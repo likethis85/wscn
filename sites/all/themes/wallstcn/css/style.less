@@ -1,0 +1,1195 @@
+/*!
+ * Bootstrap v2.3.1
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+
+// Core variables and mixins
+@import "bootstrap/less/variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "bootstrap/less/mixins.less";
+
+// CSS Reset
+@import "bootstrap/less/reset.less";
+
+// Grid system and page structure
+@import "bootstrap/less/scaffolding.less";
+@import "bootstrap/less/grid.less";
+@import "bootstrap/less/layouts.less";
+
+// Base CSS
+@import "bootstrap/less/type.less";
+@import "bootstrap/less/code.less";
+@import "bootstrap/less/forms.less";
+@import "bootstrap/less/tables.less";
+
+// Components: common
+//@import "bootstrap/less/sprites.less";
+@import "bootstrap/less/dropdowns.less";
+@import "bootstrap/less/wells.less";
+@import "bootstrap/less/component-animations.less";
+@import "bootstrap/less/close.less";
+
+// Components: Buttons & Alerts
+@import "bootstrap/less/buttons.less";
+@import "bootstrap/less/button-groups.less";
+@import "bootstrap/less/alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+
+// Components: Nav
+@import "bootstrap/less/navs.less";
+@import "bootstrap/less/navbar.less";
+@import "bootstrap/less/breadcrumbs.less";
+@import "bootstrap/less/pagination.less";
+@import "bootstrap/less/pager.less";
+
+// Components: Popovers
+@import "bootstrap/less/modals.less";
+@import "bootstrap/less/tooltip.less";
+@import "bootstrap/less/popovers.less";
+
+// Components: Misc
+@import "bootstrap/less/thumbnails.less";
+@import "bootstrap/less/media.less";
+@import "bootstrap/less/labels-badges.less";
+@import "bootstrap/less/progress-bars.less";
+@import "bootstrap/less/accordion.less";
+@import "bootstrap/less/carousel.less";
+@import "bootstrap/less/hero-unit.less";
+
+// Utility classes
+@import "bootstrap/less/utilities.less"; // Has to be last to override when necessary
+
+
+// RESPONSIVE CLASSES
+// ------------------
+
+@import "bootstrap/less/responsive-utilities.less";
+
+
+// MEDIA QUERIES
+// ------------------
+
+// Large desktops
+@import "bootstrap/less/responsive-1200px-min.less";
+
+// Tablets to regular desktops
+@import "bootstrap/less/responsive-768px-979px.less";
+
+// Phones to portrait tablets and narrow desktops
+@import "bootstrap/less/responsive-767px-max.less";
+
+
+// RESPONSIVE NAVBAR
+// ------------------
+@import "bootstrap/less/responsive-navbar.less";
+
+
+/*
+@import "bootstrap/less/metro/variables.less"; 
+@import "bootstrap/less/metro/type.less";
+@import "bootstrap/less/metro/tiles.less";
+@import "bootstrap/less/metro/navbar.less";
+@import "bootstrap/less/metro/buttons.less";
+@import "bootstrap/less/metro/code.less";
+@import "bootstrap/less/metro/dropdowns.less";
+@import "bootstrap/less/metro/wells.less";
+@import "bootstrap/less/metro/navs.less";
+@import "bootstrap/less/metro/hero-unit.less";
+@import "bootstrap/less/metro/labels-badges.less";
+@import "bootstrap/less/metro/button-groups.less";
+@import "bootstrap/less/metro/thumbnails.less";
+@import "bootstrap/less/metro/pagination.less";
+@import "bootstrap/less/metro/breadcrumbs.less";
+@import "bootstrap/less/metro/alerts.less";
+@import "bootstrap/less/metro/forms.less";
+@import "bootstrap/less/metro/icons.less";
+@import "bootstrap/less/metro/pager.less";
+@import "bootstrap/less/metro/progress-bars.less";
+@import "bootstrap/less/metro/checkbox.less";
+@import "bootstrap/less/metro/radio.less";
+*/
+
+@import "fontawesome/css/font-awesome.css";
+
+
+@blue:                  #418CD1;
+@red:                   #D24747;
+@brown:                 #84736C;
+
+@maxPageWidth : 1170px;
+@linkColor:#418CD1;
+
+@fontTitle:"Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+
+body {
+    background:#CCCCCC;
+}
+
+#wrapper {
+    margin:0 auto;
+    max-width:@maxPageWidth;
+    background:#FFF;
+    padding:0 30px;
+    overflow:hidden;
+}
+
+#header {
+    padding-top:15px;
+
+    h1 {
+        margin-top:0;
+    }
+}
+
+a {
+    .transition(all .3s ease-in-out);
+}
+
+a:hover {
+    text-decoration:none;
+}
+
+
+/* ===========================
+ * Navbar
+ * ===========================
+ */
+
+.nav-area-fixed {
+    position:fixed;
+    top:0;
+    z-index:10;
+    margin:0 auto;
+    .box-shadow(0px 2px 5px -2px rgb(0,0,0, 0.3));
+    #realtime-news {
+        margin-bottom:0;
+
+        .control-buttons {
+            display:block;
+        }
+
+        .more {
+            display:inline;
+        }    
+    }
+
+
+
+}
+
+#navbar {
+
+    background:#333;
+    margin-bottom:0;
+
+    .navbar-inner {
+        border:0;
+        background:#333;
+        padding-left:0;
+        padding-right:10px;
+    }
+
+    a {
+        color:#FFF;
+        font-size:15px;
+        border-right:1px solid #444;
+        text-shadow:none;
+    }
+
+    a:hover {
+        color:#418CD1;
+    }
+    .active a, a.active{
+        background:#418CD1;
+        color:#FFF;
+    }
+
+    ul li.leaf {
+        padding:0;
+        list-style-image:none;
+        list-style-type:none;
+    }
+}
+
+.navbar-search .input-append{
+    margin-bottom:0;
+}
+
+#realtime-news {
+    margin-bottom:30px;
+    height:38px;
+    border-bottom:3px solid #E9E9E9;
+    clear:both;
+    overflow:hidden;
+    background:#FFF;
+    position:relative;
+    vertical-align:top;
+
+    .news {
+        float:left;
+    }
+    ul {
+        margin-left:0;
+    }
+    li {
+        color:#888;
+        margin-right:30px;
+        line-height:38px;
+        //list-style-type:circle;
+        list-style-type:none;
+    }
+    a, p {
+        color:#888;
+        font-size:12px;
+        line-height:38px;
+    }
+
+    a {
+        color:#333;
+    }
+
+    a:hover {
+        color:@red;
+    }
+
+    .more {
+        display:none;
+        position:absolute;
+        right:10px;
+        top:0;
+        color:@red;
+    }
+
+    .btn {
+        margin:2px 0 0 0;
+        padding:1px 5px;
+        line-height:15px;
+    }
+
+    .control-buttons {
+        display:none;
+        margin:0 10px;
+    }
+}
+
+/* ===========================
+ * Footer
+ * ===========================
+ */
+
+
+#footer {
+    margin:0 auto;
+    max-width:@maxPageWidth;
+    background:#333;
+    padding:30px;
+    color:#999;
+
+    .footer-links {
+        clear:both;
+        margin-bottom:20px;
+    }
+
+    h6 {
+        padding-bottom:20px;
+        color:#EEE;
+        font-size:14px;
+        border-bottom:1px solid #444444;
+        font-weight:bold;
+    }
+
+    ul {
+        margin:0;
+        margin-top:10px;
+    }
+
+    li {
+        margin-top:10px;
+        list-style:inside none;
+        font-size:13px;
+    }
+
+    a {
+        color:#CCC;
+    }
+
+    a:hover {
+        color:#FFF;
+    }
+
+    p {
+        font-size:12px;
+    }
+
+}
+
+/* ===========================
+ * Page header
+ * ===========================
+ */
+
+.page-header {
+    margin:30px 0;
+    padding:0;
+    height:36px;
+    background:url(img/bg-heading.png);
+    line-height:36px;
+    border:0;
+
+    h1, h2, h3, h4, h5, h6{
+        display:inline-block;
+        .ie7-inline-block();
+        height:36px;
+        padding:0 10px;
+        background:#FFF;
+        font-size:20px;
+        font-family:@fontTitle;
+        font-weight:normal;
+    }
+
+    h1, h2, h3, h4, h5, h6, a {
+        margin:0;
+        line-height:36px;
+    }
+
+    a.btn {
+        margin:5px 5px 0 0;
+        padding-left:8px;
+        padding-right:8px;
+        line-height:15px;
+    }
+
+    .more {
+        margin-right:10px;
+        color:#333;
+        &:hover {
+            color:@linkColor;
+        }
+    }
+
+    &.header-red {
+        h1, h2, h3, h4, h5, h6 {
+            background-color:@red;
+            color:#FFF;
+
+            a {
+                color:#FFF;
+            }
+
+            a:hover {
+                color:@blue;
+            }
+        }
+    }
+
+    &.header-blue {
+        h1, h2, h3, h4, h5, h6 {
+            background-color:@blue;
+            color:#FFF;
+
+            a {
+                color:#FFF;
+            }
+        }
+    }
+
+    &.header-brown {
+        h1, h2, h3, h4, h5, h6 {
+            background-color:@brown;
+            color:#FFF;
+
+            a {
+                color:#FFF;
+            }
+        }
+    }  
+}
+
+/* ===========================
+ * top news
+ * ===========================
+ */
+
+#top-news {
+    .page-header {
+        margin-top:0;
+    }
+
+    .media {
+        padding-bottom:20px;
+        border-bottom:1px solid #E6E6E6;
+    }
+
+    .media-heading a{
+        color:#444;
+    }
+    .media-heading a:hover{
+        color:@blue;
+    }
+
+    .media-body {
+        color:#999;
+        font-size:12px;
+    }
+
+    .text-only {
+        padding-bottom:10px;
+        margin-top:10px;
+    }
+
+    .media-heading {
+        font-family:@fontTitle;
+        font-weight:normal;
+        font-size:16px;
+        line-height:20px;
+        min-height:40px;
+        max-height:62px;
+        overflow:hidden;
+    }
+}
+
+.top-news-entry {
+    min-height:555px;
+    background:#333333;
+    padding:10px;
+    font-size:12px;
+    color:#999;
+
+    .entry-meta {
+        padding-top:20px;
+        margin-top:20px;
+    }
+
+    a {
+        color:#CCC;
+    }
+
+    a:hover {
+        color:#FFF;
+    }
+
+    h2 {
+        font-size:16px;
+        line-height:25px;
+    }
+    h2 a {
+        color:#FFF;
+        font-family:@fontTitle;
+    }
+
+    h2 a:hover {
+        color:@blue;
+    }
+
+    li {
+        margin:5px 0;
+    }
+}
+
+.top-new-extra {
+    margin:0;
+    padding-top:10px;
+    margin-top:10px;
+    border-top:1px solid #999;
+    list-style:square inside;
+}
+
+
+/* ===========================
+ * top list
+ * ===========================
+ */
+
+.news-list {
+     .media {
+        padding-bottom:20px;
+        border-bottom:1px solid #E6E6E6;
+    }
+
+    .media-heading a{
+        font-weight:normal;
+        font-family:@fontTitle;
+        color:#333;
+    }
+
+    .media-heading a:hover {
+        color:@blue;
+    }
+
+    h3 {
+        line-height:20px;
+        font-size:20px;
+    }
+
+    .media-meta {
+        color:#999;
+        margin-bottom:10px;
+        font-size:12px;
+    }
+
+    .media-body {
+        color:#474747;
+        font-size:14px;
+    }   
+
+    img {
+        max-width:200px;
+    }
+
+    .media-content {
+        max-height:100px;
+    }
+}
+
+.news-list.vlist {
+    .media {
+        padding-bottom:20px;
+        border-bottom:0;
+    }
+    .media-image {
+        display:block;
+        height:140px;
+        text-align:center;
+    }
+
+    img {
+        max-width:100%;
+        max-height:140px;
+    }
+
+    .media-heading {
+        font-size:14px;
+    }
+
+    .media-meta {
+        margin:20px 0;
+    }
+
+    .media-body {
+        height:190px;
+        overflow:hidden;
+        font-size:13px;
+        color:#666;
+    }   
+}
+
+#search-result {
+    margin-top:-30px;
+    position:relative;
+    b {
+        font-weight:bold;
+        color:@red;
+    }
+    .result-count {
+        margin-right:20px;
+    }
+}
+
+#search-results-close{
+    position:absolute;
+    top:-30px;
+    right:-20px;
+    cursor:pointer;
+    .icon-remove-sign{
+        font-size:50px;
+        color:#CCC;
+    }
+
+    .icon-remove-sign:hover {
+        color:@red;
+    }
+}
+
+.row-slider {
+    height:350px;
+    overflow:hidden;
+    position:relative;
+}
+
+.btn-readmore {
+    background:#F0F0F0;
+    color:#333;
+    border:0;
+    font-weight:bold;
+    font-size:14px;
+    text-shadow:none;
+
+    &:hover {
+        background:@blue;
+        color:#FFF;
+    }
+}
+
+
+.view-more {
+    margin:20px 0;
+    text-align:center;
+
+    a {
+        display:inline-block;
+        padding:10px 15px;
+        font-family:@fontTitle;
+        font-size:18px;
+
+    }
+    a:hover {
+        background:@blue;
+        color:#FFF;
+    }
+}
+
+/* ===========================
+ * Tab
+ * ===========================
+ */
+
+.nav.nav-tabs {
+    background:url(img/bg-heading.png);
+    border-left:1px solid #E6E6E6;
+    margin-bottom:0;
+    > li {
+        background:none;
+        float:left;
+    }
+
+    > li a {
+        margin:0;
+        .border-radius(0);
+        border:1px solid #E6E6E6;
+        border-left:0;
+    }
+    > li.active a {
+        border:1px solid #E6E6E6;
+        border-left:0;        
+        border-bottom:1px solid #FFF;
+    }
+}
+
+.tab-content {
+    border:1px solid #E6E6E6;
+    border-top:0;
+    padding:20px;
+
+    .media {
+        padding-bottom:20px;
+        border-bottom:1px solid #E6E6E6;
+    }
+
+    .media-heading {
+        font-weight:normal;
+        color:#444;
+    }
+
+
+    .media-body {
+        color:#999;
+        font-size:12px;
+    }
+}
+
+.tab-content .text-only a{
+    font-size:14px;
+    color:#333;
+
+    &:hover {
+        color:@blue;
+    }
+}
+
+/* ===========================
+ * social icons
+ * ===========================
+ */
+
+.social-icons {
+    #gradient > .vertical(#FBFBFB, #EEEEEE);
+    .box-shadow(none);
+    padding:20px;
+    a {
+        text-decoration:none;
+        color:#444;
+    }
+
+    a:hover {
+        color:@brown;
+    }
+
+
+    .icon-rss {
+        font-size:40px;
+        line-height:40px;
+        color:#FF8900;
+    }
+
+    .icon-mobile-phone{
+        font-size:50px;
+        line-height:40px;
+        color:#7A91B0;
+    }
+
+    .icon-envelope {
+        font-size:30px;
+        line-height:40px;
+        color:#00D1FF;
+    }
+
+    .icon-qrcode {
+        font-size:30px;
+        line-height:40px;
+        color:#CCC;
+    }
+
+    .media-heading {
+        margin:0;
+        font-weight:bold;
+        color:#444;
+    }
+
+    .media {
+        margin-bottom:10px;
+    }
+    .media-body {
+        color:#999;
+        font-size:12px;
+    }
+}
+
+/* ===========================
+ * Comments list
+ * ===========================
+ */
+
+.comments-list {
+    .media {
+        margin-bottom:10px;
+    }
+    .media-heading {
+        white-space: nowrap;
+        overflow: hidden;           
+        -o-text-overflow: ellipsis;
+        text-overflow:    ellipsis;
+        font-size:13px;
+    }
+    .media-heading a{
+        color:@blue;
+    }
+
+    .media-content {
+        position:relative;
+        .border-radius(10px);
+        margin-top:10px;
+        padding:15px;
+        font-size:12px;
+        color:#666;
+        background:#FAFAFA;
+    }
+
+    .media-content-body {
+        max-height:200px;
+        overflow:hidden;
+    }
+
+    .media-content:after {
+        border-color: #F3961C transparent;
+        border-style: solid;
+        border-width: 10px 10px 0;
+        bottom: -10px;
+        content: "";
+        display: block;
+        left: 50px;
+        position: absolute;
+        width: 0;
+        border-color: #FAFAFA transparent;
+        border-width: 0 10px 10px;
+        bottom: auto;
+        left: auto;
+        left: 20px;
+        top: -10px;
+    }
+
+    .media-meta {
+        color:#999;
+        visibility:hidden;
+        margin:0;
+    }
+
+    .media:hover .media-meta {
+        visibility:visible;
+    }
+
+    a.user-name {
+        color:#333;
+    }
+}
+
+.tag-cloud {
+    a {
+        display:inline-block;
+        margin:0 5px 5px 0;
+        padding:3px 5px;
+        background:url(img/bg-heading.png);
+        color:#333;
+    }
+
+    a:hover {
+        color:#FFF;
+        background:@blue;
+
+    }
+}
+
+/* ===========================
+ * Side tab
+ * ===========================
+ */
+
+.ad-box {
+    margin-bottom:20px;
+    clear:both;
+}
+
+.side-list {
+    .media-heading a{
+        color:#333;
+        font-size:13px;
+    }
+}
+
+
+/* ===========================
+ * Article
+ * ===========================
+ */
+
+.article-header {
+    margin:-10px 0 20px 0;
+    h1, h2, h3, h4 {
+        font-family:@fontTitle;
+        font-weight:normal;
+        font-size:30px;
+    }
+
+    a {
+        color:#474747;
+    }
+
+}
+
+.article-meta {
+    color:#999;
+    margin-bottom:20px;
+    clear:both;
+}
+
+.article-copyright {
+    margin-bottom:20px;
+    padding:15px;
+    font-size:12px;
+    background:url(img/bg-heading.png);
+}
+
+.article-tags {
+    margin-bottom:20px;
+}
+
+.article-summary {
+    padding-bottom:20px;
+    border-bottom:1px solid #CCC;
+    margin-bottom:30px;
+}
+
+.article-tags .tag {
+	@tagBgStartColor :  #F5F5F5;
+	@tagBgEndColor :  darken(@tagBgStartColor, 10%);
+	@tagFontColor : darken(@tagBgStartColor, 50%);
+	@tagBorderColor :  darken(@tagBgStartColor, 40%);
+	@tagFontSize:12px;
+	@tagPaddingTop:5px;
+	@tagArrowSize:(@tagFontSize + @tagPaddingTop * 2) / 1.414;
+	@tagHoleSize:5px;
+
+    display:inline-block;
+    .ie7-inline-block();
+    margin:0 0 7px 20px;
+    position:relative;
+    font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size:@tagFontSize;
+	height:@tagFontSize;
+	line-height:@tagFontSize;
+    font-weight:bold;
+    text-decoration:none;
+    color:@tagFontColor;
+    text-shadow:0px 1px 0px rgba(255,255,255,.4);
+    padding:@tagPaddingTop 12px;
+    border-top:1px solid @tagBorderColor;
+    border-right:1px solid @tagBorderColor;
+    border-bottom:1px solid @tagBorderColor;
+	.border-right-radius(0.25em);
+	#gradient > .vertical(@tagBgStartColor, @tagBgEndColor);
+	.box-shadow(inset 0 1px 0 #faeaba);
+	.box-shadow(0 1px 1px rgba(0,0,0,.1));
+    z-index:1;
+
+	&:before {
+		content:'';
+		//width = tag outer height / 1.414
+		width:	@tagArrowSize;
+		height:@tagArrowSize;
+		position:absolute;
+		left: (0 - @tagArrowSize)/2;
+		top:@tagPaddingTop - 2;
+		border-left:1px solid @tagBorderColor;
+		border-bottom:1px solid @tagBorderColor;
+		#gradient > .directional(@tagBgStartColor, @tagBgEndColor, left top);
+		.rotate(45deg);
+		.border-radius(0 0 0 0.25em);
+		z-index:1;
+	}
+
+	&:after {
+		content:'';
+		width:@tagHoleSize;
+		height:@tagHoleSize;
+		position:absolute;
+		left:(0 - @tagArrowSize)/3 + @tagHoleSize/2 + 1;
+		top:(@tagFontSize + @tagPaddingTop * 2)/2 - @tagHoleSize/2 - 1;
+		background:#fff;
+		border:1px solid @tagBorderColor;
+		.border-radius(4.167em);
+		.box-shadow(0 1px 0 #faeaba);
+		z-index:11;		
+	}
+
+	&:hover {
+		#gradient > .directional(lighten(@tagBgStartColor, 10%), lighten(@tagBgEndColor, 10%), top);
+		border-color:lighten(@tagBorderColor, 10%);
+		color:@linkColor !important;
+	}
+
+	&:hover:before {
+		#gradient > .directional(lighten(@tagBgStartColor, 10%), lighten(@tagBgEndColor, 10%), left top);
+		border-color:lighten(@tagBorderColor, 10%);
+	}
+}
+
+.typo {
+	color: #474747;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	font: 500 14px/1.8 'Hiragino Sans GB', Microsoft YaHei, sans-serif;
+
+    /* HTML5 媒体文件跟 img 保持一致 */
+    audio, canvas, video {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+    }
+
+    /* 要注意表单元素并不继承父级 font 的问题 */
+    button, input, select, textarea {
+        font: 500 14px/1.8 'Hiragino Sans GB', Microsoft YaHei, sans-serif;
+    }
+
+    /* 去掉各Table  cell 的边距并让其边重合 */
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    /* IE bug fixed: th 不继承 text-align*/
+    th {
+        text-align: inherit;
+    }
+
+    /* 去除默认边框 */
+    fieldset, img {
+        border: 0;
+    }
+
+    /* 解决 IE6-7 图片缩放锯齿问题 */
+    img {
+        -ms-interpolation-mode: bicubic;    
+    }
+
+    /* ie6 7 8(q) bug 显示为行内表现 */
+    iframe {
+        display: block;
+    }
+
+    /* 块/段落引用 */
+    blockquote {
+        margin: 1em 4em 1em 2em;
+        padding: 0.6em 1em;
+        background: #f1f1f1;
+    }
+    blockquote blockquote {
+        padding: 0 0 0 1em;
+        margin-left: 2em;
+        border-left: 0.4em solid #ddd;
+    }
+
+    /* Firefox 以外，元素没有下划线，需添加 */
+    acronym, abbr {
+        border-bottom: 1px dotted;
+        font-variant: normal;
+    }
+
+    /* 添加鼠标问号，进一步确保应用的语义是正确的（要知道，交互他们也有洁癖，如果你不去掉，那得多花点口舌） */
+    abbr {
+        cursor: help;
+    }
+
+    /* 一致的 del 样式 */
+    del {
+        text-decoration: line-through;
+    }
+
+    address, caption, cite, code, den, em, th, var {
+        font-style: normal;
+        font-weight: 500;
+    }
+
+    /* 对齐是排版最重要的因素, 别让什么都居中 */
+    caption, th {
+        text-align: left;
+    }
+
+    q:before, q:after {
+        content: '';
+    }
+
+    /* 统一上标和下标 */
+    sub, sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: text-top;
+    }
+    :root sub, :root sup{
+        vertical-align: baseline; /* for ie9 and other mordern browsers */
+    }
+    sup {
+        top: -0.5em;
+    }
+    sub {
+        bottom: -0.25em;
+    }
+
+    /* 让链接在 hover 状态下显示下划线 */
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* 默认不显示下划线，保持页面简洁 */
+    ins, a {
+        text-decoration: none;
+    }
+
+    u, .typo-u {
+        text-decoration: underline;
+    }
+
+    /* 标记，类似于手写的荧光笔的作用 */
+    mark {
+        background: #fffdd1;
+    }
+
+    /* 代码片断 */
+    pre, code {
+        font-family: "Courier New", Courier, monospace;
+    }
+    pre {
+        border: 1px solid #ddd;
+        border-left-width: 0.4em;
+        background: #fbfbfb;
+        padding: 10px;
+    }
+
+    /* 底部印刷体、版本等标记 */
+    small {
+        font-size: 12px;
+        color: #888;
+    }
+
+    .clearfix:before, .clearfix:after {
+        content: "";
+        display: table;
+    }
+
+    .clearfix:after {
+        clear: both
+    }
+
+    .clearfix {
+        zoom: 1
+    }
+
+    h1, h2, h3, h4, h5, h6{
+        font-weight: 500;
+        font-weight: 800\9;
+        color:#333;
+    }
+}
+
+/* 保证块/段落之间的空白隔行 */
+.typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr, .typo table,
+.typo-p, .typo-pre, .typo-ul, .typo-ol, .typo-dl, .typo-form, .typo-hr, .typo-table {
+	margin-bottom: 1em;
+}
+
+/* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
+.typo h1, .typo h2, .typo h3, .typo h4, .typo h5, .typo h6,
+.typo-h1, .typo-h2, .typo-h3, .typo-h4, .typo-h5, .typo-h6 {
+	margin-bottom: 0.4em;
+	line-height: 1.5;
+}
+.typo h1, .typo-h1 {
+	font-size: 1.8em;
+}
+.typo h2, .typo-h2 {
+	font-size: 1.6em;
+}
+.typo h3, .typo-h3 {
+	font-size: 1.4em;
+}
+.typo h4, .typo-h4 {
+	font-size: 1.2em;
+}
+.typo h5, .typo h6, .typo-h5, .typo-h6 {
+	font-size: 1em;
+}
+
+/* 在文章中，应该还原 ul 和 ol 的样式 */
+.typo ul, .typo-ul {
+	margin-left: 1.3em;
+	list-style: disc;
+}
+.typo ol, .typo-ol {
+	list-style: decimal;
+	margin-left: 1.9em;
+}
+.typo li ul, .typo li ol, .typo-ul ul, .typo-ul ol, .typo-ol ul, .typo-ol ol {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 2em;
+}
+.typo li ul, .typo-ul ul, .typo-ol ul {
+	list-style: circle;
+}
+
+/* 同 ul/ol，在文章中应用 table 基本格式 */
+.typo table th, .typo table td, .typo-table th, .typo-table td {
+	border: 1px solid #ddd;
+	padding: 5px 10px;
+}
+.typo table th, .typo-table th {
+	background: #fbfbfb;
+}
+.typo table thead th, .typo-table thead th {
+	background: #f1f1f1;
+}
+
+
