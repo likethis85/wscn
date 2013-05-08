@@ -32,7 +32,7 @@
         </ul>
     </div>
     <div class="span3">
-        <img id="weixin-qrcode" alt="华尔街见闻二维码" src="/themes/wallstcn/css/img/qrcode.jpg" />
+        <img id="weixin-qrcode" alt="华尔街见闻二维码" src="/sites/all/themes/wallstcn/css/img/qrcode.jpg" />
     </div>
 </div>
 

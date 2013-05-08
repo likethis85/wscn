@@ -16,7 +16,7 @@
         <div class="span6">
             <div class="media">
                 <a class="pull-left" href="http://weibo.com/wallstreetcn" target="_blank">
-                    <img alt="华尔街见闻微博官方帐号" src="/themes/wallstcn/css/img/weibo.png" />
+                    <img alt="华尔街见闻微博官方帐号" src="/sites/all/themes/wallstcn/css/img/weibo.png" />
                 </a>
                 <div class="media-body">
                     <p class="media-heading"><a href="http://weibo.com/wallstreetcn" target="_blank">新浪微博</a></p>
@@ -76,7 +76,7 @@
         <div class="span6">
             <div class="media">
                 <a class="pull-left weixin" href="#footer">
-                    <img alt="" src="/themes/wallstcn/css/img/weixin.png" />
+                    <img alt="" src="/sites/all/themes/wallstcn/css/img/weixin.png" />
                 </a>
                 <div class="media-body">
                     <p class="media-heading weixin"><a href="#footer">微信公众帐号</a></p>
@@ -157,7 +157,7 @@
 <div class="side-box">
     <div class="row-fluid">
         <div class="span12">
-            <a href=""><img alt="" src="/themes/wallstcn/css/img/advertising.gif" class="span12" /></a>
+            <a href=""><img alt="" src="/sites/all/themes/wallstcn/css/img/advertising.gif" class="span12" /></a>
         </div>
     </div>
 </div>
