@@ -55,11 +55,44 @@
     <?endif?>
 </div>
 
-<div class="content"<?php print $content_attributes; ?>>
-    <?//=render($content);?>
+<div class="page-header header-blue">
+    <h2>评论</h2>
+</div>
+<div class="comments-list">
+    <?$comments = $content['comments']['comments'];
+    unset($comments['#sorted']);
+    unset($comments['pager']);
+    //var_dump($comments);
+    ?>
+    <?foreach($comments as $item):?>
+    <?$comment = $item['#comment'];?>
+    <div id="comment-<?=$comment->cid?>" class="media">
+        <div class="media-body">
+            <p class="media-heading">
+            <?if($comment->uid):?>
+            <a href="<?=url('user/'. $comment->uid);?>" class="user-name"><?=$comment->name?></a>
+            <?else:?>
+            匿名用户
+            <?endif?>
+            于 <?=format_date($comment->created);?>
+            </p>
+            <div class="media-content">
+                <div class="media-content-body typo"><?=$comment->subject?></div>
+                <p class="media-meta">
+                <a href="<?=url('node/'. $comment->nid);?>#comment-form">回复</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <?endforeach?>
 </div>
 
+<?=render($content['comments']['comment_form'])?>
+
+
 <!-- Duoshuo Comment BEGIN -->
+<!--
 <div class="ds-thread"></div>
 <script type="text/javascript">
     var duoshuoQuery = {short_name:"avnpc"};
@@ -72,6 +105,7 @@
             || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
 </script>
+-->
 <!-- Duoshuo Comment END -->
 
 <?//=render($content['links']); ?>
