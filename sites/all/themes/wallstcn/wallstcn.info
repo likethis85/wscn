@@ -59,3 +59,4 @@ exclude[css][] = 'modules/update/update.css'
 exclude[css][] = 'modules/user/user.css'
 
 settings[allow_ad] = 0
+settings[domain] = 'dp.com'

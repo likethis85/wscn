@@ -58,7 +58,7 @@
         </div><!--span6 end -->
         <div class="span6">
             <div class="media">
-                <a class="pull-left" href="http://m.wallstreetcn.com/" target="_blank">
+                <a class="pull-left" href="http://m.<?=theme_get_setting('domain')?>/" target="_blank">
                     <span class="icon-mobile-phone"></span>
                 </a>
                 <div class="media-body">

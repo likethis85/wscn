@@ -11,6 +11,13 @@
                     <?if($elements['system_main-menu']):?>
                     <?=render($elements['system_main-menu']);?>
                     <?endif?>
+                    <?if($elements['menu_menu-live-menu']):?>
+                    <?=render($elements['menu_menu-live-menu']);?>
+                    <ul class="nav pull-right">
+                        <li><a href="http://<?=theme_get_setting('domain')?>">华尔街见闻</a></li>
+                    </ul>
+                    <?endif?>
+
                     <form id="search-form" class="navbar-search pull-right" action="/search/node/">
                         <div class="input-append">
                             <input name="q" type="text" class="input-medium" placeholder="搜索华尔街见闻">
@@ -22,7 +29,7 @@
         </div><!-- /navbar-inner -->
     </div>
 
-
+    <?if(!$elements['menu_menu-live-menu']):?>
     <div class="container">
         <div class="row-fluid">
             <div class="span12">
@@ -41,6 +48,7 @@
             </div><!--span12 end-->
         </div><!--rows end-->
     </div><!--container end-->
+<?endif?>
 
 </div>
 
@@ -75,7 +83,4 @@
     </div>
     </div>
     {% } %}
-
-
 </script>
-

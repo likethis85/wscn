@@ -6,7 +6,7 @@
         <div class="row-fluid">
             <div class="span4"><h1>
                     <a class="logo" href="<?php print $front_page; ?>" title="<?php print $site_name ? $site_name : t('Home'); ?>">
-                        <img src="<?=$base_path . path_to_theme(); ?>/logo.png" alt="<?php print $site_name ? $site_name : t('Home'); ?>" />
+                        <img src="<?=$logo?>" alt="<?php print $site_name ? $site_name : t('Home'); ?>" />
                     </a>
             </h1></div>
             <div class="span8">
@@ -34,6 +34,9 @@
 
             <div class="span4">
                 <?=render($page['sidebar_first']); ?>
+                <?if($page['sidebar_live']):?>
+                <?=render($page['sidebar_live']); ?>
+                <?endif?>
             </div>
 
         </div>

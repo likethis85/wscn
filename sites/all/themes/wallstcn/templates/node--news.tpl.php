@@ -3,13 +3,13 @@
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix node-article" <?php print $attributes; ?>>
 
 <header class="article-header">
-<h1><a href=""><?=$node->title?></a></h1>
+<h1><a href="<?=url('node/' . $node->nid)?>"><?=$node->title?></a></h1>
 </header>
 
 <?php if ($display_submitted): ?>
 <div class="article-meta clearfix">
     <span class="pull-left">
-        文 <a href=""><?=$node->name?></a> / <?=format_date($node->created);?>
+        文 <a href="<?=url('user/'. $comment->uid);?>"><?=$node->name?></a> / <?=format_date($node->created);?>
         <?if($node->taxonomy_vocabulary_2):?> / 
         <?foreach($node->taxonomy_vocabulary_2['und'] as $tag):?>
         <a href="<?=url('taxonomy/term/' . $tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a>
@@ -121,13 +121,13 @@
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix node-article" <?php print $attributes; ?>>
 
 <header class="article-header">
-<h2><a href=""><?=$node->title?></a></h2>
+<h2><a href="<?=url('node/' . $node->nid)?>"><?=$node->title?></a></h2>
 </header>
 
 <?php if ($display_submitted): ?>
 <div class="article-meta clearfix">
     <span class="pull-left">
-        文 <a href=""><?=$node->name?></a> / <?=format_date($node->created);?>
+        文 <a href="<?=url('user/'. $node->uid);?>"><?=$node->name?></a> / <?=format_date($node->created);?>
         <?if($node->taxonomy_vocabulary_2):?> / 
         <?foreach($node->taxonomy_vocabulary_2['und'] as $tag):?>
         <a href="<?=url('taxonomy/term/' . $tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a>

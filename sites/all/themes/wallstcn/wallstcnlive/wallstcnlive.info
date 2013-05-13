@@ -1,0 +1,16 @@
+name = WallstreetCN_Live
+base theme = wallstcn
+description = 华尔街见闻实时新闻主题
+
+
+regions[header] = Header
+regions[page_top] = Page Top
+regions[sidebar_first]  = Sidebar
+regions[sidebar_live]  = Live Sidebar
+regions[content] = Content
+regions[footer] = Footer
+regions[page_bottom] = Page Bottom
+regions[index_content] = Index Content
+regions[live_content] = Live Index Content
+regions[navigation] = Navigation
+
