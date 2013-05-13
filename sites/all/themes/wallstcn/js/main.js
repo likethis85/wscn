@@ -194,5 +194,22 @@
             $("#main-content").show();
             $("#search-result").hide();
         });
+
+
+
+        //实时新闻页最新文章
+        $('script[data-url]').each(function(){
+            var template = $(this);
+            var url = template.attr('data-url');
+            $.ajax({
+                url : url,
+                dataType : 'json',
+                success : function(response){
+                    var t = tmpl(template.html(), response);
+                    template.after(t);
+                }
+            });		
+        });
+
     });
 })(jQuery);

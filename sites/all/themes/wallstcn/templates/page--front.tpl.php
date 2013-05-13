@@ -28,14 +28,24 @@
         <div class="row-fluid">
 
             <div class="span8">  
+                <?if($page['live_content']):?>
+                <?=render($page['live_content'])?>
+                <?endif?>
+                <?if($page['index_content']):?>
                 <?=render($page['index_content']); ?>
+                <?endif?>
             </div>
 
 
             <div class="span4">
 
+                <?if($page['sidebar_first']):?>
                 <?=render($page['sidebar_first']); ?>
+                <?endif?>
 
+                <?if($page['sidebar_live']):?>
+                <?=render($page['sidebar_live']); ?>
+                <?endif?>
             </div>
 
         </div>

@@ -1,6 +1,8 @@
 name = WallstreetCN_Live
 base theme = wallstcn
 description = 华尔街见闻实时新闻主题
+version = VERSION
+core = 7.x
 
 
 regions[header] = Header

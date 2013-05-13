@@ -1193,3 +1193,95 @@ a:hover {
 }
 
 
+
+/* ===========================
+ * Live news
+ * ===========================
+ */
+
+
+.livenews-list {
+    .media {
+        position:relative;
+        padding-left:50px;
+        border-bottom:1px solid #CCC;
+    }
+
+    time {
+        position:absolute;
+        left:5px;
+        top:10px;
+        color:#666;
+    }
+
+    .media-heading {
+        color:#333;
+        font-size:14px;
+        font-weight:normal;
+
+    }
+
+
+    .media-meta {
+        font-size:12px;
+    }
+}
+
+.control-bar{
+    padding:3px 20px;
+    padding-top:5px;
+    height:35px;
+    #gradient > .vertical(#F5F5F5, #EBEBEB);
+    border-top:1px solid #FFF;
+    border-bottom:1px solid #D0D0D0;
+    .box-shadow(0 1px 1px rgba(0,0,0,.25));
+    clear:both;
+    font-size:13px;
+    line-height:28px;
+
+    .btn {
+        margin-right:10px;
+    }
+
+    .checkbox {
+        margin-top:0;
+    }
+}
+
+#live-topnews {
+    margin-bottom:30px;
+    padding:10px 0;
+    border-bottom:3px solid #E9E9E9;
+    vertical-align:top;
+    font-size:12px;
+
+    .first {
+        font-weight:bold;
+    }
+    ul {
+        margin:0;
+    }
+    li {
+        list-style-type:none;
+    }
+
+    a {
+        color:#666;
+    }
+    a:hover {
+        color:@blue;
+    }
+    .last {
+        text-align:right;
+    }
+}
+
+#comment-form {
+    .form-type-item {
+        display:none;
+    }
+
+    .form-submit {
+        .btn;
+    }
+}

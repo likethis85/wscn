@@ -7883,3 +7883,197 @@ a:hover {
 .typo-table thead th {
   background: #f1f1f1;
 }
+
+/* ===========================
+ * Live news
+ * ===========================
+ */
+
+.livenews-list .media {
+  position: relative;
+  padding-left: 50px;
+  border-bottom: 1px solid #CCC;
+}
+
+.livenews-list time {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  color: #666;
+}
+
+.livenews-list .media-heading {
+  font-size: 14px;
+  font-weight: normal;
+  color: #333;
+}
+
+.livenews-list .media-meta {
+  font-size: 12px;
+}
+
+.control-bar {
+  height: 35px;
+  padding: 3px 20px;
+  padding-top: 5px;
+  clear: both;
+  font-size: 13px;
+  line-height: 28px;
+  background-color: #f1f1f1;
+  background-image: -moz-linear-gradient(top, #f5f5f5, #ebebeb);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#ebebeb));
+  background-image: -webkit-linear-gradient(top, #f5f5f5, #ebebeb);
+  background-image: -o-linear-gradient(top, #f5f5f5, #ebebeb);
+  background-image: linear-gradient(to bottom, #f5f5f5, #ebebeb);
+  background-repeat: repeat-x;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #D0D0D0;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#ffebebeb', GradientType=0);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+     -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.control-bar .btn {
+  margin-right: 10px;
+}
+
+.control-bar .checkbox {
+  margin-top: 0;
+}
+
+#live-topnews {
+  padding: 10px 0;
+  margin-bottom: 30px;
+  font-size: 12px;
+  vertical-align: top;
+  border-bottom: 3px solid #E9E9E9;
+}
+
+#live-topnews .first {
+  font-weight: bold;
+}
+
+#live-topnews ul {
+  margin: 0;
+}
+
+#live-topnews li {
+  list-style-type: none;
+}
+
+#live-topnews a {
+  color: #666;
+}
+
+#live-topnews a:hover {
+  color: #418cd1;
+}
+
+#live-topnews .last {
+  text-align: right;
+}
+
+#comment-form .form-type-item {
+  display: none;
+}
+
+#comment-form .form-submit {
+  display: inline-block;
+  *display: inline;
+  padding: 4px 12px;
+  margin-bottom: 0;
+  *margin-left: .3em;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  *background-color: #e6e6e6;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border: 1px solid #cccccc;
+  *border: 0;
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  *zoom: 1;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+#comment-form .form-submit:hover,
+#comment-form .form-submit:focus,
+#comment-form .form-submit:active,
+#comment-form .form-submit.active,
+#comment-form .form-submit.disabled,
+#comment-form .form-submit[disabled] {
+  color: #333333;
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+}
+
+#comment-form .form-submit:active,
+#comment-form .form-submit.active {
+  background-color: #cccccc \9;
+}
+
+#comment-form .form-submit:first-child {
+  *margin-left: 0;
+}
+
+#comment-form .form-submit:hover,
+#comment-form .form-submit:focus {
+  color: #333333;
+  text-decoration: none;
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+     -moz-transition: background-position 0.1s linear;
+       -o-transition: background-position 0.1s linear;
+          transition: background-position 0.1s linear;
+}
+
+#comment-form .form-submit:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+#comment-form .form-submit.active,
+#comment-form .form-submit:active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+#comment-form .form-submit.disabled,
+#comment-form .form-submit[disabled] {
+  cursor: default;
+  background-image: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+
+#comment-form .form-submit .label,
+#comment-form .form-submit .badge {
+  position: relative;
+  top: -1px;
+}
