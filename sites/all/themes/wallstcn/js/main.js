@@ -211,5 +211,76 @@
             });		
         });
 
+        //实时新闻刷新
+        if($('#livenews-list')[0]){
+            var jplayer = $('<div id="jplayer" />').appendTo('body');
+            var livenewsTmpl = $("#livenews-list-js");
+            var refreshTime = 5000;
+            var livenewsHandler;
+            var allowFresh = function(){
+                return $("#enable-fresh").val() ? true : false;
+            }
+            var allowSound = function(){
+                return $("#enable-sound").val() ? true : false;
+            }
+            var appendLivenews = function(items){
+                var foundNew = false;
+                for(var i in items){
+                    var item = $("#livenews-id-" + items[i].nid);
+                    if(item[0]){
+                        continue;
+                    }
+                    item = items[i];
+                    livenewsTmpl.after(tmpl(livenewsTmpl.html(), item));
+                    foundNew = true;
+                }
+                if(foundNew && allowSound()) {
+                    jplayer.jPlayer('play');
+                }
+            }
+            var loadLivenews = function(){
+                $.ajax({
+                    url : '/apiv1/livenews.json',
+                    dataType : 'json',
+                    ifModified:true,
+                    success : function(response, textStatus, jqXHR){
+                        appendLivenews(response);
+                    }
+                });
+            }
+            $('#livenews-list').on('click', '.media', function(){
+                var item = $(this);
+                if(item.hasClass('expend')){
+                    item.removeClass('expend');
+                    item.find('.media-meta').hide();
+                } else {
+                    item.find('.media-meta').show();
+                    item.addClass('expend');
+                }
+            });
+
+            jplayer.jPlayer({
+                ready: function () {
+                    $(this).jPlayer("setMedia", {
+                        mp3 : "/sites/all/themes/wallstcn/js/notification.mp3"
+                    });
+                },
+                swfPath: "/sites/all/themes/wallstcn/js/Jplayer.swf",
+                supplied: "mp3"
+            });
+
+            if(allowFresh()){
+                livenewsHandler = setInterval(loadLivenews, refreshTime);
+            }
+
+            $("#enable-fresh").on('change', function(){
+                if($(this).attr('checked')){
+                    livenewsHandler = setInterval(loadLivenews, refreshTime);
+                } else {
+                    clearInterval(livenewsHandler);
+                }
+            });
+        }
+
     });
 })(jQuery);

@@ -12,7 +12,22 @@ $lastdate = '';
 </div>
 
 
-<div class="livenews-list">
+<div id="livenews-list" class="livenews-list">
+<script id="livenews-list-js" type="text/x-tmpl">
+    <div id="livenews-id-{%=o.nid%}" class="media new">
+        <div class="media-body">
+            <time datetime=""></time>
+            <span class="icon">
+            <i class="icon-file-alt"></i> 
+            </span>
+
+            <h2 class="media-heading">{%#o.body%}</h2>
+            <div class="media-meta">
+            </div>
+        </div>
+    </div>
+</script>
+
     <?foreach($items as $item):?>
     <?$current_date = format_date($item->node_created, 'custom', 'Y年m月d日');?>
     <?if($lastdate && $lastdate !== $current_date):?>
@@ -20,7 +35,7 @@ $lastdate = '';
         <?=$current_date?>
     </div>
     <?endif?>
-    <div class="media">
+    <div id="livenews-id-<?=$item->nid?>" class="media">
         <div class="media-body media-format-<?=$item->field_field_format[0]['raw']['value']?> media-color-<?=$item->field_field_color[0]['raw']['value']?>">
             <time datetime="<?=format_date($item->node_created);?>"><?=format_date($item->node_created, 'custom', 'H:i');?></time>
             <span class="icon">
