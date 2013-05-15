@@ -1019,7 +1019,8 @@ a:hover {
     blockquote {
         margin: 1em 4em 1em 2em;
         padding: 0.6em 1em;
-        background: #f1f1f1;
+        border-left: 0.4em solid #f1f1f1;
+        //background: #f1f1f1;
     }
     blockquote blockquote {
         padding: 0 0 0 1em;
@@ -1198,34 +1199,67 @@ a:hover {
 
 .livenews-list {
     .media {
+        margin:0;
+        padding:10px 0 10px 80px;
         position:relative;
-        padding-left:50px;
         border-bottom:1px solid #CCC;
+
+        &:hover{
+            cursor:pointer;
+            background:#CDE9F8;
+        }
     }
 
     time {
         position:absolute;
-        left:5px;
+        left:25px;
         top:10px;
         color:#666;
+    }
+
+    .icon {
+        position:absolute;
+        left:0px;
+        top:10px;
+        color:#CCC;
     }
 
     .media-heading {
         color:#333;
         font-size:14px;
         font-weight:normal;
-
+        line-height:20px;
     }
-
 
     .media-meta {
+        display:none;
         font-size:12px;
     }
+
+    .datebar {
+        padding:5px 10px;
+        background:#EEEEEE;
+        color:#000;
+        font-weight:bold;
+    }
+
+    .media-color-red .media-heading{
+        color:@red;
+    }
+    .media-color-blue .media-heading{
+        color:@blue;
+    }
+    .media-format-bold .media-heading{
+        font-weight:bold;
+    }
+
+
 }
 
 .control-bar{
     padding:3px 20px;
     padding-top:5px;
+    margin-bottom:10px;
     height:35px;
     #gradient > .vertical(#F5F5F5, #EBEBEB);
     border-top:1px solid #FFF;

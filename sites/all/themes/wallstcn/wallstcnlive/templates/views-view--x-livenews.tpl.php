@@ -2,7 +2,9 @@
 global $wscn;
 if($wscn['x_livenews_rendered']) return;
 ?>
-<?$items = $view->result;?>
+<?$items = $view->result;
+$lastdate = '';
+?>
 
 <div class="control-bar">
     <label class="btn btn-small"> <i class="icon-refresh"></i> 自动刷新 <input id="enable-fresh" class="checkbox" type="checkbox" checked="chekced" /></label>
@@ -12,18 +14,47 @@ if($wscn['x_livenews_rendered']) return;
 
 <div class="livenews-list">
     <?foreach($items as $item):?>
+    <?$current_date = format_date($item->node_created, 'custom', 'Y年m月d日');?>
+    <?if($lastdate && $lastdate !== $current_date):?>
+    <div class="datebar">
+        <?=$current_date?>
+    </div>
+    <?endif?>
     <div class="media">
-        <div class="media-body">
-            <time datetime="2012-07-11T12:54:55+00:00">12:30</time>
+        <div class="media-body media-format-<?=$item->field_field_format[0]['raw']['value']?> media-color-<?=$item->field_field_color[0]['raw']['value']?>">
+            <time datetime="<?=format_date($item->node_created);?>"><?=format_date($item->node_created, 'custom', 'H:i');?></time>
+            <span class="icon">
+            <?$icon = $item->field_field_icon[0]['raw']['value'];?>
+            <?if($icon == 'chart'):?>
+            <i class="icon-bar-chart"></i>
+            <?elseif('calendar'):?>
+            <i class="icon-calendar"></i>
+            <?elseif('download'):?>
+            <i class="icon-download-alt"></i>
+            <?elseif('warning'):?>
+            <i class="icon-warning-sign"></i>
+            <?else:?>
+            <i class="icon-file-alt"></i> 
+            <?endif?>
+            </span>
+
             <h2 class="media-heading"><?=$item->field_body[0]['raw']['value']?></h2>
-            <p class="media-meta">
+            <div class="media-meta">
             <a href="/node/<?=$item->nid?>"><?=format_date($item->node_created);?></a>
             / <a href="/node/<?=$item->nid?>">评论</a>
-            </p>
-            <div class="media-content">
+            <?if($item->field_field_source):?>
+            / 消息来源:
+            <?if($item->field_field_sourcelink):?>
+            <a href="<?=$item->field_field_sourcelink[0]['raw']['value']?>"><?=$item->field_field_source[0]['raw']['value']?></a>
+            <?else:?>
+            <?=$item->field_field_source[0]['raw']['value']?>
+            <?endif?>
+
+            <?endif?>
             </div>
         </div>
     </div>
+    <?$lastdate = $current_date;?>
     <?endforeach?>
 </div>
 

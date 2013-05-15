@@ -7639,7 +7639,7 @@ a:hover {
 .typo blockquote {
   padding: 0.6em 1em;
   margin: 1em 4em 1em 2em;
-  background: #f1f1f1;
+  border-left: 0.4em solid #f1f1f1;
 }
 
 .typo blockquote blockquote {
@@ -7891,31 +7891,66 @@ a:hover {
 
 .livenews-list .media {
   position: relative;
-  padding-left: 50px;
+  padding: 10px 0 10px 80px;
+  margin: 0;
   border-bottom: 1px solid #CCC;
+}
+
+.livenews-list .media:hover {
+  cursor: pointer;
+  background: #CDE9F8;
 }
 
 .livenews-list time {
   position: absolute;
   top: 10px;
-  left: 5px;
+  left: 25px;
   color: #666;
+}
+
+.livenews-list .icon {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  color: #CCC;
 }
 
 .livenews-list .media-heading {
   font-size: 14px;
   font-weight: normal;
+  line-height: 20px;
   color: #333;
 }
 
 .livenews-list .media-meta {
+  display: none;
   font-size: 12px;
+}
+
+.livenews-list .datebar {
+  padding: 5px 10px;
+  font-weight: bold;
+  color: #000;
+  background: #EEEEEE;
+}
+
+.livenews-list .media-color-red .media-heading {
+  color: #d24747;
+}
+
+.livenews-list .media-color-blue .media-heading {
+  color: #418cd1;
+}
+
+.livenews-list .media-format-bold .media-heading {
+  font-weight: bold;
 }
 
 .control-bar {
   height: 35px;
   padding: 3px 20px;
   padding-top: 5px;
+  margin-bottom: 10px;
   clear: both;
   font-size: 13px;
   line-height: 28px;
