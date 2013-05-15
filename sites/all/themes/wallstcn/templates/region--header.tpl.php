@@ -1,4 +1,6 @@
+<div class="container">
 <div id="nav-area">
+    <div class="row"><div class="span12">
     <div id="navbar" class="navbar">
         <div class="navbar-inner">
             <div class="container">
@@ -25,9 +27,10 @@
                         </div>
                     </form>
                 </div><!-- /.nav-collapse -->
-            </div>
+            </div><!-- container end -->
         </div><!-- /navbar-inner -->
-    </div>
+    </div><!-- #navbar end -->
+</div></div>
 
     <?if(!$elements['menu_menu-live-menu']):?>
     <div class="container">
@@ -50,42 +53,45 @@
     </div><!--container end-->
 <?endif?>
 
+</div><!--navbar area end-->
+</div><!--outer container end-->
+
+
+<?if($elements['menu_menu-live-menu']):?>
+<script type="text/x-tmpl" data-url="/apiv1/node.json?parameters[type]=news">
+<div class="container">
+    <div id="live-topnews">
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span4">
+                    <ul>
+                        <li class="first">最新文章</li>
+                        {% for (var i=0; i < 2; i++) { %}
+                            <li><a href="http://<?=theme_get_setting('domain')?>/node/{%=o[i].nid%}">{%=o[i].title%}</a></li>
+                        {% } %}
+                    </ul>
+                </div>
+                <div class="span4">
+                    <ul>
+                        {% for (var i=2; i < 5; i++) { %}
+                            <li><a href="http://<?=theme_get_setting('domain')?>/node/{%=o[i].nid%}">{%=o[i].title%}</a></li>
+                        {% } %}
+                    </ul>
+                </div>
+                <div class="span4">
+                    <ul>
+                        {% for (var i=5; i < 7; i++) { %}
+                            <li><a href="http://<?=theme_get_setting('domain')?>/node/{%=o[i].nid%}">{%=o[i].title%}</a></li>
+                        {% } %}
+                    <li class="last"><a href="http://<?=theme_get_setting('domain')?>/titles">查看更多 »</a></li>
+                    </ul>
+                </div>
+            </div><!--rows end-->
+        </div><!--container end-->
+    </div>
 </div>
-
-
-    <?if($elements['menu_menu-live-menu']):?>
-    <script type="text/x-tmpl" data-url="/apiv1/node.json">
-        <div id="live-topnews">
-            <div class="container">
-                <div class="row-fluid">
-                    <div class="span4">
-                        <ul>
-                            <li class="first">最新文章</li>
-                            {% for (var i=0; i < 2; i++) { %}
-                                <li><a href="http://<?=theme_get_setting('domain')?>/node/{%=o[i].nid%}">{%=o[i].title%}</a></li>
-                            {% } %}
-                        </ul>
-                    </div>
-                    <div class="span4">
-                        <ul>
-                            {% for (var i=2; i < 5; i++) { %}
-                                <li><a href="http://<?=theme_get_setting('domain')?>/node/{%=o[i].nid%}">{%=o[i].title%}</a></li>
-                            {% } %}
-                        </ul>
-                    </div>
-                    <div class="span4">
-                        <ul>
-                            {% for (var i=5; i < 7; i++) { %}
-                                <li><a href="http://<?=theme_get_setting('domain')?>/node/{%=o[i].nid%}">{%=o[i].title%}</a></li>
-                            {% } %}
-                        <li class="last"><a href="http://<?=theme_get_setting('domain')?>/titles">查看更多 »</a></li>
-                        </ul>
-                    </div>
-                </div><!--rows end-->
-            </div><!--container end-->
-        </div>
-    </script>
-    <?endif?>
+</script>
+<?endif?>
 
 <script id="search-results-js" type="text/x-tmpl">
     {% if(o.cursor.currentPageIndex == 0) { %}

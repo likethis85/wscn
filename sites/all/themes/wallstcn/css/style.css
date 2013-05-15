@@ -7959,6 +7959,11 @@ a:hover {
 }
 
 #live-topnews li {
+  width: 100%;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
   list-style-type: none;
 }
 

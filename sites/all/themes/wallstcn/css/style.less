@@ -157,7 +157,6 @@ a:hover {
  * Navbar
  * ===========================
  */
-
 .nav-area-fixed {
     position:fixed;
     top:0;
@@ -175,9 +174,6 @@ a:hover {
             display:inline;
         }    
     }
-
-
-
 }
 
 #navbar {
@@ -1263,6 +1259,11 @@ a:hover {
     }
     li {
         list-style-type:none;
+        white-space: nowrap;
+        width: 100%;
+        overflow: hidden;           
+        -o-text-overflow: ellipsis;
+        text-overflow:    ellipsis;
     }
 
     a {

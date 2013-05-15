@@ -2,9 +2,9 @@
 
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix node-article" <?php print $attributes; ?>>
 
-<header class="article-header">
-<h1><a href="<?=url('node/' . $node->nid)?>"><?=$node->title?></a></h1>
-</header>
+<div class="page-header header-red">
+    <h3>实时新闻</h3>
+</div>
 
 <?php if ($display_submitted): ?>
 <div class="article-meta clearfix">
