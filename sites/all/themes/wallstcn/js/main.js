@@ -248,14 +248,30 @@
                     }
                 });
             }
-            $('#livenews-list').on('click', '.media', function(){
-                var item = $(this);
+
+            var loadComment = function(item){
+                var url = item.find('.livenews-loader').attr('href');
+                if(item.hasClass('comment-loaded')){
+                } else {
+                    item.find('.media-comment').load(url + ' #comment-ajax', function(){
+                        item.find('.livenews-comment-trigger').hide();
+                        item.find('form').attr('target', "_blank");
+                    });
+                    item.addClass('comment-loaded');
+                }
+                item.find('.media-comment').show();
+            }
+
+            $('#livenews-list').on('click', '.media-heading', function(){
+                var item = $(this).parent();
                 if(item.hasClass('expend')){
                     item.removeClass('expend');
                     item.find('.media-meta').hide();
+                    item.find('.media-comment').hide();
                 } else {
                     item.find('.media-meta').show();
                     item.addClass('expend');
+                    loadComment(item);
                 }
             });
 
@@ -281,6 +297,5 @@
                 }
             });
         }
-
     });
 })(jQuery);

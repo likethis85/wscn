@@ -1203,12 +1203,9 @@ a:hover {
         padding:10px 0 10px 80px;
         position:relative;
         border-bottom:1px solid #CCC;
-
-        &:hover{
-            cursor:pointer;
-            background:#CDE9F8;
-        }
     }
+
+
 
     time {
         position:absolute;
@@ -1226,9 +1223,14 @@ a:hover {
 
     .media-heading {
         color:#333;
-        font-size:14px;
+        font-size:13px;
         font-weight:normal;
         line-height:20px;
+
+        &:hover{
+            cursor:pointer;
+            background:#CDE9F8;
+        }
     }
 
     .media-meta {
@@ -1253,7 +1255,10 @@ a:hover {
         font-weight:bold;
     }
 
-
+    .media .media {
+        padding:5px 0;
+        border:0;
+    }
 }
 
 .control-bar{
@@ -1309,6 +1314,23 @@ a:hover {
     .last {
         text-align:right;
     }
+}
+
+.node-livenews {
+    .page-header {
+        margin-top:0;
+    }
+
+    .article-content {
+        margin-bottom:20px;
+        min-height:80px;
+        font-size:16px;
+    }
+
+    .article-meta {
+        margin-top:20px;
+    }
+
 }
 
 #comment-form {

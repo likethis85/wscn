@@ -7896,11 +7896,6 @@ a:hover {
   border-bottom: 1px solid #CCC;
 }
 
-.livenews-list .media:hover {
-  cursor: pointer;
-  background: #CDE9F8;
-}
-
 .livenews-list time {
   position: absolute;
   top: 10px;
@@ -7916,10 +7911,15 @@ a:hover {
 }
 
 .livenews-list .media-heading {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: normal;
   line-height: 20px;
   color: #333;
+}
+
+.livenews-list .media-heading:hover {
+  cursor: pointer;
+  background: #CDE9F8;
 }
 
 .livenews-list .media-meta {
@@ -7944,6 +7944,11 @@ a:hover {
 
 .livenews-list .media-format-bold .media-heading {
   font-weight: bold;
+}
+
+.livenews-list .media .media {
+  padding: 5px 0;
+  border: 0;
 }
 
 .control-bar {
@@ -8012,6 +8017,20 @@ a:hover {
 
 #live-topnews .last {
   text-align: right;
+}
+
+.node-livenews .page-header {
+  margin-top: 0;
+}
+
+.node-livenews .article-content {
+  min-height: 80px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.node-livenews .article-meta {
+  margin-top: 20px;
 }
 
 #comment-form .form-type-item {

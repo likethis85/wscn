@@ -1,17 +1,16 @@
 <?if($view_mode == 'full'):?>
-
-<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix node-article" <?php print $attributes; ?>>
+<?//p($node, 1)?>
+<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix node-article node-livenews" <?php print $attributes; ?>>
 
 <div class="page-header header-red">
-    <h3>实时新闻</h3>
+    <h3>实时新闻 <?=format_date($node->created);?></h3>
 </div>
 
-<?php if ($display_submitted): ?>
 <div class="article-meta clearfix">
     <span class="pull-left">
-        文 <a href="<?=url('user/'. $comment->uid);?>"><?=$node->name?></a> / <?=format_date($node->created);?>
-        <?if($node->taxonomy_vocabulary_2):?> / 
-        <?foreach($node->taxonomy_vocabulary_2['und'] as $tag):?>
+        文 <a href="<?=url('user/'. $comment->uid);?>"><?=$node->name?></a>
+        <?if($node->field_location):?> / 
+        <?foreach($node->field_location['und'] as $tag):?>
         <a href="<?=url('taxonomy/term/' . $tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a>
         <?endforeach?>
         <?endif?>
@@ -33,11 +32,21 @@
 
 
 </div>
-<?php endif; ?>
 
 <div class="article-content typo">
     <?=$node->body['und']['0']['value']?>
 </div>
+
+
+<div class="article-tags">
+    新闻标签：
+    <?if($node->field_category):?>
+    <?foreach($node->field_category['und'] as $tag):?>
+    <a href="<?=url('taxonomy/term/' . $tag['tid'])?>" class="tag"><?=$tag['taxonomy_term']->name?></a>
+    <?endforeach?>
+    <?endif?>
+</div>
+
 
 
 <div class="article-copyright">
@@ -46,72 +55,47 @@
     <p></p>
 </div>
 
-<div class="article-tags">
-    文章标签：
-    <?if($node->taxonomy_vocabulary_3):?>
-    <?foreach($node->taxonomy_vocabulary_3['und'] as $tag):?>
-    <a href="<?=url('taxonomy/term/' . $tag['tid'])?>" class="tag"><?=$tag['taxonomy_term']->name?></a>
-    <?endforeach?>
-    <?endif?>
-</div>
+
+
 
 <div class="page-header header-blue">
     <h2>评论</h2>
 </div>
+
+<div id="comment-ajax">
+
 <div class="comments-list">
     <?$comments = $content['comments']['comments'];
     unset($comments['#sorted']);
     unset($comments['pager']);
-    //var_dump($comments);
-    ?>
-    <?foreach($comments as $item):?>
-    <?$comment = $item['#comment'];?>
-    <div id="comment-<?=$comment->cid?>" class="media">
-        <div class="media-body">
-            <p class="media-heading">
-            <?if($comment->uid):?>
-            <a href="<?=url('user/'. $comment->uid);?>" class="user-name"><?=$comment->name?></a>
-            <?else:?>
-            匿名用户
-            <?endif?>
-            于 <?=format_date($comment->created);?>
+?>
+<?foreach($comments as $item):?>
+<?$comment = $item['#comment'];?>
+<div id="comment-<?=$comment->cid?>" class="media">
+    <div class="media-body">
+        <p class="media-heading">
+        <?if($comment->uid):?>
+        <a href="<?=url('user/'. $comment->uid);?>" class="user-name"><?=$comment->name?></a>
+        <?else:?>
+        匿名用户
+        <?endif?>
+        于 <?=format_date($comment->created);?>
+        </p>
+        <div class="media-content">
+            <div class="media-content-body typo"><?=$comment->subject?></div>
+            <p class="media-meta">
+            <a href="<?=url('node/'. $comment->nid);?>#comment-form">回复</a>
             </p>
-            <div class="media-content">
-                <div class="media-content-body typo"><?=$comment->subject?></div>
-                <p class="media-meta">
-                <a href="<?=url('node/'. $comment->nid);?>#comment-form">回复</a>
-                </p>
-            </div>
-
         </div>
+
     </div>
-    <?endforeach?>
+</div>
+<?endforeach?>
 </div>
 
 <?=render($content['comments']['comment_form'])?>
 
-
-<!-- Duoshuo Comment BEGIN -->
-<!--
-<div class="ds-thread"></div>
-<script type="text/javascript">
-    var duoshuoQuery = {short_name:"avnpc"};
-    (function() {
-            var ds = document.createElement('script');
-            ds.type = 'text/javascript';ds.async = true;
-            ds.src = 'http://static.duoshuo.com/embed.js';
-            ds.charset = 'UTF-8';
-            (document.getElementsByTagName('head')[0] 
-            || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-</script>
--->
-<!-- Duoshuo Comment END -->
-
-<?//=render($content['links']); ?>
-
-<?//=render($content['comments']); ?>
-
+</div><!--comment ajax end-->
 </article>
 
 
