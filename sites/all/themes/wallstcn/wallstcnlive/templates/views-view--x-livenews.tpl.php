@@ -14,15 +14,29 @@ $lastdate = '';
 
 <div id="livenews-list" class="livenews-list">
     <script id="livenews-list-js" type="text/x-tmpl">
-        <div id="livenews-id-{%=o.nid%}" class="media new">
-            <div class="media-body">
-                <time datetime=""></time>
+        <div id="livenews-id-{%=o.nid%}" class="media highlight">
+            <div class="media-body {%=o.colorClass%}">
+                <time datetime="">{%=o.time%}</time>
                 <span class="icon">
                     <i class="icon-file-alt"></i> 
                 </span>
 
                 <h2 class="media-heading">{%#o.body%}</h2>
                 <div class="media-meta">
+                    <a href="/node/{%=o.nid%}">{%=o.created%}</a>
+                    <span class="livenews-comment-trigger">
+                        / <a href="/node/{%=o.nid%}" class="livenews-loader"><i class="icon-spinner icon-spin"></i> 正在加载评论...</a>
+                    </span>
+                    {% if(o.field_field_source) { %}
+                    / 消息来源:
+                        {% if(o.field_field_sourcelink) { %}
+                            <a href="{%=o.field_field_sourcelink[0].raw.value%}">{%=o.field_field_source[0].raw.value%}</a>
+                        {% } else { %}
+                            {%=o.field_field_source[0].raw.value%}
+                        {% } %}
+                    {% } %}
+                </div>
+                <div class="media-comment">
                 </div>
             </div>
         </div>
@@ -55,7 +69,7 @@ $lastdate = '';
 
             <h2 class="media-heading"><?=$item->field_body[0]['raw']['value']?></h2>
             <div class="media-meta">
-                <a href="/node/<?=$item->nid?>"><?=format_date($item->node_created);?></a>
+                <a href="/node/<?=$item->nid?>" target="_blank"><?=format_date($item->node_created);?></a>
                 <span class="livenews-comment-trigger">
                     / <a href="/node/<?=$item->nid?>" class="livenews-loader"><i class="icon-spinner icon-spin"></i> 正在加载评论...</a>
                     <!--/ <a href="/node/<?=$item->nid?>">评论</a>-->

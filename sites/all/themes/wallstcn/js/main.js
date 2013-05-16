@@ -215,13 +215,34 @@
         if($('#livenews-list')[0]){
             var jplayer = $('<div id="jplayer" />').appendTo('body');
             var livenewsTmpl = $("#livenews-list-js");
-            var refreshTime = 5000;
+            var refreshTime = 1000;
+            var lowlightTime = 500;
             var livenewsHandler;
             var allowFresh = function(){
                 return $("#enable-fresh").val() ? true : false;
             }
             var allowSound = function(){
                 return $("#enable-sound").val() ? true : false;
+            }
+
+            var prepareItem = function(item){
+                var timstamp = parseInt(item.node_created);
+                var date = new Date(timstamp * 1000);
+                var year = date.getFullYear() + '年';
+                var month = date.getMonth() + 1 + '月';
+                var day = date.getDate() + '日';
+                var time = ('0' + date.getHours()).slice(-2)  + ':' + ('0' + date.getMinutes()).slice(-2);
+                item.time = time;
+                item.created = [year,month,day].join('') + ' ' + time;
+
+
+                var colorMapping = {
+                    '黑色' : '',
+                    '红色' : 'media-color-red',
+                    '蓝色' : 'media-color-blue'
+                }
+                item.colorClass = colorMapping[item.color];
+                return item;
             }
             var appendLivenews = function(items){
                 var foundNew = false;
@@ -230,8 +251,22 @@
                     if(item[0]){
                         continue;
                     }
-                    item = items[i];
+                    item = prepareItem(items[i]);
                     livenewsTmpl.after(tmpl(livenewsTmpl.html(), item));
+                    
+                    var lowlight = function(nid){
+                        setTimeout(function(){
+                            $("#livenews-id-" + nid).animate({
+                                "background-color": "#FFF"
+                            }, 1500, 'linear', function() {
+                                $(this).removeClass('highlight');
+                            });
+                        }, lowlightTime);
+                    }
+
+                    lowlight(items[i].nid);
+                    
+
                     foundNew = true;
                 }
                 if(foundNew && allowSound()) {
@@ -243,7 +278,14 @@
                     url : '/apiv1/livenews.json',
                     dataType : 'json',
                     ifModified:true,
+                    error: function(xhr, err){
+                        //console.log(err);
+                        //console.log(xhr);
+                        //console.log("readyState: "+xhr.readyState+"\nstatus: "+xhr.status);
+                        //console.log("responseText: "+xhr.responseText);
+                    },
                     success : function(response, textStatus, jqXHR){
+                        //console.log(2);
                         appendLivenews(response);
                     }
                 });
@@ -263,7 +305,7 @@
             }
 
             $('#livenews-list').on('click', '.media-heading', function(){
-                var item = $(this).parent();
+                var item = $(this).parent().parent();
                 if(item.hasClass('expend')){
                     item.removeClass('expend');
                     item.find('.media-meta').hide();

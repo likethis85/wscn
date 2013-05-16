@@ -7896,6 +7896,16 @@ a:hover {
   border-bottom: 1px solid #CCC;
 }
 
+.livenews-list .media:hover {
+  cursor: pointer;
+  background: #CDE9F8;
+}
+
+.livenews-list .media.expend {
+  cursor: normal;
+  background: #FFF;
+}
+
 .livenews-list time {
   position: absolute;
   top: 10px;
@@ -7911,15 +7921,10 @@ a:hover {
 }
 
 .livenews-list .media-heading {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: normal;
-  line-height: 20px;
+  line-height: 22px;
   color: #333;
-}
-
-.livenews-list .media-heading:hover {
-  cursor: pointer;
-  background: #CDE9F8;
 }
 
 .livenews-list .media-meta {
@@ -7949,6 +7954,10 @@ a:hover {
 .livenews-list .media .media {
   padding: 5px 0;
   border: 0;
+}
+
+.livenews-list .media.highlight {
+  background: #FFFF70;
 }
 
 .control-bar {
