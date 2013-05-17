@@ -16,7 +16,7 @@
                     <?if($elements['menu_menu-live-menu']):?>
                     <?=render($elements['menu_menu-live-menu']);?>
                     <ul class="nav pull-right">
-                        <li><a href="http://<?=theme_get_setting('domain')?>">华尔街见闻</a></li>
+                        <li><a href="http://<?=variable_get('site_domain')?>">华尔街见闻</a></li>
                     </ul>
                     <?endif?>
 
@@ -38,15 +38,15 @@
             <div class="span12">
                 <div id="realtime-news">
                     <p class="control-buttons pull-left">
-                    <a href="http://live.<?=theme_get_setting('domain')?>" class="btn prev"><span class="icon-angle-up"></span></a>
-                    <a href="http://live.<?=theme_get_setting('domain')?>" class="btn next"><span class="icon-angle-down"></span></a>
+                    <a href="http://live.<?=variable_get('site_domain')?>" class="btn prev"><span class="icon-angle-up"></span></a>
+                    <a href="http://live.<?=variable_get('site_domain')?>" class="btn next"><span class="icon-angle-down"></span></a>
                     </p>
                     <p class="news"> 实时新闻：
                     <ul>
                         <li>正在载入...</li>
                     </ul>
                     </p>
-                    <a href="http://live.<?=theme_get_setting('domain')?>" class="more" target="_blank">即时刷新»</a>
+                    <a href="http://live.<?=variable_get('site_domain')?>" class="more" target="_blank">即时刷新»</a>
                 </div>
             </div><!--span12 end-->
         </div><!--rows end-->
@@ -68,23 +68,23 @@
                     <ul>
                         <li class="first">最新文章</li>
                         {% for (var i=0; i < 2; i++) { %}
-                            <li><a href="http://<?=theme_get_setting('domain')?>/node/{%=o[i].nid%}">{%=o[i].title%}</a></li>
+                            <li><a href="http://<?=variable_get('site_domain')?>/node/{%=o[i].nid%}">{%=o[i].title%}</a></li>
                         {% } %}
                     </ul>
                 </div>
                 <div class="span4">
                     <ul>
                         {% for (var i=2; i < 5; i++) { %}
-                            <li><a href="http://<?=theme_get_setting('domain')?>/node/{%=o[i].nid%}">{%=o[i].title%}</a></li>
+                            <li><a href="http://<?=variable_get('site_domain')?>/node/{%=o[i].nid%}">{%=o[i].title%}</a></li>
                         {% } %}
                     </ul>
                 </div>
                 <div class="span4">
                     <ul>
                         {% for (var i=5; i < 7; i++) { %}
-                            <li><a href="http://<?=theme_get_setting('domain')?>/node/{%=o[i].nid%}">{%=o[i].title%}</a></li>
+                            <li><a href="http://<?=variable_get('site_domain')?>/node/{%=o[i].nid%}">{%=o[i].title%}</a></li>
                         {% } %}
-                    <li class="last"><a href="http://<?=theme_get_setting('domain')?>/titles">查看更多 »</a></li>
+                    <li class="last"><a href="http://<?=variable_get('site_domain')?>/titles">查看更多 »</a></li>
                     </ul>
                 </div>
             </div><!--rows end-->
