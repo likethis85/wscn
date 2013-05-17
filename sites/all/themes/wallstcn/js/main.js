@@ -1,6 +1,42 @@
 (function ($) {
     $(document).ready(function(){
 
+	var parseUri = function(url){
+		function parseUri (str) {
+			var	o   = parseUri.options,
+				m   = o.parser[o.strictMode ? "strict" : "loose"].exec(str),
+				uri = {},
+				i   = 14;
+
+			while (i) {
+				i--;
+				uri[o.key[i]] = m[i] || "";
+			}
+
+			uri[o.q.name] = {};
+			uri[o.key[12]].replace(o.q.parser, function ($0, $1, $2) {
+				if ($1) uri[o.q.name][$1] = $2;
+			});
+
+			return uri;
+		}
+
+		parseUri.options = {
+			strictMode: false,
+			key: ["source","protocol","authority","userInfo","user","password","host","port","relative","path","directory","file","query","anchor"],
+			q:   {
+				name:   "queryKey",
+				parser: /(?:^|&)([^&=]*)=?([^&]*)/g
+			},
+			parser: {
+				strict: /^(?:([^:\/?#]+):)?(?:\/\/((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?))?((((?:[^?#\/]*\/)*)([^?#]*))(?:\?([^#]*))?(?:#(.*))?)/,
+				loose:  /^(?:(?![^:@]+:[^:@\/]*@)([^:\/?#.]+):)?(?:\/\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#\/]*\.[^?#\/.]+(?:[?#]|$)))*\/?)?([^?#\/]*))(?:\?([^#]*))?(?:#(.*))?)/
+			}
+		};
+
+		return url ? parseUri(url) : parseUri(window.location.href);
+	};
+
         //实时新闻
         var realtimeNews = [];
         var realtimeNewsIndex = 0;
@@ -274,8 +310,23 @@
                 }
             }
             var loadLivenews = function(){
+                var url = '/apiv1/livenews.json';
+                var currentPath = parseUri();
+                switch(currentPath.path) {
+                    case '/live-europe':
+                        url = '/apiv1/livenews-europe.json';
+                    break;
+                    case '/live-china':
+                        url = '/apiv1/livenews-china.json';
+                    break;
+                    case '/live-america':
+                        url = '/apiv1/livenews-america.json';
+                    break;
+                    default:
+                    break;
+                }
                 $.ajax({
-                    url : '/apiv1/livenews.json',
+                    url : url,
                     dataType : 'json',
                     ifModified:true,
                     error: function(xhr, err){
