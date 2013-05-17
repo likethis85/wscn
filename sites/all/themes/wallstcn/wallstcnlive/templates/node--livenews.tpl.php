@@ -35,6 +35,10 @@
 
 <div class="article-content typo">
     <?=$node->body['und']['0']['value']?>
+
+    <?if($node->upload):?>
+    <img alt="" class="" src="<?=file_create_url($node->upload['und'][0]['uri']);?>">
+    <?endif?>
 </div>
 
 
@@ -46,7 +50,6 @@
     <?endforeach?>
     <?endif?>
 </div>
-
 
 
 <div class="article-copyright">

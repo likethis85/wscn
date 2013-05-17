@@ -58,9 +58,10 @@
 
 
 <?if($elements['menu_menu-live-menu']):?>
-<script type="text/x-tmpl" data-url="/apiv1/node.json?parameters[type]=news">
 <div class="container">
     <div id="live-topnews">
+<script type="text/x-tmpl" data-url="/apiv1/node.json?parameters[type]=news">
+
         <div class="container">
             <div class="row-fluid">
                 <div class="span4">
@@ -88,9 +89,9 @@
                 </div>
             </div><!--rows end-->
         </div><!--container end-->
+    </script>
     </div>
 </div>
-</script>
 <?endif?>
 
 <script id="search-results-js" type="text/x-tmpl">

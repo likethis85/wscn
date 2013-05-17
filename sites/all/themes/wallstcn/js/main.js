@@ -215,8 +215,8 @@
         if($('#livenews-list')[0]){
             var jplayer = $('<div id="jplayer" />').appendTo('body');
             var livenewsTmpl = $("#livenews-list-js");
-            var refreshTime = 1000;
-            var lowlightTime = 500;
+            var refreshTime = 5000;
+            var lowlightTime = 10000;
             var livenewsHandler;
             var allowFresh = function(){
                 return $("#enable-fresh").val() ? true : false;
@@ -258,7 +258,7 @@
                         setTimeout(function(){
                             $("#livenews-id-" + nid).animate({
                                 "background-color": "#FFF"
-                            }, 1500, 'linear', function() {
+                            }, 'slow', function() {
                                 $(this).removeClass('highlight');
                             });
                         }, lowlightTime);

@@ -92,6 +92,6 @@ $lastdate = '';
 </div>
 
 <div class="view-more">
-    <a href="/live?page=2">查看更多 »</a>
+    <a href="/live/?page=1">查看更多 »</a>
 </div>
 <?$wscn['x_livenews_rendered'] = true;?>
