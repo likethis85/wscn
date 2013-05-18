@@ -177,9 +177,12 @@ a:hover {
 }
 
 #navbar {
-
     background:#333;
     margin-bottom:0;
+
+    .brand {
+        margin-left:10px;
+    }
 
     .navbar-inner {
         border:0;
@@ -897,6 +900,30 @@ a:hover {
     margin-bottom:30px;
 }
 
+.article-related {
+    margin:20px 0;
+    border-top:1px solid #EEE;
+
+    h2 {
+        margin:0;
+        font-size:14px;
+    }
+
+    h3 {
+        margin:0;
+        font-size:13px;
+        line-height:25px;
+    }
+
+    a {
+        color:#666;
+    }
+
+    a:hover {
+        color:@brown;
+    }
+}
+
 .article-tags .tag {
 	@tagBgStartColor :  #F5F5F5;
 	@tagBgEndColor :  darken(@tagBgStartColor, 10%);
@@ -1212,7 +1239,7 @@ a:hover {
 
     .media.expend{
         background:#FFF;
-        cursor:normal;
+        cursor:default;
     }
 
 
@@ -1352,4 +1379,45 @@ a:hover {
     .form-submit {
         .btn;
     }
+}
+
+
+/* ===========================
+ * Special
+ * ===========================
+ */
+
+.googleplus-author {
+    a {
+        color:#999;
+        cursor:default;
+    }
+}
+
+
+/* ===========================
+ * responsive
+ * ===========================
+ */
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+    #wrapper {
+        padding:0 5px;
+    }
+}
+
+@media (max-width: 767px) {
+    #wrapper {
+        padding:0;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+    #wrapper {
+        padding:0;
+    }
+
 }

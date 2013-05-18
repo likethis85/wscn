@@ -6716,6 +6716,10 @@ a:hover {
   background: #333;
 }
 
+#navbar .brand {
+  margin-left: 10px;
+}
+
 #navbar .navbar-inner {
   padding-right: 10px;
   padding-left: 0;
@@ -7486,6 +7490,30 @@ a:hover {
   border-bottom: 1px solid #CCC;
 }
 
+.article-related {
+  margin: 20px 0;
+  border-top: 1px solid #EEE;
+}
+
+.article-related h2 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.article-related h3 {
+  margin: 0;
+  font-size: 13px;
+  line-height: 25px;
+}
+
+.article-related a {
+  color: #666;
+}
+
+.article-related a:hover {
+  color: #84736c;
+}
+
 .article-tags .tag {
   position: relative;
   z-index: 1;
@@ -7902,7 +7930,7 @@ a:hover {
 }
 
 .livenews-list .media.expend {
-  cursor: normal;
+  cursor: default;
   background: #FFF;
 }
 
@@ -8144,4 +8172,37 @@ a:hover {
 #comment-form .form-submit .badge {
   position: relative;
   top: -1px;
+}
+
+/* ===========================
+ * Special
+ * ===========================
+ */
+
+.googleplus-author a {
+  color: #999;
+  cursor: default;
+}
+
+/* ===========================
+ * responsive
+ * ===========================
+ */
+
+@media (min-width: 768px) and (max-width: 979px) {
+  #wrapper {
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 767px) {
+  #wrapper {
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  #wrapper {
+    padding: 0;
+  }
 }

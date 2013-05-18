@@ -9,11 +9,11 @@
 <?php if ($display_submitted): ?>
 <div class="article-meta clearfix">
     <span class="pull-left">
-        文 <a href="<?=url('user/'. $comment->uid);?>"><?=$node->name?></a> / <?=format_date($node->created);?>
-        <?if($node->taxonomy_vocabulary_2):?> / 
+        <?if($node->taxonomy_vocabulary_2):?>
         <?foreach($node->taxonomy_vocabulary_2['und'] as $tag):?>
         <a href="<?=url('taxonomy/term/' . $tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a>
-        <?endforeach?>
+         / <?endforeach?> 
+        文 <a href="<?=url('user/'. $comment->uid);?>"><?=$node->name?></a> <span class="googleplus-author">@<a href="https://plus.google.com/117171791148320400898?rel=author">华尔街见闻</a></span> / <?=format_date($node->created);?>
         <?endif?>
         /  分享到：
     </span>
@@ -31,13 +31,23 @@
     <script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js?uid=1773865" charset="utf-8"></script>
     <!-- JiaThis Button END -->
 
-
 </div>
 <?php endif; ?>
 
 <div class="article-content typo">
     <?=$node->body['und']['0']['value']?>
 </div>
+
+<?if($node->field_related):?>
+<div class="article-related">
+    <h2>相关文章：</h2>
+    <ul>
+        <?foreach($node->field_related['und'] as $related):?>
+        <li><h3><a href="<?=url('node/'. $related['entity']->nid);?>"><?=$related['entity']->title?></a></h3></li>
+        <?endforeach?>
+    </ul>
+</div>
+<?endif?>
 
 
 <div class="article-copyright">
@@ -89,28 +99,6 @@
 </div>
 
 <?=render($content['comments']['comment_form'])?>
-
-
-<!-- Duoshuo Comment BEGIN -->
-<!--
-<div class="ds-thread"></div>
-<script type="text/javascript">
-    var duoshuoQuery = {short_name:"avnpc"};
-    (function() {
-            var ds = document.createElement('script');
-            ds.type = 'text/javascript';ds.async = true;
-            ds.src = 'http://static.duoshuo.com/embed.js';
-            ds.charset = 'UTF-8';
-            (document.getElementsByTagName('head')[0] 
-            || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-</script>
--->
-<!-- Duoshuo Comment END -->
-
-<?//=render($content['links']); ?>
-
-<?//=render($content['comments']); ?>
 
 </article>
 
