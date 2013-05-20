@@ -23,14 +23,17 @@ unset($items[0]);
                     </div>                    
                     <h2 class="entry-title"><a href="<?=url('node/'. $item->nid);?>"><?=$item->node_title?></a></h2>
 
+                    <?if($item->field_field_related):?>
                     <ul class="top-new-extra">
-                        <li><a href="http://wallstreetcn.com/node/24403">华尔街预计QE持续至2014 今年底先将每月购债降至500亿美元</a></li>
-                        <li><a href="http://wallstreetcn.com/node/24403">华尔街预计QE持续至2014 今年底先将每月购债降至500亿美元</a></li>
-                        <li><a href="http://wallstreetcn.com/node/24403">华尔街预计QE持续至2014 今年底先将每月购债降至500亿美元</a></li>
-                        <li><a href="http://wallstreetcn.com/node/24403">华尔街预计QE持续至2014 今年底先将每月购债降至500亿美元</a></li>
-                        <li><a href="http://wallstreetcn.com/node/24403">华尔街预计QE持续至2014 今年底先将每月购债降至500亿美元</a></li>
-                        <li><a href="http://wallstreetcn.com/node/24403">华尔街预计QE持续至2014 今年底先将每月购债降至500亿美元</a></li>
+                        <?foreach($item->field_field_related as $related_item):?>
+                        <li><a href="<?=url('node/'. $related_item['raw']['entity']->nid);?>"><?=$related_item['raw']['entity']->title?></a></li>
+                        <?endforeach?>
                     </ul>
+                    <?elseif($item->field_body):?>
+                    <div class="top-new-extra">
+                        <?=$item->field_body[0]['raw']['summary']?>
+                    </div>
+                    <?endif?>
                 </div>
             </div>
         </div><!--span6 end -->

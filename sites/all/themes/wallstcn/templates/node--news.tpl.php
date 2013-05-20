@@ -49,6 +49,20 @@
 </div>
 <?endif?>
 
+<?if(0):?>
+<script type="text/javascript" id="wumiiRelatedItems"></script>
+<script type="text/javascript">
+    var wumiiPermaLink = "123"; //请用代码生成文章永久的链接
+    var wumiiTitle = "123"; //请用代码生成文章标题
+    var wumiiTags = "美国"; //请用代码生成文章标签，以英文逗号分隔，如："标签1,标签2"
+    var wumiiCategories = []; //请用代码生成文章分类，分类名放在 JSONArray 中，如: ["分类1", "分类2"]
+    var wumiiSitePrefix = "http://wallstreetcn.com/";
+    var wumiiParams = "&num=5&mode=1&pf=JAVASCRIPT";
+</script>
+<script type="text/javascript" src="http://widget.wumii.cn/ext/relatedItemsWidget"></script>
+<?endif?>
+
+
 
 <div class="article-copyright">
     <p>本文内容仅供读者参考，并非投资建议。 转载请注明来源并加上本站链接，华尔街见闻将保留所有法律权益。</p>
@@ -56,14 +70,14 @@
     <p></p>
 </div>
 
+<?if($node->taxonomy_vocabulary_3):?>
 <div class="article-tags">
     文章标签：
-    <?if($node->taxonomy_vocabulary_3):?>
     <?foreach($node->taxonomy_vocabulary_3['und'] as $tag):?>
     <a href="<?=url('taxonomy/term/' . $tag['tid'])?>" class="tag"><?=$tag['taxonomy_term']->name?></a>
     <?endforeach?>
-    <?endif?>
 </div>
+<?endif?>
 
 <div class="page-header header-blue">
     <h2>评论</h2>

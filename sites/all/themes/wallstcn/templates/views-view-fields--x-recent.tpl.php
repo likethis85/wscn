@@ -4,7 +4,7 @@ if($wscn['x_recent_rendered']) return;
 ?>
 <?$items = $view->result;?>
 <div class="page-header header-red">
-    <a href="/news/?page=1" class="more pull-right">更多</a>
+    <a href="/news?page=1" class="more pull-right">更多</a>
     <h2>最新文章</h2>
 </div>
 <div class="news-list">
@@ -38,6 +38,6 @@ if($wscn['x_recent_rendered']) return;
 </div>
 
 <div class="view-more">
-    <a href="/news/?page=1">查看更多 »</a>
+    <a href="/news?page=1">查看更多 »</a>
 </div>
 <?$wscn['x_recent_rendered'] = true;?>
