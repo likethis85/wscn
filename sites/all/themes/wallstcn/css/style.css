@@ -6700,6 +6700,7 @@ a:hover {
 }
 
 .nav-area-fixed #realtime-news {
+  padding-right: 70px;
   margin-bottom: 0;
 }
 
@@ -6718,6 +6719,10 @@ a:hover {
 
 #navbar .brand {
   margin-left: 10px;
+}
+
+#navbar .mainsite-brand {
+  display: none;
 }
 
 #navbar .navbar-inner {
@@ -6757,6 +6762,7 @@ a:hover {
 #realtime-news {
   position: relative;
   height: 38px;
+  padding-left: 65px;
   margin-bottom: 30px;
   overflow: hidden;
   clear: both;
@@ -6766,7 +6772,8 @@ a:hover {
 }
 
 #realtime-news .news {
-  float: left;
+  position: absolute;
+  left: 5px;
 }
 
 #realtime-news ul {
@@ -6774,14 +6781,16 @@ a:hover {
 }
 
 #realtime-news li {
-  margin-right: 30px;
+  height: 38px;
+  overflow: hidden;
   line-height: 38px;
   color: #888;
   list-style-type: none;
 }
 
 #realtime-news a,
-#realtime-news p {
+#realtime-news p,
+#realtime-news .time {
   font-size: 12px;
   line-height: 38px;
   color: #888;
@@ -7098,7 +7107,7 @@ a:hover {
 
 .news-list h3 {
   font-size: 20px;
-  line-height: 20px;
+  line-height: 30px;
 }
 
 .news-list .media-meta {
@@ -7118,6 +7127,7 @@ a:hover {
 
 .news-list .media-content {
   max-height: 100px;
+  overflow: hidden;
 }
 
 .news-list.vlist .media {
@@ -7145,7 +7155,7 @@ a:hover {
 }
 
 .news-list.vlist .media-body {
-  height: 190px;
+  height: 195px;
   overflow: hidden;
   font-size: 13px;
   color: #666;
@@ -8193,16 +8203,48 @@ a:hover {
   #wrapper {
     padding: 0 5px;
   }
+  #navbar .mainsite-brand {
+    display: block;
+  }
 }
 
 @media (max-width: 767px) {
+  body {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
   #wrapper {
-    padding: 0;
+    padding: 0 10px;
+  }
+  .nav-area-fixed {
+    position: static;
+  }
+  .row-slider {
+    height: auto;
+  }
+  .news-slider-btn {
+    display: none;
+  }
+  #navbar .mainsite-brand {
+    display: block;
   }
 }
 
 @media (max-width: 480px) {
+  body {
+    padding-right: 0;
+    padding-left: 0;
+  }
   #wrapper {
-    padding: 0;
+    padding: 0 5px;
+  }
+  .nav-area-fixed {
+    position: static;
+  }
+  .row-slider {
+    height: auto;
+  }
+  .news-slider-btn {
+    display: none;
   }
 }

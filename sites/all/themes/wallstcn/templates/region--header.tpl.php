@@ -1,6 +1,6 @@
 <div class="container">
 <div id="nav-area">
-    <div class="row"><div class="span12">
+    <div class="row-fluid"><div class="span12">
     <div id="navbar" class="navbar">
         <div class="navbar-inner">
             <div class="container">
@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-                    <a href="http://<?=variable_get('site_domain')?>" class="brand"><i class="icon-home"></i> 华尔街见闻</a>
+                <a href="http://<?=variable_get('site_domain')?>" class="brand <?=$elements['system_main-menu'] ? 'mainsite-brand' : ''?>"><i class="icon-home"></i> 华尔街见闻</a>
                 <div class="nav-collapse collapse navbar-responsive-collapse">
                     <?if($elements['system_main-menu']):?>
                     <?=render($elements['system_main-menu']);?>
@@ -36,8 +36,8 @@
             <div class="span12">
                 <div id="realtime-news">
                     <p class="control-buttons pull-left">
-                    <a href="http://live.<?=variable_get('site_domain')?>" class="btn prev"><span class="icon-angle-up"></span></a>
-                    <a href="http://live.<?=variable_get('site_domain')?>" class="btn next"><span class="icon-angle-down"></span></a>
+                    <a id="livenews-navbar-prev" href="http://live.<?=variable_get('site_domain')?>" class="btn prev"><span class="icon-angle-up"></span></a>
+                    <a id="livenews-navbar-next" href="http://live.<?=variable_get('site_domain')?>" class="btn next"><span class="icon-angle-down"></span></a>
                     </p>
                     <p class="news"> 实时新闻：
                     <ul>

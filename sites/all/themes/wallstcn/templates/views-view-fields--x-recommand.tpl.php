@@ -21,7 +21,7 @@ $rows = ceil($max / 3);
             <div class="media">
                 <?if($item->file_managed_field_data_upload_uri || $item->field_field_image_1):?>
                 <a class="media-image" href="<?=url('node/'. $item->nid);?>">
-                    <img alt="" width="100%" src="<?=wscn_image_url($item);?>">
+                    <img alt="" src="<?=wscn_image_url($item);?>">
                 </a>
                 <?endif?>
                 <div class="media-body">

@@ -164,6 +164,7 @@ a:hover {
     margin:0 auto;
     .box-shadow(0px 2px 5px -2px rgb(0,0,0, 0.3));
     #realtime-news {
+        padding-right:70px;
         margin-bottom:0;
 
         .control-buttons {
@@ -182,6 +183,10 @@ a:hover {
 
     .brand {
         margin-left:10px;
+    }
+
+    .mainsite-brand {
+        display:none;
     }
 
     .navbar-inner {
@@ -220,6 +225,7 @@ a:hover {
 #realtime-news {
     margin-bottom:30px;
     height:38px;
+    padding-left:65px;
     border-bottom:3px solid #E9E9E9;
     clear:both;
     overflow:hidden;
@@ -228,19 +234,20 @@ a:hover {
     vertical-align:top;
 
     .news {
-        float:left;
+        position:absolute;
+        left:5px;
     }
     ul {
         margin-left:0;
     }
     li {
         color:#888;
-        margin-right:30px;
         line-height:38px;
-        //list-style-type:circle;
         list-style-type:none;
+        height:38px;
+        overflow:hidden;
     }
-    a, p {
+    a, p, .time {
         color:#888;
         font-size:12px;
         line-height:38px;
@@ -519,7 +526,7 @@ a:hover {
     }
 
     h3 {
-        line-height:20px;
+        line-height:30px;
         font-size:20px;
     }
 
@@ -540,6 +547,7 @@ a:hover {
 
     .media-content {
         max-height:100px;
+        overflow:hidden;
     }
 }
 
@@ -568,7 +576,7 @@ a:hover {
     }
 
     .media-body {
-        height:190px;
+        height:195px;
         overflow:hidden;
         font-size:13px;
         color:#666;
@@ -1405,19 +1413,54 @@ a:hover {
     #wrapper {
         padding:0 5px;
     }
+
+    #navbar .mainsite-brand {
+        display:block;
+    }
 }
 
 @media (max-width: 767px) {
+    body {
+        padding-left:5px;
+        padding-right:5px;
+    }
+    
     #wrapper {
-        padding:0;
+        padding:0 10px;
     }
 
+    .nav-area-fixed {
+        position:static;
+    }
+
+    .row-slider {
+        height:auto;
+    }
+    .news-slider-btn {
+        display:none;
+    }
+
+    #navbar .mainsite-brand {
+        display:block;
+    }
 }
 
 
 @media (max-width: 480px) {
-    #wrapper {
-        padding:0;
+    body {
+        padding-left:0;
+        padding-right:0;
     }
-
+    #wrapper {
+        padding:0 5px;
+    }
+    .nav-area-fixed {
+        position:static;
+    }
+    .row-slider {
+        height:auto;
+    }
+    .news-slider-btn {
+        display:none;
+    }
 }

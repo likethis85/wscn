@@ -49,11 +49,13 @@
                 realtimeNewsIndex = realtimeNewsIndex >= realtimeNews.length ? 0 : realtimeNewsIndex;
             }
             $("#realtime-news ul").animate({
-                "margin-top": - (realtimeNewsIndex * 39) + "px"
-            }, 500, 'linear', function() {
+                "margin-top": - (realtimeNewsIndex * 38) + "px"
+            }, 1000, 'linear', function() {
             });
         }
         var initRealtimeNews = function(){
+            /*
+            //by Google ajax
             $.ajax({
                 url : 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=13&output=json-in-script&q=http://wallstreetcn.com/rss.xml',
                 dataType : 'jsonp',
@@ -69,6 +71,23 @@
                     $("#realtime-news ul").html(realtimeNews.join(""));
                 }
             });        
+           */
+           var url = '/apiv1/node.json?parameters[type]=livenews';
+           $.ajax({
+                url : url,
+                dataType : 'json',
+                success : function(entries){
+                    var domain = $("#livenews-navbar-prev").attr('href');
+                    for(var i in entries){
+                        var date = new Date(parseInt(entries[i].created) * 1000);
+                        var time = ('0' + date.getHours()).slice(-2)  + ':' + ('0' + date.getMinutes()).slice(-2);
+                        realtimeNews.push(
+                            '<li><span class="time">' + time + '</span> <a href="' + domain + '/node/' + entries[i].nid + '" target="_blank">' + entries[i].title + '</a></li>'
+                        );
+                    }
+                    $("#realtime-news ul").html(realtimeNews.join(""));
+                }
+            });
         }
 
         $("#realtime-news").on('click', '.prev', function(){
