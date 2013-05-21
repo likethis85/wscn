@@ -28,6 +28,14 @@
         <div class="row-fluid">
 
             <div class="span8">  
+
+                <?$local_menu = menu_local_tasks();
+                ?>
+                <?if($local_menu['tabs']['count'] > 1):?>
+                <ul class="nav nav-pills">
+                <?=render($local_menu);?>
+                </ul>
+                <?endif?>
                 <?=render($page['content']); ?>
             </div>
 
