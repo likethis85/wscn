@@ -61,14 +61,4 @@
 </div>
 </footer>
 
-<div id="navigation">
-    <div class="container">
-        <div class="row-fluid">
-            <div class="span4">
-            </div>
-            <div class="span8">
-                <?php print render($page['navigation']); ?>
-            </div>
-        </div>
-    </div>
-</div>
+<?=render($page['navigation']); ?>
