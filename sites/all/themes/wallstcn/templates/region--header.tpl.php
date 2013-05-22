@@ -20,7 +20,7 @@
 
                     <form id="search-form" class="navbar-search pull-right" action="/search/node/">
                         <div class="input-append">
-                            <input name="q" type="text" class="input-medium" placeholder="搜索华尔街见闻">
+                            <input name="q" type="text" class="input-medium" placeholder="搜索华尔街见闻"  x-webkit-speech x-webkit-grammar="builtin:translate" lang="zh-CN" />
                             <button class="btn" type="submit"><span class="icon-search"></span></button>
                         </div>
                     </form>
