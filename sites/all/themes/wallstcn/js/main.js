@@ -186,6 +186,11 @@
         var searchForm = $("#search-form");
         var searchPage = 0;
         var q = '';
+        //语音搜索
+        searchForm.find('input[name=q]').on("webkitspeechchange", function() {
+            searchForm.submit();
+        });
+        
         
         var showSearchResults = function(results, reset){
             searchHideLoading();
