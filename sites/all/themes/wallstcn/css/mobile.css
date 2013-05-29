@@ -1,0 +1,486 @@
+.page-header {
+  height: 36px;
+  padding: 0;
+  margin: 20px 0;
+  line-height: 36px;
+  border: 0;
+}
+
+.page-header h1,
+.page-header h2,
+.page-header h3,
+.page-header h4,
+.page-header h5,
+.page-header h6 {
+  height: 36px;
+  font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-size: 30px;
+}
+
+.page-header h1 a,
+.page-header h2 a,
+.page-header h3 a,
+.page-header h4 a,
+.page-header h5 a,
+.page-header h6 a {
+  font-weight: normal !important;
+  color: #333 !important;
+  text-decoration: none;
+}
+
+.article-meta {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.article-copyright {
+  padding: 15px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  background: #E9E9E9;
+}
+
+.article-tags {
+  margin-bottom: 20px;
+}
+
+.copyright {
+  padding: 20px 0;
+}
+
+.typo {
+  font: 500 14px/1.8 'Hiragino Sans GB', Microsoft YaHei, sans-serif;
+  color: #474747;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+.typo audio,
+.typo canvas,
+.typo video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+.typo button,
+.typo input,
+.typo select,
+.typo textarea {
+  font: 500 14px/1.8 'Hiragino Sans GB', Microsoft YaHei, sans-serif;
+}
+
+.typo table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.typo th {
+  text-align: inherit;
+}
+
+.typo fieldset,
+.typo img {
+  border: 0;
+}
+
+.typo img {
+  -ms-interpolation-mode: bicubic;
+}
+
+.typo iframe {
+  display: block;
+}
+
+.typo blockquote {
+  padding: 0.6em 1em;
+  margin: 1em 4em 1em 2em;
+  border-left: 0.4em solid #f1f1f1;
+}
+
+.typo blockquote blockquote {
+  padding: 0 0 0 1em;
+  margin-left: 2em;
+  border-left: 0.4em solid #ddd;
+}
+
+.typo acronym,
+.typo abbr {
+  border-bottom: 1px dotted;
+  font-variant: normal;
+}
+
+.typo abbr {
+  cursor: help;
+}
+
+.typo del {
+  text-decoration: line-through;
+}
+
+.typo address,
+.typo caption,
+.typo cite,
+.typo code,
+.typo den,
+.typo em,
+.typo th,
+.typo var {
+  font-style: normal;
+  font-weight: 500;
+}
+
+.typo caption,
+.typo th {
+  text-align: left;
+}
+
+.typo q:before,
+.typo q:after {
+  content: '';
+}
+
+.typo sub,
+.typo sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: text-top;
+}
+
+.typo :root sub,
+.typo :root sup {
+  vertical-align: baseline;
+  /* for ie9 and other mordern browsers */
+
+}
+
+.typo sup {
+  top: -0.5em;
+}
+
+.typo sub {
+  bottom: -0.25em;
+}
+
+.typo a:hover {
+  text-decoration: underline;
+}
+
+.typo ins,
+.typo a {
+  text-decoration: none;
+}
+
+.typo u,
+.typo .typo-u {
+  text-decoration: underline;
+}
+
+.typo mark {
+  background: #fffdd1;
+}
+
+.typo pre,
+.typo code {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.typo pre {
+  padding: 10px;
+  background: #fbfbfb;
+  border: 1px solid #ddd;
+  border-left-width: 0.4em;
+}
+
+.typo small {
+  font-size: 12px;
+  color: #888;
+}
+
+.typo .clearfix:before,
+.typo .clearfix:after {
+  display: table;
+  content: "";
+}
+
+.typo .clearfix:after {
+  clear: both;
+}
+
+.typo .clearfix {
+  zoom: 1;
+}
+
+.typo h1,
+.typo h2,
+.typo h3,
+.typo h4,
+.typo h5,
+.typo h6 {
+  font-weight: 500;
+  font-weight: 800\9;
+  color: #333;
+}
+
+/* 保证块/段落之间的空白隔行 */
+
+.typo p,
+.typo pre,
+.typo ul,
+.typo ol,
+.typo dl,
+.typo form,
+.typo hr,
+.typo table,
+.typo-p,
+.typo-pre,
+.typo-ul,
+.typo-ol,
+.typo-dl,
+.typo-form,
+.typo-hr,
+.typo-table {
+  margin-bottom: 1em;
+}
+
+/* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
+
+.typo h1,
+.typo h2,
+.typo h3,
+.typo h4,
+.typo h5,
+.typo h6,
+.typo-h1,
+.typo-h2,
+.typo-h3,
+.typo-h4,
+.typo-h5,
+.typo-h6 {
+  margin-bottom: 0.4em;
+  line-height: 1.5;
+}
+
+.typo h1,
+.typo-h1 {
+  font-size: 1.8em;
+}
+
+.typo h2,
+.typo-h2 {
+  font-size: 1.6em;
+}
+
+.typo h3,
+.typo-h3 {
+  font-size: 1.4em;
+}
+
+.typo h4,
+.typo-h4 {
+  font-size: 1.2em;
+}
+
+.typo h5,
+.typo h6,
+.typo-h5,
+.typo-h6 {
+  font-size: 1em;
+}
+
+/* 在文章中，应该还原 ul 和 ol 的样式 */
+
+.typo ul,
+.typo-ul {
+  margin-left: 1.3em;
+  list-style: disc;
+}
+
+.typo ol,
+.typo-ol {
+  margin-left: 1.9em;
+  list-style: decimal;
+}
+
+.typo li ul,
+.typo li ol,
+.typo-ul ul,
+.typo-ul ol,
+.typo-ol ul,
+.typo-ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 2em;
+}
+
+.typo li ul,
+.typo-ul ul,
+.typo-ol ul {
+  list-style: circle;
+}
+
+/* 同 ul/ol，在文章中应用 table 基本格式 */
+
+.typo table th,
+.typo table td,
+.typo-table th,
+.typo-table td {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+}
+
+.typo table th,
+.typo-table th {
+  background: #fbfbfb;
+}
+
+.typo table thead th,
+.typo-table thead th {
+  background: #f1f1f1;
+}
+
+.pagination {
+  margin: 20px 0;
+}
+
+.pagination ul {
+  display: inline-block;
+  *display: inline;
+  margin-bottom: 0;
+  margin-left: 0;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  *zoom: 1;
+}
+
+.pagination ul > li {
+  display: inline;
+  margin: 0;
+}
+
+.pagination ul > li > a,
+.pagination ul > li > span {
+  float: left;
+  padding: 4px 12px;
+  line-height: 20px;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-left-width: 0;
+}
+
+.pagination ul > li > a:hover,
+.pagination ul > li > a:focus,
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+  background-color: #f5f5f5;
+}
+
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+  color: #999999;
+  cursor: default;
+}
+
+.pagination ul > .disabled > span,
+.pagination ul > .disabled > a,
+.pagination ul > .disabled > a:hover,
+.pagination ul > .disabled > a:focus {
+  color: #999999;
+  cursor: default;
+  background-color: transparent;
+}
+
+.pagination ul > li:first-child > a,
+.pagination ul > li:first-child > span {
+  border-left-width: 1px;
+  -webkit-border-bottom-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+  -webkit-border-top-left-radius: 4px;
+          border-top-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -moz-border-radius-topleft: 4px;
+}
+
+.pagination ul > li:last-child > a,
+.pagination ul > li:last-child > span {
+  -webkit-border-top-right-radius: 4px;
+          border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 4px;
+}
+
+.pagination-centered {
+  text-align: center;
+}
+
+.pagination-right {
+  text-align: right;
+}
+
+.pagination-large ul > li > a,
+.pagination-large ul > li > span {
+  padding: 11px 19px;
+  font-size: 17.5px;
+}
+
+.pagination-large ul > li:first-child > a,
+.pagination-large ul > li:first-child > span {
+  -webkit-border-bottom-left-radius: 6px;
+          border-bottom-left-radius: 6px;
+  -webkit-border-top-left-radius: 6px;
+          border-top-left-radius: 6px;
+  -moz-border-radius-bottomleft: 6px;
+  -moz-border-radius-topleft: 6px;
+}
+
+.pagination-large ul > li:last-child > a,
+.pagination-large ul > li:last-child > span {
+  -webkit-border-top-right-radius: 6px;
+          border-top-right-radius: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+          border-bottom-right-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  -moz-border-radius-bottomright: 6px;
+}
+
+.pagination-mini ul > li:first-child > a,
+.pagination-small ul > li:first-child > a,
+.pagination-mini ul > li:first-child > span,
+.pagination-small ul > li:first-child > span {
+  -webkit-border-bottom-left-radius: 3px;
+          border-bottom-left-radius: 3px;
+  -webkit-border-top-left-radius: 3px;
+          border-top-left-radius: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  -moz-border-radius-topleft: 3px;
+}
+
+.pagination-mini ul > li:last-child > a,
+.pagination-small ul > li:last-child > a,
+.pagination-mini ul > li:last-child > span,
+.pagination-small ul > li:last-child > span {
+  -webkit-border-top-right-radius: 3px;
+          border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+          border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+}
+
+.pagination-small ul > li > a,
+.pagination-small ul > li > span {
+  padding: 2px 10px;
+  font-size: 11.9px;
+}
+
+.pagination-mini ul > li > a,
+.pagination-mini ul > li > span {
+  padding: 0 6px;
+  font-size: 10.5px;
+}

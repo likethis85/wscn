@@ -27,21 +27,33 @@
 
         <div class="row-fluid">
 
-            <div class="span8">  
+            <div class="span8"> 
+                <?if($is_front):?>
 
-                <?$local_menu = menu_local_tasks();
-                ?>
-                <?if($local_menu['tabs']['count'] > 1):?>
-                <ul class="nav nav-pills">
-                <?=render($local_menu);?>
-                </ul>
+                    <?if($page['live_content']):?>
+                    <?=render($page['live_content'])?>
+                    <?endif?>
+                    <?if($page['index_content']):?>
+                    <?=render($page['index_content']); ?>
+                    <?endif?>
+
+                <?else:?>
+
+                    <?$local_menu = menu_local_tasks();?>
+                    <?if($local_menu['tabs']['count'] > 1):?>
+                    <ul class="nav nav-pills">
+                        <?=render($local_menu);?>
+                    </ul>
+                    <?endif?>
+                    <?=render($page['content']); ?>
                 <?endif?>
-                <?=render($page['content']); ?>
             </div>
 
 
             <div class="span4">
+                <?if($page['sidebar_first']):?>
                 <?=render($page['sidebar_first']); ?>
+                <?endif?>
                 <?if($page['sidebar_live']):?>
                 <?=render($page['sidebar_live']); ?>
                 <?endif?>
