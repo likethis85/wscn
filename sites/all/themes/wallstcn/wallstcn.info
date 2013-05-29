@@ -5,7 +5,7 @@ version = VERSION
 core = 7.x
 stylesheets[all][] = css/style.css
 stylesheets[print][] = css/print.css
-scripts[] = js/bootstrap.min.js
+scripts[0] = js/bootstrap.min.js
 scripts[] = js/tmpl.js
 scripts[] = js/main.js
 

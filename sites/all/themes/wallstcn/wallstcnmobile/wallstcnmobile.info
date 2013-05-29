@@ -1,0 +1,13 @@
+name = WallstreetCN_Mobile
+base theme = wallstcn
+description = 华尔街见闻移动版主题
+version = VERSION
+core = 7.x
+
+
+regions[content] = Content
+regions[mobile_index] = Mobile Index
+
+stylesheets[all][] = ../css/jquery.mobile/jquery.mobile-1.3.1.min.css
+
+scripts[] = ../js/jquery.mobile-1.3.1.min.js
