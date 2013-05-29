@@ -7500,6 +7500,10 @@ a:hover {
   color: #333;
 }
 
+.side-list img {
+  max-width: 80px;
+}
+
 /* ===========================
  * Article
  * ===========================
@@ -8243,6 +8247,12 @@ a:hover {
  * responsive
  * ===========================
  */
+
+@media (max-width: 1200px) {
+  #search-query {
+    width: 100px;
+  }
+}
 
 @media (min-width: 768px) and (max-width: 979px) {
   #wrapper {
