@@ -6,7 +6,7 @@ $lastdate = '';
 ?>
 
 <div class="view-more">
-    <a href="/live" data-role="button" data-icon="refresh" data-theme="b">立即刷新</a>
+    <a href="/live" data-role="button" data-icon="refresh" data-theme="c">立即刷新</a>
 </div>
 
 
