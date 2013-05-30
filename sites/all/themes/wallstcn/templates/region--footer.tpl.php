@@ -2,10 +2,10 @@
     <div class="span3">
         <h6>相关信息</h6>
         <ul>
-            <li><a href="/contact">关于华尔街见闻</a></li>
-            <li><a href="/contact">使用条款</a></li>
-            <li><a href="/contact">版权声明</a></li>
-            <li><a href="/contact">加入我们</a></li>
+            <li><a href="/about">关于华尔街见闻</a></li>
+            <li><a href="/terms">使用条款</a></li>
+            <li><a href="/copyrightstatement">版权声明</a></li>
+            <li><a href="/wanted">加入我们</a></li>
         </ul>
     </div>
     <div class="span3">
@@ -13,8 +13,7 @@
         <ul>
             <li><a href="/contact">联系我们</a></li>
             <li><a href="/contact">广告投放</a></li>
-            <li>联系地址：上海市松江区松江区松江区松江区</li>
-            <li>联系电话：12344546546</li>
+            <li>联系地址：上海市闵行区七莘路1855号时尚部落903</li>
             <li>联系邮箱：ad@wallstreetcn.com</li>
         </ul>
 
@@ -50,7 +49,5 @@
 
 <div class="copyright">
     &copy; 2010-2013 <a class="copyright" href="/">华尔街见闻 wallstcn.com</a> , All Rights Reserved. 
-    <?if(0):?>
-    <a target="_blank" rel="nofollow" href="http://www.miibeian.gov.cn/">沪ICP备12000031号</a>
-    <?endif?>
+    <a target="_blank" rel="nofollow" href="http://www.miibeian.gov.cn/">沪ICP备13019121号</a>
 </div>

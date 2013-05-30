@@ -79,15 +79,18 @@
 </div>
 <?endif?>
 
+<?$comments = $content['comments']['comments'];
+unset($comments['#sorted']);
+unset($comments['pager']);
+//var_dump($comments);
+?>
+<?if($node->comment == 2 || $comments):?>
 <div class="page-header header-blue">
     <h2>评论</h2>
 </div>
+
 <div class="comments-list">
-    <?$comments = $content['comments']['comments'];
-    unset($comments['#sorted']);
-    unset($comments['pager']);
-    //var_dump($comments);
-    ?>
+
     <?foreach($comments as $item):?>
     <?$comment = $item['#comment'];?>
     <div id="comment-<?=$comment->cid?>" class="media">
@@ -111,6 +114,8 @@
     </div>
     <?endforeach?>
 </div>
+
+<?endif?>
 
 <?=render($content['comments']['comment_form'])?>
 

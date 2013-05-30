@@ -62,7 +62,7 @@
                     <span class="icon-mobile-phone"></span>
                 </a>
                 <div class="media-body">
-                    <p class="media-heading"><a href="">Mobile移动版</a></p>
+                    <p class="media-heading"><a href="http://m.<?=variable_get('site_domain')?>/">Mobile移动版</a></p>
                     <div>
                         随时随地手机查看
                     </div>
