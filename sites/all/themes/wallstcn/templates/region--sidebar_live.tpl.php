@@ -1,13 +1,12 @@
 <?if(theme_get_setting('allow_ad')):?>
 <div class="ad-box">
-    <div class="row-fluid">
-        <div class="span6">
-            <a target="_blank" href="http://www.igoldhk.com/?utm_source=wallstreetcn&amp;utm_medium=banner&amp;utm_term=160x50&amp;utm_content=award_first&amp;utm_campaign=all-index"><img class="span12" src="http://wallstreetcn.com/ckuploadimg/images/ad_igoldhk.gif" alt=""></a> 
-        </div><!--span6 end -->
-        <div class="span6">
-            <a target="_blank" href="http://www.wfgold.com/"><img class="span12" src="http://wallstreetcn.com/ckuploadimg/images/side_ad_wfgold_new.gif" alt=""></a>
-        </div><!--span6 end -->
-    </div>
+    <script type="text/javascript">
+        google_ad_client = "ca-pub-0869270234052789";
+        google_ad_slot = "3270919188";
+        google_ad_width = 300;
+        google_ad_height = 250;
+    </script>
+    <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
 </div>
 <?endif?>
 
@@ -103,42 +102,19 @@
 
 <?if(theme_get_setting('allow_ad')):?>
 <div class="ad-box">
-    <div style="width:336px;margin:0 auto">
-        <script type="text/javascript">
-            google_ad_client = "ca-pub-0869270234052789";
-            google_ad_slot = "2911844489";
-            google_ad_width = 336;
-            google_ad_height = 280;
-            google_ad_client = "ca-pub-0869270234052789";
-            google_ad_slot = "2911844489";
-            google_ad_width = 336;
-            google_ad_height = 280;
-        </script>
-        <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script> 
-    </div>
+    <script type="text/javascript">
+        google_ad_client = "ca-pub-0869270234052789";
+        google_ad_slot = "8382675565";
+        google_ad_width = 300;
+        google_ad_height = 250;
+    </script>
+    <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+
 </div>
 <?endif?>
 
 <?if($elements['views_x_click-block']):?>
 <?=render($elements['views_x_click-block'])?>
-<?endif?>
-
-<?if(theme_get_setting('allow_ad')):?>
-<div class="ad-box">
-    <div style="width:336px;margin:0 auto">
-        <script type="text/javascript">
-            google_ad_client = "ca-pub-0869270234052789";
-            google_ad_slot = "2911844489";
-            google_ad_width = 336;
-            google_ad_height = 280;
-            google_ad_client = "ca-pub-0869270234052789";
-            google_ad_slot = "2911844489";
-            google_ad_width = 336;
-            google_ad_height = 280;
-        </script>
-        <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script> 
-    </div>
-</div>
 <?endif?>
 
 <div class="page-header">

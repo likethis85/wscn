@@ -47,6 +47,18 @@
 </div>
 <?endif?>
 
+<?if(theme_get_setting('allow_ad')):?>
+<div class="ad-box">
+<script type="text/javascript">
+	google_ad_client = "ca-pub-0869270234052789";
+	google_ad_slot = "2492112899";
+	google_ad_width = 320;
+	google_ad_height = 50;
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</div>
+<?endif?>
+
 <a href="http://<?=variable_get('site_domain')?>/<?=url('node/' . $node->nid)?>" data-role="button" data-icon="arrow-r" data-theme="b">去网页版参与评论</a>
 
 </article>

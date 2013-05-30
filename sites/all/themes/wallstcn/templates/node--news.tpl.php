@@ -79,6 +79,18 @@
 </div>
 <?endif?>
 
+<?if(theme_get_setting('allow_ad')):?>
+<div class="ad-box">
+    <script type="text/javascript">
+	google_ad_client = "ca-pub-0869270234052789";
+	google_ad_slot = "5114810965";
+	google_ad_width = 468;
+	google_ad_height = 60;
+	</script>
+	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</div>
+<?endif?>
+
 <?$comments = $content['comments']['comments'];
 unset($comments['#sorted']);
 unset($comments['pager']);
