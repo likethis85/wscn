@@ -117,6 +117,12 @@ unset($comments['pager']);
 
 <?endif?>
 
+<?if($node->comment == 2 && !$logged_in):?>
+<div>
+    请<a href="/user">登录</a>后发表评论，新用户请<a href="/user/register">点击注册</a>
+</div>
+<?endif?>
+
 <?=render($content['comments']['comment_form'])?>
 
 </article>

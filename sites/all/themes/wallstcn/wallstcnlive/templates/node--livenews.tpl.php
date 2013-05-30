@@ -59,19 +59,24 @@
 </div>
 
 
-
-
-<div class="page-header header-blue">
-    <h2>评论</h2>
-</div>
-
-<div id="comment-ajax">
-
-<div class="comments-list">
-    <?$comments = $content['comments']['comments'];
+<?$comments = $content['comments']['comments'];
     unset($comments['#sorted']);
     unset($comments['pager']);
 ?>
+
+<?if($node->comment == 2 || $comments):?>
+<div class="page-header header-blue">
+    <h2>评论</h2>
+</div>
+<?endif?>
+
+
+
+<div id="comment-ajax">
+
+<?if($node->comment == 2 || $comments):?>
+<div class="comments-list">
+
 <?foreach($comments as $item):?>
 <?$comment = $item['#comment'];?>
 <div id="comment-<?=$comment->cid?>" class="media">
@@ -95,8 +100,28 @@
 </div>
 <?endforeach?>
 </div>
+<?endif?>
+
+<?if(!$comments && $node->comment == 2):?>
+<div>
+    还没有评论
+</div>
+<?endif?>
+
+<?if($node->comment != 2):?>
+<div>
+    当前文章不允许评论
+</div>
+<?endif?>
 
 <?=render($content['comments']['comment_form'])?>
+
+
+<?if($node->comment == 2 && !$logged_in):?>
+<div>
+    请<a href="/user">登录</a>后发表评论，新用户请<a href="/user/register">点击注册</a>
+</div>
+<?endif?>
 
 </div><!--comment ajax end-->
 </article>
