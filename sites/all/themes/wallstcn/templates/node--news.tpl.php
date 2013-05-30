@@ -6,6 +6,14 @@
 <h1><a href="<?=url('node/' . $node->nid)?>"><?=$node->title?></a></h1>
 </header>
 
+<?if(!$node->status):?>
+<div class="alert alert-error">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>本文尚未发布</strong> <a href="/node/<?=$node->nid?>/edit" class="btn">编辑</a>
+  <!--<a href="/node/<?=$node->nid?>/toggle/status" class="btn">发布</a>-->
+</div>
+<?endif?>
+
 <?php if ($display_submitted): ?>
 <div class="article-meta clearfix">
     <span class="pull-left">
