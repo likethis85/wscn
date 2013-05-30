@@ -1,6 +1,6 @@
 <div class="container">
 <div id="nav-area">
-    <div class="row-fluid"><div class="span12">
+    <div class="row"><div class="span12">
     <div id="navbar" class="navbar">
         <div class="navbar-inner">
             <div class="container">
