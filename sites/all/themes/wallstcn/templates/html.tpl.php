@@ -10,6 +10,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <?php print $styles; ?>
+    <!--[if IE 6]>
+    <script src="/sites/all/themes/wallstcn/js/killie6.js"></script>
+    <![endif]-->
     <?php print $scripts; ?>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
