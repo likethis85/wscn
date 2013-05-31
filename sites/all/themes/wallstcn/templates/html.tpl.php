@@ -14,6 +14,10 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <!--[if lt IE 7]>
+    <link href="/sites/all/themes/wallstcn/css/bootstrap/ie6.min.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="/sites/all/themes/wallstcn/js/ie6.js"></script>
+    <![endif]-->
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
     <?php print $page_top; ?>

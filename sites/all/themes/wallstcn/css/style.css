@@ -6734,6 +6734,7 @@ a:hover {
   padding-left: 0;
   background: #333;
   border: 0;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
 
 #navbar a {
@@ -6848,6 +6849,7 @@ a:hover {
   padding: 0;
   background: none;
   border: 0;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
   -webkit-box-shadow: none;
      -moz-box-shadow: none;
           box-shadow: none;
@@ -8310,4 +8312,38 @@ a:hover {
   .news-slider-btn {
     display: none;
   }
+}
+
+/* ===========================
+ * IE fix
+ * ===========================
+ */
+
+/* IE8  */
+
+.lt-ie9 #wrapper {
+  padding: 0;
+}
+
+.lt-ie9 .container {
+  overflow: hidden;
+}
+
+.lt-ie9 #search-query {
+  width: 100px;
+}
+
+.lt-ie9 #footer {
+  background: #000;
+}
+
+/* IE7  */
+
+.lt-ie8 .nav-area-fixed {
+  position: static;
+  overflow: hidden;
+}
+
+.lt-ie8 #footer {
+  width: 100%;
 }

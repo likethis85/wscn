@@ -196,6 +196,7 @@ a:hover {
     .navbar-inner {
         border:0;
         background:#333;
+        .reset-filter();
         padding-left:0;
         padding-right:10px;
     }
@@ -309,6 +310,7 @@ a:hover {
         background:none;
         border:0;
         .box-shadow(none);
+        .reset-filter();
     }
 
     .navbar .nav > li > a {
@@ -1527,3 +1529,43 @@ a:hover {
         display:none;
     }
 }
+
+
+
+
+/* ===========================
+ * IE fix
+ * ===========================
+ */
+
+/* IE8  */
+.lt-ie9 {
+   #wrapper {
+       padding:0;
+   }
+
+   .container{
+        overflow:hidden;
+    }
+
+    #search-query {
+        width:100px;
+    }
+
+    #footer {
+        background:#000;
+    }
+} 
+
+
+/* IE7  */
+.lt-ie8 {
+    .nav-area-fixed {
+        position:static;
+        overflow:hidden;
+    }
+    #footer {
+        width:100%;
+    }
+}
+
