@@ -23,6 +23,9 @@
          / <?endforeach?> 
         文 <a href="<?=url('user/'. $comment->uid);?>"><?=$node->name?></a> <span class="googleplus-author">@<a href="https://plus.google.com/117171791148320400898?rel=author">华尔街见闻</a></span> / <?=format_date($node->created);?>
         <?endif?>
+        <?if($logged_in && $content['links']['statistics']):?>
+        / <?=$content['links']['statistics']['#links']['statistics_counter']['title']?>
+        <?endif?>
         /  分享到：
     </span>
     <!-- JiaThis Button BEGIN -->
@@ -87,7 +90,7 @@
 </div>
 <?endif?>
 
-<?if(theme_get_setting('allow_ad')):?>
+<?if(variable_get('site_ad')):?>
 <div class="ad-box">
     <script type="text/javascript">
 	google_ad_client = "ca-pub-0869270234052789";

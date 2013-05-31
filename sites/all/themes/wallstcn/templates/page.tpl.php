@@ -10,7 +10,7 @@
                     </a>
             </h1></div>
             <div class="span8">
-                <?if(theme_get_setting('allow_ad')):?>
+                <?if(variable_get('site_ad')):?>
                 <?if($page['live_content']):?>
                 <script type="text/javascript" src="http://cbjs.baidu.com/js/m.js"></script>
                 <script type="text/javascript">BAIDU_CLB_fillSlot("507799");</script>

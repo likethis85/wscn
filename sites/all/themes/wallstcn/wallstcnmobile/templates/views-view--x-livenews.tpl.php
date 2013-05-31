@@ -22,7 +22,7 @@ $lastdate = '';
     </li>
     <?endif?>
     <li class="media-format-<?=$item->field_field_format[0]['raw']['value']?> media-color-<?=$item->field_field_color[0]['raw']['value']?>">
-    <p><strong><?=$item->field_body[0]['raw']['value']?></strong></p>
+    <p><strong class="full-title"> <?=format_date($item->node_created, 'custom', 'H:i');?> :  <?=$item->field_body[0]['raw']['value']?></strong></p>
     <?if($item->field_field_source):?>
     <p>
     消息来源:
@@ -33,7 +33,9 @@ $lastdate = '';
     <?endif?>
     </p>
     <?endif?>
+    <?if(0):?>
     <p class="ui-li-aside"><strong><?=format_date($item->node_created, 'custom', 'H:i');?></strong></p>
+    <?endif?>
     </li>
 
     <?$lastdate = $current_date;?>

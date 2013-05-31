@@ -81,7 +81,7 @@
 
 <div data-role="footer">
     <div class="copyright">
-        &copy; 2010-2013 <a href="http://<?=variable_get('site_domain')?>/">华尔街见闻 wallstcn.com</a> , All Rights Reserved. 
+        &copy; 2010-2013 <a href="http://<?=variable_get('site_domain')?>/">华尔街见闻</a> , All Rights Reserved. 
         | <a href="http://<?=variable_get('site_domain')?>/">网页版</a> 
     </div>
 </div>

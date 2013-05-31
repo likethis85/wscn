@@ -1,10 +1,10 @@
-<?if(theme_get_setting('allow_ad')):?>
+<?if(variable_get('site_ad')):?>
 <div class="ad-box">
     <div class="row-fluid">
         <div class="span6">
             <a target="_blank" href="http://www.wfgold.com/"><img src="http://wallstreetcn.com/ckuploadimg/images/side_ad_wfgold0523.gif" alt=""></a>
         </div><!--span6 end -->
-        <div class="span6">
+        <div class="span6 right-align">
             <a target="_blank" href="http://www.igoldhk.com/?utm_source=wallstreetcn&utm_medium=banner&utm_term=160x50&utm_content=award_first&utm_campaign=all-index"><img src="http://wallstreetcn.com/ckuploadimg/images/ad_igold_0508.gif" alt=""></a> 
         </div><!--span6 end -->
     </div>
@@ -101,7 +101,7 @@
     </div><!--row end -->
 </div><!-- social end-->
 
-<?if(theme_get_setting('allow_ad')):?>
+<?if(variable_get('site_ad')):?>
 <div class="ad-box">
     <div style="width:336px;margin:0 auto">
         <script type="text/javascript">
@@ -123,7 +123,7 @@
 <?=render($elements['views_x_click-block'])?>
 <?endif?>
 
-<?if(theme_get_setting('allow_ad')):?>
+<?if(variable_get('site_ad')):?>
 <div class="ad-box">
     <div style="width:336px;margin:0 auto">
      <script type="text/javascript">

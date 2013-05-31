@@ -7495,6 +7495,14 @@ a:hover {
   clear: both;
 }
 
+.ad-box.ad-middle {
+  margin-top: 20px;
+}
+
+.ad-box .right-align {
+  text-align: right;
+}
+
 .side-list .media-heading a {
   font-size: 13px;
   color: #333;

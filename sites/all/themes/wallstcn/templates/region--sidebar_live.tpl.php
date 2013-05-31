@@ -1,4 +1,4 @@
-<?if(theme_get_setting('allow_ad')):?>
+<?if(variable_get('site_ad')):?>
 <div class="ad-box">
     <script type="text/javascript">
         google_ad_client = "ca-pub-0869270234052789";
@@ -100,7 +100,7 @@
     </div><!--row end -->
 </div><!-- social end-->
 
-<?if(theme_get_setting('allow_ad')):?>
+<?if(variable_get('site_ad')):?>
 <div class="ad-box">
     <script type="text/javascript">
         google_ad_client = "ca-pub-0869270234052789";

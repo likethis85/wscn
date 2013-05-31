@@ -47,7 +47,7 @@
 </div>
 <?endif?>
 
-<?if(theme_get_setting('allow_ad')):?>
+<?if(variable_get('site_ad')):?>
 <div class="ad-box">
 <script type="text/javascript">
 	google_ad_client = "ca-pub-0869270234052789";
@@ -69,6 +69,7 @@
 <div id="node-<?=$node->nid; ?>" data-role="collapsible" data-theme="d" data-content-theme="d">
     <h2><?=$node->title?></h2>
     <p>
+        <h3><?=$node->title?></h3>
         <p>
             文 <?=$node->name?> / <?=format_date($node->created);?>
             <?if($node->taxonomy_vocabulary_2):?> / 

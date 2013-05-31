@@ -1,8 +1,7 @@
 .page-header {
-  height: 36px;
   padding: 0;
   margin: 20px 0;
-  line-height: 36px;
+  line-height: 30px;
   border: 0;
 }
 
@@ -12,9 +11,8 @@
 .page-header h4,
 .page-header h5,
 .page-header h6 {
-  height: 36px;
   font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .page-header h1 a,
@@ -47,6 +45,11 @@
 
 .copyright {
   padding: 20px 0;
+}
+
+.full-title {
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 .typo {
