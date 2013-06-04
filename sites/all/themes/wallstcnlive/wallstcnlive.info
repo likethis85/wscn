@@ -16,4 +16,4 @@ regions[index_content] = Index Content
 regions[live_content] = Live Index Content
 regions[navigation] = Navigation
 
-scripts[] = ../js/jquery.jplayer.js
+scripts[] = ../wallstcn/js/jquery.jplayer.js
