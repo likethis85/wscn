@@ -506,7 +506,7 @@ a:hover {
 }
 
 .top-news-entry {
-    min-height:555px;
+    min-height:565px;
     background:#333333;
     padding:10px;
     font-size:12px;
@@ -597,6 +597,11 @@ a:hover {
         max-height:100px;
         overflow:hidden;
     }
+
+    .news-img {
+        max-height:130px;
+        overflow:hidden;
+    }
 }
 
 .news-list.vlist {
@@ -610,6 +615,10 @@ a:hover {
         text-align:center;
     }
 
+    h3 {
+        line-height:20px;
+    }
+
     img {
         max-width:100%;
         max-height:140px;
@@ -617,6 +626,8 @@ a:hover {
 
     .media-heading {
         font-size:14px;
+        height:41px;
+        overflow:hidden;
     }
 
     .media-meta {
@@ -624,7 +635,7 @@ a:hover {
     }
 
     .media-body {
-        height:195px;
+        height:190px;
         overflow:hidden;
         font-size:13px;
         color:#666;
@@ -1071,6 +1082,11 @@ a:hover {
 	-ms-text-size-adjust: 100%;
 	font: 500 14px/1.8 'Hiragino Sans GB', Microsoft YaHei, sans-serif;
 
+    //fix bootstrap
+    blockquote p {
+        font-size:14px;
+    }
+
     /* HTML5 媒体文件跟 img 保持一致 */
     audio, canvas, video {
         display: inline-block;
@@ -1116,6 +1132,7 @@ a:hover {
         border-left: 0.4em solid #f1f1f1;
         //background: #f1f1f1;
     }
+
     blockquote blockquote {
         padding: 0 0 0 1em;
         margin-left: 2em;
@@ -1246,7 +1263,7 @@ a:hover {
 .typo h3, .typo-h3 {
 	font-size: 1.4em;
 }
-.typo h4, .typo-h4 {
+.typo h4, .typo-h0 {
 	font-size: 1.2em;
 }
 .typo h5, .typo h6, .typo-h5, .typo-h6 {

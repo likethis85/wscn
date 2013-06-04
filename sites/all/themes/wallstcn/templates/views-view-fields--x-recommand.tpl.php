@@ -31,7 +31,7 @@ $rows = ceil($max / 3);
                     </p>
                     <h3 class="media-heading"><a href="<?=url('node/'. $item->nid);?>"><?=$item->node_title?></a></h3>
                     <div>
-                        <p><?=$item->_field_data['nid']['entity']->body['und'][0]['summary']?></p>
+                        <p><?=strip_tags($item->_field_data['nid']['entity']->body['und'][0]['summary'])?></p>
                     </div>
                 </div>
             </div>

@@ -7086,7 +7086,7 @@ a:hover {
 }
 
 .top-news-entry {
-  min-height: 555px;
+  min-height: 565px;
   padding: 10px;
   font-size: 12px;
   color: #999;
@@ -7177,6 +7177,11 @@ a:hover {
   overflow: hidden;
 }
 
+.news-list .news-img {
+  max-height: 130px;
+  overflow: hidden;
+}
+
 .news-list.vlist .media {
   padding-bottom: 20px;
   border-bottom: 0;
@@ -7188,12 +7193,18 @@ a:hover {
   text-align: center;
 }
 
+.news-list.vlist h3 {
+  line-height: 20px;
+}
+
 .news-list.vlist img {
   max-width: 100%;
   max-height: 140px;
 }
 
 .news-list.vlist .media-heading {
+  height: 41px;
+  overflow: hidden;
   font-size: 14px;
 }
 
@@ -7202,7 +7213,7 @@ a:hover {
 }
 
 .news-list.vlist .media-body {
-  height: 195px;
+  height: 190px;
   overflow: hidden;
   font-size: 13px;
   color: #666;
@@ -7696,6 +7707,10 @@ a:hover {
       -ms-text-size-adjust: 100%;
 }
 
+.typo blockquote p {
+  font-size: 14px;
+}
+
 .typo audio,
 .typo canvas,
 .typo video {
@@ -7919,7 +7934,7 @@ a:hover {
 }
 
 .typo h4,
-.typo-h4 {
+.typo-h0 {
   font-size: 1.2em;
 }
 
