@@ -8,7 +8,7 @@ core = 7.x
 regions[content] = Content
 regions[mobile_index] = Mobile Index
 
-stylesheets[all][] = ../css/jquery.mobile/jquery.mobile-1.3.1.min.css
-stylesheets[all][] = ../css/mobile.css
+stylesheets[all][] = ../wallstcn/css/jquery.mobile/jquery.mobile-1.3.1.min.css
+stylesheets[all][] = ../wallstcn/css/mobile.css
 
-scripts[] = ../js/jquery.mobile-1.3.1.min.js
+scripts[] = ../wallstcn/js/jquery.mobile-1.3.1.min.js
