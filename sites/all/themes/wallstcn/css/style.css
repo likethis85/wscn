@@ -8263,6 +8263,16 @@ a:hover {
  * ===========================
  */
 
+.pagination ul {
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+
+.pagination ul li {
+  margin: 0;
+}
+
 .googleplus-author a {
   color: #999;
   cursor: default;

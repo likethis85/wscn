@@ -9,7 +9,7 @@
         <ul>
             <li><a href="/">首页</a></li>
             <li><a href="/taxonomy/term/3119">推荐</a></li>
-            <li><a href="/live">直播</a></li>
+            <li><a href="/livenews">直播</a></li>
             <li><a href="#market">市场</a></li>
             <li><a href="#schedule">日程</a></li>
         </ul>
@@ -45,7 +45,7 @@
         <ul>
             <li><a href="/">首页</a></li>
             <li><a href="/taxonomy/term/3119">推荐</a></li>
-            <li><a href="/live">直播</a></li>
+            <li><a href="/livenews">直播</a></li>
             <li><a href="#market" class="ui-btn-active">市场</a></li>
             <li><a href="#schedule">日程</a></li>
         </ul>
@@ -71,7 +71,7 @@
         <ul>
             <li><a href="/">首页</a></li>
             <li><a href="/taxonomy/term/3119">推荐</a></li>
-            <li><a href="/live">直播</a></li>
+            <li><a href="/livenews">直播</a></li>
             <li><a href="#market">市场</a></li>
             <li><a href="#schedule" class="ui-btn-active">日程</a></li>
         </ul>

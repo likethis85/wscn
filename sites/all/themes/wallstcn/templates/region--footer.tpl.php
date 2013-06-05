@@ -48,6 +48,6 @@
 <?endif?>
 
 <div class="copyright">
-    &copy; 2010-2013 <a class="copyright" href="/">华尔街见闻 wallstcn.com</a> , All Rights Reserved. 
+    &copy; 2010-2013 <a class="copyright" href="/">华尔街见闻 wallstreetcn.com</a> , All Rights Reserved. 
     <a target="_blank" rel="nofollow" href="http://www.miibeian.gov.cn/">沪ICP备13019121号</a>
 </div>
