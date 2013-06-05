@@ -57,6 +57,7 @@ CKEDITOR.editorConfig = function(config) {
     config.bodyClass = 'singlepage';
     config.bodyId = 'primary';
   }
+  config.allowedContent = true;
 }
 
 /*
