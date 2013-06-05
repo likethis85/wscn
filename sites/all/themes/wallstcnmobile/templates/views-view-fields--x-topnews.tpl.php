@@ -3,8 +3,6 @@ global $wscn;
 if($wscn['x_topnews_rendered']) return;
 
 $items = $view->result;
-$item = $items[0];
-unset($items[0]);
 ?>
 
 <ul data-role="listview" data-inset="true"  data-theme="c">
