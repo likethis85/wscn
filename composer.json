@@ -1,0 +1,12 @@
+{
+    "name": "AlloVince/WSCN",
+    "description": "",
+    "license": "BSD-3-Clause",
+    "homepage": "http://avnpc.com/",
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "require-dev": {
+        "firephp/firephp-core": "dev-master"
+    }
+}

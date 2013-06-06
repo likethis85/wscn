@@ -39,7 +39,7 @@
                     <a id="livenews-navbar-prev" href="http://live.<?=variable_get('site_domain')?>" class="btn prev"><span class="icon-angle-up"></span></a>
                     <a id="livenews-navbar-next" href="http://live.<?=variable_get('site_domain')?>" class="btn next"><span class="icon-angle-down"></span></a>
                     </p>
-                    <p class="news"> 实时新闻：
+                    <p class="news"> <a href="http://live.<?=variable_get('site_domain')?>" target="_blank">实时新闻</a>：
                     <ul>
                         <li>正在载入...</li>
                     </ul>
