@@ -13,7 +13,6 @@
         <ul>
             <li><a href="/contact">联系我们</a></li>
             <li><a href="/contact">广告投放</a></li>
-            <li>联系地址：上海市闵行区七莘路1855号时尚部落903</li>
             <li>联系邮箱：ad@wallstreetcn.com</li>
         </ul>
 

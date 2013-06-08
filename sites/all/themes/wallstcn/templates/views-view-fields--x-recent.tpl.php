@@ -11,27 +11,26 @@ if($wscn['x_recent_rendered']) return;
     <?foreach($items as $item):?>
     <div class="media">
         <?if($item->file_managed_field_data_upload_uri || $item->field_field_image_1):?>
-        <a class="pull-left news-img" href="<?=url('node/'. $item->nid);?>">
+        <a class="pull-left news-img" href="<?=url('node/'. $item->nid);?>" target="_blank">
             <img alt="" class="" src="<?=wscn_image_url($item);?>">
         </a>
         <?endif?>
         <div class="media-body">
-            <h3 class="media-heading"><a href="<?=url('node/'. $item->nid);?>"><?=$item->node_title?></a></h3>
+            <h3 class="media-heading"><a href="<?=url('node/'. $item->nid);?>" target="_blank"><?=$item->node_title?></a></h3>
             <p class="media-meta">
-           文 <a href="/user/<?=$item->users_node_uid?>"><?=$item->users_node_name?></a>
+            文 <?=$item->users_node_name?>
            / <?=format_date($item->node_created);?>
-           <!--
-           <?if($item->_field_data['nid']['entity']->taxonomy_vocabulary_2):?> / 
+           <?if(0 && $item->_field_data['nid']['entity']->taxonomy_vocabulary_2):?> / 
+           /
            <?foreach($item->_field_data['nid']['entity']->taxonomy_vocabulary_2['und'] as $tag):?>
            <a href="<?=url('taxonomy/term/' . $tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a>
            <?endforeach?>
            <?endif?>
-           -->
            </p>
            <div class="media-content">
-               <div><?=$item->_field_data['nid']['entity']->body['und'][0]['summary']?></div>
+               <?=$item->_field_data['nid']['entity']->body['und'][0]['summary']?>
+               <a class="pull-left" href="<?=url('node/'. $item->nid);?>" target="_blank">[阅读全文]</a>
            </div>
-            <a class="btn btn-readmore" href="<?=url('node/'. $item->nid);?>">阅读全文</a>
         </div>
     </div>
     <?endforeach?>

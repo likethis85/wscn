@@ -18,12 +18,12 @@ if($wscn['x_click_rendered']) return;
             <?foreach($items as $item):?>
             <div class="media">
                 <?if($item->file_managed_field_data_upload_uri || $item->field_field_image_1):?>
-                <a class="pull-left" href="<?=url('node/'. $item->nid);?>">
+                <a class="pull-left" href="<?=url('node/'. $item->nid);?>" target="_blank">
                     <img alt="" class="" src="<?=wscn_image_url($item);?>">
                 </a>
                 <?endif?>
                 <div class="media-body">
-                    <h4 class="media-heading"><a href="<?=url('node/'. $item->nid);?>"><?=$item->node_title?></a></h4>
+                    <h4 class="media-heading"><a href="<?=url('node/'. $item->nid);?>" target="_blank"><?=$item->node_title?></a></h4>
                 </div>
             </div>
             <?endforeach?>

@@ -20,16 +20,16 @@ $rows = ceil($max / 3);
         <div class="span4">
             <div class="media">
                 <?if($item->file_managed_field_data_upload_uri || $item->field_field_image_1):?>
-                <a class="media-image" href="<?=url('node/'. $item->nid);?>">
+                <a class="media-image" href="<?=url('node/'. $item->nid);?>" target="_blank">
                     <img alt="" src="<?=wscn_image_url($item);?>">
                 </a>
                 <?endif?>
                 <div class="media-body">
                     <p class="media-meta">
-                    by <a href="/user/<?=$item->users_node_uid?>"><?=$item->users_node_name?></a>
+                    by <?=$item->users_node_name?>
                     <?=format_date($item->node_created);?>
                     </p>
-                    <h3 class="media-heading"><a href="<?=url('node/'. $item->nid);?>"><?=$item->node_title?></a></h3>
+                    <h3 class="media-heading"><a href="<?=url('node/'. $item->nid);?>" target="blank"><?=$item->node_title?></a></h3>
                     <div>
                         <p><?=strip_tags($item->_field_data['nid']['entity']->body['und'][0]['summary'])?></p>
                     </div>
