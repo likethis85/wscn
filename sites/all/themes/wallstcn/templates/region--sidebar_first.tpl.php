@@ -1,4 +1,4 @@
-<?if(variable_get('site_ad')):?>
+<?if(0 && variable_get('site_ad')):?>
 <div class="ad-box">
     <div class="row-fluid">
         <div class="span6">

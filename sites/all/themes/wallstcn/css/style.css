@@ -6701,19 +6701,7 @@ a:hover {
 }
 
 .nav-area-fixed #realtime-news {
-  padding-right: 70px;
-  padding-left: 120px;
   margin-bottom: 0;
-}
-
-.nav-area-fixed #realtime-news .control-buttons {
-  position: absolute;
-  left: 60px;
-  display: block;
-}
-
-.nav-area-fixed #realtime-news .more {
-  display: inline;
 }
 
 #navbar {
@@ -6767,7 +6755,9 @@ a:hover {
 #realtime-news {
   position: relative;
   height: 38px;
+  padding-right: 70px;
   padding-left: 65px;
+  padding-left: 120px;
   margin-bottom: 30px;
   overflow: hidden;
   clear: both;
@@ -6826,6 +6816,16 @@ a:hover {
 #realtime-news .control-buttons {
   display: none;
   margin: 0 10px;
+}
+
+#realtime-news .control-buttons {
+  position: absolute;
+  left: 60px;
+  display: block;
+}
+
+#realtime-news .more {
+  display: inline;
 }
 
 /* ===========================
@@ -7138,7 +7138,7 @@ a:hover {
  */
 
 .news-list .media {
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   border-bottom: 1px solid #E6E6E6;
 }
 
@@ -7169,17 +7169,30 @@ a:hover {
 }
 
 .news-list img {
-  max-width: 200px;
+  width: 200px;
 }
 
 .news-list .media-content {
-  max-height: 100px;
+  min-height: 70px;
   overflow: hidden;
 }
 
-.news-list .news-img {
-  max-height: 130px;
+.news-list .news-img-wrap {
+  width: 210px;
+  height: 130px;
   overflow: hidden;
+  text-align: center;
+}
+
+.news-list .news-img {
+  display: inline-block;
+  width: 210px;
+  height: 130px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow: hidden;
+  text-align: center;
+  background: #EFEFEF;
 }
 
 .news-list.vlist .media {
@@ -7449,7 +7462,7 @@ a:hover {
 }
 
 .comments-list .media-content-body {
-  max-height: 200px;
+  max-height: 60px;
   overflow: hidden;
 }
 
@@ -8262,6 +8275,26 @@ a:hover {
  * Special
  * ===========================
  */
+
+#to-top {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  display: none;
+  width: 51px;
+  height: 51px;
+  overflow: hidden;
+  font-size: 40px;
+  line-height: 51px;
+  color: #FFF;
+  text-align: center;
+  text-decoration: none;
+  background: #666;
+  border: none;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+}
 
 .pagination ul {
   -webkit-box-shadow: none;

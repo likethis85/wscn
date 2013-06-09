@@ -164,21 +164,11 @@ a:hover {
     z-index:10;
     margin:0 auto;
     .box-shadow(0px 2px 5px -2px rgb(0,0,0, 0.3));
+
     #realtime-news {
-        padding-left:120px;
-        padding-right:70px;
         margin-bottom:0;
-
-        .control-buttons {
-            display:block;
-            position:absolute;
-            left:60px;
-        }
-
-        .more {
-            display:inline;
-        }    
     }
+
 }
 
 #navbar {
@@ -284,6 +274,21 @@ a:hover {
         display:none;
         margin:0 10px;
     }
+
+
+    //fixed style to default
+    padding-left:120px;
+    padding-right:70px;
+
+    .control-buttons {
+        display:block;
+        position:absolute;
+        left:60px;
+    }
+
+    .more {
+        display:inline;
+    }    
 }
 
 
@@ -559,7 +564,7 @@ a:hover {
 
 .news-list {
      .media {
-        padding-bottom:20px;
+        padding-bottom:15px;
         border-bottom:1px solid #E6E6E6;
     }
 
@@ -590,16 +595,29 @@ a:hover {
     }   
 
     img {
-        max-width:200px;
+        width:200px;
+        //max-height:130px;
     }
 
     .media-content {
-        max-height:100px;
+        min-height:70px;
         overflow:hidden;
     }
 
+    .news-img-wrap {
+        width:210px;
+        height:130px;
+        overflow:hidden;
+        text-align:center;
+    }
     .news-img {
-        max-height:130px;
+        width:210px;
+        height:130px;
+        padding-bottom:5px;
+        padding-top:5px;
+        display:inline-block;
+        background:#EFEFEF;
+        text-align:center;
         overflow:hidden;
     }
 }
@@ -854,7 +872,7 @@ a:hover {
     }
 
     .media-content-body {
-        max-height:200px;
+        max-height:60px;
         overflow:hidden;
     }
 
@@ -1470,6 +1488,25 @@ a:hover {
  * Special
  * ===========================
  */
+
+
+#to-top {
+	display:none;
+	text-decoration:none;
+	position:fixed;
+	bottom:10px;
+	right:10px;
+	overflow:hidden;
+	width:51px;
+	height:51px;
+	line-height:51px;
+	border:none;
+	background:#666;
+	.border-radius(10px);
+	text-align:center;
+	font-size:40px;
+	color:#FFF;
+}
 
 
 .pagination ul {

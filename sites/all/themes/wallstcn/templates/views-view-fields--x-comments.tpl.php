@@ -17,13 +17,13 @@ if($wscn['x_comments_rendered']) return;
             <?else:?>
             匿名用户
             <?endif?>
-            评论了 <a href="<?=url('node/'. $item->comment_nid);?>"><?=$item->node_comment_title?></a>
+            评论了 <a href="<?=url('node/'. $item->comment_nid);?>" target="_blank"><?=$item->node_comment_title?></a>
             </p>
             <div class="media-content">
                 <div class="media-content-body"><?=$item->field_comment_body[0]['raw']['safe_value']?></div>
                 <p class="media-meta">
                 <?=format_date($item->comment_created);?>
-                <a href="<?=url('node/'. $item->comment_nid);?>">回复</a>
+                <a href="<?=url('node/'. $item->comment_nid);?>" target="_blank">回复</a>
                 </p>
             </div>
 

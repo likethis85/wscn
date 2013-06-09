@@ -12,7 +12,9 @@ if($wscn['x_recent_rendered']) return;
     <div class="media">
         <?if($item->file_managed_field_data_upload_uri || $item->field_field_image_1):?>
         <a class="pull-left news-img" href="<?=url('node/'. $item->nid);?>" target="_blank">
+            <div class="news-img-wrap">
             <img alt="" class="" src="<?=wscn_image_url($item);?>">
+            </div>
         </a>
         <?endif?>
         <div class="media-body">
@@ -29,7 +31,9 @@ if($wscn['x_recent_rendered']) return;
            </p>
            <div class="media-content">
                <?=$item->_field_data['nid']['entity']->body['und'][0]['summary']?>
+               <?if(0):?>
                <a class="pull-left" href="<?=url('node/'. $item->nid);?>" target="_blank">[阅读全文]</a>
+               <?endif?>
            </div>
         </div>
     </div>

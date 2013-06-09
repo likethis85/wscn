@@ -1,5 +1,57 @@
+(function($){
+	$.fn.backToTop = function(options) {
+
+ 		var defaults = {
+    			text: '<i class="icon-chevron-up"></i>',
+    			min: 200,
+    			inDelay:600,
+    			outDelay:400,
+      			containerID: 'to-top',
+    			containerHoverID: 'to-top-hover',
+    			scrollSpeed: 1200,
+    			easingType: 'linear'
+ 		    },
+            settings = $.extend(defaults, options),
+            containerIDhash = '#' + settings.containerID,
+            containerHoverIDHash = '#'+settings.containerHoverID;
+		
+		$('body').append('<a href="#" id="'+settings.containerID+'">'+settings.text+'</a>');
+		$(containerIDhash).hide().on('click.UItoTop',function(){
+			$('html, body').animate({scrollTop:0}, settings.scrollSpeed, settings.easingType);
+			$('#'+settings.containerHoverID, this).stop().animate({'opacity': 0 }, settings.inDelay, settings.easingType);
+			return false;
+		})
+		.prepend('<span id="'+settings.containerHoverID+'"></span>')
+		.hover(function() {
+				$(containerHoverIDHash, this).stop().animate({
+					'opacity': 1
+				}, 600, 'linear');
+			}, function() { 
+				$(containerHoverIDHash, this).stop().animate({
+					'opacity': 0
+				}, 700, 'linear');
+			});
+					
+		$(window).scroll(function() {
+			var sd = $(window).scrollTop();
+			if(typeof document.body.style.maxHeight === "undefined") {
+				$(containerIDhash).css({
+					'position': 'absolute',
+					'top': sd + $(window).height() - 50
+				});
+			}
+			if ( sd > settings.min ) 
+				$(containerIDhash).fadeIn(settings.inDelay);
+			else 
+				$(containerIDhash).fadeOut(settings.Outdelay);
+		});
+};
+})(jQuery);
+
 (function ($) {
     $(document).ready(function(){
+
+	$().backToTop({ easingType: 'easeOutQuart' });
 
 	var parseUri = function(url){
 		function parseUri (str) {
@@ -174,7 +226,7 @@
                 success : function(response){
                     var res = [];
                     for(var i in response){
-                        res.push(' <div class="media text-only"><div class="media-body"><h4 class="media-heading"><a href="/node/' + response[i].nid + '">' + response[i].node_title +'</a></h4></div></div>')
+                        res.push(' <div class="media text-only"><div class="media-body"><h4 class="media-heading"><a href="/node/' + response[i].nid + '" target="_blank">' + response[i].node_title +'</a></h4></div></div>')
                     }
                     //target.html('<ul>' + res.join('') + '</ul>');
                     target.html( res.join('') );
