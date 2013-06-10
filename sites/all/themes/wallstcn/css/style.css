@@ -7165,7 +7165,7 @@ a:hover {
   color: #418cd1;
 }
 
-.news-list h3 {
+.news-list .media-heading h3 {
   font-size: 20px;
   line-height: 30px;
 }
@@ -7181,7 +7181,7 @@ a:hover {
   color: #474747;
 }
 
-.news-list img {
+.news-list .media img {
   width: 200px;
 }
 
@@ -7557,6 +7557,7 @@ a:hover {
  */
 
 .node-article {
+  padding-bottom: 10px;
   margin-bottom: 20px;
   border-bottom: 1px solid #CCC;
 }
@@ -7576,7 +7577,7 @@ a:hover {
   color: #418cd1;
 }
 
-.node-article h3 {
+.node-article .media-heading h3 {
   font-size: 20px;
   line-height: 30px;
 }
@@ -7592,7 +7593,7 @@ a:hover {
   color: #474747;
 }
 
-.node-article img {
+.node-article .media img {
   width: 200px;
 }
 
@@ -7619,7 +7620,7 @@ a:hover {
   background: #EFEFEF;
 }
 
-.node-article h2 {
+.node-article .media-heading h2 {
   margin: 0;
   font-size: 18px;
   font-weight: normal;
