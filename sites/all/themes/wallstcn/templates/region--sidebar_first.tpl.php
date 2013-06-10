@@ -168,6 +168,8 @@
 <?=render($elements['views_x_tags-block'])?>
 <?endif?>
 
+<?p($elements);?>
+
 
 <div class="page-header">
     <h2>加入我们</h2>

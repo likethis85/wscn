@@ -114,12 +114,19 @@
 
 @import "fontawesome/css/font-awesome.css";
 
+// 1200px min to 1060
+@gridColumnWidth1200:     70px;
+@gridGutterWidth1200:     20px;
+@gridRowWidth1200:        (@gridColumns * @gridColumnWidth1200) + (@gridGutterWidth1200 * (@gridColumns - 1));
+
+
+
+
 
 @blue:                  #418CD1;
 @red:                   #D24747;
 @brown:                 #84736C;
 
-@maxPageWidth : 1170px;
 @linkColor:#418CD1;
 
 @fontTitle:"Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
@@ -128,12 +135,27 @@ body {
     background:#CCCCCC;
 }
 
+//For 1200
+/*
+@maxPageWidth : 1170px;
 #wrapper {
     margin:0 auto;
     margin-top:30px;
     max-width:@maxPageWidth;
     background:#FFF;
     padding:0 30px;
+    overflow:hidden;
+}
+*/
+
+//For 1060
+@maxPageWidth : 1060px;
+#wrapper {
+    margin:0 auto;
+    margin-top:30px;
+    max-width:@maxPageWidth;
+    background:#FFF;
+    padding:0 20px;
     overflow:hidden;
 }
 
@@ -302,8 +324,8 @@ a:hover {
     height:30px;
     position:absolute;
     top:0;
+    left:0;
     width:100%;
-    //z-index:99999;
 
 
     .navbar {
@@ -1571,6 +1593,18 @@ a:hover {
     #navbar .mainsite-brand {
         display:block;
     }
+
+    
+    .news-list.vlist {
+        .media-meta {
+            margin-top:0;
+            margin-bottom:10px;
+        }
+        .media-image {
+            float:left;
+            margin-right:10px;
+        }
+    }
 }
 
 
@@ -1591,6 +1625,8 @@ a:hover {
     .news-slider-btn {
         display:none;
     }
+
+    
 }
 
 

@@ -10,6 +10,7 @@
                     </a>
             </h1></div>
             <div class="span8">
+                <div class="pull-right">
                 <?if(variable_get('site_ad')):?>
                 <?if($page['live_content']):?>
                 <script type="text/javascript" src="http://cbjs.baidu.com/js/m.js"></script>

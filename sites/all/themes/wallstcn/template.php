@@ -8,8 +8,8 @@ $theme_wscn = array(
 );
 
 
-//drupal_theme_rebuild();
-//system_rebuild_theme_data();
+drupal_theme_rebuild();
+system_rebuild_theme_data();
 // Auto-rebuild the theme registry during theme development.
 if (theme_get_setting('clear_registry')) {
     // Rebuild .info data.
