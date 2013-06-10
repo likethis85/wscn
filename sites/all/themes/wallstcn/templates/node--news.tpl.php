@@ -153,31 +153,40 @@ unset($comments['pager']);
 
 <?elseif($view_mode == 'teaser'):?>
 
-<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix node-article" <?php print $attributes; ?>>
+<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix node-article media" <?php print $attributes; ?>>
 
-<header class="article-header">
-<h2><a href="<?=url('node/' . $node->nid)?>"><?=$node->title?></a></h2>
-</header>
+    <?if($node->upload['und']):?>
+    <a class="pull-left news-img" href="<?=url('node/'. $item->nid);?>" target="_blank">
+        <div class="news-img-wrap">
+            <img src="<?=file_create_url($node->upload['und'][0]['uri']);?>" alt="" cl />
+        </div>
+    </a>
+    <?endif?>
 
-<?php if ($display_submitted): ?>
-<div class="article-meta clearfix">
-    <span class="pull-left">
-        文 <a href="<?=url('user/'. $node->uid);?>"><?=$node->name?></a> / <?=format_date($node->created);?>
-        <?if($node->taxonomy_vocabulary_2):?> / 
-        <?foreach($node->taxonomy_vocabulary_2['und'] as $tag):?>
-        <a href="<?=url('taxonomy/term/' . $tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a>
-        <?endforeach?>
-        <?endif?>
-    </span>
-</div>
-<?php endif; ?>
+    <div class="media-body">
+        <header class="media-heading">
+        <h2><a href="<?=url('node/' . $node->nid)?>"><?=$node->title?></a></h2>
+        </header>
 
-<div class="article-summary typo">
-    <?=$node->body['und']['0']['summary']?>
-</div>
+        <?php if ($display_submitted): ?>
+        <div class="media-meta clearfix">
+            <span class="pull-left">
+                文 <a href="<?=url('user/'. $node->uid);?>"><?=$node->name?></a> / <?=format_date($node->created);?>
+                <?if($node->taxonomy_vocabulary_2):?> / 
+                <?foreach($node->taxonomy_vocabulary_2['und'] as $tag):?>
+                <a href="<?=url('taxonomy/term/' . $tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a>
+                <?endforeach?>
+                <?endif?>
+            </span>
+        </div>
+        <?php endif; ?>
 
-</article>
+        <div class="media-content typo">
+            <?=$node->body['und']['0']['summary']?>
+        </div>
 
+    </div><!-- media body end-->
+</div><!-- node teaser end-->
 
 <?else:?>
 

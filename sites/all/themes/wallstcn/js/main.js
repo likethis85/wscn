@@ -51,6 +51,13 @@
 (function ($) {
     $(document).ready(function(){
 
+    //Fix news image height
+    $(".news-img-wrap img").each(function(){
+        if($(this).height() < $(this).parent().height()){
+            $(this).height($(this).parent().height());
+        }
+    });
+
 	$().backToTop({ easingType: 'easeOutQuart' });
 
 	var parseUri = function(url){

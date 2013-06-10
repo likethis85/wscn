@@ -21,15 +21,17 @@
         <h6>关注我们</h6>
         <ul>
             <li><a href="http://weibo.com/wallstreetcn" target="_blank">微博 @华尔街见闻</a></li>
-            <li><a href="#">微信公众帐号 wallstreetcn</a></li>
             <li><a href="http://t.qq.com/wallstreetcn" target="_blank">腾讯微博</a></li>
+            <?if(0):?>
+            <li><a href="#">微信公众帐号 wallstreetcn</a></li>
             <li><a href="http://wallstreetcn.t.sohu.com/" target="_blank">搜狐微博</a></li>
             <li><a href="http://twitter.com/wallstreetcn" target="_blank">Twitter</a></li>
+            <?endif?>
             <li><a href="/rss.xml">RSS订阅</a></li>
             <li><a href="http://feedburner.google.com/fb/a/mailverify?uri=wallstreetcn&loc=en_US" target="_blank">邮件订阅</a></li>
         </ul>
     </div>
-    <div class="span3">
+    <div class="offset1 span2">
         <img id="weixin-qrcode" alt="华尔街见闻二维码" src="/sites/all/themes/wallstcn/css/img/qrcode.jpg" />
     </div>
 </div>
