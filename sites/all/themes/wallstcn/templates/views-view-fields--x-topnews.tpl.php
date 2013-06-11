@@ -13,16 +13,18 @@ unset($items[0]);
             <div class="top-news-entry">
                 <div class="row-fluid">
                     <div class="span12">
-                        <a href="<?=url('node/'. $item->nid);?>" target="_blank">
-                            <!--<img alt="" class="span12" src="<?=file_create_url($item->field_field_image_1[0]['raw']['uri']);?>">-->
-                            <img alt="" class="span12" src="<?=file_create_url($item->uri);?>">
+                        <a class="entry-img" href="<?=url('node/'. $item->nid);?>" target="_blank">
+                            <div class="entry-img-wrap">
+                                <img alt="" class="span12" src="<?=file_create_url($item->uri);?>" />
+                            </div>
                         </a>
                     </div>
+                    <?if(0):?>
                     <div class="entry-meta">
                         <?=format_date($item->node_created);?>
                     </div>                    
+                    <?endif?>
                     <h2 class="entry-title"><a href="<?=url('node/'. $item->nid);?>"  target="_blank"><?=$item->node_title?></a></h2>
-
                     <div class="top-new-extra">
                     <?if($item->field_body):?>
                         <?=$item->field_body[0]['raw']['summary']?>

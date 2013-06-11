@@ -19,11 +19,13 @@ $rows = ceil($max / 3);
         <?$item = $items[$i * 3 + $j];?>
         <div class="span4">
             <div class="media">
+                <a class="media-image news-img" href="<?=url('node/'. $item->nid);?>" target="_blank">
                 <?if($item->file_managed_field_data_upload_uri || $item->field_field_image_1):?>
-                <a class="media-image" href="<?=url('node/'. $item->nid);?>" target="_blank">
-                    <img alt="" src="<?=wscn_image_url($item);?>">
-                </a>
+                    <div class="news-img-wrap">
+                        <img alt="" class="" src="<?=wscn_image_url($item);?>">
+                    </div>
                 <?endif?>
+                </a>
                 <div class="media-body">
                     <p class="media-meta">
                     by <?=$item->users_node_name?>

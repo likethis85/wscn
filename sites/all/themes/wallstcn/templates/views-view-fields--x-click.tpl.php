@@ -6,9 +6,9 @@ if($wscn['x_click_rendered']) return;
 <div class="side-box">
     <ul class="nav nav-tabs">
         <li class="active first">
-        <a data-toggle="tab" href="#side-tab-first">近期热门</a>
+        <a data-toggle="tab" href="#side-tab-first">48小时排行</a>
         </li>
-        <li><a data-toggle="tab" href="#side-tab-second" data-tab-url="/apiv1/click_today.json">今日热门</a></li>
+        <li><a data-toggle="tab" href="#side-tab-second" data-tab-url="/apiv1/click_today.json">今日排行</a></li>
         <li class="">
         <a data-toggle="tab" href="#side-tab-third" data-tab-url="/apiv1/click_all.json">总排行</a>
         </li>
@@ -18,8 +18,10 @@ if($wscn['x_click_rendered']) return;
             <?foreach($items as $item):?>
             <div class="media">
                 <?if($item->file_managed_field_data_upload_uri || $item->field_field_image_1):?>
-                <a class="pull-left" href="<?=url('node/'. $item->nid);?>" target="_blank">
-                    <img alt="" class="" src="<?=image_style_url('thumbnail', $item->file_managed_field_data_upload_uri);?>" width="80" height="45">
+                <a class="pull-left news-img" href="<?=url('node/'. $item->nid);?>" target="_blank">
+                    <div class="news-img-wrap">
+                        <img alt="" class="" src="<?=image_style_url('thumbnail', $item->file_managed_field_data_upload_uri);?>">
+                    </div>
                 </a>
                 <?endif?>
                 <div class="media-body">
