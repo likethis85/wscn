@@ -18,6 +18,23 @@ if (theme_get_setting('clear_registry')) {
     drupal_theme_rebuild();
 }
 
+function wscn_tagmapping($tid) {
+    $mapping = array(
+        '7350' => 'america',
+        '4' => 'economy',
+        '7353' => 'centralbank',
+        '3562' => 'breakfast',
+        '7349' => 'europe',
+        '7351' => 'china',
+        '48' => 'market',
+        '7354' => 'company',
+    );
+    if(isset($mapping[$tid])){
+        return url($mapping[$tid]);
+    }
+    return url('taxonomy/term/' . $tid);
+}
+
 
 function wscn_image_url($item) {
     if ($item->file_managed_field_data_upload_uri) {
