@@ -1,6 +1,6 @@
 <?if($view_mode == 'full'):?>
 
-<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix node-article" <?php print $attributes; ?>>
+<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix node-article node-single" <?php print $attributes; ?>>
 
 <header class="article-header">
 <h1><a href="<?=url('node/' . $node->nid)?>"><?=$node->title?></a></h1>
@@ -19,28 +19,15 @@
     <span class="pull-left">
         <?if($node->taxonomy_vocabulary_2):?>
         <?foreach($node->taxonomy_vocabulary_2['und'] as $tag):?>
-        <a href="<?=url('taxonomy/term/' . $tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a>
+        <a href="<?=wscn_tagmapping($tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a>
          / <?endforeach?> 
-        文 <a href="<?=url('user/'. $comment->uid);?>"><?=$node->name?></a> <span class="googleplus-author">@<a href="https://plus.google.com/117171791148320400898?rel=author">华尔街见闻</a></span> / <?=format_date($node->created);?>
+        文 <?=$node->name?> <span class="googleplus-author">@<a href="https://plus.google.com/117171791148320400898?rel=author">华尔街见闻</a></span> / <?=format_date($node->created);?>
         <?endif?>
         <?if($logged_in && $content['links']['statistics']):?>
         / <?=$content['links']['statistics']['#links']['statistics_counter']['title']?>
         <?endif?>
-        /  分享到：
     </span>
-    <!-- JiaThis Button BEGIN -->
-    <div class="jiathis_style">
-        <a class="jiathis_button_tsina"></a>
-        <a class="jiathis_button_tqq"></a>
-        <a class="jiathis_button_weixin"></a>
-        <a class="jiathis_button_douban"></a>
-        <a class="jiathis_button_fb"></a>
-        <a class="jiathis_button_twitter"></a>
-        <a class="jiathis_button_copy"></a>
-        <a class="jiathis_button_fav"></a>
-    </div>
-    <script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js?uid=1773865" charset="utf-8"></script>
-    <!-- JiaThis Button END -->
+
 
 </div>
 <?php endif; ?>
@@ -81,24 +68,52 @@
     <p></p>
 </div>
 
+
+
+<div class="article-share">
+    <!-- JiaThis Button BEGIN -->
+    <div class="jiathis_style_32x32">
+        <a class="jiathis_button_tsina"></a>
+        <a class="jiathis_button_tqq"></a>
+        <a class="jiathis_button_weixin"></a>
+        <a class="jiathis_button_twitter"></a>
+        <a class="jiathis_button_googleplus"></a>
+        <a class="jiathis_button_fb"></a>
+        <a class="jiathis_button_email"></a>
+        <a class="jiathis_button_copy"></a>
+        <a class="jiathis_button_fav"></a>
+        <a class="jiathis_button_print"></a>
+        <a class="jiathis_counter_style"></a>
+    </div>
+    <script type="text/javascript" >
+        var jiathis_config={
+                data_track_clickback:true,
+                summary:"",
+                hideMore:true
+            }
+        </script>
+        <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1673372" charset="utf-8"></script>
+        <!-- JiaThis Button END -->
+    </div>
+
+<?if(variable_get('site_ad')):?>
+<div class="ad-box">
+<script type="text/javascript">
+google_ad_client = "ca-pub-0869270234052789";
+google_ad_slot = "5114810965";
+google_ad_width = 468;
+google_ad_height = 60;
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</div>
+<?endif?>
+
 <?if($node->taxonomy_vocabulary_3):?>
 <div class="article-tags">
     文章标签：
     <?foreach($node->taxonomy_vocabulary_3['und'] as $tag):?>
     <a href="<?=url('taxonomy/term/' . $tag['tid'])?>" class="tag"><?=$tag['taxonomy_term']->name?></a>
     <?endforeach?>
-</div>
-<?endif?>
-
-<?if(variable_get('site_ad')):?>
-<div class="ad-box">
-    <script type="text/javascript">
-	google_ad_client = "ca-pub-0869270234052789";
-	google_ad_slot = "5114810965";
-	google_ad_width = 468;
-	google_ad_height = 60;
-	</script>
-	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
 </div>
 <?endif?>
 
@@ -171,10 +186,10 @@ unset($comments['pager']);
         <?php if ($display_submitted): ?>
         <div class="media-meta clearfix">
             <span class="pull-left">
-                文 <a href="<?=url('user/'. $node->uid);?>"><?=$node->name?></a> / <?=format_date($node->created);?>
+                文 <?=$node->name?> / <?=format_date($node->created);?>
                 <?if($node->taxonomy_vocabulary_2):?> / 
                 <?foreach($node->taxonomy_vocabulary_2['und'] as $tag):?>
-                <a href="<?=url('taxonomy/term/' . $tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a>
+                <a href="<?=wscn_tagmapping($tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a>
                 <?endforeach?>
                 <?endif?>
             </span>

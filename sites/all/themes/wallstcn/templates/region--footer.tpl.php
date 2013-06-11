@@ -45,10 +45,10 @@
 
 
 <?if($is_front):?>
-<p>友情链接： <a href="http://www.caijing.com.cn" target="_blank">财经网</a> | <a href="http://news.hexun.com/">和讯网</a> | <a href="http://www.howbuy.com/" target="_blank">好买基金网</a> | <a href="http://www.wolun.com.cn" target="_blank">港股通</a> | <a href="http://news.cnfol.com/" target="_blank">中金在线财经</a> | <a href="http://www.cnforex.com">环球外汇网</a> | <a href="http://www.guancha.cn" target="_blank">观察者网</a> | <a href="http://www.jfinfo.com">丰华财经</a> | <a href="http://finance.china.com/">中华网财经</a> | <a href="http://www.ijrong.com/">i金融</a> | <a href="http://www.9va.cn/">唯爱精品商城</a></p>
+<p>友情链接： <a href="http://www.caijing.com.cn" target="_blank">财经网</a> | <a href="http://news.hexun.com/">和讯网</a> | <a href="http://www.howbuy.com/" target="_blank">好买基金网</a> | <a href="http://www.wolun.com.cn" target="_blank">港股通</a> | <a href="http://news.cnfol.com/" target="_blank">中金在线财经</a> | <a href="http://www.cnforex.com">环球外汇网</a> | <a href="http://www.guancha.cn" target="_blank">观察者网</a> | <a href="http://www.jfinfo.com">丰华财经</a> | <a href="http://finance.china.com/">中华网财经</a> | <a href="http://www.ijrong.com/">i金融</a><p>
 <?endif?>
 
 <div class="copyright">
-    &copy; 2010-2013 <a class="copyright" href="/">华尔街见闻 wallstreetcn.com</a> , All Rights Reserved. 
+    &copy; 2010-2013 <a class="" href="/">华尔街见闻 wallstreetcn.com</a> , All Rights Reserved. 
     <a target="_blank" rel="nofollow" href="http://www.miibeian.gov.cn/">沪ICP备13019121号</a>
 </div>

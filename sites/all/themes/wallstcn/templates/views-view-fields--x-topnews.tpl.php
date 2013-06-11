@@ -9,7 +9,7 @@ unset($items[0]);
 
 <div id="top-news">
     <div class="row-fluid">
-        <div class="span7">
+        <div class="span6">
             <div class="top-news-entry">
                 <div class="row-fluid">
                     <div class="span12">
@@ -23,21 +23,23 @@ unset($items[0]);
                     </div>                    
                     <h2 class="entry-title"><a href="<?=url('node/'. $item->nid);?>"  target="_blank"><?=$item->node_title?></a></h2>
 
+                    <div class="top-new-extra">
+                    <?if($item->field_body):?>
+                        <?=$item->field_body[0]['raw']['summary']?>
+                    <?endif?>
                     <?if($item->field_field_related):?>
-                    <ul class="top-new-extra">
+                    <ul class="">
                         <?foreach($item->field_field_related as $related_item):?>
                         <li><a href="<?=url('node/'. $related_item['raw']['entity']->nid);?>"  target="_blank"><?=$related_item['raw']['entity']->title?></a></li>
                         <?endforeach?>
                     </ul>
-                    <?elseif($item->field_body):?>
-                    <div class="top-new-extra">
-                        <?=$item->field_body[0]['raw']['summary']?>
-                    </div>
                     <?endif?>
+                    </div>
+                   
                 </div>
             </div>
         </div><!--span6 end -->
-        <div class="span5">
+        <div class="span6">
             <div class="page-header header-blue">
                 <a href="/taxonomy/term/3118" class="more pull-right"  target="_blank">更多</a>
                 <h3>头条新闻</h3>
