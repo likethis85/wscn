@@ -39,7 +39,7 @@
                 <div class="media-body">
                     <p class="media-heading"><a href="">邮件订阅</a></p>
                     <div>
-                        每天免费深度文章
+                        每天免费文章
                     </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                 <div class="media-body">
                     <p class="media-heading"><a href="/rss.xml">RSS</a></p>
                     <div>
-                        订阅获得最新资讯
+                        订阅最新资讯
                     </div>
                 </div>
             </div>
@@ -72,7 +72,7 @@
                 <div class="media-body">
                     <p class="media-heading"><a href="http://m.<?=variable_get('site_domain')?>/">Mobile移动版</a></p>
                     <div>
-                        随时随地手机查看
+                        随时随地查看
                     </div>
                 </div>
             </div>

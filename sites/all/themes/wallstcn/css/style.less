@@ -165,6 +165,10 @@ body {
     h1 {
         margin-top:0;
     }
+
+    .row-fluid .span8, .row-fluid .span7 {
+        overflow:hidden;
+    }
 }
 
 a {
@@ -966,9 +970,14 @@ a:hover {
 .ad-box {
     margin-bottom:20px;
     clear:both;
+    overflow:hidden;
 
     &.ad-middle {
         margin-top:20px;
+
+        .span4 {
+            overflow:hidden;
+        }
     }
     .right-align {
         text-align:right;

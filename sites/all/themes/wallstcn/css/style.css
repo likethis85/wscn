@@ -6686,6 +6686,11 @@ body {
   margin-top: 0;
 }
 
+#header .row-fluid .span8,
+#header .row-fluid .span7 {
+  overflow: hidden;
+}
+
 a {
   -webkit-transition: all 0.3s ease-in-out;
      -moz-transition: all 0.3s ease-in-out;
@@ -7543,11 +7548,16 @@ a:hover {
 
 .ad-box {
   margin-bottom: 20px;
+  overflow: hidden;
   clear: both;
 }
 
 .ad-box.ad-middle {
   margin-top: 20px;
+}
+
+.ad-box.ad-middle .span4 {
+  overflow: hidden;
 }
 
 .ad-box .right-align {
