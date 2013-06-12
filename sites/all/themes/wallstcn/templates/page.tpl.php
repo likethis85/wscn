@@ -11,7 +11,8 @@
             </h1></div>
             <div class="span8">
                 <div class="pull-right">
-                <?if(variable_get('site_ad')):?>
+                    <img alt="华尔街见闻微博官方帐号" src="/sites/all/themes/wallstcn/banner.jpg" />
+                <?if(0 && variable_get('site_ad')):?>
                 <?if($page['live_content']):?>
                 <script type="text/javascript" src="http://cbjs.baidu.com/js/m.js"></script>
                 <script type="text/javascript">BAIDU_CLB_fillSlot("507799");</script>

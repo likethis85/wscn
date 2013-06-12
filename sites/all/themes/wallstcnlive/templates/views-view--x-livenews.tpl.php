@@ -7,7 +7,7 @@ $lastdate = '';
 ?>
 
 <div class="control-bar">
-    <span id="realtime-clock" class="pull-right">1</span>
+    <span id="realtime-clock" class="pull-right"></span>
     <label class="btn btn-small"> <i class="icon-refresh"></i> 自动刷新 <input id="enable-fresh" class="checkbox" type="checkbox" checked="chekced" /></label>
     <label class="btn btn-small"> <i class="icon-volume-up"></i>  声音提醒 <input id="enable-sound" class="checkbox" type="checkbox" checked="chekced" /></label>
 </div>
