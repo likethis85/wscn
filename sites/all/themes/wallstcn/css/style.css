@@ -8560,6 +8560,21 @@ a:hover {
   cursor: default;
 }
 
+#toolbar {
+  position: static !important;
+  width: 100%;
+  overflow: hidden;
+}
+
+body.toolbar,
+body.toolbar-drawer {
+  padding-top: 0 !important;
+}
+
+#admin-menu {
+  position: absolute !important;
+}
+
 /* ===========================
  * responsive
  * ===========================

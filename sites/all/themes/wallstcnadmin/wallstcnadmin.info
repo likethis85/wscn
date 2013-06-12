@@ -1,0 +1,7 @@
+name = WallstreetCN_Admin
+base theme = garland
+description = 华尔街见闻后台
+version = VERSION
+core = 7.x
+
+stylesheets[all][] = new.css

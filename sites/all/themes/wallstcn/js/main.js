@@ -137,7 +137,7 @@
                 dataType : 'json',
                 success : function(entries){
                     var domain = $("#livenews-navbar-prev").attr('href');
-                    console.log(entries);
+                    //console.log(entries);
                     for(var i in entries){
                         var date = new Date(parseInt(entries[i].node_created) * 1000);
                         var time = ('0' + date.getHours()).slice(-2)  + ':' + ('0' + date.getMinutes()).slice(-2);
@@ -330,6 +330,11 @@
                 }
             });		
         });
+
+        //实时新闻时钟
+        setInterval(function(){
+            $("#realtime-clock").html(moment().format('YYYY年MM月DD日 HH:mm:ss'));
+        }, 1000);
 
         //实时新闻刷新
         if($('#livenews-list')[0]){
