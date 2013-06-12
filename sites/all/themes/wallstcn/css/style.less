@@ -885,22 +885,45 @@ a:hover {
 .tab-content {
     border:1px solid #E6E6E6;
     border-top:0;
-    padding:20px;
+    padding:10px;
 
     .media {
-        padding-bottom:20px;
+        margin:0;
+        position:relative;
+        padding:10px 0 10px 30px;
         border-bottom:1px solid #E6E6E6;
     }
 
     .media-heading {
         font-weight:normal;
         color:#444;
+        font-size:14px;
+        color:#333;
+
+        a {
+            color:#333;
+            font-size:14px;
+        }
+
+        a:hover {
+            color:@red;
+        }
     }
 
 
     .media-body {
         color:#999;
-        font-size:12px;
+    }
+
+    .number {
+        font-size:20px;
+        font-family: "Times New Roman",Georgia,Serif;
+        font-style: italic;
+        position:absolute;
+        top:12px;
+        left:5px;
+        color:@red;
+        font-weight:bold;
     }
 }
 
@@ -1080,17 +1103,6 @@ a:hover {
     }
     .right-align {
         text-align:right;
-    }
-}
-
-.side-list {
-    .media-heading a{
-        color:#333;
-        font-size:13px;
-    }
-
-    img {
-        max-width:80px;
     }
 }
 

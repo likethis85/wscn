@@ -3,7 +3,7 @@ global $wscn;
 if($wscn['x_click_rendered']) return;
 ?>
 <?$items = $view->result;?>
-<div class="side-box">
+<div class="side-box ranking">
     <ul class="nav nav-tabs">
         <li class="active first">
         <a data-toggle="tab" href="#side-tab-first">48小时排行</a>
@@ -15,10 +15,11 @@ if($wscn['x_click_rendered']) return;
     </ul>
     <div class="tab-content">
         <div id="side-tab-first" class="tab-pane fade in active side-list">
-            <?foreach($items as $item):?>
+            <?foreach($items as $key => $item):?>
             <div class="media">
+                <span class="number"><?=$key + 1?></span>
                 <?if($item->file_managed_field_data_upload_uri || $item->field_field_image_1):?>
-                <a class="pull-left news-img" href="<?=url('node/'. $item->nid);?>" target="_blank">
+                <a class="pull-right news-img" href="<?=url('node/'. $item->nid);?>" target="_blank">
                     <div class="news-img-wrap">
                         <img alt="" class="" src="<?=image_style_url('thumbnail', $item->file_managed_field_data_upload_uri);?>">
                     </div>

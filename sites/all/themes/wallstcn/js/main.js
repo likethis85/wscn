@@ -233,7 +233,7 @@
                 success : function(response){
                     var res = [];
                     for(var i in response){
-                        res.push(' <div class="media text-only"><div class="media-body"><h4 class="media-heading"><a href="/node/' + response[i].nid + '" target="_blank">' + response[i].node_title +'</a></h4></div></div>')
+                        res.push(' <div class="media text-only"><span class="number">' + (parseInt(i) + 1) +'</span><div class="media-body"><h4 class="media-heading"><a href="/node/' + response[i].nid + '" target="_blank">' + response[i].node_title +'</a></h4></div></div>')
                     }
                     //target.html('<ul>' + res.join('') + '</ul>');
                     target.html( res.join('') );
