@@ -438,6 +438,7 @@
                     item.find('.media-comment').load(url + ' #comment-ajax', function(){
                         item.find('.livenews-comment-trigger').hide();
                         item.find('form').attr('target', "_blank");
+                        item.find('.live-news-full').removeClass('hide');
                     });
                     item.addClass('comment-loaded');
                 }

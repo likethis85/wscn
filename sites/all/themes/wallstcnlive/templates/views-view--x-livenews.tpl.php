@@ -63,17 +63,24 @@ $lastdate = '';
                 <i class="icon-download-alt"></i>
                 <?elseif('warning'):?>
                 <i class="icon-warning-sign"></i>
+                <?elseif('alert'):?>
+                <i class="icon-bullhorn"></i>
+                <?elseif('chart_pie'):?>
+                <i class="icon-bolt"></i>
+                <?elseif('rumor'):?>
+                <i class="icon-twitter"></i>
                 <?else:?>
                 <i class="icon-file-alt"></i> 
                 <?endif?>
             </span>
 
-            <h2 class="media-heading"><?=$item->field_body[0]['raw']['value']?></h2>
-            <div class="media-meta">
-                <a href="/node/<?=$item->nid?>" target="_blank"><?=format_date($item->node_created);?></a>
+            <h2 class="media-heading">
+                <?=$item->field_body[0]['raw']['summary']  ? $item->field_body[0]['raw']['summary'] : $item->field_body[0]['raw']['value']?>
+            </h2>
+            <div class="media-meta clearfix">
+                <a href="/node/<?=$item->nid?>" target="_blank" class="pull-left"><?=format_date($item->node_created);?></a>
                 <span class="livenews-comment-trigger">
-                    / <a href="/node/<?=$item->nid?>" class="livenews-loader"><i class="icon-spinner icon-spin"></i> 正在加载评论...</a>
-                    <!--/ <a href="/node/<?=$item->nid?>">评论</a>-->
+                　/　<a href="/node/<?=$item->nid?>" class="livenews-loader"><i class="icon-spinner icon-spin"></i> 正在加载评论...</a>
                 </span>
                 <?if($item->field_field_source):?>
                 / 消息来源:
@@ -83,6 +90,17 @@ $lastdate = '';
                 <?=$item->field_field_source[0]['raw']['value']?>
                 <?endif?>
                 <?endif?>
+
+                <span class="share-btn pull-left">
+                    <span class="pull-left">　/　分享到：</span>
+                    <span class="addthis_toolbox addthis_default_style" addthis:url="http://live.dp.com/node/<?=$item->nid?>"  addthis:title="<?=$item->node_title?>">
+                        <a class="addthis_button_twitter"></a>
+                        <a class="addthis_button_facebook"></a>
+                        <a class="addthis_button_google_plusone_share"></a>
+                        <a class="addthis_button_sinaweibo"></a>
+                        <a class="addthis_button_douban"></a>
+                    </span>
+                </span>
             </div>
             <div class="media-comment">
             </div>
@@ -91,6 +109,8 @@ $lastdate = '';
     <?$lastdate = $current_date;?>
     <?endforeach?>
 </div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51b970eb71800842"></script>
 
 <div class="view-more">
     <a href="/live/?page=1">查看更多 »</a>
