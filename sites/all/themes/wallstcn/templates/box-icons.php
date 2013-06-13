@@ -66,12 +66,13 @@
     <div class="row-fluid">
         <div class="span6">
             <div class="media">
-                <a class="pull-left weixin  icon-img" href="#footer">
-                    <span class="icon-qrcode"></span>
+                <a class="pull-left icon-img" href="#footer">
+                    <span class="icon-star-empty"></span>
                 </a>
-                <div class="media-body weixin">
+                <div class="media-body add-tofavor">
+                    <p class="media-heading"><a href="http://m.<?=variable_get('site_domain')?>/">加入收藏</a></p>
                     <div>
-                        <a href="#footer">点击查看二维码</a>
+                        方便每日查看
                     </div>
                 </div>
             </div>
@@ -84,7 +85,7 @@
                 <div class="media-body">
                     <p class="media-heading"><a href="http://m.<?=variable_get('site_domain')?>/">Mobile移动版</a></p>
                     <div>
-                        随时随地查看
+                        随时随地浏览
                     </div>
                 </div>
             </div>

@@ -7572,6 +7572,12 @@ a:hover {
   color: #CCC;
 }
 
+.social-icons .icon-star-empty {
+  font-size: 30px;
+  line-height: 40px;
+  color: #FEF161;
+}
+
 .social-icons .media-heading {
   margin: 0;
   font-weight: bold;

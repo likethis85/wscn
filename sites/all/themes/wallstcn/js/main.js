@@ -219,6 +219,37 @@
             }).hide();        
         });
 
+
+        //添加收藏夹
+        $(".add-tofavor").on('click', function(){
+              title = document.title; 
+              url = document.location; 
+              try { 
+                // Internet Explorer 
+                window.external.AddFavorite( url, title ); 
+              } 
+              catch (e) { 
+                try { 
+                  // Mozilla 
+                  window.sidebar.addPanel( title, url, "" ); 
+                } 
+                catch (e) { 
+                  // Opera 
+                  if( typeof( opera ) == "object" ) { 
+                    a.rel = "sidebar"; 
+                    a.title = title; 
+                    a.url = url; 
+                    return true; 
+                  } 
+                  else { 
+                    // Unknown 
+                    alert( '请按Ctrl+D键收藏本站' ); 
+                  } 
+                } 
+              } 
+              return false; 
+        });
+
         //tab 切换
         $('.side-box a[data-tab-url]').on('show', function (e) {
             var url = $(this).attr('data-tab-url');
