@@ -93,12 +93,11 @@ $lastdate = '';
 
                 <span class="share-btn pull-left">
                     <span class="pull-left">　/　分享到：</span>
-                    <span class="addthis_toolbox addthis_default_style" addthis:url="http://live.dp.com/node/<?=$item->nid?>"  addthis:title="<?=$item->node_title?>">
+                    <span class="addthis_toolbox addthis_default_style" addthis:url="http://live.<?=variable_get('site_domain')?>/node/<?=$item->nid?>"  addthis:title="<?=$item->node_title?>">
+                        <a class="addthis_button_sinaweibo"></a>
                         <a class="addthis_button_twitter"></a>
                         <a class="addthis_button_facebook"></a>
                         <a class="addthis_button_google_plusone_share"></a>
-                        <a class="addthis_button_sinaweibo"></a>
-                        <a class="addthis_button_douban"></a>
                     </span>
                 </span>
             </div>

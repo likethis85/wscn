@@ -487,3 +487,13 @@
   padding: 0 6px;
   font-size: 10.5px;
 }
+
+.ui-li-thumb,
+.ui-listview .ui-li-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+}

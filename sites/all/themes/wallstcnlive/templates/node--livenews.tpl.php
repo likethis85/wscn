@@ -28,7 +28,7 @@
     <script type="text/javascript" >
     var jiathis_config={
         data_track_clickback:true,
-        url:"http://live.dp.com/node/<?=$node->nid?>",
+        url:"http://live.<?=variable_get('site_domain')?>/node/<?=$node->nid?>",
         summary:"<?=$node->title?>",
         title:"<?=$node->title?>",
         ralateuid:{
