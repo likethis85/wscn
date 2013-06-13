@@ -31,8 +31,8 @@
 </div>
 <?endif?>
 
-<?if($elements['views_x_click-block']):?>
-<?=render($elements['views_x_click-block'])?>
+<?if($elements['views_x_click-twodays']):?>
+<?=render($elements['views_x_click-twodays'])?>
 <?endif?>
 
 <?if(variable_get('site_ad')):?>

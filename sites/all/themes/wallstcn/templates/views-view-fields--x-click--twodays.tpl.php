@@ -5,13 +5,12 @@ if($wscn['x_click_rendered']) return;
 <?$items = $view->result;?>
 <div class="side-box ranking">
     <ul class="nav nav-tabs">
+        <li><a data-toggle="tab" href="#side-tab-fourth" data-tab-url="/apiv1/click_all.json">点击排行</a></li>
         <li class="active first">
-        <a data-toggle="tab" href="#side-tab-first">48小时排行</a>
+        <a data-toggle="tab" href="#side-tab-first">48小时</a>
         </li>
-        <li><a data-toggle="tab" href="#side-tab-second" data-tab-url="/apiv1/click_today.json">今日排行</a></li>
-        <li class="">
-        <a data-toggle="tab" href="#side-tab-third" data-tab-url="/apiv1/click_all.json">总排行</a>
-        </li>
+        <li><a data-toggle="tab" href="#side-tab-second" data-tab-url="/apiv1/click_week.json">一周排行</a></li>
+        <li class=""><a data-toggle="tab" href="#side-tab-third" data-tab-url="/apiv1/click_month.json">一月</a></li>
     </ul>
     <div class="tab-content">
         <div id="side-tab-first" class="tab-pane fade in active side-list">
@@ -34,6 +33,8 @@ if($wscn['x_click_rendered']) return;
         <div id="side-tab-second" class="tab-pane fade">
         </div>
         <div id="side-tab-third" class="tab-pane fade">
+        </div>
+        <div id="side-tab-fourth" class="tab-pane fade">
         </div>
     </div>
 </div>

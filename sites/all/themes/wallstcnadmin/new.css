@@ -5,10 +5,5 @@
 
 .form-radios .form-item,
 .form-checkboxes .form-item {
-  width: 19%;         
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   display: inline-block;
-  margin: 0px;
 }
