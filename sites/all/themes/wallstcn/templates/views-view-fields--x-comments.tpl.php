@@ -10,10 +10,18 @@ if($wscn['x_comments_rendered']) return;
 <div class="comments-list">
     <?foreach($items as $item):?>
     <div class="media">
+        <a class="pull-left" href="<?=url('node/'. $item->comment_nid);?>" target="_blank">
+            <?if($item->users_comment_picture):?>
+            <?$pic = file_load($item->users_comment_picture);?>
+            <img alt="" class="" src="<?=image_style_url('thumbnail', $pic->uri);?>" width="50" height="50">
+            <?else:?>
+            <img alt="" class="" src="/sites/all/themes/wallstcn/css/img/avatar.png" width="50" height="50">
+            <?endif?>
+        </a>
         <div class="media-body">
             <p class="media-heading">
             <?if($item->comment_uid):?>
-            <a href="<?=url('user/'. $item->comment_uid);?>" class="user-name"><?=$item->comment_name?></a>
+            <a href="<?=url('node/'. $item->comment_nid);?>" class="user-name"><?=$item->comment_name?></a>
             <?else:?>
             匿名用户
             <?endif?>
