@@ -19,10 +19,11 @@
                     <?endif?>
 
                     <form id="search-form" class="navbar-search pull-right form-search" action="/search/node/">
-                        <div class="input-append">
+                        <div class="">
                             <input id="search-query" name="q" type="text" class="search-query" placeholder="搜索华尔街见闻"  x-webkit-speech x-webkit-grammar="builtin:translate" lang="zh-CN" />
-                            <button class="btn" type="submit"><span class="icon-search"></span></button>
+                            <button id="search-submit" class="btn hide" type="submit"><span class="icon-search"></span></button>
                         </div>
+                        <span id="search-submit-icon"><span class="icon-search"></span></span>
                     </form>
                 </div><!-- /.nav-collapse -->
             </div><!-- container end -->

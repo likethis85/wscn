@@ -8,6 +8,7 @@ stylesheets[print][] = css/print.css
 scripts[0] = js/bootstrap.min.js
 scripts[] = js/tmpl.js
 scripts[] = js/moment.min.js
+scripts[] = js/jquery.easing.min.js
 scripts[] = js/main.js
 
 

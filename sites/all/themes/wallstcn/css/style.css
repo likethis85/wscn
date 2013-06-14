@@ -8025,7 +8025,8 @@ a:hover {
 .typo blockquote {
   padding: 0.6em 1em;
   margin: 1em 4em 1em 2em;
-  border-left: 0.4em solid #f1f1f1;
+  background: #f1f1f1;
+  border-left: 0.4em solid #666666;
 }
 
 .typo blockquote blockquote {
@@ -8572,6 +8573,42 @@ a:hover {
  * Special
  * ===========================
  */
+
+#search-form {
+  position: relative;
+  margin-top: 7px;
+}
+
+#search-query {
+  width: 110px;
+  padding-right: 25px;
+  background: #707070;
+  border: none;
+  -webkit-box-shadow: -2px -2px 2px #000000 inset;
+     -moz-box-shadow: -2px -2px 2px #000000 inset;
+          box-shadow: -2px -2px 2px #000000 inset;
+}
+
+#search-submit-icon {
+  position: absolute;
+  top: 2px;
+  right: 10px;
+  display: block;
+  color: #9F9F9F;
+  cursor: pointer;
+}
+
+#search-query[placeholder] {
+  color: #9F9F9F;
+}
+
+/*
+#search-query:focus {
+    width:150px;
+    background:#FFF;
+    .transition(all .5s ease-in-out);
+}
+*/
 
 .pagination ul .active a,
 .pagination ul .active span {

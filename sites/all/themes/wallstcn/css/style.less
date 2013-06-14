@@ -1334,8 +1334,8 @@ a:hover {
     blockquote {
         margin: 1em 4em 1em 2em;
         padding: 0.6em 1em;
-        border-left: 0.4em solid #f1f1f1;
-        //background: #f1f1f1;
+        border-left: 0.4em solid #666666;
+        background: #f1f1f1;
     }
 
     blockquote blockquote {
@@ -1708,6 +1708,40 @@ a:hover {
  * Special
  * ===========================
  */
+
+#search-form {
+    margin-top:7px;
+    position:relative;
+}
+#search-query {
+    .box-shadow(-2px -2px 2px #000 inset);
+    padding-right:25px;
+    width:110px;
+    background:#707070;
+    border:none;
+}
+
+#search-submit-icon {
+    display:block;
+    position:absolute;
+    right:10px;
+    top:2px;
+    color:#9F9F9F;
+    cursor:pointer;
+}
+
+#search-query[placeholder]{
+    color:#9F9F9F;
+}
+
+
+/*
+#search-query:focus {
+    width:150px;
+    background:#FFF;
+    .transition(all .5s ease-in-out);
+}
+*/
 
 .pagination ul .active a, .pagination ul .active span {
     background:@red;
