@@ -6773,8 +6773,8 @@ a:hover {
   position: relative;
   height: 38px;
   padding-right: 70px;
-  padding-left: 65px;
-  padding-left: 120px;
+  padding-left: 75px;
+  padding-left: 130px;
   margin-bottom: 30px;
   overflow: hidden;
   clear: both;
@@ -6839,7 +6839,7 @@ a:hover {
 
 #realtime-news .control-buttons {
   position: absolute;
-  left: 60px;
+  left: 70px;
   display: block;
 }
 
@@ -7833,7 +7833,9 @@ a:hover {
 
 .article-share {
   height: 40px;
+  padding: 10px 10px 2px;
   margin: 10px 0;
+  background: #EEE;
 }
 
 .article-summary {
@@ -8313,9 +8315,9 @@ a:hover {
 }
 
 .livenews-list .media-heading {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: normal;
-  line-height: 22px;
+  line-height: 19px;
   color: #333;
 }
 
@@ -8570,6 +8572,12 @@ a:hover {
  * Special
  * ===========================
  */
+
+.pagination ul .active a,
+.pagination ul .active span {
+  color: #FFF;
+  background: #d24747;
+}
 
 #to-top {
   position: fixed;

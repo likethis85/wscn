@@ -18,9 +18,9 @@
                     <?=render($elements['menu_menu-live-menu']);?>
                     <?endif?>
 
-                    <form id="search-form" class="navbar-search pull-right" action="/search/node/">
+                    <form id="search-form" class="navbar-search pull-right form-search" action="/search/node/">
                         <div class="input-append">
-                            <input id="search-query" name="q" type="text" class="input-medium" placeholder="搜索华尔街见闻"  x-webkit-speech x-webkit-grammar="builtin:translate" lang="zh-CN" />
+                            <input id="search-query" name="q" type="text" class="search-query" placeholder="搜索华尔街见闻"  x-webkit-speech x-webkit-grammar="builtin:translate" lang="zh-CN" />
                             <button class="btn" type="submit"><span class="icon-search"></span></button>
                         </div>
                     </form>
@@ -39,7 +39,7 @@
                     <a id="livenews-navbar-prev" href="http://live.<?=variable_get('site_domain')?>" class="btn prev"><span class="icon-angle-up"></span></a>
                     <a id="livenews-navbar-next" href="http://live.<?=variable_get('site_domain')?>" class="btn next"><span class="icon-angle-down"></span></a>
                     </p>
-                    <p class="news"> <a href="http://live.<?=variable_get('site_domain')?>" target="_blank">实时新闻</a>：
+                    <p class="news"> <a href="http://live.<?=variable_get('site_domain')?>" target="_blank"><i class="icon-volume-up"></i> 实时新闻</a>：
                     <ul>
                         <li>正在载入...</li>
                     </ul>

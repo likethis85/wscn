@@ -7,7 +7,7 @@ $lastdate = '';
 ?>
 
 <div class="control-bar">
-    <span id="realtime-clock" class="pull-right"></span>
+    <span class="pull-right"><i class="icon-time"></i> <span id="realtime-clock" class=""></span></span>
     <label class="btn btn-small"> <i class="icon-refresh"></i> 自动刷新 <input id="enable-fresh" class="checkbox" type="checkbox" checked="chekced" /></label>
     <label class="btn btn-small"> <i class="icon-volume-up"></i>  声音提醒 <input id="enable-sound" class="checkbox" type="checkbox" checked="chekced" /></label>
 </div>
@@ -112,6 +112,6 @@ $lastdate = '';
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51b970eb71800842"></script>
 
 <div class="view-more">
-    <a href="/live/?page=1">查看更多 »</a>
+    <a href="/live/?page=1">MORE »</a>
 </div>
 <?$wscn['x_livenews_rendered'] = true;?>

@@ -66,7 +66,7 @@
     <div class="row-fluid">
         <div class="span6">
             <div class="media">
-                <a class="pull-left icon-img" href="#footer">
+                <a class="pull-left icon-img add-tofavor" href="#footer">
                     <span class="icon-star-empty"></span>
                 </a>
                 <div class="media-body add-tofavor">
