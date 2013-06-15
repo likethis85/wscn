@@ -58,15 +58,14 @@
 <?=render($elements['views_x_comments-block'])?>
 <?endif?>
 
-<?if(1 && $is_front):?>
 <div class="page-header">
     <a href="http://weibo.com/wallstreetcn" class="more pull-right" target="_blank">MORE»</a>
     <h3>最新微博</h3>
 </div>
 <iframe width="100%" height="800" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=800&fansRow=2&ptype=1&speed=0&skin=1&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=1875034341&verifier=7ef13898&dpc=1"></iframe>
-<?endif?>
 
 
+<?if($is_front):?>
 <div class="page-header">
     <h2>投放广告</h2>
 </div>
@@ -77,12 +76,14 @@
         </div>
     </div>
 </div>
+<?endif?>
 
 <?if($elements['views_x_tags-block']):?>
 <?=render($elements['views_x_tags-block'])?>
 <?endif?>
 
 
+<?if($is_front):?>
 <div class="page-header">
     <h2>加入我们</h2>
 </div>
@@ -93,3 +94,4 @@
         </div>
     </div>
 </div>
+<?endif?>

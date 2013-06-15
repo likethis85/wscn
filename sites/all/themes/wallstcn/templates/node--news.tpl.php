@@ -212,7 +212,7 @@ unset($comments['pager']);
         </div>
         <?php endif; ?>
 
-        <div class="media-content typo">
+        <div class="media-content">
             <?=$node->body['und']['0']['summary']?>
         </div>
 
