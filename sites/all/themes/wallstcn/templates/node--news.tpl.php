@@ -29,7 +29,7 @@
             <i class="icon-pencil"></i>  文 / <?=$node->name?>
         </span>
         <span class="meta-item">
-            <?=format_date($node->created);?>
+            <i class="icon-time"></i> <?=format_date($node->created);?>
         </span>
         <span class="meta-item">
         <?if($logged_in && $content['links']['statistics']):?>
