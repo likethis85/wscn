@@ -6,7 +6,7 @@ $max = count($items);
 $rows = ceil($max / 3);
 ?>
 <div class="page-header header-brown news-slider-controls">
-    <a href="/taxonomy/term/3119" class="pull-right more">MORE»</a>
+    <a href="/recommend" class="pull-right more">MORE»</a>
     <a href="javascript:;" class="news-slider-btn btn pull-right next"><span class="icon-angle-right"></span></a>
     <a href="javascript:;" class="news-slider-btn btn pull-right prev"><span class="icon-angle-left"></span></a>
     <h2>编辑推荐</h2>

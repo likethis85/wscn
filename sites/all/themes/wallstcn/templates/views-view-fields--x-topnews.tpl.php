@@ -43,7 +43,7 @@ unset($items[0]);
         </div><!--span6 end -->
         <div class="span5">
             <div class="page-header header-blue">
-                <a href="/taxonomy/term/3118" class="more pull-right"  target="_blank">MORE»</a>
+                <a href="/topnews" class="more pull-right"  target="_blank">MORE»</a>
                 <h3>头条新闻</h3>
             </div>
             <?foreach($items as $item):?>
