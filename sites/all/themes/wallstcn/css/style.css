@@ -7820,6 +7820,10 @@ a:hover {
   color: #999;
 }
 
+.meta-item {
+  margin-right: 20px;
+}
+
 .article-copyright {
   padding: 15px;
   margin: 20px 0;
@@ -8172,7 +8176,8 @@ a:hover {
 .typo-form,
 .typo-hr,
 .typo-table {
-  margin-bottom: 1em;
+  margin-bottom: 15px;
+  line-height: 25px;
 }
 
 /* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
@@ -8573,6 +8578,12 @@ a:hover {
  * Special
  * ===========================
  */
+
+#realtime-clock-wrap {
+  padding: 0 5px;
+  margin-top: 2px;
+  border: 1px solid #CCCCCC;
+}
 
 #search-form {
   position: relative;

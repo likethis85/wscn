@@ -18,17 +18,26 @@
 <div class="article-meta clearfix">
     <span class="pull-left">
         <?if($node->taxonomy_vocabulary_2):?>
+        <span class="meta-item">
+            <i class="icon-tags"></i> 
         <?foreach($node->taxonomy_vocabulary_2['und'] as $tag):?>
         <a href="<?=wscn_tagmapping($tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a>
-         / <?endforeach?> 
-        文 <?=$node->name?> <span class="googleplus-author">@<a href="https://plus.google.com/117171791148320400898?rel=author">华尔街见闻</a></span> / <?=format_date($node->created);?>
+        <?endforeach?> 
+        </span>
         <?endif?>
+        <span class="meta-item">
+            <i class="icon-pencil"></i>  文 / <?=$node->name?>
+        </span>
+        <span class="meta-item">
+            <?=format_date($node->created);?>
+        </span>
+        <span class="meta-item">
         <?if($logged_in && $content['links']['statistics']):?>
-        / <?=$content['links']['statistics']['#links']['statistics_counter']['title']?>
+        <i class="icon-desktop"></i> <?=$content['links']['statistics']['#links']['statistics_counter']['title']?>
         <?endif?>
+        </span>
     </span>
-
-
+    <span class="pull-right"><span class="googleplus-author">来源：<a href="https://plus.google.com/117171791148320400898?rel=author">华尔街见闻</a></span></span>
 </div>
 <?php endif; ?>
 
@@ -173,7 +182,7 @@ unset($comments['pager']);
     <?if($node->upload['und']):?>
     <a class="pull-left news-img" href="<?=url('node/'. $item->nid);?>" target="_blank">
         <div class="news-img-wrap">
-            <img src="<?=file_create_url($node->upload['und'][0]['uri']);?>" alt="" cl />
+            <img src="<?=file_create_url($node->upload['und'][0]['uri']);?>" alt="" />
         </div>
     </a>
     <?endif?>
@@ -186,11 +195,18 @@ unset($comments['pager']);
         <?php if ($display_submitted): ?>
         <div class="media-meta clearfix">
             <span class="pull-left">
-                文 <?=$node->name?> / <?=format_date($node->created);?>
-                <?if($node->taxonomy_vocabulary_2):?> / 
+                <span class="meta-item">
+                    文 / <?=$node->name?>
+                </span>
+                <span class="meta-item">
+                    <?=format_date($node->created);?>
+                </span>
+                <?if($node->taxonomy_vocabulary_2):?> 
+                <span class="meta-item">
                 <?foreach($node->taxonomy_vocabulary_2['und'] as $tag):?>
                 <a href="<?=wscn_tagmapping($tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a>
                 <?endforeach?>
+                </span>
                 <?endif?>
             </span>
         </div>
