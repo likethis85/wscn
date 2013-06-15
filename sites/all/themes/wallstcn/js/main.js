@@ -107,6 +107,10 @@
                 realtimeNewsIndex++;
                 realtimeNewsIndex = realtimeNewsIndex >= realtimeNews.length ? 0 : realtimeNewsIndex;
             }
+
+            if(realtimeNewsIndex == 0) {
+                $("#realtime-news ul").css("margin-top", '-38px');
+            }
             $("#realtime-news ul").animate({
                 "margin-top": - (realtimeNewsIndex * 38) + "px"
             }, 1000, 'linear', function() {
