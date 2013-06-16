@@ -6772,7 +6772,7 @@ a:hover {
 #realtime-news {
   position: relative;
   height: 38px;
-  padding-right: 70px;
+  padding-right: 80px;
   padding-left: 75px;
   padding-left: 130px;
   margin-bottom: 30px;
@@ -6799,6 +6799,9 @@ a:hover {
   overflow: hidden;
   line-height: 38px;
   color: #888;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
   list-style-type: none;
 }
 
