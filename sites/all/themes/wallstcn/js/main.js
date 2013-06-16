@@ -422,10 +422,10 @@
             var lowlightTime = 10000;
             var livenewsHandler;
             var allowFresh = function(){
-                return $("#enable-fresh").val() ? true : false;
+                return $("#enable-fresh").attr('checked') ? true : false;
             }
             var allowSound = function(){
-                return $("#enable-sound").val() ? true : false;
+                return $("#enable-sound").attr('checked') ? true : false;
             }
 
             var prepareItem = function(item){
