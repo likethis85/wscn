@@ -20,8 +20,14 @@ if($wscn['x_recent_rendered']) return;
         <div class="media-body">
             <h3 class="media-heading"><a href="<?=url('node/'. $item->nid);?>" target="_blank"><?=$item->node_title?></a></h3>
             <p class="media-meta">
-            文 <?=$item->users_node_name?>
-           / <?=format_date($item->node_created);?>
+
+            <span class="meta-item">
+            文 / <?=$item->users_node_name?>
+            </span>
+            
+            <span class="meta-item">
+                <?=format_date($item->node_created);?>
+            </span>
            <?if(0 && $item->_field_data['nid']['entity']->taxonomy_vocabulary_2):?> / 
            /
            <?foreach($item->_field_data['nid']['entity']->taxonomy_vocabulary_2['und'] as $tag):?>

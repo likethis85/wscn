@@ -7188,6 +7188,7 @@ a:hover {
 .top-news-entry .entry-img {
   display: block;
   max-height: 240px;
+  margin-bottom: 10px;
   overflow: hidden;
 }
 
@@ -7257,6 +7258,10 @@ a:hover {
   margin-bottom: 10px;
   font-size: 12px;
   color: #999;
+}
+
+.news-list .meta-item {
+  margin-right: 15px;
 }
 
 .news-list .media-body {
@@ -7751,6 +7756,10 @@ a:hover {
   margin-bottom: 10px;
   font-size: 12px;
   color: #999;
+}
+
+.node-article .meta-item {
+  margin-right: 15px;
 }
 
 .node-article .media-body {

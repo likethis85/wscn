@@ -26,18 +26,18 @@ unset($items[0]);
                     <?endif?>
                     <h2 class="entry-title"><a href="<?=url('node/'. $item->nid);?>"  target="_blank"><?=$item->node_title?></a></h2>
                     <div class="top-new-extra">
-                    <?if($item->field_body):?>
+                        <?if($item->field_body):?>
                         <?=$item->field_body[0]['raw']['summary']?>
-                    <?endif?>
-                    <?if($item->field_field_related):?>
-                    <ul class="">
-                        <?foreach($item->field_field_related as $related_item):?>
-                        <li><a href="<?=url('node/'. $related_item['raw']['entity']->nid);?>"  target="_blank"><?=$related_item['raw']['entity']->title?></a></li>
-                        <?endforeach?>
-                    </ul>
-                    <?endif?>
+                        <?endif?>
+                        <?if($item->field_field_related):?>
+                        <ul class="">
+                            <?foreach($item->field_field_related as $related_item):?>
+                            <li><a href="<?=url('node/'. $related_item['raw']['entity']->nid);?>"  target="_blank"><?=$related_item['raw']['entity']->title?></a></li>
+                            <?endforeach?>
+                        </ul>
+                        <?endif?>
                     </div>
-                   
+
                 </div>
             </div>
         </div><!--span6 end -->
