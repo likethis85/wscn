@@ -148,7 +148,8 @@
                         var date = new Date(parseInt(entries[i].node_created) * 1000);
                         var time = ('0' + date.getHours()).slice(-2)  + ':' + ('0' + date.getMinutes()).slice(-2);
                         realtimeNews.push(
-                            '<li><span class="time">' + time + '</span> <a href="' + domain + '/node/' + entries[i].nid + '" target="_blank">' + entries[i].node_title + '</a></li>'
+                            //'<li><span class="time">' + time + '</span> <a href="' + domain + '/node/' + entries[i].nid + '" target="_blank">' + entries[i].node_title + '</a></li>'
+                            '<li><span class="time">' + time + '</span> <a href="' + domain + '/" target="_blank">' + entries[i].node_title + '</a></li>'
                         );
                     }
                     $("#realtime-news ul").html(realtimeNews.join(""));
