@@ -67,23 +67,23 @@
                     <ul>
                         <li class="first">最新文章</li>
                         {% for (var i=0; i < 2; i++) { %}
-                            <li><a href="http://<?=variable_get('site_domain')?>/node/{%=o[i].nid%}">{%=o[i].title%}</a></li>
+                            <li><a href="http://<?=variable_get('site_domain')?>/node/{%=o[i].nid%}" target="_blank">{%=o[i].title%}</a></li>
                         {% } %}
                     </ul>
                 </div>
                 <div class="span4">
                     <ul>
                         {% for (var i=2; i < 5; i++) { %}
-                            <li><a href="http://<?=variable_get('site_domain')?>/node/{%=o[i].nid%}">{%=o[i].title%}</a></li>
+                            <li><a href="http://<?=variable_get('site_domain')?>/node/{%=o[i].nid%}" target="_blank">{%=o[i].title%}</a></li>
                         {% } %}
                     </ul>
                 </div>
                 <div class="span4">
                     <ul>
                         {% for (var i=5; i < 7; i++) { %}
-                            <li><a href="http://<?=variable_get('site_domain')?>/node/{%=o[i].nid%}">{%=o[i].title%}</a></li>
+                            <li><a href="http://<?=variable_get('site_domain')?>/node/{%=o[i].nid%}"  target="_blank">{%=o[i].title%}</a></li>
                         {% } %}
-                    <li class="last"><a href="http://<?=variable_get('site_domain')?>/titles">MORE »</a></li>
+                    <li class="last"><a href="http://<?=variable_get('site_domain')?>/news" target="_blank">MORE »</a></li>
                     </ul>
                 </div>
             </div><!--rows end-->

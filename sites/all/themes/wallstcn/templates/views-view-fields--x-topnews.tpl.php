@@ -5,9 +5,12 @@ if($wscn['x_topnews_rendered']) return;
 $items = $view->result;
 $item = $items[0];
 unset($items[0]);
+if(!$item->field_field_related){
+    unset($items[count($items) - 1]);
+}
 ?>
 
-<div id="top-news">
+<div id="top-news" class="<?if(!$item->field_field_related):?>no-related<?endif?>">
     <div class="row-fluid">
         <div class="span7">
             <div class="top-news-entry">
@@ -37,7 +40,6 @@ unset($items[0]);
                         </ul>
                         <?endif?>
                     </div>
-
                 </div>
             </div>
         </div><!--span6 end -->

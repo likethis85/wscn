@@ -7179,6 +7179,10 @@ a:hover {
   letter-spacing: 1px;
 }
 
+#top-news.no-related .top-news-entry {
+  height: 417px;
+}
+
 .top-news-entry {
   height: 482px;
   padding: 10px;
