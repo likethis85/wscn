@@ -99,7 +99,7 @@
         //实时新闻
         var realtimeNews = [];
         var realtimeNewsIndex = 0;
-        var scrollingNews = function(direction){
+        var scrollingNews = function(direction, speed){
             if(direction < 0) {
                 realtimeNewsIndex--;
                 realtimeNewsIndex = realtimeNewsIndex < 0 ? realtimeNews.length - 1 : realtimeNewsIndex;
@@ -111,9 +111,11 @@
             if(realtimeNewsIndex == 0) {
                 $("#realtime-news ul").css("margin-top", '-38px');
             }
+
+            speed = speed > 0 ? speed : 1000;
             $("#realtime-news ul").animate({
                 "margin-top": - (realtimeNewsIndex * 38) + "px"
-            }, 1000, 'linear', function() {
+            }, speed, 'linear', function() {
             });
         }
         var initRealtimeNews = function(){
@@ -155,16 +157,24 @@
         }
 
         $("#realtime-news").on('click', '.prev', function(){
-            scrollingNews(-1);
+            scrollingNews(-1, 300);
             return false;
         });
         $("#realtime-news").on('click', '.next', function(){
-            scrollingNews(1);
+            scrollingNews(1, 300);
             return false;
         });
 
+
+
         var timerHandler = setInterval(scrollingNews, 5000);
         initRealtimeNews();
+        $(document).on('mouseover', '#realtime-news', function(){
+            clearInterval(timerHandler);
+        });
+        $(document).on('mouseout', '#realtime-news', function(){
+            timerHandler = setInterval(scrollingNews, 5000);
+        });
 
 
         //固定头部
