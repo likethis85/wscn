@@ -37,7 +37,7 @@
                     <span class="icon-envelope"></span>
                 </a>
                 <div class="media-body">
-                    <p class="media-heading"><a href="">邮件订阅</a></p>
+                    <p class="media-heading"><a href="http://feedburner.google.com/fb/a/mailverify?uri=wallstreetcn&loc=en_US" target="_blank">邮件订阅</a></p>
                     <div>
                         每天免费文章
                     </div>

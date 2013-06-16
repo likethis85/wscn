@@ -38,7 +38,7 @@
 <div id="market" data-role="page" data-add-back-btn="true" data-back-btn-text="后退">
     <div data-role="header">
         <a href="/" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right jqm-home">Home</a>
-        <h1><a href="/"><img src="/sites/all/themes/wallstcn/wallstcnmobile/logo.png" alt="华尔街见闻 移动版" /></a></h1>
+        <h1><a href="/"><img src="/sites/all/themes/wallstcnmobile/logo.png" alt="华尔街见闻 移动版" /></a></h1>
     </div><!-- /header -->
 
     <div data-role="navbar" data-grid="d">
@@ -64,7 +64,7 @@
 <div id="schedule" data-role="page" data-add-back-btn="true" data-back-btn-text="后退">
     <div data-role="header">
         <a href="/" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right jqm-home">Home</a>
-        <h1><a href="/"><img src="/sites/all/themes/wallstcn/wallstcnmobile/logo.png" alt="华尔街见闻 移动版" /></a></h1>
+        <h1><a href="/"><img src="/sites/all/themes/wallstcnmobile/logo.png" alt="华尔街见闻 移动版" /></a></h1>
     </div><!-- /header -->
 
     <div data-role="navbar" data-grid="d">
