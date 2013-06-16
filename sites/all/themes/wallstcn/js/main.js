@@ -51,12 +51,14 @@
 (function ($) {
     $(document).ready(function(){
 
-    //Fix news image height
-    $(".news-img-wrap img").each(function(){
+    $(".news-img-wrap img").one('load', function() {
         if($(this).height() < $(this).parent().height()){
             $(this).height($(this).parent().height());
         }
+    }).each(function() {
+        if(this.complete) $(this).load();
     });
+    
 
 	$().backToTop({ easingType: 'easeOutQuart' });
 

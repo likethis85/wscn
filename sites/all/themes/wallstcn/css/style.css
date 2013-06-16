@@ -7516,6 +7516,12 @@ a:hover {
   color: #d24747;
 }
 
+.tab-content .news-img-wrap {
+  width: 100px;
+  height: 60px;
+  overflow: hidden;
+}
+
 .tab-content .text-only a {
   font-size: 14px;
   color: #333;
