@@ -120,7 +120,7 @@
     {% if(o.cursor.currentPageIndex == 0) { %}
     </div>
     <div class="search-pager view-more">
-        <a href="/search/node/">查看更多 »</a>
+        <a href="/search/node/">MORE »</a>
     </div>
     </div>
     {% } %}

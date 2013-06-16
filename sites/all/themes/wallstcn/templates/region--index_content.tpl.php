@@ -2,7 +2,7 @@
 <?=render($elements['views_x_topnews-block']);?>
 <?endif?>
 
-<?if(variable_get('site_ad')):?>
+<?if(0 && variable_get('site_ad')):?>
 <div class="ad-box ad-middle">
     <div class="row-fluid">
         <div class="span4">
@@ -29,6 +29,12 @@
     </div>
 </div>
 <?endif?>
+
+<?if(variable_get('site_ad')):?>
+<script type="text/javascript" src="http://cbjs.baidu.com/js/m.js"></script>
+<script type="text/javascript">BAIDU_CLB_fillSlot("507800");</script>
+<?endif?>
+
 
 <?if($elements['views_x_recommand-block']):?>
 <?=render($elements['views_x_recommand-block']);?>

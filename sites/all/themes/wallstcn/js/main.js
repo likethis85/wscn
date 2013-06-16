@@ -304,7 +304,7 @@
         $("#search-query").on('focus', function(){
             var q = $(this);
             var width = q.width();
-            var allowWidth = $("#navbar").width() - $("#navbar .nav").width() - 150;
+            var allowWidth = 230;
             if(allowWidth < width) {
                 allowWidth = width;
             }

@@ -83,7 +83,7 @@
 <?endif?>
 
 
-<?if($is_front):?>
+<?if(0 && $is_front):?>
 <div class="page-header">
     <h2>加入我们</h2>
 </div>
