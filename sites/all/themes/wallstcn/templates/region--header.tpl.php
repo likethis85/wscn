@@ -108,8 +108,8 @@
     {% var item = o.results[i]; %}
     <div class="media">
         <div class="media-body">
-            <h3 class="media-heading"><a href="{%=item.url%}">{%#item.title%}</a></h3>
-            <p class="media-meta">链接：<a href="{%=item.url%}">{%=item.url%}</a></p>
+            <h3 class="media-heading"><a href="{%=item.url%}" target="_blank">{%#item.title%}</a></h3>
+            <p class="media-meta">链接：<a href="{%=item.url%}" target="_blank">{%=item.url%}</a></p>
            <div class="media-content">
                {%#item.content%}
            </div>
