@@ -1,15 +1,17 @@
 <?
 global $wscn;
+//p($view->style_plugin->row_plugin->nodes, 1);
+//exit;
 if($wscn['x_livenews_rendered']) return;
 ?>
-<?$items = $view->result;
+<?$items = $view->style_plugin->row_plugin->nodes;
 $lastdate = '';
 ?>
 
 <div class="control-bar">
     <span id="realtime-clock-wrap" class="pull-right"><i class="icon-time"></i> <span id="realtime-clock" class=""></span></span>
-    <label class="btn btn-small"> <i class="icon-refresh"></i> 自动刷新 <input id="enable-fresh" class="checkbox" type="checkbox" checked="chekced" /></label>
-    <label class="btn btn-small"> <i class="icon-volume-up"></i>  声音提醒 <input id="enable-sound" class="checkbox" type="checkbox" checked="chekced" /></label>
+    <label class="btn btn-small"> <i class="icon-refresh"></i> 自动刷新 <input id="enable-fresh" class="checkbox" type="checkbox" /></label>
+    <label class="btn btn-small"> <i class="icon-volume-up"></i>  声音提醒 <input id="enable-sound" class="checkbox" type="checkbox" /></label>
 </div>
 
 
@@ -44,17 +46,17 @@ $lastdate = '';
     </script>
 
     <?foreach($items as $item):?>
-    <?$current_date = format_date($item->node_created, 'custom', 'Y年m月d日');?>
+    <?$current_date = format_date($item->created, 'custom', 'Y年m月d日');?>
     <?if($lastdate && $lastdate !== $current_date):?>
     <div class="datebar">
         <?=$current_date?>
     </div>
     <?endif?>
     <div id="livenews-id-<?=$item->nid?>" class="media">
-        <div class="media-body media-format-<?=$item->field_field_format[0]['raw']['value']?> media-color-<?=$item->field_field_color[0]['raw']['value']?>">
-            <time datetime="<?=format_date($item->node_created);?>"><?=format_date($item->node_created, 'custom', 'H:i');?></time>
+        <div class="media-body media-format-<?=$item->field_format['und'][0]['value']?> media-color-<?=$item->field_color['und'][0]['value']?>">
+            <time datetime="<?=format_date($item->created);?>"><?=format_date($item->created, 'custom', 'H:i');?></time>
             <span class="icon">
-                <?$icon = $item->field_field_icon[0]['raw']['value'];?>
+                <?$icon = $item->field_icon['und'][0]['value'];?>
                 <?if($icon == 'chart'):?>
                 <i class="icon-bar-chart"></i>
                 <?elseif('calendar'):?>
@@ -75,25 +77,25 @@ $lastdate = '';
             </span>
 
             <h2 class="media-heading">
-                <?=$item->field_body[0]['raw']['summary']  ? $item->field_body[0]['raw']['summary'] : $item->field_body[0]['raw']['value']?>
+                <?=$item->body['und'][0]['summary']  ? $item->body['und'][0]['summary'] : $item->body['und'][0]['safe_value']?>
             </h2>
             <div class="media-meta clearfix">
-                <a href="/node/<?=$item->nid?>" target="_blank" class="pull-left"><?=format_date($item->node_created);?></a>
+                <a href="/node/<?=$item->nid?>" target="_blank" class="pull-left"><?=format_date($item->created);?></a>
                 <span class="livenews-comment-trigger">
                 　/　<a href="/node/<?=$item->nid?>" class="livenews-loader"><i class="icon-spinner icon-spin"></i> 正在加载评论...</a>
                 </span>
-                <?if($item->field_field_source):?>
+                <?if($item->field_source):?>
                 / 消息来源:
-                <?if($item->field_field_sourcelink):?>
-                <a href="<?=$item->field_field_sourcelink[0]['raw']['value']?>"><?=$item->field_field_source[0]['raw']['value']?></a>
+                <?if($item->field_sourcelink):?>
+                <a href="<?=$item->field_sourcelink['und'][0]['value']?>"><?=$item->field_source['und'][0]['value']?></a>
                 <?else:?>
-                <?=$item->field_field_source[0]['raw']['value']?>
+                <?=$item->field_source['und'][0]['value']?>
                 <?endif?>
                 <?endif?>
 
                 <span class="share-btn pull-left">
                     <span class="pull-left">　/　分享到：</span>
-                    <span class="addthis_toolbox addthis_default_style" addthis:url="http://live.<?=variable_get('site_domain')?>/node/<?=$item->nid?>"  addthis:title="<?=$item->node_title?>">
+                    <span class="addthis_toolbox addthis_default_style" addthis:url="http://live.<?=variable_get('site_domain')?>/node/<?=$item->nid?>"  addthis:title="<?=$item->title?>">
                         <a class="addthis_button_sinaweibo"></a>
                         <a class="addthis_button_twitter"></a>
                         <a class="addthis_button_facebook"></a>
@@ -106,6 +108,7 @@ $lastdate = '';
         </div>
     </div>
     <?$lastdate = $current_date;?>
+    <?//p($item, 1);exit;?>
     <?endforeach?>
 </div>
 <script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
