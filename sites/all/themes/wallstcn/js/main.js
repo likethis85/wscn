@@ -139,6 +139,9 @@
                 }
             });        
            */
+           if(!$("#realtime-news")[0]){
+                return false;
+           }
            var url = '/apiv1/live-index.json';
            $.ajax({
                 url : url,

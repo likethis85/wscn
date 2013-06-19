@@ -57,17 +57,17 @@ $lastdate = '';
                 <?$icon = $item->field_field_icon[0]['raw']['value'];?>
                 <?if($icon == 'chart'):?>
                 <i class="icon-bar-chart"></i>
-                <?elseif('calendar'):?>
+                <?elseif($icon == 'calendar'):?>
                 <i class="icon-calendar"></i>
-                <?elseif('download'):?>
+                <?elseif($icon == 'download'):?>
                 <i class="icon-download-alt"></i>
-                <?elseif('warning'):?>
+                <?elseif($icon == 'warning'):?>
                 <i class="icon-warning-sign"></i>
-                <?elseif('alert'):?>
+                <?elseif($icon == 'alert'):?>
                 <i class="icon-bullhorn"></i>
-                <?elseif('chart_pie'):?>
+                <?elseif($icon == 'chart_pie'):?>
                 <i class="icon-bolt"></i>
-                <?elseif('rumor'):?>
+                <?elseif($icon == 'rumor'):?>
                 <i class="icon-twitter"></i>
                 <?else:?>
                 <i class="icon-file-alt"></i> 
