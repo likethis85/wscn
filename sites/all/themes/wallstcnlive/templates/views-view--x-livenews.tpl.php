@@ -75,7 +75,10 @@ $lastdate = '';
             </span>
 
             <h2 class="media-heading">
-                <?=$item->field_body[0]['raw']['summary']  ? $item->field_body[0]['raw']['summary'] : $item->field_body[0]['raw']['value']?>
+                <?=$item->field_body[0]['raw']['summary']  ? $item->field_body[0]['raw']['summary'] : $item->field_body[0]['raw']['safe_value']?>
+                <?if($item->field_body[0]['raw']['summary']):?>
+                <span class="show-more pull-right">[more]</span>
+                <?endif?>
             </h2>
             <div class="media-meta clearfix">
                 <a href="/node/<?=$item->nid?>" target="_blank" class="pull-left"><?=format_date($item->node_created);?></a>

@@ -1,5 +1,4 @@
 <?if($view_mode == 'full'):
-p($node, 1);
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix node-article node-livenews" <?php print $attributes; ?>>
 
@@ -177,4 +176,5 @@ unset($comments['pager']);
 <?=render($content);?>
 
 <?endif?>
+
 
