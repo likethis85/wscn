@@ -7722,6 +7722,11 @@ a:hover {
   clear: both;
 }
 
+.ad-box.ad-top {
+  padding-top: 0;
+  padding-bottom: 30px;
+}
+
 .ad-box.ad-middle {
   max-height: 58px;
 }
@@ -8306,7 +8311,7 @@ a:hover {
 
 .livenews-list .media {
   position: relative;
-  padding: 5px 0 5px 80px;
+  padding: 7px 0 7px 70px;
   margin: 0;
   border-bottom: 1px solid #CCC;
 }
@@ -8331,16 +8336,19 @@ a:hover {
 
 .livenews-list time {
   position: absolute;
-  top: 10px;
+  top: 7px;
   left: 25px;
+  font-size: 13px;
   color: #666;
 }
 
 .livenews-list .icon {
   position: absolute;
-  top: 10px;
+  top: 7px;
   left: 0;
+  font-size: 16px;
   color: #CCC;
+  text-align: center;
 }
 
 .livenews-list .media-heading {
