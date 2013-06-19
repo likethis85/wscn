@@ -16,7 +16,7 @@ $lastdate = '';
 <div id="livenews-list" class="livenews-list">
     <script id="livenews-list-js" type="text/x-tmpl">
         <div id="livenews-id-{%=o.nid%}" class="media highlight">
-            <div class="media-body {%=o.colorClass%}">
+            <div class="media-body {%=o.colorClass%} {%=o.format == '加粗' ? 'media-format-bold' : ''%}">
                 <time datetime="">{%=o.time%}</time>
                 <span class="icon">
                     <i class="icon-file-alt"></i> 

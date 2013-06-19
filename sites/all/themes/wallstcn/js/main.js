@@ -449,11 +449,12 @@
                     '红色' : 'media-color-red',
                     '蓝色' : 'media-color-blue'
                 }
-                item.colorClass = colorMapping[item.color];
+                item.colorClass = colorMapping[item.颜色] || colorMapping[item.color];
                 return item;
             }
             var appendLivenews = function(items){
                 var foundNew = false;
+                items.reverse();
                 for(var i in items){
                     var item = $("#livenews-id-" + items[i].nid);
                     if(item[0]){
