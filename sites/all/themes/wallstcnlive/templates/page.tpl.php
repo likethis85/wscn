@@ -1,5 +1,4 @@
-<div id="wrapper">
-
+<div id="wrapper" class="livenews-channel">
     <header id="header">
     <?php if (!empty($logo)): //logo start?>
     <div class="container">

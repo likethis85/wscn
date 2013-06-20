@@ -8387,6 +8387,17 @@ a:hover {
   font-size: 12px;
 }
 
+.livenews-list .show-more {
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: normal !important;
+  color: #999 !important;
+}
+
+.livenews-list .highlight {
+  background-color: #FFFF88;
+}
+
 .livenews-list .datebar {
   padding: 5px 10px;
   font-weight: bold;

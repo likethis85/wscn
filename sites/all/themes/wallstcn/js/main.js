@@ -148,7 +148,6 @@
                 dataType : 'json',
                 success : function(entries){
                     var domain = $("#livenews-navbar-prev").attr('href');
-                    //console.log(entries);
                     for(var i in entries){
                         var date = new Date(parseInt(entries[i].node_created) * 1000);
                         var time = ('0' + date.getHours()).slice(-2)  + ':' + ('0' + date.getMinutes()).slice(-2);
@@ -360,6 +359,7 @@
             if(newSearch) {
                 searchPage = 0;
             }
+
             $.ajax({
                 url:'http://ajax.googleapis.com/ajax/services/search/web',
                 data : {
@@ -384,17 +384,35 @@
             googleCustomSearch();
             return false;
         });
-        searchForm.on('submit', function(){
-            var currentQ = $(this).find('input[name=q]').val();
-            if(q == currentQ) {
-                q = currentQ;
-                googleCustomSearch(q);
-            } else {
-                q = currentQ;
-                googleCustomSearch(q, 1);
+
+        if($('.livenews-channel')[0]) {
+            searchForm.attr('action', '/livesearch');
+            searchForm.find('input[name=q]').attr('name', 'title').attr('placeholder', '搜索实时新闻');
+
+            var uri = parseUri();
+            var title = uri.queryKey.title || null;
+            if(title) {
+                title = decodeURIComponent(title);
+                $("#livenews-list").highlight(title);
+                searchForm.find('input[name=title]').val(title);
+                $("#livenews-list").prepend('<div class="page-header header-red"><h3>正在搜索 : ' +  title + '</h3></div>');
             }
-            return false;
-        });
+            
+        
+        } else {
+            searchForm.on('submit', function(){
+                var currentQ = $(this).find('input[name=q]').val();
+                if(q == currentQ) {
+                    q = currentQ;
+                    googleCustomSearch(q);
+                } else {
+                    q = currentQ;
+                    googleCustomSearch(q, 1);
+                }
+                return false;
+            });       
+        }
+
         $(document).on('click', "#search-results-close", function(){
             $("#main-content").show();
             $("#search-result").hide();
@@ -457,6 +475,10 @@
             var appendLivenews = function(items){
                 var uri = parseUri();
                 var page = uri.queryKey.page || 0;
+                //搜索页面强制检测最新消息
+                if(uri.path == '/livesearch'){
+                    page = 1;
+                }
                 //console.log(page);
                 //console.log(pageloadTime);
                 //console.log(parseInt(items[0].node_created));

@@ -18,3 +18,4 @@ regions[navigation] = Navigation
 
 scripts[] = ../wallstcn/js/jquery.jplayer.js
 scripts[] = ../wallstcn/js/moment.min.js
+scripts[] = ../wallstcn/js/jquery.highlight.js
