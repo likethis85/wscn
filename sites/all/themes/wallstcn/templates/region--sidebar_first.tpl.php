@@ -13,8 +13,8 @@
 
 <?include 'box-icons.php'?>
 
-<?if(variable_get('site_ad')):?>
-<div class="ad-box">
+<?if(0 && variable_get('site_ad')):?>
+<div class="ad-box ad-side">
     <div style="width:336px;margin:0 auto">
         <script type="text/javascript">
             google_ad_client = "ca-pub-0869270234052789";
@@ -31,12 +31,20 @@
 </div>
 <?endif?>
 
+<?if(variable_get('site_ad')):?>
+<div class="ad-box ad-side">
+    <div style="width:336px;margin:0 auto">
+        <a href="http://www.sinolending.com/" target="_blank"><img src="/sites/all/themes/wallstcn/ads/ad_sinolending.jpg" alt="" /></a>
+    </div>
+</div>
+<?endif?>
+
 <?if($elements['views_x_click-twodays']):?>
 <?=render($elements['views_x_click-twodays'])?>
 <?endif?>
 
 <?if(variable_get('site_ad')):?>
-<div class="ad-box">
+<div class="ad-box ad-side ad-margin-top">
     <div style="width:336px;margin:0 auto">
      <script type="text/javascript">
          google_ad_client = "ca-pub-0869270234052789";

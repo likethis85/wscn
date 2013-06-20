@@ -7708,6 +7708,7 @@ a:hover {
   padding: 15px 0;
   overflow: hidden;
   clear: both;
+  text-align: center;
   *zoom: 1;
 }
 
@@ -7722,9 +7723,14 @@ a:hover {
   clear: both;
 }
 
-.ad-box.ad-top {
-  padding-top: 0;
-  padding-bottom: 30px;
+.ad-box.ad-side {
+  padding-top: 10px;
+  margin-bottom: 15px;
+  background-color: #F1F1F1;
+}
+
+.ad-box.ad-margin-top {
+  margin-top: 15px;
 }
 
 .ad-box.ad-middle {
@@ -7737,6 +7743,24 @@ a:hover {
 
 .ad-box .right-align {
   text-align: right;
+}
+
+.iframe-box {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  clear: both;
+  *zoom: 1;
+}
+
+.iframe-box:before,
+.iframe-box:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.iframe-box:after {
+  clear: both;
 }
 
 /* ===========================
