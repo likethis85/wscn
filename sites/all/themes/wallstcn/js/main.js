@@ -309,7 +309,9 @@
         $("#search-query").on('focus', function(){
             var q = $(this);
             var width = q.width();
-            var allowWidth = 230;
+            var maxAllowWidth = 230;
+            var allowWidth = $("#navbar").width() - $("#navbar .nav").width() - 150;
+            allowWidth = allowWidth > maxAllowWidth ? maxAllowWidth : allowWidth;
             if(allowWidth < width) {
                 allowWidth = width;
             }
@@ -509,7 +511,7 @@
                     '/live-europe' : { location : 9478 },
                     '/live-america' : { location: 9477 },
                     '/live-japan' : { location: 9480 },
-                    '/live-economy' : { tid: 9501 },
+                    '/live-economy' : { tid: 9498 },
                     '/live-centralbank' : { tid: 9496},
                     '/live-market' : { tid: 9502},
                 }
