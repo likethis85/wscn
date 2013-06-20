@@ -432,7 +432,6 @@
             var allowSound = function(){
                 return $("#enable-sound").attr('checked') ? true : false;
             }
-
             var prepareItem = function(item){
                 var timstamp = parseInt(item.node_created);
                 var date = new Date(timstamp * 1000);
@@ -452,7 +451,17 @@
                 item.colorClass = colorMapping[item.颜色] || colorMapping[item.color];
                 return item;
             }
+            var pageloadTime = Math.round(new Date().getTime()/1000);
             var appendLivenews = function(items){
+                var uri = parseUri();
+                var page = uri.queryKey.page || 0;
+                //console.log(page);
+                //console.log(pageloadTime);
+                //console.log(parseInt(items[0].node_created));
+                if(page > 0 && parseInt(items[0].node_created) < pageloadTime){
+                    return false;
+                }
+
                 var foundNew = false;
                 items.reverse();
                 for(var i in items){
@@ -484,23 +493,33 @@
             }
             var loadLivenews = function(){
                 var url = '/apiv1/livenews.json';
-                var currentPath = parseUri();
-                switch(currentPath.path) {
-                    case '/live-europe':
-                        url = '/apiv1/livenews-europe.json';
-                    break;
-                    case '/live-china':
-                        url = '/apiv1/livenews-china.json';
-                    break;
-                    case '/live-america':
-                        url = '/apiv1/livenews-america.json';
+                var uri = parseUri();
+                var page = uri.queryKey.page || 0;
+                var data = {};
+                switch(uri.path) {
+                    case '/node':
+                    case '/':
                     break;
                     default:
+                        url = '/apiv1/livesearch.json';
                     break;
                 }
+                var pathMapping = {
+                    '/live-china' : { location : 9479 },
+                    '/live-europe' : { location : 9478 },
+                    '/live-america' : { location: 9477 },
+                    '/live-japan' : { location: 9480 },
+                    '/live-economy' : { tid: 9501 },
+                    '/live-centralbank' : { tid: 9496},
+                    '/live-market' : { tid: 9502},
+                }
+                if(pathMapping[uri.path]) {
+                    data = pathMapping[uri.path];
+                }
                 $.ajax({
-                    url : url,
+                    url : url, 
                     dataType : 'json',
+                    data : data,
                     ifModified:true,
                     error: function(xhr, err){
                         //console.log(err);
