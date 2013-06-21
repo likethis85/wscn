@@ -473,6 +473,9 @@
             }
             var pageloadTime = Math.round(new Date().getTime()/1000);
             var appendLivenews = function(items){
+                if(!items){
+                    return false;
+                }
                 var uri = parseUri();
                 var page = uri.queryKey.page || 0;
                 //搜索页面强制检测最新消息

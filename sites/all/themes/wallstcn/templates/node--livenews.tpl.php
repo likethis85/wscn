@@ -42,7 +42,7 @@
 </div>
 
 <div class="article-content typo">
-    <?=$node->body['und']['0']['value']?>
+    <?=$node->body['und']['0']['safe_value']?>
 
     <?if($node->upload['und']):?>
     <img alt="" class="" src="<?=file_create_url($node->upload['und'][0]['uri']);?>">
