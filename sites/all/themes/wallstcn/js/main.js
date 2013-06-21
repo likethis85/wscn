@@ -485,7 +485,7 @@
                 }
                 var uri = parseUri();
                 var page = uri.queryKey.page || 0;
-                //搜索页面强制检测最新消息
+                //搜索页面强制不检测最新消息
                 if(uri.path == '/livesearch'){
                     page = 1;
                 }
@@ -594,6 +594,11 @@
                     loadComment(item);
                 }
             });
+
+            $('#livenews-list .media-heading.has-more').each(function(){
+                $(this).find('p:last').append(' <span class="show-more">[more]</span>');
+            })
+
 
             jplayer.jPlayer({
                 ready: function () {

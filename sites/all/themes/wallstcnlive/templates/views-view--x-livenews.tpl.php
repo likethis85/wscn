@@ -74,9 +74,9 @@ $lastdate = '';
                 <?endif?>
             </span>
 
-            <h2 class="media-heading">
+            <h2 class="media-heading <?=$item->field_body[0]['raw']['summary'] ? 'has-more' : ''?>">
                 <?=$item->field_body[0]['raw']['summary']  ? $item->field_body[0]['raw']['summary'] : $item->field_body[0]['raw']['safe_value']?>
-                <?if($item->field_body[0]['raw']['summary']):?>
+                <?if(0 && $item->field_body[0]['raw']['summary']):?>
                 <span class="show-more pull-left">[more]</span>
                 <?endif?>
             </h2>
