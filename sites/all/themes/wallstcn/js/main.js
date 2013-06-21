@@ -93,7 +93,7 @@
         //图片延迟加载
         $("img.lazy").show().lazyload({
             effect       : "fadeIn",
-            threshold : 200,
+            threshold : 500,
             load : function() {
                 var img = $(this);
                 if(img.parent().hasClass('news-img-wrap') && img.height() < img.parent().height()){
