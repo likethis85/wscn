@@ -34,7 +34,7 @@
 <?if(variable_get('site_ad')):?>
 <div class="ad-box ad-side">
     <div style="width:336px;margin:0 auto">
-        <a href="http://www.sinolending.com/" target="_blank"><img src="/sites/all/themes/wallstcn/ads/ad_sinolending.jpg" alt="" /></a>
+        <a href="http://www.sinolending.com/" target="_blank"><img src="/sites/all/themes/wallstcn/ads/ad_sinolending.gif" alt="" /></a>
     </div>
 </div>
 <?endif?>
