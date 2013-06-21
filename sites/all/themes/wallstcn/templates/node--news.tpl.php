@@ -182,7 +182,8 @@ unset($comments['pager']);
     <?if($node->upload['und']):?>
     <a class="pull-left news-img" href="<?=url('node/'. $item->nid);?>" target="_blank">
         <div class="news-img-wrap">
-            <img src="<?=wscn_image_domain(file_create_url($node->upload['und'][0]['uri']));?>" alt="" />
+            <img class="lazy" src="/sites/all/themes/wallstcn/placeholder.gif" data-original="<?=wscn_image_domain(file_create_url($node->upload['und'][0]['uri']));?>" />
+            <noscript><img alt="" class="" src="<?=wscn_image_domain(file_create_url($node->upload['und'][0]['uri']));?>"></noscript>
         </div>
     </a>
     <?endif?>

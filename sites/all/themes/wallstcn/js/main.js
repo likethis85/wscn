@@ -51,14 +51,15 @@
 (function ($) {
     $(document).ready(function(){
 
-    $(".news-img-wrap img").one('load', function() {
-        if($(this).height() < $(this).parent().height()){
-            $(this).height($(this).parent().height());
+    $("img.lazy").show().lazyload({
+        effect       : "fadeIn",
+        load : function() {
+            var img = $(this);
+            if(img.parent().hasClass('news-img-wrap') && img.height() < img.parent().height()){
+                img.height(img.parent().height());
+            }
         }
-    }).each(function() {
-        if(this.complete) $(this).load();
     });
-    
 
 	$().backToTop({ easingType: 'easeOutQuart' });
 
