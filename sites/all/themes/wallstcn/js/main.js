@@ -49,20 +49,7 @@
 })(jQuery);
 
 (function ($) {
-    $(document).ready(function(){
-
-    $("img.lazy").show().lazyload({
-        effect       : "fadeIn",
-        load : function() {
-            var img = $(this);
-            if(img.parent().hasClass('news-img-wrap') && img.height() < img.parent().height()){
-                img.height(img.parent().height());
-            }
-        }
-    });
-
-	$().backToTop({ easingType: 'easeOutQuart' });
-
+    //Url解析
 	var parseUri = function(url){
 		function parseUri (str) {
 			var	o   = parseUri.options,
@@ -98,6 +85,24 @@
 
 		return url ? parseUri(url) : parseUri(window.location.href);
 	};
+
+
+
+    $(document).ready(function(){
+
+        //图片延迟加载
+        $("img.lazy").show().lazyload({
+            effect       : "fadeIn",
+            load : function() {
+                var img = $(this);
+                if(img.parent().hasClass('news-img-wrap') && img.height() < img.parent().height()){
+                    img.height(img.parent().height());
+                }
+            }
+        });
+
+        //回到顶部
+        $().backToTop({ easingType: 'easeOutQuart' });
 
         //实时新闻
         var realtimeNews = [];
@@ -611,6 +616,21 @@
                 }
             });
         }
+
+
+        //iframe延迟加载
+        $('.iframe-box').each(function() {
+            if(!$(this).attr('data-src')){
+                return false;
+            }
+            var attrs = [];
+            $.each(this.attributes, function() {
+                if(this.specified) {
+                    attrs.push(this.name.replace('data-', '') + '="' + this.value + '"');
+                }
+            });
+            $(this).append('<iframe ' + attrs.join(' ') + '></iframe>');
+        });
     });
 })(jQuery);
 

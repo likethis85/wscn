@@ -7357,7 +7357,6 @@ a:hover {
 }
 
 .news-list.vlist .news-img-wrap {
-  width: 96%;
   height: 130px;
   margin: 0 auto;
   overflow: hidden;
@@ -7588,13 +7587,19 @@ a:hover {
 .social-icons .icon-qrcode {
   font-size: 30px;
   line-height: 40px;
-  color: #CCC;
+  color: #93CF23;
 }
 
 .social-icons .icon-star-empty {
   font-size: 30px;
   line-height: 40px;
   color: #FEF161;
+}
+
+.social-icons .icon-weibo {
+  font-size: 30px;
+  line-height: 40px;
+  color: #EB182C;
 }
 
 .social-icons .media-heading {
@@ -8787,12 +8792,19 @@ body.toolbar, body.toolbar-drawer {
   #navbar .mainsite-brand {
     display: block;
   }
+  .top-news-entry .entry-img {
+    max-height: none;
+  }
+  .news-list.vlist .media-heading {
+    height: auto;
+  }
   .news-list.vlist .media-meta {
     margin-top: 0;
     margin-bottom: 10px;
   }
   .news-list.vlist .media-image {
     float: left;
+    width: 200px;
     margin-right: 10px;
   }
 }

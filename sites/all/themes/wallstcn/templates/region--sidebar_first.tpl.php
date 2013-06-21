@@ -70,8 +70,11 @@
     <a href="http://weibo.com/wallstreetcn" class="more pull-right" target="_blank">MORE»</a>
     <h3>最新微博</h3>
 </div>
-<iframe width="100%" height="800" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=800&fansRow=2&ptype=1&speed=0&skin=1&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=1875034341&verifier=7ef13898&dpc=1"></iframe>
-
+<div class="iframe-box" data-width="100%" data-height="800" data-class="share_self"  data-frameborder="0" data-scrolling="no" data-src="http://widget.weibo.com/weiboshow/index.php?language=&amp;width=0&amp;height=800&amp;fansRow=2&amp;ptype=1&amp;speed=0&amp;skin=1&amp;isTitle=0&amp;noborder=0&amp;isWeibo=1&amp;isFans=0&amp;uid=1875034341&amp;verifier=7ef13898&amp;dpc=1">
+<?if(0):?>
+<iframe width="100%" height="800" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&amp;width=0&amp;height=800&amp;fansRow=2&amp;ptype=1&amp;speed=0&amp;skin=1&amp;isTitle=0&amp;noborder=0&amp;isWeibo=1&amp;isFans=0&amp;uid=1875034341&amp;verifier=7ef13898&amp;dpc=1"></iframe>
+<?endif?>
+</div>
 
 <?if($is_front):?>
 <div class="page-header">
@@ -80,7 +83,10 @@
 <div class="side-box">
     <div class="row-fluid">
         <div class="span12">
-            <a href=""><img alt="" src="/sites/all/themes/wallstcn/css/img/advertising.gif" class="span12" /></a>
+            <a href="/contact">
+                <img class="lazy" src="/sites/all/themes/wallstcn/placeholder.gif" data-original="/sites/all/themes/wallstcn/css/img/advertising.gif" />
+                <noscript><img alt="" class="" src="/sites/all/themes/wallstcn/css/img/advertising.gif"></noscript>
+            </a>
         </div>
     </div>
 </div>

@@ -3,7 +3,10 @@
         <div class="span6">
             <div class="media">
                 <a class="pull-left icon-img" href="http://weibo.com/wallstreetcn" target="_blank">
+                    <i class="icon-weibo"></i>
+                    <?if(0):?>
                     <img alt="华尔街见闻微博官方帐号" src="/sites/all/themes/wallstcn/css/img/weibo.png" />
+                    <?endif?>
                 </a>
                 <div class="media-body">
                     <p class="media-heading"><a href="http://weibo.com/wallstreetcn" target="_blank">新浪微博</a></p>
@@ -18,7 +21,10 @@
         <div class="span6">
             <div class="media">
                 <a class="pull-left weixin  icon-img" href="#footer">
+                    <?if(0):?>
                     <img alt="" src="/sites/all/themes/wallstcn/css/img/weixin.png" />
+                    <?endif?>
+                    <i class="icon-qrcode"></i>
                 </a>
                 <div class="media-body">
                     <p class="media-heading weixin"><a href="#footer">微信公众帐号</a></p>
