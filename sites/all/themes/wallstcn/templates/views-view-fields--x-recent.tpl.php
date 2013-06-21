@@ -1,8 +1,8 @@
 <?
 global $wscn;
 if($wscn['x_recent_rendered']) return;
+$items = $view->result;
 ?>
-<?$items = $view->result;?>
 <div class="page-header header-red">
     <a href="/news?page=1" class="more pull-right">MORE»</a>
     <h2>最新文章</h2>
@@ -13,7 +13,7 @@ if($wscn['x_recent_rendered']) return;
         <?if($item->file_managed_field_data_upload_uri || $item->field_field_image_1):?>
         <a class="pull-left news-img" href="<?=url('node/'. $item->nid);?>" target="_blank">
             <div class="news-img-wrap">
-            <img alt="" class="" src="<?=wscn_image_url($item);?>">
+            <img alt="" class="" src="<?=wscn_image_domain(wscn_image_url($item));?>">
             </div>
         </a>
         <?endif?>

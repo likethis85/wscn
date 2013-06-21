@@ -35,14 +35,24 @@ function wscn_tagmapping($tid) {
     return url('taxonomy/term/' . $tid);
 }
 
+function wscn_image_domain($url){
+    $img_domain = variable_get('site_image_domain_enable') ? variable_get('site_image_domain') : '';
+    if($img_domain){
+        $url = parse_url($url);
+        $url['host'] = $img_domain;
+        $url = 'http://' . $url['host'] . $url['path'] . $url['query'];
+    }
+    return $url;
+}
 
 function wscn_image_url($item) {
+    $url = '';
     if ($item->file_managed_field_data_upload_uri) {
-        return file_create_url($item->file_managed_field_data_upload_uri);
+        $url = file_create_url($item->file_managed_field_data_upload_uri);
     } elseif($item->field_field_image_1) {
-        return file_create_url($item->field_field_image_1[0]['raw']['uri']);
+        $url = file_create_url($item->field_field_image_1[0]['raw']['uri']);
     }
-    return '';
+    return $url;
 }
 
 function wallstcn_js_alter(&$javascript) {
