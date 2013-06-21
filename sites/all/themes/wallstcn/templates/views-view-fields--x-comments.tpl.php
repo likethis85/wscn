@@ -13,11 +13,9 @@ if($wscn['x_comments_rendered']) return;
         <a class="pull-left" href="<?=url('node/'. $item->comment_nid);?>" target="_blank">
             <?if($item->users_comment_picture):?>
             <?$pic = file_load($item->users_comment_picture);?>
-            <img class="lazy" src="<?=path_to_theme()?>/placeholder.gif" data-original="<?=image_style_url('thumbnail', $pic->uri);?>" width="50" height="50" />
-            <noscript><img alt="" class="" src="<?=image_style_url('thumbnail', $pic->uri);?>"  width="50" height="50"></noscript>
+            <img alt="" class="" src="<?=image_style_url('thumbnail', $pic->uri);?>" width="50" height="50">
             <?else:?>
-            <img class="lazy" src="<?=path_to_theme()?>/placeholder.gif" data-original="/sites/all/themes/wallstcn/css/img/avatar.png" width="50" height="50" />
-            <noscript><img alt="" class="" src="/sites/all/themes/wallstcn/css/img/avatar.png" width="50" height="50"></noscript>
+            <img alt="" class="" src="/sites/all/themes/wallstcn/css/img/avatar.png" width="50" height="50">
             <?endif?>
         </a>
         <div class="media-body">
