@@ -106,6 +106,18 @@
         <!-- JiaThis Button END -->
     </div>
 
+<?if(variable_get('site_ad')):?>
+<div class="ad-box">
+<script type="text/javascript">
+google_ad_client = "ca-pub-0869270234052789";
+google_ad_slot = "5114810965";
+google_ad_width = 728;
+google_ad_height = 90;
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</div>
+<?endif?>
+
 <?if($node->taxonomy_vocabulary_3):?>
 <div id="related-read" class="">
     <h5>关键字阅读：</h5>
@@ -136,17 +148,7 @@
 </div>
 <?endif?>
 
-<?if(variable_get('site_ad')):?>
-<div class="ad-box">
-<script type="text/javascript">
-google_ad_client = "ca-pub-0869270234052789";
-google_ad_slot = "5114810965";
-google_ad_width = 468;
-google_ad_height = 60;
-</script>
-<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
-</div>
-<?endif?>
+
 
 <?if(0 && $node->taxonomy_vocabulary_3):?>
 <div class="article-tags">
