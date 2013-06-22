@@ -7704,6 +7704,14 @@ a:hover {
   color: #333;
 }
 
+.comment-block .media-meta {
+  visibility: hidden;
+}
+
+.comment-block .media:hover .media-meta {
+  visibility: visible;
+}
+
 .tag-cloud a {
   display: inline-block;
   padding: 3px 5px;

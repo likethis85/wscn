@@ -7,7 +7,7 @@ if($wscn['x_comments_rendered']) return;
 <div class="page-header">
     <h2>最新评论</h2>
 </div>
-<div class="comments-list">
+<div class="comments-list comment-block">
     <?foreach($items as $item):?>
     <div class="media">
         <a class="pull-left" href="<?=url('node/'. $item->comment_nid);?>" target="_blank">
