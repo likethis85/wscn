@@ -137,7 +137,7 @@ google_ad_height = 90;
         {% var max = o.results.length > 10 ? 10 : o.results.length; %}
         {% for (var i=0; i < max; i++) { %}
         {% var item = o.results[i]; %}
-        <li><a href="{%=item.href%}" target="_blank">{%=item.title%}</a></li>
+        <li><a href="{%=item.url%}" target="_blank">{%=item.title%}</a></li>
         {% } %}
         {% if(o.results.length >= 10) { %}
             <li class="last"><a href="/taxonomy/term/{%=o.tid%}" target="_blank" class="pull-right">MORE»</a></li>
