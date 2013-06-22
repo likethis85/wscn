@@ -186,7 +186,7 @@ unset($comments['pager']);
             <div class="media-content">
                 <div class="media-content-body typo"><?=$comment->subject?></div>
                 <p class="media-meta">
-                <a href="<?=url('node/'. $comment->nid);?>#comment-form">回复</a>
+                <a href="<?=url('node/'. $comment->nid);?>#comment-form"><i class="icon-comment"></i> 回复</a>
                 </p>
             </div>
 

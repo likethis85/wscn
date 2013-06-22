@@ -7697,11 +7697,7 @@ a:hover {
 .comments-list .media-meta {
   margin: 0;
   color: #999;
-  visibility: hidden;
-}
-
-.comments-list .media:hover .media-meta {
-  visibility: visible;
+  text-align: right;
 }
 
 .comments-list a.user-name {
