@@ -77,35 +77,7 @@
     <p></p>
 </div>
 
-<?if($node->taxonomy_vocabulary_3):?>
-<div id="related-read" class="">
-    <h5>关键字阅读：</h5>
-    <ul class="nav nav-tabs">
-        <?foreach($node->taxonomy_vocabulary_3['und'] as $key => $tag):?>
-        <li><a data-toggle="tab" href="#related-read-<?=$key?>" data-tab-url="<?=url('taxonomy/term/' . $tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a></li>
-        <?endforeach?>
-    </ul>
-    <div class="tab-content">
-        <?foreach($node->taxonomy_vocabulary_3['und'] as $key => $tag):?>
-        <div id="related-read-<?=$key?>" class="tab-pane fade" data-tid="<?=$tag['tid']?>"><a href="<?=url('taxonomy/term/' . $tag['tid'])?>" class="tag"><?=$tag['taxonomy_term']->name?></a></div>
-        <?endforeach?>
-    </div>
 
-<script id="related-read-js" type="text/x-tmpl">
-    <ul>
-        {% var max = o.results.length > 10 ? 10 : o.results.length; %}
-        {% for (var i=0; i < max; i++) { %}
-        {% var item = o.results[i]; %}
-        <li><a href="{%=item.href%}" target="_blank">{%=item.title%}</a></li>
-        {% } %}
-        {% if(o.results.length >= 10) { %}
-            <li><a href="/taxonomy/term/{%=o.tid%}" target="_blank" class="pull-right">MORE»</a></li>
-        {% } %}
-    </ul>
-</script>
-
-</div>
-<?endif?>
 
 
 <div class="article-share">
@@ -133,6 +105,36 @@
         <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1673372" charset="utf-8"></script>
         <!-- JiaThis Button END -->
     </div>
+
+<?if($node->taxonomy_vocabulary_3):?>
+<div id="related-read" class="">
+    <h5>关键字阅读：</h5>
+    <ul class="nav nav-tabs">
+        <?foreach($node->taxonomy_vocabulary_3['und'] as $key => $tag):?>
+        <li><a data-toggle="tab" href="#related-read-<?=$key?>" data-tab-url="<?=url('taxonomy/term/' . $tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a></li>
+        <?endforeach?>
+    </ul>
+    <div class="tab-content">
+        <?foreach($node->taxonomy_vocabulary_3['und'] as $key => $tag):?>
+        <div id="related-read-<?=$key?>" class="tab-pane fade" data-tid="<?=$tag['tid']?>"><a href="<?=url('taxonomy/term/' . $tag['tid'])?>" class="tag"><?=$tag['taxonomy_term']->name?></a></div>
+        <?endforeach?>
+    </div>
+
+<script id="related-read-js" type="text/x-tmpl">
+    <ul>
+        {% var max = o.results.length > 10 ? 10 : o.results.length; %}
+        {% for (var i=0; i < max; i++) { %}
+        {% var item = o.results[i]; %}
+        <li><a href="{%=item.href%}" target="_blank">{%=item.title%}</a></li>
+        {% } %}
+        {% if(o.results.length >= 10) { %}
+            <li class="last"><a href="/taxonomy/term/{%=o.tid%}" target="_blank" class="pull-right">MORE»</a></li>
+        {% } %}
+    </ul>
+</script>
+
+</div>
+<?endif?>
 
 <?if(variable_get('site_ad')):?>
 <div class="ad-box">

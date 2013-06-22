@@ -7536,11 +7536,15 @@ a:hover {
 
 #related-read .tab-pane li {
   margin-bottom: 5px;
-  list-style: none;
+  list-style: square inside;
 }
 
 #related-read .show-more {
   border-top: 1px solid #CCC;
+}
+
+#related-read li.last {
+  list-style: none !important;
 }
 
 /* ===========================
