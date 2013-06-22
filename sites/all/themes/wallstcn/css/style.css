@@ -7530,6 +7530,19 @@ a:hover {
   color: #d24747;
 }
 
+#related-read .tab-pane ul {
+  margin-left: 0;
+}
+
+#related-read .tab-pane li {
+  margin-bottom: 5px;
+  list-style: none;
+}
+
+#related-read .show-more {
+  border-top: 1px solid #CCC;
+}
+
 /* ===========================
  * social icons
  * ===========================

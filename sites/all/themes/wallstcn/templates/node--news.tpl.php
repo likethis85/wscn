@@ -77,6 +77,35 @@
     <p></p>
 </div>
 
+<?if($node->taxonomy_vocabulary_3):?>
+<div id="related-read" class="">
+    <h5>关键字阅读：</h5>
+    <ul class="nav nav-tabs">
+        <?foreach($node->taxonomy_vocabulary_3['und'] as $key => $tag):?>
+        <li><a data-toggle="tab" href="#related-read-<?=$key?>" data-tab-url="<?=url('taxonomy/term/' . $tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a></li>
+        <?endforeach?>
+    </ul>
+    <div class="tab-content">
+        <?foreach($node->taxonomy_vocabulary_3['und'] as $key => $tag):?>
+        <div id="related-read-<?=$key?>" class="tab-pane fade" data-tid="<?=$tag['tid']?>"><a href="<?=url('taxonomy/term/' . $tag['tid'])?>" class="tag"><?=$tag['taxonomy_term']->name?></a></div>
+        <?endforeach?>
+    </div>
+
+<script id="related-read-js" type="text/x-tmpl">
+    <ul>
+        {% var max = o.results.length > 10 ? 10 : o.results.length; %}
+        {% for (var i=0; i < max; i++) { %}
+        {% var item = o.results[i]; %}
+        <li><a href="{%=item.href%}" target="_blank">{%=item.title%}</a></li>
+        {% } %}
+        {% if(o.results.length >= 10) { %}
+            <li><a href="/taxonomy/term/{%=o.tid%}" target="_blank" class="pull-right">MORE»</a></li>
+        {% } %}
+    </ul>
+</script>
+
+</div>
+<?endif?>
 
 
 <div class="article-share">
@@ -117,7 +146,7 @@ google_ad_height = 60;
 </div>
 <?endif?>
 
-<?if($node->taxonomy_vocabulary_3):?>
+<?if(0 && $node->taxonomy_vocabulary_3):?>
 <div class="article-tags">
     文章标签：
     <?foreach($node->taxonomy_vocabulary_3['und'] as $tag):?>
@@ -125,6 +154,8 @@ google_ad_height = 60;
     <?endforeach?>
 </div>
 <?endif?>
+
+
 
 <?$comments = $content['comments']['comments'];
 unset($comments['#sorted']);

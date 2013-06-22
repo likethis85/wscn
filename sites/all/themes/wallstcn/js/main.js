@@ -276,7 +276,6 @@
               return false; 
         });
 
-
         //tab 切换
         $('.side-box a[data-tab-url]').on('show', function (e) {
             var url = $(this).attr('data-tab-url');
@@ -299,6 +298,41 @@
                 }
             })
         });
+
+
+        //关键字阅读
+        $('#related-read a[data-tab-url]').on('show', function (e) {
+            var url = $(this).attr('data-tab-url');
+            var target = $($(this).attr('href'));
+            if(target.hasClass('inited')){
+                return;
+            }
+            target.html('<i class="icon-spinner icon-spin"></i> 正在载入...');
+            $.ajax({
+                url : url,
+                dataType : 'html',
+                success : function(response){
+                    var relatedReads = {
+                        'tid' : target.attr('data-tid'),
+                        'results' : []
+                    };
+                    $(response).find('#block-system-main .media-heading').each(function(){
+                        var link = $(this);
+                        var relatedRead = {
+                            'title' : '',
+                            'url' : ''
+                        };
+                        relatedRead.title = link.text();
+                        relatedRead.url = link.find('a').attr('href');
+                        relatedReads.results.push(relatedRead);
+                        var t = tmpl($("#related-read-js").html(), relatedReads);
+                        target.html(t);
+                    });
+                    target.addClass('inited');
+                }
+            })
+        });
+        $('#related-read a:first').tab('show');
 
 
         
