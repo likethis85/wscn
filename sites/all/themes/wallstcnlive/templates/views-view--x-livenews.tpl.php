@@ -75,7 +75,11 @@ $lastdate = '';
             </span>
 
             <h2 class="media-heading <?=$item->field_body[0]['raw']['summary'] ? 'has-more' : ''?>">
+                <?if(!$item->field_body[0]['raw']['summary'] && !$item->field_body[0]['raw']['safe_value']):?>
+                数据图表
+                <?else:?>
                 <?=$item->field_body[0]['raw']['summary']  ? $item->field_body[0]['raw']['summary'] : $item->field_body[0]['raw']['safe_value']?>
+                <?endif?>
                 <?if(0 && $item->field_body[0]['raw']['summary']):?>
                 <span class="show-more pull-left">[more]</span>
                 <?endif?>
