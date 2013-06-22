@@ -84,8 +84,7 @@
     <div class="row-fluid">
         <div class="span12">
             <a href="/contact">
-                <img class="lazy" src="/sites/all/themes/wallstcn/placeholder.gif" data-original="/sites/all/themes/wallstcn/css/img/advertising.gif" />
-                <noscript><img alt="" class="" src="/sites/all/themes/wallstcn/css/img/advertising.gif"></noscript>
+                <img class="" src="/sites/all/themes/wallstcn/css/img/advertising.gif" />
             </a>
         </div>
     </div>
