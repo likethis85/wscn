@@ -186,7 +186,7 @@ unset($comments['pager']);
             于 <?=format_date($comment->created);?>
             </p>
             <div class="media-content">
-                <div class="media-content-body typo"><?=$comment->subject?></div>
+                <div class="media-content-body typo"><?=$comment->comment_body['und'][0]['safe_value']?></div>
                 <p class="media-meta">
                 <a href="<?=url('node/'. $comment->nid);?>#comment-form"><i class="icon-comment"></i> 回复</a>
                 </p>
