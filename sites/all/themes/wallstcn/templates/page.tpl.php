@@ -35,6 +35,7 @@
         <div class="row-fluid">
 
             <div class="span8"> 
+                <?php print $messages; ?>
                 <?if($is_front):?>
 
                     <?if($page['live_content']):?>
