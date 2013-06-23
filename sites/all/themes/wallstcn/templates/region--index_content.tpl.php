@@ -31,8 +31,10 @@
 <?endif?>
 
 <?if(variable_get('site_ad')):?>
+<div class="ad-box">
 <script type="text/javascript" src="http://cbjs.baidu.com/js/m.js"></script>
 <script type="text/javascript">BAIDU_CLB_fillSlot("507800");</script>
+</div>
 <?endif?>
 
 
