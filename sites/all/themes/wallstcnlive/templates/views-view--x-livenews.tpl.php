@@ -56,7 +56,7 @@ $lastdate = '';
             <span class="icon">
                 <?$icon = $item->field_field_icon[0]['raw']['value'];?>
                 <?if($icon == 'chart'):?>
-                <i class="icon-bar-chart"></i>
+                <i class="icon-external-link"></i>
                 <?elseif($icon == 'calendar'):?>
                 <i class="icon-calendar"></i>
                 <?elseif($icon == 'download'):?>
@@ -66,7 +66,7 @@ $lastdate = '';
                 <?elseif($icon == 'alert'):?>
                 <i class="icon-bullhorn"></i>
                 <?elseif($icon == 'chart_pie'):?>
-                <i class="icon-bolt"></i>
+                <i class="icon-signal"></i>
                 <?elseif($icon == 'rumor'):?>
                 <i class="icon-twitter"></i>
                 <?else:?>

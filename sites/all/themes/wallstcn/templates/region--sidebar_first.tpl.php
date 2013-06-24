@@ -13,7 +13,7 @@
 
 <?include 'box-icons.php'?>
 
-<?if(0 && variable_get('site_ad')):?>
+<?if(variable_get('site_ad')):?>
 <div class="ad-box ad-side">
     <div style="width:336px;margin:0 auto">
         <script type="text/javascript">
@@ -31,7 +31,7 @@
 </div>
 <?endif?>
 
-<?if(variable_get('site_ad')):?>
+<?if(0 && variable_get('site_ad')):?>
 <div class="ad-box ad-side">
     <div style="width:336px;margin:0 auto">
         <a href="http://www.sinolending.com/" target="_blank"><img src="/sites/all/themes/wallstcn/ads/ad_sinolending.gif" alt="" /></a>

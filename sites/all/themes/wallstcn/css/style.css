@@ -8452,8 +8452,13 @@ a:hover {
   background: #FFFF70;
 }
 
-.livenews-list .icon-bar-chart {
+.livenews-list .icon-bar-chart,
+.livenews-list .icon-signal {
   color: #0077BF;
+}
+
+.livenews-list .icon-external-link {
+  color: #FF0000;
 }
 
 .livenews-list .icon-calendar {
