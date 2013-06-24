@@ -11,7 +11,9 @@
             </h1></div>
             <div class="span8">
                 <div class="pull-right">
+                    <?if(0):?>
                     <img alt="华尔街见闻微博官方帐号" src="/sites/all/themes/wallstcn/banner.jpg" />
+                    <?endif?>
                 <?if(0 && variable_get('site_ad')):?>
                 <?if($page['live_content']):?>
                 <script type="text/javascript" src="http://cbjs.baidu.com/js/m.js"></script>
@@ -20,6 +22,9 @@
                 <script type="text/javascript" src="http://cbjs.baidu.com/js/m.js"></script>
                 <script type="text/javascript">BAIDU_CLB_fillSlot("507800");</script>
                 <?endif?>
+                <?endif?>
+                <?if(variable_get('site_ad')):?>
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="90" width="728"><param name="quality" value="high" /><param name="movie" value="/ckuploadimg/flash/IronFX.swf" /><embed height="90" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/ckuploadimg/flash/IronFX.swf" type="application/x-shockwave-flash" width="728"></embed></object>
                 <?endif?>
             </div>
         </div>
