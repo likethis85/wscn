@@ -9,6 +9,7 @@
             <a target="_blank" href="http://nordfx-chinese.com/promo/bonus_deposit.html?id=730026"><img src="/sites/all/themes/wallstcn/ads/ad_nordfx.gif" alt=""></a>
         </div>
         <div class="span4">
+            <?if(0):?>
             <script type="text/javascript">
               var ord = window.ord || Math.floor(Math.random() * 1e16);
               document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N6105/adj/G-wallstreetcn.com/banc;sz=230x60;ord=' + ord + '?"><\/script>');
@@ -18,8 +19,11 @@
             <img src="http://ad.doubleclick.net/N6105/ad/G-wallstreetcn.com/banc;sz=230x60;ord=[timestamp]?" width="230" height="60" />
             </a>
             </noscript>
+            <?endif?>
+            <a target="_blank" href="/contact"><img src="/sites/all/themes/wallstcn/ads/ad_weixin.gif" alt=""></a>
         </div>
         <div class="span4 right-align">
+            <?if(0):?>
             <script type="text/javascript">
               var ord = window.ord || Math.floor(Math.random() * 1e16);
               document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N6105/adj/G-wallstreetcn.com/hantecfx;sz=230x60;ord=' + ord + '?"><\/script>');
@@ -29,6 +33,8 @@
             <img src="http://ad.doubleclick.net/N6105/ad/G-wallstreetcn.com/hantecfx;sz=230x60;ord=[timestamp]?" width="230" height="60" />
             </a>
             </noscript>
+            <?endif?>
+            <a target="_blank" href="/contact"><img src="/sites/all/themes/wallstcn/ads/ad_sponsor.gif" alt=""></a>
         </div>
     </div>
 </div>
