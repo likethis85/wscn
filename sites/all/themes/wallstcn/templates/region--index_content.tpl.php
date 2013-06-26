@@ -6,7 +6,7 @@
 <div class="ad-box ad-middle">
     <div class="row-fluid">
         <div class="span4">
-            <a target="_blank" href="http://nordfx-chinese.com/promo/bonus_deposit.html?id=730026"><img src="/sites/all/themes/wallstcn/ads/ad_nordfx.gif" alt=""></a>
+            <a target="_blank" href="http://nordfx-chinese.com/?id=730026"><img src="/sites/all/themes/wallstcn/ads/ad_nordfx.gif" alt=""></a>
         </div>
         <div class="span4">
             <script type="text/javascript">
