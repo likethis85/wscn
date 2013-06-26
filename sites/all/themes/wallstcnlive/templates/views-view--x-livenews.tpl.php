@@ -12,6 +12,7 @@ $lastdate = '';
     <label class="btn btn-small"> <i class="icon-volume-up"></i>  声音提醒 <input id="enable-sound" class="checkbox" type="checkbox" checked="chekced" /></label>
 </div>
 
+<div class="alert live-alert" title="最新实时新闻会自动显示">直播中<span class="ani-dot">...</span></div>
 
 <div id="livenews-list" class="livenews-list">
     <script id="livenews-list-js" type="text/x-tmpl">
