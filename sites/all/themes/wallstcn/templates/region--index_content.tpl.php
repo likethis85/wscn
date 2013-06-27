@@ -8,6 +8,18 @@
         <div class="span4">
             <a target="_blank" href="http://nordfx-chinese.com/?id=730026"><img src="/sites/all/themes/wallstcn/ads/ad_nordfx.gif" alt=""></a>
         </div>
+        <div class="span8">
+<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:468px;height:60px"
+     data-ad-client="ca-pub-0869270234052789"
+     data-ad-slot="5114810965"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        </div>
+        <?if(0):?>
         <div class="span4">
             <script type="text/javascript">
               var ord = window.ord || Math.floor(Math.random() * 1e16);
@@ -36,6 +48,7 @@
             <a target="_blank" href="/contact"><img src="/sites/all/themes/wallstcn/ads/ad_sponsor.gif" alt=""></a>
             <?endif?>
         </div>
+        <?endif?>
     </div>
 </div>
 <?endif?>

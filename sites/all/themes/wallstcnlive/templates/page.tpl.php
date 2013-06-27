@@ -12,8 +12,15 @@
                 <div class="pull-right">
                     <img alt="华尔街见闻新版上线" src="/sites/all/themes/wallstcn/banner.jpg" />
                     <?if(0 && variable_get('site_ad')):?>
-                    <script type="text/javascript" src="http://cbjs.baidu.com/js/m.js"></script>
-                    <script type="text/javascript">BAIDU_CLB_fillSlot("507799");</script>
+<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-0869270234052789"
+     data-ad-slot="0299947861"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
                     <?endif?>
                 </div>
             </div>
@@ -52,13 +59,15 @@
             <div class="span4">
                 <?if(variable_get('site_ad')):?>
                 <div class="ad-box ad-side">
-                    <script type="text/javascript">
-                        google_ad_client = "ca-pub-0869270234052789";
-                        google_ad_slot = "3270919188";
-                        google_ad_width = 336;
-                        google_ad_height = 280;
-                    </script>
-                    <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-0869270234052789"
+     data-ad-slot="7550994990"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
                 </div>
                 <?endif?>
 
@@ -74,13 +83,15 @@
 
                 <?if(variable_get('site_ad')):?>
                 <div class="ad-box ad-side">
-                    <script type="text/javascript">
-                        google_ad_client = "ca-pub-0869270234052789";
-                        google_ad_slot = "8382675565";
-                        google_ad_width = 336;
-                        google_ad_height = 280;
-                    </script>
-                    <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-0869270234052789"
+     data-ad-slot="9265550449"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
                 </div>
                 <?endif?>
 

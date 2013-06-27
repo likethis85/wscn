@@ -16,17 +16,18 @@
 <?if(variable_get('site_ad')):?>
 <div class="ad-box ad-side">
     <div style="width:336px;margin:0 auto">
-        <script type="text/javascript">
-            google_ad_client = "ca-pub-0869270234052789";
-            google_ad_slot = "2911844489";
-            google_ad_width = 336;
-            google_ad_height = 280;
-            google_ad_client = "ca-pub-0869270234052789";
-            google_ad_slot = "2911844489";
-            google_ad_width = 336;
-            google_ad_height = 280;
-        </script>
-        <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-0869270234052789";
+/* 主页侧栏1 */
+google_ad_slot = "2911844489";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
     </div>
 </div>
 <?endif?>
@@ -46,18 +47,14 @@
 <?if(variable_get('site_ad')):?>
 <div class="ad-box ad-side ad-margin-top">
     <div style="width:336px;margin:0 auto">
-     <script type="text/javascript">
-         google_ad_client = "ca-pub-0869270234052789";
-         google_ad_slot = "2352258047";
-         google_ad_width = 336;
-         google_ad_height = 280;
-         google_ad_client = "ca-pub-0869270234052789";
-         google_ad_slot = "2352258047";
-         google_ad_width = 336;
-         google_ad_height = 280;
-    </script>
-    <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
-
+<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-0869270234052789"
+     data-ad-slot="2352258047"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
     </div>
 </div>
 <?endif?>

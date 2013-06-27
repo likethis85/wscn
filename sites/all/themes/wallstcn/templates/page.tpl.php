@@ -15,13 +15,14 @@
                     <img alt="华尔街见闻微博官方帐号" src="/sites/all/themes/wallstcn/banner.jpg" />
                     <?endif?>
                 <?if(0 && variable_get('site_ad')):?>
-                <?if($page['live_content']):?>
-                <script type="text/javascript" src="http://cbjs.baidu.com/js/m.js"></script>
-                <script type="text/javascript">BAIDU_CLB_fillSlot("507799");</script>
-                <?else:?>
-                <script type="text/javascript" src="http://cbjs.baidu.com/js/m.js"></script>
-                <script type="text/javascript">BAIDU_CLB_fillSlot("507800");</script>
-                <?endif?>
+<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-0869270234052789"
+     data-ad-slot="9607908946"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
                 <?endif?>
                 <?if(variable_get('site_ad')):?>
 <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="90" width="728"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/IronFX.swf" /><embed height="90" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/IronFX.swf" type="application/x-shockwave-flash" width="728"></embed></object>

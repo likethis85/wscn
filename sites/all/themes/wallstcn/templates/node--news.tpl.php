@@ -108,13 +108,14 @@
 
 <?if(variable_get('site_ad')):?>
 <div class="ad-box">
-<script type="text/javascript">
-google_ad_client = "ca-pub-0869270234052789";
-google_ad_slot = "5114810965";
-google_ad_width = 728;
-google_ad_height = 90;
+<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-0869270234052789"
+     data-ad-slot="7788817240"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
 </div>
 <?endif?>
 
