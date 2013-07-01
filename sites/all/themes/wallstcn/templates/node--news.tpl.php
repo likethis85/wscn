@@ -226,7 +226,7 @@ unset($comments['pager']);
 
     <div class="media-body">
         <header class="media-heading">
-        <h2><a href="<?=url('node/' . $node->nid)?>"><?=$node->title?></a></h2>
+        <h2><a href="<?=url('node/' . $node->nid)?>" target="_blank"><?=$node->title?></a></h2>
         </header>
 
         <?php if ($display_submitted): ?>

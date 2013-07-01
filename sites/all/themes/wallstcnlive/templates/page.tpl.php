@@ -10,8 +10,10 @@
             </h1></div>
             <div class="span8">
                 <div class="pull-right">
+                    <?if(0):?>
                     <img alt="华尔街见闻新版上线" src="/sites/all/themes/wallstcn/banner.jpg" />
-                    <?if(0 && variable_get('site_ad')):?>
+                    <?endif?>
+                    <?if(variable_get('site_ad')):?>
 <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:inline-block;width:728px;height:90px"
