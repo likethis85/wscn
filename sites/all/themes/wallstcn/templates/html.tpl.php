@@ -24,6 +24,7 @@
     <link href="/sites/all/themes/wallstcn/css/bootstrap/ie6.min.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/sites/all/themes/wallstcn/js/ie6.js"></script>
     <![endif]-->
+    <link rel="alternate" type="application/rss+xml" title="华尔街见闻" href="http://wallstreetcn.com/rss.xml" />
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
     <?php print $page_top; ?>
