@@ -15,7 +15,7 @@ shuffle($items);
 </div>
 <div class="tag-cloud">
     <?foreach($items as $item):?>
-    <a href="<?=url('taxonomy/term/'. $item->tid);?>" style="font-size:<?=ceil(log($item->taxonomy_term_data_tid, 20) * 5)?>pt"><?=$item->taxonomy_term_data_name?></a>
+    <a href="<?=wscn_tagmapping($item->tid)?>" style="font-size:<?=ceil(log($item->taxonomy_term_data_tid, 20) * 5)?>pt"><?=$item->taxonomy_term_data_name?></a>
     <?endforeach?>
 </div>
 
