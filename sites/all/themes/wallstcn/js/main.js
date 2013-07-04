@@ -101,6 +101,11 @@
                 }
             }
         });
+        //解决加载问题
+        window.onload = function() {
+            $(window).resize()
+        };
+        
 
         //回到顶部
         $().backToTop({ easingType: 'easeOutQuart' });
@@ -513,7 +518,15 @@
                 return item;
             }
             var pageloadTime = Math.round(new Date().getTime()/1000);
-            var appendLivenews = function(items){
+
+            var replaceLivenews = function(item) {
+                var $item = $("#livenews-id-" + item.nid);
+                if($.trim($item.find('.media-heading').html()) == $.trim(item.body)) {
+                    return false;
+                }
+                $item.find('.media-heading').html(item.body);
+            }
+            var appendLivenews = function(items, statusCode){
                 if(!items){
                     return false;
                 }
@@ -523,9 +536,8 @@
                 if(uri.path == '/livesearch'){
                     page = 1;
                 }
-                //console.log(page);
-                //console.log(pageloadTime);
-                //console.log(parseInt(items[0].node_created));
+
+                //翻页后只加载新闻事件 > 用户本地时间 的最新消息
                 if(page > 0 && parseInt(items[0].node_created) < pageloadTime){
                     return false;
                 }
@@ -534,7 +546,10 @@
                 items.reverse();
                 for(var i in items){
                     var item = $("#livenews-id-" + items[i].nid);
+
+                    //ID相同， 还需要检查文本是否被替换
                     if(item[0]){
+                        replaceLivenews(items[i]);
                         continue;
                     }
                     item = prepareItem(items[i]);
@@ -559,6 +574,8 @@
                     jplayer.jPlayer('play');
                 }
             }
+
+            //载入实时新闻
             var loadLivenews = function(){
                 var url = '/apiv1/livenews.json';
                 var uri = parseUri();
@@ -596,8 +613,7 @@
                         //console.log("responseText: "+xhr.responseText);
                     },
                     success : function(response, textStatus, jqXHR){
-                        //console.log(2);
-                        appendLivenews(response);
+                        appendLivenews(response, jqXHR.status);
                     }
                 });
             }

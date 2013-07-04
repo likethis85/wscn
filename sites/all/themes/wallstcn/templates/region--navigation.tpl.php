@@ -11,7 +11,7 @@
                 <li><a href="/user/logout"><?=t('Log out')?></a></li>
                 <?else:?>
                 <li><a href="/user">登录　|</a></li>
-                <li><a href="/user/register">注册　| </a></li>
+                <li><a href="/user/register">注册</a></li>
                 <?endif?>
             </ul>
         </div>
