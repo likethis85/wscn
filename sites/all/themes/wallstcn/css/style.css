@@ -7188,8 +7188,8 @@ a:hover {
   padding: 10px;
   overflow: hidden;
   font-size: 14px;
-  color: #999;
-  background: #333333;
+  color: #000;
+  background: #EFEFEF;
 }
 
 .top-news-entry .entry-img {
@@ -7200,11 +7200,11 @@ a:hover {
 }
 
 .top-news-entry a {
-  color: #CCC;
+  color: #000;
 }
 
 .top-news-entry a:hover {
-  color: #FFF;
+  color: #d24747;
 }
 
 .top-news-entry h2 {
@@ -7214,7 +7214,7 @@ a:hover {
 
 .top-news-entry h2 a {
   font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-  color: #FFF;
+  color: #000;
 }
 
 .top-news-entry h2 a:hover {
