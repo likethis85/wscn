@@ -526,6 +526,22 @@
                 }
                 $item.find('.media-heading').html(item.body);
             }
+
+            //检测页面最上边部item，如果与items不统一则删除
+            var removePageItems = function(items) {
+                var pageItems = $("#livenews-list .media:lt(3)");
+                var ajaxIds = [];
+                for(var i in items) {
+                    ajaxIds.push("livenews-id-" + items[i].nid);
+                }
+
+                pageItems.each(function(){
+                    var id = $(this).attr('id');
+                    if(-1 === $.inArray(id, ajaxIds)) {
+                        $("#" + id).remove();
+                    }
+                });
+            }
             var appendLivenews = function(items, statusCode){
                 if(!items){
                     return false;
@@ -573,6 +589,7 @@
                 if(foundNew && allowSound()) {
                     jplayer.jPlayer('play');
                 }
+                removePageItems(items);
             }
 
             //载入实时新闻
@@ -606,6 +623,7 @@
                     dataType : 'json',
                     data : data,
                     ifModified:true,
+                    //cache : false,
                     error: function(xhr, err){
                         //console.log(err);
                         //console.log(xhr);
