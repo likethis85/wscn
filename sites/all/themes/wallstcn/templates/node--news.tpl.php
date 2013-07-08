@@ -36,7 +36,7 @@
         <?endif?>
         </span>
     </span>
-    <span class="pull-right"><span class="googleplus-author">来源：<a href="https://plus.google.com/117171791148320400898?rel=author">华尔街见闻</a></span></span>
+    <span class="pull-right"><span class="googleplus-author">来源：<a href="https://plus.google.com/110470401701117498132?rel=author">华尔街见闻</a></span></span>
 </div>
 <?php endif; ?>
 
