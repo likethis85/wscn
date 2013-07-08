@@ -19,11 +19,11 @@ $title = str_replace('%1', $view->build_info['substitutions']['%1'], $view->buil
         </a>
         <?endif?>
         <div class="media-body">
-            <h3 class="media-heading"><a href="<?=url('node/'. $item->node_uid);?>" target="_blank"><?=$item->node_title?></a></h3>
+            <h3 class="media-heading"><a href="<?=url('node/'. $item->nid);?>" target="_blank"><?=$item->node_title?></a></h3>
             <p class="media-meta">
 
             <span class="meta-item">
-                文 / <a href="<?=url('columns/'. $item->uid);?>" target="blank"><?=$item->users_node_name?></a>
+                文 / <a href="<?=url('columns/'. $item->node_uid);?>" target="blank"><?=$item->users_node_name?></a>
             </span>
             
             <span class="meta-item">
