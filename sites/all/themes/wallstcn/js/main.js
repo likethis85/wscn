@@ -92,7 +92,7 @@
 
         //图片延迟加载
         $("img.lazy").show().lazyload({
-            effect       : "fadeIn",
+            //effect       : "fadeIn",
             threshold : 500,
             load : function() {
                 var img = $(this);

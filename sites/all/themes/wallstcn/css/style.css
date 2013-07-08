@@ -7114,6 +7114,10 @@ a:hover {
   color: #FFF;
 }
 
+.page-header.top-header {
+  margin-top: 0;
+}
+
 /* ===========================
  * top news
  * ===========================

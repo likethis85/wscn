@@ -1,11 +1,11 @@
 <?
 global $wscn;
-if($wscn['x_recent_rendered']) return;
+if($wscn['x_column_rendered']) return;
 $items = $view->result;
+$title = str_replace('%1', $view->build_info['substitutions']['%1'], $view->build_info['title']);
 ?>
-<div class="page-header header-red">
-    <a href="/news?page=1" class="more pull-right">MORE»</a>
-    <h2>最新文章</h2>
+<div class="page-header header-red top-header">
+    <h2><?=$title?></h2>
 </div>
 <div class="news-list">
     <?foreach($items as $item):?>
@@ -19,11 +19,11 @@ $items = $view->result;
         </a>
         <?endif?>
         <div class="media-body">
-            <h3 class="media-heading"><a href="<?=url('node/'. $item->nid);?>" target="_blank"><?=$item->node_title?></a></h3>
+            <h3 class="media-heading"><a href="<?=url('node/'. $item->node_uid);?>" target="_blank"><?=$item->node_title?></a></h3>
             <p class="media-meta">
 
             <span class="meta-item">
-                文 / <a href="<?=url('columns/'. $item->node_uid);?>" target="blank"><?=$item->users_node_name?></a>
+                文 / <a href="<?=url('columns/'. $item->uid);?>" target="blank"><?=$item->users_node_name?></a>
             </span>
             
             <span class="meta-item">
@@ -47,7 +47,4 @@ $items = $view->result;
     <?endforeach?>
 </div>
 
-<div class="view-more">
-    <a href="/news?page=1">MORE »</a>
-</div>
-<?$wscn['x_recent_rendered'] = true;?>
+<?$wscn['x_column_rendered'] = true;?>

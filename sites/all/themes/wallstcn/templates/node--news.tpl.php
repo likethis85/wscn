@@ -10,7 +10,6 @@
 <div class="alert alert-error">
   <button type="button" class="close" data-dismiss="alert">&times;</button>
   <strong>本文尚未发布</strong> <a href="/node/<?=$node->nid?>/edit" class="btn">编辑</a>
-  <!--<a href="/node/<?=$node->nid?>/toggle/status" class="btn">发布</a>-->
 </div>
 <?endif?>
 
@@ -26,7 +25,7 @@
         </span>
         <?endif?>
         <span class="meta-item">
-            <i class="icon-pencil"></i>  文 / <?=$node->name?>
+            <i class="icon-pencil"></i>  文 / <a href="<?=url('columns/'. $node->uid);?>" target="blank"><?=$node->name?></a>
         </span>
         <span class="meta-item">
             <i class="icon-time"></i> <?=format_date($node->created);?>
@@ -233,7 +232,7 @@ unset($comments['pager']);
         <div class="media-meta clearfix">
             <span class="pull-left">
                 <span class="meta-item">
-                    文 / <?=$node->name?>
+                    文 / <a href="<?=url('columns/'. $node->uid);?>" target="blank"><?=$node->name?></a>
                 </span>
                 <span class="meta-item">
                     <?=format_date($node->created);?>
