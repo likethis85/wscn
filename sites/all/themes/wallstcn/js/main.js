@@ -49,6 +49,8 @@
 })(jQuery);
 
 (function ($) {
+    //Google 访问滚动事件追踪
+    $.scrollDepth();
     //Url解析
 	var parseUri = function(url){
 		function parseUri (str) {

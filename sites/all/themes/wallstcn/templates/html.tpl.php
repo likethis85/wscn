@@ -25,6 +25,7 @@
     <script src="/sites/all/themes/wallstcn/js/ie6.js"></script>
     <![endif]-->
     <link rel="alternate" type="application/rss+xml" title="华尔街见闻" href="http://wallstreetcn.com/rss.xml" />
+    <script>var _hmt = _hmt || []; (function() {  var hm = document.createElement("script");  hm.src = "//hm.baidu.com/hm.js?c9477ef9d8ebaa27c94f86cc3f505fa5";  var s = document.getElementsByTagName("script")[0];   s.parentNode.insertBefore(hm, s); })(); </script>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
     <?php print $page_top; ?>
