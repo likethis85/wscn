@@ -503,3 +503,15 @@
   padding-top: 0;
   padding-bottom: 0;
 }
+
+.media-color-red {
+  color: #d24747 !important;
+}
+
+.media-color-blue {
+  color: #d24747 !important;
+}
+
+.media-format-bold {
+  font-weight: bold !important;
+}

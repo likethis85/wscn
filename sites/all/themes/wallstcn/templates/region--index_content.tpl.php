@@ -9,7 +9,7 @@
             <a target="_blank" href="http://nordfx-chinese.com/?id=730026"><img src="/sites/all/themes/wallstcn/ads/ad_nordfx.gif" alt=""></a>
         </div>
 
-        <?if(0):?>
+        <?if(1):?>
         <div class="span8">
             <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <ins class="adsbygoogle"
@@ -22,6 +22,7 @@
         </div>
         <?endif?>
 
+        <?if(0):?>
         <div class="span4">
             <!-- G-wallstreetcn.com/banc -->
             <script type="text/javascript">
@@ -46,6 +47,7 @@
             </a>
             </noscript>
         </div>
+        <?endif?>
     </div>
 </div>
 <?endif?>
