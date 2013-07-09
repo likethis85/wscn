@@ -10,7 +10,7 @@ if(!$item->field_field_related){
 }
 ?>
 
-<div id="top-news" class="<?if(!$item->field_field_related):?>no-related<?endif?>">
+<div id="top-news" class="<?if(!$item->field_field_related):?>no-related<?endif?> <?=$classes;?>" <?=$attributes;?>>
     <div class="row-fluid">
         <div class="span7">
             <div class="top-news-entry">

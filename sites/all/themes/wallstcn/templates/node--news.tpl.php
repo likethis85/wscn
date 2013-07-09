@@ -1,6 +1,17 @@
+<?$title_prefix = '期货外汇黄金全球市场投资资讯平台';?>
 <?if($view_mode == 'full'):?>
+<?$page_title = $node->title;
+if($node->taxonomy_vocabulary_2){
+    $tags = array();
+    foreach($node->taxonomy_vocabulary_2['und'] as $tag) {
+        $tags[] = $tag['taxonomy_term']->name;
+    }
+    $page_title .= '_' . implode('_', $tags);
+}
+$page_title .= '_' . $title_prefix;
+drupal_set_title($page_title, PASS_THROUGH);?>
 
-<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix node-article node-single" <?php print $attributes; ?>>
+<article id="node-<?=$node->nid; ?>" class="<?=$classes; ?> clearfix node-article node-single" <?=$attributes; ?>>
 
 <header class="article-header">
 <h1><a href="<?=url('node/' . $node->nid)?>"><?=$node->title?></a></h1>
@@ -211,8 +222,7 @@ unset($comments['pager']);
 
 
 <?elseif($view_mode == 'teaser'):?>
-
-<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix node-article media" <?php print $attributes; ?>>
+<div id="node-<?=$node->nid; ?>" class="<?=$classes;?> clearfix node-article media" <?=$attributes;?>>
 
     <?if($node->upload['und']):?>
     <a class="pull-left news-img" href="<?=url('node/'. $item->nid);?>" target="_blank">

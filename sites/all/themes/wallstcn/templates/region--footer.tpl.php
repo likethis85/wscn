@@ -1,4 +1,4 @@
-<div class="row footer-links">
+<div class="row footer-links <?=$classes;?>" <?=$attributes;?>>
     <div class="span3">
         <h6>相关信息</h6>
         <ul>

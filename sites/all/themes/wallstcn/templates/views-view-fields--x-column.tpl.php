@@ -4,7 +4,7 @@ if($wscn['x_column_rendered']) return;
 $items = $view->result;
 $title = str_replace('%1', $view->build_info['substitutions']['%1'], $view->build_info['title']);
 ?>
-<div class="page-header header-red top-header">
+<div class="page-header header-red top-header <?=$classes;?>" <?=$attributes;?>>
     <h2><?=$title?></h2>
 </div>
 <div class="news-list">

@@ -5,6 +5,7 @@ $items = $view->result;
 $max = count($items);
 $rows = ceil($max / 3);
 ?>
+<div class="<?=$classes;?>" <?=$attributes;?>>
 <div class="page-header header-brown news-slider-controls">
     <a href="/recommend" class="pull-right more">MORE»</a>
     <a href="javascript:;" class="news-slider-btn btn pull-right next"><span class="icon-angle-right"></span></a>
@@ -44,6 +45,7 @@ $rows = ceil($max / 3);
     <?php endfor;?>
     </div>
 </div><!--new list end-->
+</div><!--drupal recommend standard div end-->
 
 
 <?$wscn['x_recommand_rendered'] = true;?>

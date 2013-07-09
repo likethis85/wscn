@@ -9,6 +9,7 @@ shuffle($items);
 //taxonomy_term_data_tid
 //p($items, 1);exit;
 ?>
+<div class="<?=$classes;?>" <?=$attributes;?>>
 
 <div class="page-header">
     <h2>热门标签</h2>
@@ -19,5 +20,5 @@ shuffle($items);
     <?endforeach?>
 </div>
 
-
+</div><!--drupal tags standard div end-->
 <?$wscn['x_tags_rendered'] = true;?>

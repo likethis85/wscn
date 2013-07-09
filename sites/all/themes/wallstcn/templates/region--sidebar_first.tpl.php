@@ -1,3 +1,4 @@
+<div class="<?=$classes;?>" <?=$attributes;?>>
 <?if(0 && variable_get('site_ad')):?>
 <div class="ad-box">
     <div class="row-fluid">
@@ -105,3 +106,5 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     </div>
 </div>
 <?endif?>
+
+</div><!--drupal standard div end-->

@@ -4,6 +4,7 @@ if($wscn['x_comments_rendered']) return;
 ?>
 <?$items = $view->result;?>
 
+<div class="<?=$classes;?>" <?=$attributes;?>>
 <div class="page-header">
     <h2>最新评论</h2>
 </div>
@@ -40,5 +41,5 @@ if($wscn['x_comments_rendered']) return;
     <?endforeach?>
 </div>
 
-
+</div><!--drupal comment standard div end-->
 <?$wscn['x_comments_rendered'] = true;?>

@@ -7,7 +7,7 @@ $items = $view->result;
     <a href="/news?page=1" class="more pull-right">MORE»</a>
     <h2>最新文章</h2>
 </div>
-<div class="news-list">
+<div class="news-list <?=$classes;?>" <?=$attributes;?>>
     <?foreach($items as $item):?>
     <div class="media">
         <?if($item->file_managed_field_data_upload_uri || $item->field_field_image_1):?>

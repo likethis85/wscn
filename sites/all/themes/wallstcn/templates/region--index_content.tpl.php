@@ -2,6 +2,8 @@
 <?=render($elements['views_x_topnews-block']);?>
 <?endif?>
 
+<div class="<?=$classes;?>" <?=$attributes;?>>
+
 <?if(variable_get('site_ad')):?>
 <div class="ad-box ad-middle">
     <div class="row-fluid">
@@ -68,3 +70,5 @@
 <?if($elements['views_x_recent-block']):?>
 <?=render($elements['views_x_recent-block']);?>
 <?endif?>
+
+</div><!--drupal index content standard div end-->

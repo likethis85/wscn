@@ -1,4 +1,4 @@
-<nav id="navbar-user" >
+<nav id="navbar-user" class="<?=$classes;?>" <?=$attributes;?> >
 <div class="container">
     <div class="navbar">
         <div class="navbar-inner">

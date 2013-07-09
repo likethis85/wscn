@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container <?=$classes;?>" <?=$attributes;?>>
 <div id="nav-area">
     <div class="row"><div class="span12">
     <div id="navbar" class="navbar">

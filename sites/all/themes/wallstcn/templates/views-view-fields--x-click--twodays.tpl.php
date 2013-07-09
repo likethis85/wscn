@@ -3,7 +3,7 @@ global $wscn;
 if($wscn['x_click_rendered']) return;
 ?>
 <?$items = $view->result;?>
-<div class="side-box ranking">
+<div class="side-box ranking <?=$classes;?>" <?=$attributes;?>>
     <ul class="nav nav-tabs">
         <li><a data-toggle="tab" href="#side-tab-fourth" data-tab-url="/apiv1/click_all.json">点击排行</a></li>
         <li class="active first">
