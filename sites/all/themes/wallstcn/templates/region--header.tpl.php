@@ -59,7 +59,7 @@
 <?if($elements['menu_menu-live-menu']):?>
 <div class="container">
     <div id="live-topnews">
-<script type="text/x-tmpl" data-url="/apiv1/node.json?parameters[type]=news">
+<script type="text/x-tmpl" data-url="/apiv1/news.json">
 
         <div class="container">
             <div class="row-fluid">
@@ -67,21 +67,21 @@
                     <ul>
                         <li class="first">最新文章</li>
                         {% for (var i=0; i < 2; i++) { %}
-                            <li><a href="http://<?=variable_get('site_domain')?>/node/{%=o[i].nid%}" target="_blank">{%=o[i].title%}</a></li>
+                            <li><a href="http://<?=variable_get('site_domain')?>/node/{%=o[i].nid%}" target="_blank">{%=o[i].node_title%}</a></li>
                         {% } %}
                     </ul>
                 </div>
                 <div class="span4">
                     <ul>
                         {% for (var i=2; i < 5; i++) { %}
-                            <li><a href="http://<?=variable_get('site_domain')?>/node/{%=o[i].nid%}" target="_blank">{%=o[i].title%}</a></li>
+                            <li><a href="http://<?=variable_get('site_domain')?>/node/{%=o[i].nid%}" target="_blank">{%=o[i].node_title%}</a></li>
                         {% } %}
                     </ul>
                 </div>
                 <div class="span4">
                     <ul>
                         {% for (var i=5; i < 7; i++) { %}
-                            <li><a href="http://<?=variable_get('site_domain')?>/node/{%=o[i].nid%}"  target="_blank">{%=o[i].title%}</a></li>
+                            <li><a href="http://<?=variable_get('site_domain')?>/node/{%=o[i].nid%}"  target="_blank">{%=o[i].node_title%}</a></li>
                         {% } %}
                     <li class="last"><a href="http://<?=variable_get('site_domain')?>/news" target="_blank">MORE »</a></li>
                     </ul>
