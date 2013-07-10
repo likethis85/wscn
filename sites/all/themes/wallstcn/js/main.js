@@ -708,7 +708,7 @@
         });
 
         //Google 访问滚动事件追踪
-        //$.scrollDepth();
+        $.scrollDepth();
     });
 })(jQuery);
 
