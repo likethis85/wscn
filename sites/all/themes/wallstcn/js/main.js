@@ -91,6 +91,9 @@
 
     $(document).ready(function(){
 
+        //slider
+        $('.carousel').carousel();
+
         //图片延迟加载
         $("img.lazy").show().lazyload({
             //effect       : "fadeIn",
