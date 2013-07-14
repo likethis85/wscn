@@ -52,10 +52,10 @@ $lastdate = '';
     </div>
     <?endif?>
     <div id="livenews-id-<?=$item->nid?>" class="media">
-        <div class="media-body media-format-<?=$item->field_field_format[0]['raw']['value']?> media-color-<?=$item->field_field_color[0]['raw']['value']?>">
+        <div class="media-body media-format-<?=isset($item->field_field_format[0]) ? $item->field_field_format[0]['raw']['value'] : '';?> media-color-<?=isset($item->field_field_color[0]) ? $item->field_field_color[0]['raw']['value'] : '';?>">
             <time datetime="<?=format_date($item->node_created);?>"><?=format_date($item->node_created, 'custom', 'H:i');?></time>
             <span class="icon">
-                <?$icon = $item->field_field_icon[0]['raw']['value'];?>
+                <?$icon = isset($item->field_field_icon[0]) ? $item->field_field_icon[0]['raw']['value'] : '';?>
                 <?if($icon == 'chart'):?>
                 <i class="icon-external-link"></i>
                 <?elseif($icon == 'calendar'):?>

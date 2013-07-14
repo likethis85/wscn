@@ -41,7 +41,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </div>
 <?endif?>
 
-<?if($elements['views_x_click-twodays']):?>
+<?if(isset($elements['views_x_click-twodays']) && $elements['views_x_click-twodays']):?>
 <?=render($elements['views_x_click-twodays'])?>
 <?endif?>
 
@@ -89,7 +89,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </div>
 <?endif?>
 
-<?if($elements['views_x_tags-block']):?>
+<?if(isset($elements['views_x_tags-block']) && $elements['views_x_tags-block']):?>
 <?=render($elements['views_x_tags-block'])?>
 <?endif?>
 

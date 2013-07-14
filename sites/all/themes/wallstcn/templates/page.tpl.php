@@ -41,13 +41,13 @@
         <div class="row-fluid">
 
             <div class="span8"> 
-                <?php print $messages; ?>
+                <?=$messages; ?>
                 <?if($is_front):?>
 
-                    <?if($page['live_content']):?>
+                    <?if(isset($page['live_content']) && $page['live_content']):?>
                     <?=render($page['live_content'])?>
                     <?endif?>
-                    <?if($page['index_content']):?>
+                    <?if(isset($page['index_content']) && $page['index_content']):?>
                     <?=render($page['index_content']); ?>
                     <?endif?>
 
@@ -67,9 +67,6 @@
             <div class="span4">
                 <?if($page['sidebar_first']):?>
                 <?=render($page['sidebar_first']); ?>
-                <?endif?>
-                <?if($page['sidebar_live']):?>
-                <?=render($page['sidebar_live']); ?>
                 <?endif?>
             </div>
 

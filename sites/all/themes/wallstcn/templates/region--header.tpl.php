@@ -14,7 +14,7 @@
                     <?if($elements['system_main-menu']):?>
                     <?=render($elements['system_main-menu']);?>
                     <?endif?>
-                    <?if($elements['menu_menu-live-menu']):?>
+                    <?if(isset($elements['menu_menu-live-menu']) && $elements['menu_menu-live-menu']):?>
                     <?=render($elements['menu_menu-live-menu']);?>
                     <?endif?>
 
@@ -31,7 +31,7 @@
     </div><!-- #navbar end -->
 </div></div>
 
-    <?if(!$elements['menu_menu-live-menu']):?>
+    <?if(!isset($elements['menu_menu-live-menu']) || !$elements['menu_menu-live-menu']):?>
     <div class="container">
         <div class="row-fluid">
             <div class="span12">
@@ -56,7 +56,7 @@
 </div><!--outer container end-->
 
 
-<?if($elements['menu_menu-live-menu']):?>
+<?if(isset($elements['menu_menu-live-menu']) && $elements['menu_menu-live-menu']):?>
 <div class="container">
     <div id="live-topnews">
 <script type="text/x-tmpl" data-url="/apiv1/news.json">
