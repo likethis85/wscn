@@ -499,7 +499,7 @@
         if($('#livenews-list')[0]){
             var jplayer = $('<div id="jplayer" />').appendTo('body');
             var livenewsTmpl = $("#livenews-list-js");
-            var refreshTime = 5000;
+            var refreshTime = 10000;
             var lowlightTime = 60000;
             var livenewsHandler;
             var allowFresh = function(){
