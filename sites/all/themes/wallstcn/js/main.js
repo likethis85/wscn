@@ -489,12 +489,18 @@
             $("#realtime-clock").html(moment().format('YYYY年MM月DD日 HH:mm:ss'));
         }, 1000);
 
+        //页面自动刷新
+        if($('#livenews-list')[0]){
+            //每6分钟
+            setTimeout('window.location.reload();', 1000 * 60 * 6);
+        }
+
         //实时新闻刷新
         if($('#livenews-list')[0]){
             var jplayer = $('<div id="jplayer" />').appendTo('body');
             var livenewsTmpl = $("#livenews-list-js");
             var refreshTime = 5000;
-            var lowlightTime = 10000;
+            var lowlightTime = 60000;
             var livenewsHandler;
             var allowFresh = function(){
                 return $("#enable-fresh").attr('checked') ? true : false;
