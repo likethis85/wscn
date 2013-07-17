@@ -11,7 +11,7 @@
             <a target="_blank" href="http://nordfx-chinese.com/?id=730026"><img src="/sites/all/themes/wallstcn/ads/ad_nordfx.gif" alt=""></a>
         </div>
 
-        <?if(1):?>
+        <?if(0):?>
         <div class="span8">
             <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <ins class="adsbygoogle"
@@ -24,30 +24,12 @@
         </div>
         <?endif?>
 
-        <?if(0):?>
+        <?if(1):?>
         <div class="span4">
-            <!-- G-wallstreetcn.com/banc -->
-            <script type="text/javascript">
-              var ord = window.ord || Math.floor(Math.random() * 1e16);
-              document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N6105/adj/G-wallstreetcn.com/banc;sz=230x60;ord=' + ord + '?"><\/script>');
-            </script>
-            <noscript>
-            <a href="http://ad.doubleclick.net/N6105/jump/G-wallstreetcn.com/banc;sz=230x60;ord=[timestamp]?">
-            <img src="http://ad.doubleclick.net/N6105/ad/G-wallstreetcn.com/banc;sz=230x60;ord=[timestamp]?" width="230" height="60" />
-            </a>
-            </noscript>
+            <a target="_blank" href="http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="/sites/all/themes/wallstcn/ads/ad_forexct.jpg" alt=""></a>
         </div>
         <div class="span4 right-align">
-            <!-- G-wallstreetcn.com/hantecfx -->
-            <script type="text/javascript">
-              var ord = window.ord || Math.floor(Math.random() * 1e16);
-              document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N6105/adj/G-wallstreetcn.com/hantecfx;sz=230x60;ord=' + ord + '?"><\/script>');
-            </script>
-            <noscript>
-            <a href="http://ad.doubleclick.net/N6105/jump/G-wallstreetcn.com/hantecfx;sz=230x60;ord=[timestamp]?">
-            <img src="http://ad.doubleclick.net/N6105/ad/G-wallstreetcn.com/hantecfx;sz=230x60;ord=[timestamp]?" width="230" height="60" />
-            </a>
-            </noscript>
+            <a target="_blank" href="http://www.guolong9999.com/join.html"><img src="/sites/all/themes/wallstcn/ads/ad_guolong9999.gif" alt=""></a>
         </div>
         <?endif?>
     </div>
