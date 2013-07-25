@@ -26,7 +26,16 @@
 
         <?if(1):?>
         <div class="span4">
+<div class="carousel slide">
+    <div class="carousel-inner">
+        <div class="active item">
+            <a target="_blank" href="http://www.svsfx.com.cn"><img src="/sites/all/themes/wallstcn/ads/ad_svsfx.gif" alt=""></a>
+        </div>
+        <div class="item">
             <a target="_blank" href="http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="/sites/all/themes/wallstcn/ads/ad_forexct.jpg" alt=""></a>
+        </div>
+    </div>
+</div>
         </div>
         <div class="span4 right-align">
             <a target="_blank" href="http://www.guolong9999.com/join.html"><img src="/sites/all/themes/wallstcn/ads/ad_guolong9999.gif" alt=""></a>
