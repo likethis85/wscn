@@ -99,6 +99,7 @@ drupal_set_title($page_title, PASS_THROUGH);?>
         <a class="jiathis_button_twitter"></a>
         <a class="jiathis_button_googleplus"></a>
         <a class="jiathis_button_fb"></a>
+        <a class="jiathis_button_renren"></a>
         <a class="jiathis_button_email"></a>
         <a class="jiathis_button_copy"></a>
         <a class="jiathis_button_fav"></a>
@@ -223,6 +224,15 @@ unset($comments['pager']);
 
 <?elseif($view_mode == 'teaser'):?>
 <div id="node-<?=$node->nid; ?>" class="<?=$classes;?> clearfix node-article media" <?=$attributes;?>>
+
+    <?if(isset($node->field_upload) && $node->field_upload['und']):?>
+    <a class="pull-left news-img" href="<?=url('node/'. $item->nid);?>" target="_blank">
+        <div class="news-img-wrap">
+            <img class="lazy" src="/sites/all/themes/wallstcn/placeholder.gif" data-original="<?=wscn_image_domain(file_create_url($node->field_upload['und'][0]['uri']));?>" />
+            <noscript><img alt="" class="" src="<?=wscn_image_domain(file_create_url($node->field_upload['und'][0]['uri']));?>"></noscript>
+        </div>
+    </a>
+    <?endif?>
 
     <?if($node->upload['und']):?>
     <a class="pull-left news-img" href="<?=url('node/'. $item->nid);?>" target="_blank">

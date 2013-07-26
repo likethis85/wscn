@@ -61,6 +61,25 @@
 <?=render($elements['views_x_click-twodays'])?>
 <?endif?>
 
+<?if($is_front):?>
+<div class="ad-box">
+<div class="carousel slide">
+    <div class="carousel-inner">
+        <div class="active item">
+            <a target="_blank" href="/sponsor"><img src="/sites/all/themes/wallstcn/ads/sponsor_fxcm.jpg" alt=""></a>
+        </div>
+        <div class="item">
+            <a target="_blank" href="/sponsor"><img src="/sites/all/themes/wallstcn/ads/sponsor_ironfx.jpg" alt=""></a>
+        </div>
+        <div class="item">
+            <a target="_blank" href="/sponsor"><img src="/sites/all/themes/wallstcn/ads/sponsor_svsfx.jpg" alt=""></a>
+        </div>
+    </div>
+</div>
+</div>
+<?endif?>
+
+
 <?if(variable_get('site_ad')):?>
 <div class="ad-box ad-side ad-margin-top">
     <div style="width:336px;margin:0 auto">
@@ -90,6 +109,7 @@
 <?endif?>
 </div>
 
+
 <?if($is_front):?>
 <div class="page-header">
     <h2>投放广告</h2>
@@ -98,7 +118,7 @@
     <div class="row-fluid">
         <div class="span12">
             <a href="/contact">
-                <img class="" src="/sites/all/themes/wallstcn/css/img/advertising.gif" />
+                <img class="" src="/sites/all/themes/wallstcn/css/img/advertising.gif" width="360" />
             </a>
         </div>
     </div>
@@ -108,6 +128,7 @@
 <?if(isset($elements['views_x_tags-block']) && $elements['views_x_tags-block']):?>
 <?=render($elements['views_x_tags-block'])?>
 <?endif?>
+
 
 
 <?if(0 && $is_front):?>
