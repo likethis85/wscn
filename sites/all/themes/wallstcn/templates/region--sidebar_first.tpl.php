@@ -1,22 +1,7 @@
 <div class="<?=$classes;?>" <?=$attributes;?>>
-
-<?if(0 && variable_get('site_ad')):?>
-<div class="ad-box">
-    <div class="row-fluid">
-        <div class="span6">
-            <a target="_blank" href="http://www.wfgold.com/"><img src="http://wallstreetcn.com/ckuploadimg/images/side_ad_wfgold0523.gif" alt=""></a>
-        </div><!--span6 end -->
-        <div class="span6 right-align">
-            <a target="_blank" href="http://www.igoldhk.com/?utm_source=wallstreetcn&utm_medium=banner&utm_term=160x50&utm_content=award_first&utm_campaign=all-index"><img src="http://wallstreetcn.com/ckuploadimg/images/ad_igold_0508.gif" alt=""></a> 
-        </div><!--span6 end -->
-    </div>
-</div>
-<?endif?>
-
 <?include 'box-icons.php'?>
 
-
-<?if(variable_get('site_ad')):?>
+<?if(0 && variable_get('site_ad')):?>
 <div class="ad-box ad-side">
 <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
@@ -26,6 +11,12 @@
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+</div>
+<?endif?>
+
+<?if(variable_get('site_ad')):?>
+<div class="ad-box ad-side" style="padding:0;">
+    <a target="_blank" href="http://www.svsfx.com.cn/hd/"><img src="/sites/all/themes/wallstcn/ads/ad_svsfx_medium.gif" alt=""></a>
 </div>
 <?endif?>
 
