@@ -1,7 +1,7 @@
 <div class="<?=$classes;?>" <?=$attributes;?>>
 <?include 'box-icons.php'?>
 
-<?if(variable_get('site_ad')):?>
+<?if(0 && variable_get('site_ad')):?>
 <div class="ad-box ad-side">
 <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
@@ -20,21 +20,20 @@
 </div>
 <?endif?>
 
-<?if(0 && variable_get('site_ad')): //slider ads?>
+<?if(variable_get('site_ad')): //slider ads?>
 <div class="ad-box ad-side">
-<div class="carousel slide">
+<div class="carousel slide" style="margin-bottom:0;">
     <div class="carousel-inner">
         <div class="active item">
-<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:inline-block;width:336px;height:280px"
-     data-ad-client="ca-pub-0869270234052789"
-     data-ad-slot="2911844489"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+            <div style="height:280px;margin:0 auto;">
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/fxcm_07.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/fxcm_07.swf" type="application/x-shockwave-flash" width="336"></embed></object>
+            </div>
         </div>
-        <div class="item">abc</div>
+        <div class="item">
+            <div style="margin:0 auto;">
+            <a target="_blank" href="http://www.svsfx.com.cn/hd/"><img src="/sites/all/themes/wallstcn/ads/ad_svsfx_medium_new.gif" alt=""></a>
+            </div>
+        </div>
     </div>
 </div>
 </div>
