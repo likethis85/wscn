@@ -1,7 +1,7 @@
 <div class="<?=$classes;?>" <?=$attributes;?>>
 <?include 'box-icons.php'?>
 
-<?if(0 && variable_get('site_ad')):?>
+<?if(variable_get('site_ad')):?>
 <div class="ad-box ad-side">
 <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
@@ -14,13 +14,7 @@
 </div>
 <?endif?>
 
-<?if(0 && variable_get('site_ad')):?>
-<div class="ad-box ad-side" style="padding:0;">
-    <a target="_blank" href="http://www.svsfx.com.cn/hd/"><img src="/sites/all/themes/wallstcn/ads/ad_svsfx_medium.gif" alt=""></a>
-</div>
-<?endif?>
-
-<?if(variable_get('site_ad')): //slider ads?>
+<?if(0 && variable_get('site_ad')): //slider ads?>
 <div class="ad-box ad-side">
 <div class="carousel slide" style="margin-bottom:0;">
     <div class="carousel-inner">
