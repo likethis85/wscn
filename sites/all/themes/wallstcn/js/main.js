@@ -92,7 +92,7 @@
     $(document).ready(function(){
 
         //slider
-        $('.carousel').carousel();
+        $('.carousel').carousel({interval: 7000});
 
         //图片延迟加载
         $("img.lazy").show().lazyload({
