@@ -98,10 +98,7 @@
                 <div class="page-header header-red">
                     <h3>最新市场行情</h3>
                 </div>
-                <div class="iframe-box" data-frameborder="0" data-scrolling="no" data-height="310" data-width="100%" data-allowtransparency="true" data-src="http://tools.cn.forexprostools.com/market_quotes.php?tab_1=1,2,3,5,7,9&amp;tab_2=169,166,20,172,27,178&amp;tab_3=8830,8849,8836,8862,8831,8988&amp;tab_4=8880,8907,8900,8899,8886,8895&amp;select_color=000000&amp;default_color=0059B0">
-                <?if(0):?>
-                <iframe frameborder="0" scrolling="no" height="310" width="100%" allowtransparency="true" src="http://tools.cn.forexprostools.com/market_quotes.php?tab_1=1,2,3,5,7,9&amp;tab_2=169,166,20,172,27,178&amp;tab_3=8830,8849,8836,8862,8831,8988&amp;tab_4=8880,8907,8900,8899,8886,8895&amp;select_color=000000&amp;default_color=0059B0"></iframe>
-                <?endif?>
+                <iframe frameborder="0" scrolling="no" height="287" width="300" allowtransparency="true" marginwidth="0" marginheight="0" src="http://tools.cn.forexprostools.com/market_quotes.php?tab_1=1,2,3,5,7,9&tab_2=169,166,20,172,27,178&tab_3=8830,8849,8836,8862,8831,8988&tab_4=8880,8907,8900,8899,8886,8895&select_color=000000&default_color=0059B0"> </iframe><br /><div style="width:300"><span style="font-size: 11px;color: #333333;text-decoration: none;">市场行情由 <a href="http://cn.investing.com" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">cn.investing.com</a> 提供。</span></div>
                 </div>
 
                 <?if(variable_get('site_ad')):?>
