@@ -41,7 +41,7 @@ function wscn_image_domain($url){
         $url = parse_url($url);
         $url['host'] = $img_domain;
         $query = isset($url['query']) ? $url['query'] : '';
-        $url = 'http://' . $url['host'] . $url['path'] . $url['query'];
+        $url = 'http://' . $url['host'] . $url['path'] . $query;
     }
     return $url;
 }

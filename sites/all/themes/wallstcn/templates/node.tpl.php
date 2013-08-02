@@ -1,7 +1,7 @@
 <?$title_prefix = '期货外汇黄金全球市场投资资讯平台';?>
 <?if($view_mode == 'full'):?>
 <?$page_title = $node->title;
-if($node->taxonomy_vocabulary_2){
+if(!empty($node->taxonomy_vocabulary_2)){
     $tags = array();
     foreach($node->taxonomy_vocabulary_2['und'] as $tag) {
         $tags[] = $tag['taxonomy_term']->name;
@@ -55,7 +55,7 @@ drupal_set_title($page_title, PASS_THROUGH);?>
     <?=$node->body['und']['0']['value']?>
 </div>
 
-<?if($node->field_related):?>
+<?if(!empty($node->field_related)):?>
 <div class="article-related">
     <h2>相关文章：</h2>
     <ul>
@@ -130,7 +130,7 @@ drupal_set_title($page_title, PASS_THROUGH);?>
 </div>
 <?endif?>
 
-<?if($node->taxonomy_vocabulary_3):?>
+<?if(!empty($node->taxonomy_vocabulary_3)):?>
 <div id="related-read" class="">
     <h5>关键字阅读：</h5>
     <ul class="nav nav-tabs">
@@ -173,10 +173,13 @@ drupal_set_title($page_title, PASS_THROUGH);?>
 
 
 
-<?$comments = $content['comments']['comments'];
-unset($comments['#sorted']);
-unset($comments['pager']);
-//var_dump($comments);
+<?
+$comments = array();
+if(!empty($content['comments']['comments'])) {
+    $comments = $content['comments']['comments'];
+    unset($comments['#sorted']);
+    unset($comments['pager']);
+}
 ?>
 <?if($node->comment == 2 || $comments):?>
 <div class="page-header header-blue">
@@ -234,7 +237,7 @@ unset($comments['pager']);
     </a>
     <?endif?>
 
-    <?if($node->upload['und']):?>
+    <?if(isset($node->upload['und']) && $node->upload['und']):?>
     <a class="pull-left news-img" href="<?=url('node/'. $node->nid);?>" target="_blank">
         <div class="news-img-wrap">
             <img class="lazy" src="/sites/all/themes/wallstcn/placeholder.gif" data-original="<?=wscn_image_domain(file_create_url($node->upload['und'][0]['uri']));?>" />

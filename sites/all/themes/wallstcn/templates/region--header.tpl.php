@@ -9,9 +9,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-                <a href="http://<?=variable_get('site_domain')?>" class="brand <?=$elements['system_main-menu'] ? 'mainsite-brand' : ''?>"><i class="icon-home"></i> 华尔街见闻</a>
+                <a href="http://<?=variable_get('site_domain')?>" class="brand <?=!empty($elements['system_main-menu']) ? 'mainsite-brand' : ''?>"><i class="icon-home"></i> 华尔街见闻</a>
                 <div class="nav-collapse collapse navbar-responsive-collapse">
-                    <?if($elements['system_main-menu']):?>
+                    <?if(isset($elements['system_main-menu']) && $elements['system_main-menu']):?>
                     <?=render($elements['system_main-menu']);?>
                     <?endif?>
                     <?if(isset($elements['menu_menu-live-menu']) && $elements['menu_menu-live-menu']):?>

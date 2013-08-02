@@ -8,7 +8,7 @@
 
 <div class="article-meta clearfix">
     <span class="pull-left">
-        文 <a href="<?=url('user/'. $comment->uid);?>"><?=$node->name?></a>
+        文 <a href="<?=url('user/'. $node->uid);?>"><?=$node->name?></a>
         <?if($node->field_location):?> / 
         <?foreach($node->field_location['und'] as $tag):?>
         <a href="<?=url('taxonomy/term/' . $tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a>
@@ -44,7 +44,7 @@
 <div class="article-content typo">
     <?=$node->body['und']['0']['safe_value']?>
 
-    <?if($node->upload['und']):?>
+    <?if(!empty($node->upload['und']) && $node->upload['und']):?>
     <img alt="" class="" src="<?=file_create_url($node->upload['und'][0]['uri']);?>">
     <?endif?>
 </div>
@@ -94,7 +94,7 @@ unset($comments['pager']);
 
 <div id="comment-ajax">
 
-    <?if($node->upload['und'] || $node->body['und']['0']['summary'] && $node->body['und']['0']['value'] != $node->body['und']['0']['summary']):?>
+    <?if(!empty($node->upload['und']) || $node->body['und']['0']['summary'] && $node->body['und']['0']['value'] != $node->body['und']['0']['summary']):?>
     <div class="live-news-full hide">
         <?if($node->body['und']['0']['value'] != $node->body['und']['0']['summary']):?>
         <?=$node->body['und']['0']['value']?>
