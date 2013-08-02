@@ -1,6 +1,6 @@
 <?
 global $wscn;
-if($wscn['x_recent_rendered']) return;
+if(!empty($wscn['x_recent_rendered'])) return;
 $items = $view->result;
 ?>
 <div class="page-header header-red">
@@ -10,6 +10,8 @@ $items = $view->result;
 <div class="news-list <?=$classes;?>" <?=$attributes;?>>
     <?foreach($items as $item):?>
     <div class="media">
+        <?if($item->field_field_from && $item->field_field_from[0]['raw']['value'] == 2):?>
+        <?else:?>
         <?if($item->file_managed_field_data_upload_uri || $item->field_field_image_1):?>
         <a class="pull-left news-img" href="<?=url('node/'. $item->nid);?>" target="_blank">
             <div class="news-img-wrap">
@@ -18,6 +20,8 @@ $items = $view->result;
             </div>
         </a>
         <?endif?>
+        <?endif?>
+
         <div class="media-body">
             <h3 class="media-heading"><a href="<?=url('node/'. $item->nid);?>" target="_blank"><?=$item->node_title?></a></h3>
             <p class="media-meta">

@@ -1,6 +1,6 @@
 <?
 global $wscn;
-if($wscn['x_comments_rendered']) return;
+if(!empty($wscn['x_comments_rendered'])) return;
 ?>
 <?$items = $view->result;?>
 

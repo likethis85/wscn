@@ -237,6 +237,8 @@ if(!empty($content['comments']['comments'])) {
     </a>
     <?endif?>
 
+    <?if(isset($node->field_from) && $node->field_from['und'][0]['value'] == 2):?>
+    <?else:?>
     <?if(isset($node->upload['und']) && $node->upload['und']):?>
     <a class="pull-left news-img" href="<?=url('node/'. $node->nid);?>" target="_blank">
         <div class="news-img-wrap">
@@ -244,6 +246,7 @@ if(!empty($content['comments']['comments'])) {
             <noscript><img alt="" class="" src="<?=wscn_image_domain(file_create_url($node->upload['und'][0]['uri']));?>"></noscript>
         </div>
     </a>
+    <?endif?>
     <?endif?>
 
     <div class="media-body">

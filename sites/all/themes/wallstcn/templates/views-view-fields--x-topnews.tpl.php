@@ -1,6 +1,6 @@
 <?
 global $wscn;
-if($wscn['x_topnews_rendered']) return;
+if(!empty($wscn['x_topnews_rendered'])) return;
 
 $items = $view->result;
 $item = $items[0];

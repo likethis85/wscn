@@ -1,6 +1,6 @@
 <?
 global $wscn;
-if($wscn['x_recommand_rendered']) return;
+if(!empty($wscn['x_recommand_rendered'])) return;
 $items = $view->result;
 $max = count($items);
 $rows = ceil($max / 3);

@@ -1,6 +1,6 @@
 <?
 global $wscn;
-if($wscn['x_click_rendered']) return;
+if(!empty($wscn['x_click_rendered'])) return;
 ?>
 <?$items = $view->result;?>
 <div class="side-box ranking <?=$classes;?>" <?=$attributes;?>>
