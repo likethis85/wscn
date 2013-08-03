@@ -237,7 +237,7 @@ if(!empty($content['comments']['comments'])) {
     </a>
     <?endif?>
 
-    <?if(isset($node->field_from) && $node->field_from['und'][0]['value'] == 2):?>
+    <?if(isset($node->field_from) && isset($node->field_from['und'][0]['value']) && $node->field_from['und'][0]['value'] == 2):?>
     <?else:?>
     <?if(isset($node->upload['und']) && $node->upload['und']):?>
     <a class="pull-left news-img" href="<?=url('node/'. $node->nid);?>" target="_blank">
