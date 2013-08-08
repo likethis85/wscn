@@ -9,9 +9,11 @@ $items = $view->result;
 </div>
 <div class="news-list <?=$classes;?>" <?=$attributes;?>>
     <?foreach($items as $item):?>
+    <?if($item->field_field_from && $item->field_field_from[0]['raw']['value'] == 2):?>
+    <div class="media textonly">
+    <?else:?>
     <div class="media">
-        <?if($item->field_field_from && $item->field_field_from[0]['raw']['value'] == 2):?>
-        <?else:?>
+    <?endif?>
         <?if($item->file_managed_field_data_upload_uri || $item->field_field_image_1):?>
         <a class="pull-left news-img" href="<?=url('node/'. $item->nid);?>" target="_blank">
             <div class="news-img-wrap">
@@ -19,7 +21,6 @@ $items = $view->result;
             <noscript><img alt="" class="" src="<?=wscn_image_domain(wscn_image_url($item));?>"></noscript>
             </div>
         </a>
-        <?endif?>
         <?endif?>
 
         <div class="media-body">
