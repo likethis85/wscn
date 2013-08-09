@@ -6330,6 +6330,15 @@ a:hover {
 #top-news.no-related .top-news-entry {
   height: 417px;
 }
+#top-news .carousel {
+  margin-bottom: 0;
+}
+#top-news .carousel-control {
+  margin-top: 0;
+  color: #d24747;
+  background: none;
+  border: 0;
+}
 .top-news-entry {
   height: 482px;
   background: #EFEFEF;

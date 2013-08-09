@@ -16,11 +16,41 @@ if(!$item->field_field_related){
             <div class="top-news-entry">
                 <div class="row-fluid">
                     <div class="span12">
+
                         <a class="entry-img" href="<?=url('node/'. $item->nid);?>" target="_blank">
                             <div class="entry-img-wrap">
                                 <img alt="" class="span12" src="<?=wscn_image_domain(file_create_url($item->uri));?>" />
                             </div>
                         </a>
+                        <?if(0):?>
+                        <div id="top-carousel" class="carousel slide">
+                            <ol class="carousel-indicators">
+                                <li data-target="#top-carousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#top-carousel" data-slide-to="1"></li>
+                            </ol>
+                            <!-- Carousel items -->
+                            <div class="carousel-inner">
+                                <div class="active item">
+                                    <a class="entry-img" href="<?=url('node/'. $item->nid);?>" target="_blank">
+                                        <div class="entry-img-wrap">
+                                            <img alt="" class="span12" src="<?=wscn_image_domain(file_create_url($item->uri));?>" />
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a class="entry-img" href="<?=url('node/'. $item->nid);?>" target="_blank">
+                                        <div class="entry-img-wrap">
+                                            <img alt="" class="" src="/sites/all/themes/wallstcn/ads/ad_brokers.jpg" width="406" height="200" />
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Carousel nav -->
+                            <a class="carousel-control left" href="#top-carousel" data-slide="prev">&lsaquo;</a>
+                            <a class="carousel-control right" href="#top-carousel" data-slide="next">&rsaquo;</a>
+                        </div>
+                        <?endif?>
+
                     </div>
                     <?if(0):?>
                     <div class="entry-meta">
