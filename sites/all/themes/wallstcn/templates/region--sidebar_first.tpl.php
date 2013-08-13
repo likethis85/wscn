@@ -132,6 +132,11 @@
 <?=render($elements['views_x_tags-block'])?>
 <?endif?>
 
+<?if(variable_get('site_ad')):?>
+<div class="side-box">
+<a href="http://www.efinancialcareers.cn/?utm_source=APAC_CN_CNS&utm_medium=DA_WALLSTREETCN&utm_campaign=PART_MPU_WALLSTREETCN" target="_blank"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" width="360" height="450"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/ad_aefc.swf" /><embed pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/ad_aefc.swf" type="application/x-shockwave-flash" width="360" height="450"></embed></object></a>
+</div>
+<?endif?>
 
 
 <?if(0 && $is_front):?>

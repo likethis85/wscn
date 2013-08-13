@@ -26,7 +26,7 @@
 
         <?if(1):?>
         <div class="span4">
-<div class="carousel slide">
+<div class="random-ad">
     <div class="carousel-inner">
         <div class="active item">
             <a target="_blank" href="http://www.svsfx.com.cn"><img src="/sites/all/themes/wallstcn/ads/ad_svsfx_new.gif" alt=""></a>
