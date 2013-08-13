@@ -95,14 +95,17 @@
         //$('.carousel').carousel({interval: 7000});
         $('.carousel').carousel();
 
-        var random = parseInt(Math.random() * 10 % 2);
-        $(".random-ad .item").each(function(index){
-            if(index === random) {
-                $(this).show();
-            } else {
-                $(this).hide();
-            }
+        $(".random-ad").each(function(){
+            var random = parseInt(Math.random() * 10 % 2);
+            $(this).find('.item').each(function(index){
+                if(index === random) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
         });
+            
 
         //图片延迟加载
         $("img.lazy").show().lazyload({
