@@ -24,7 +24,14 @@
         </div>
         <?endif?>
 
-        <?if(1):?>
+        <div class="span4">
+            <a target="_blank" href="http://www.svsfx.com.cn"><img src="/sites/all/themes/wallstcn/ads/ad_svsfx_new.gif" alt=""></a>
+        </div>
+        <div class="span4 right-align">
+            <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" width="234" height="60"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/ad_forexct0819.swf" /><embed pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/ad_forexct0819.swf" type="application/x-shockwave-flash" width="234" height="60"></embed></object>
+        </div>
+
+        <?if(0):?>
         <div class="span4">
 <div class="random-ad">
     <div class="carousel-inner">
