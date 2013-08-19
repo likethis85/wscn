@@ -51,6 +51,7 @@
 <a href="http://news.hexun.com/" target="_blank">和讯网</a> | 
 <a href="http://www.eastmoney.com/" target="_blank">东方财富网</a> | 
 <a href="http://www.financialnews.com.cn/" target="_blank">中国金融新闻网</a> | 
+<a href="http://www.xinhua08.com/" target="_blank">中国金融信息网</a> | 
 <a href="http://finance.china.com/" target="_blank">中华网财经</a> | 
 <a href="http://www.cnforex.com" target="_blank">环球外汇网</a> | 
 <a href="http://news.cnfol.com/" target="_blank">中金在线财经</a> | 
