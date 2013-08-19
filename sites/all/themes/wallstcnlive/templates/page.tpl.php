@@ -61,6 +61,16 @@
             <div class="span4">
                 <?if(variable_get('site_ad')):?>
                 <div class="ad-box ad-side">
+<script type="text/javascript">
+/*侧栏*/
+var cpro_id = "u1349094";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+                </div>
+                <?endif?>
+
+                <?if(0 && variable_get('site_ad')):?>
+                <div class="ad-box ad-side">
                 <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <ins class="adsbygoogle"
                      style="display:inline-block;width:336px;height:280px"
