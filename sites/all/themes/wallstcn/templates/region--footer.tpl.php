@@ -50,6 +50,7 @@
 <a href="http://www.caijing.com.cn" target="_blank">财经网</a> | 
 <a href="http://news.hexun.com/" target="_blank">和讯网</a> | 
 <a href="http://www.eastmoney.com/" target="_blank">东方财富网</a> | 
+<a href="http://www.jrj.com.cn/" target="_blank">金融界</a> | 
 <a href="http://www.financialnews.com.cn/" target="_blank">中国金融新闻网</a> | 
 <a href="http://www.xinhua08.com/" target="_blank">中国金融信息网</a> | 
 <a href="http://finance.china.com/" target="_blank">中华网财经</a> | 
