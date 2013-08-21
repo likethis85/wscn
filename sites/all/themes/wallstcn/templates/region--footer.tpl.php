@@ -57,6 +57,7 @@
 <a href="http://www.cnforex.com" target="_blank">环球外汇网</a> | 
 <a href="http://news.cnfol.com/" target="_blank">中金在线财经</a> | 
 <a href="http://www.xcf.cn/" target="_blank">新财富</a> | 
+<a href="http://www.sywgqh.com.cn/" target="_blank">申银万国期货</a> | 
 <a href="http://agri.sci99.com/" target="_blank">卓创资讯农业</a> | 
 <a href="http://www.howbuy.com/" target="_blank">好买基金网</a> | 
 <a href="http://www.wolun.com.cn" target="_blank">港股通</a> | 
