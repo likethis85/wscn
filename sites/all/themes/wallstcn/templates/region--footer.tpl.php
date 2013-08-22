@@ -49,6 +49,7 @@
 <a href="http://finance.sina.com.cn/" target="_blank">新浪财经</a> | 
 <a href="http://www.caijing.com.cn" target="_blank">财经网</a> | 
 <a href="http://news.hexun.com/" target="_blank">和讯网</a> | 
+<a href="http://www.591hx.com/" target="_blank">华讯财经</a> | 
 <a href="http://www.eastmoney.com/" target="_blank">东方财富网</a> | 
 <a href="http://www.jrj.com.cn/" target="_blank">金融界</a> | 
 <a href="http://www.p5w.net/news/index.htm" target="_blank">全景财经</a> | 
