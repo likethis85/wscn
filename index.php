@@ -16,6 +16,15 @@
  */
 define('DRUPAL_ROOT', getcwd());
 
+require_once 'vendor/autoload.php';
+function p($r, $useVarDump = false)
+{
+    if($useVarDump || false === method_exists('\FB','log')){
+        echo sprintf("<pre>%s</pre>", var_dump($r));
+    }
+    FB::log($r);
+}
+
 require_once DRUPAL_ROOT . '/includes/bootstrap.inc';
 drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
 menu_execute_active_handler();

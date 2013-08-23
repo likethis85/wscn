@@ -255,6 +255,53 @@ function advagg_schema() {
   return $schema;
 }
 
+
+/**
+ * Upgrade AdvAgg previous versions (6.x-1.x & 7.x-1.x) to 7.x-2.x.
+ *
+ * Implements hook_update_N().
+ */
+function advagg_update_7200(&$sandbox) {
+  // Check and see if new tables exist.
+  $table_names = array_keys(advagg_schema());
+  $all_tables_exist = TRUE;
+  $missing_tables = array();
+  foreach ($table_names as $table_name) {
+    if (!db_table_exists($table_name)) {
+      $all_tables_exist = FALSE;
+      $missing_tables[] = $table_name;
+    }
+  }
+  // Bail if needed DB Tables exist.
+  if ($all_tables_exist) {
+    return t('Nothing needed to happen in Advanced CSS/JS Aggregation.');
+  }
+
+  // Remove all old advagg variables.
+  db_delete('variable')
+    ->condition('name', 'advagg%', 'LIKE')
+    ->execute();
+
+  // Remove old schema.
+  $tables_to_remove = array(
+    'cache_advagg',
+    'cache_advagg_files_data',
+    'cache_advagg_bundle_reuse',
+    'advagg_files',
+    'advagg_bundles',
+  );
+  foreach ($tables_to_remove as $table_to_remove) {
+    if (db_table_exists($table_to_remove)) {
+      db_drop_table($table_to_remove);
+    }
+  }
+
+  // Install new schema.
+  drupal_install_schema('advagg');
+
+  return t('Upgraded Advanced CSS/JS Aggregation to 7.x-2.x.');
+}
+
 /**
  * Implements hook_requirements().
  */
@@ -263,9 +310,29 @@ function advagg_requirements($phase) {
   // Ensure translations don't break at install time
   $t = get_t();
 
-  // Report Drupal version
+  // Always check these, independent of the current phase.
+  $function_list = array(
+    'rename',
+  );
+  // Check each function to make sure it exists.
+  foreach ($function_list as $function_name) {
+    if (!function_exists($function_name)) {
+      $requirements['advagg_function_' . $function_name] = array(
+        'title' => $t('Adv CSS/JS Agg - Function Disabled'),
+        'value' => $phase == 'install' ? FALSE : $function_name,
+        'severity' => REQUIREMENT_ERROR,
+        'description' => $t('<a href="!url">%name()</a> is disabled on this server. Please contact your hosting provider or server administrator and see if they can re-enable this function for you.', array(
+          '!url' => 'http://php.net/' . str_replace('_', '-', $function_name),
+          '%name' => $function_name,
+        )),
+      );
+    }
+  }
+
+  // Do the following checks only at runtime.
   if ($phase == 'runtime') {
     list($css_path, $js_path) = advagg_get_root_files_dir();
+    $config_path = advagg_admin_config_root_path();
 
     // Make sure directories are writable.
     if (!file_prepare_directory($css_path[0], FILE_CREATE_DIRECTORY)) {
@@ -299,7 +366,7 @@ function advagg_requirements($phase) {
         'title' => $t('Adv CSS/JS Agg - Enabled'),
         'severity' => REQUIREMENT_WARNING,
         'value' => $t('Advanced CSS/JS aggregation is disabled.'),
-        'description' => $t('Go to the Advanced CSS/JS aggregation <a href="@settings">settings page</a> and enable it.', array('@settings' => url('admin/settings/advagg'))),
+        'description' => $t('Go to the Advanced CSS/JS aggregation <a href="@settings">settings page</a> and enable it.', array('@settings' => url($config_path . '/advagg'))),
       );
     }
 
@@ -379,14 +446,6 @@ function advagg_requirements($phase) {
           'description' => $t('You need to install the latest patch in <a href="@link">this issue</a>.', array('@link' => 'http://drupal.org/node/1942230')),
         );
       }
-      elseif (variable_get(CDN_BASIC_FARFUTURE_VARIABLE, CDN_BASIC_FARFUTURE_DEFAULT)) {
-        $requirements['advagg_module_cdn_farfuture'] = array(
-          'title' => $t('Adv CSS/JS Agg - CDN module'),
-          'severity' => REQUIREMENT_WARNING,
-          'value' => $t('The CDN module and farfutre do not work together currently.'),
-          'description' => $t('You need to disable CDN Far Future expiration on the <a href="@link">CDN details configuration page, or uninstall AdvAgg.</a>', array('@link' => url('admin/config/development/cdn/details'))),
-        );
-      }
     }
     if (module_exists('labjs')) {
       if (!function_exists('labjs_advagg_modify_js_pre_render_alter')) {
@@ -436,61 +495,109 @@ function advagg_install_check_via_http(&$requirements) {
   $types = array('css', 'js');
 
   // Make sure we get an advagg fast 404.
-  foreach ($types as $type) {
-    if ($type == 'css') {
-      $path = $css_path[0];
-    }
-    elseif ($type == 'js') {
-      $path = $js_path[0];
-    }
-    // Set arguments for drupal_http_request().
-    // Make a 404 request to the advagg menu callback.
-    $url = file_create_url($path . '/' . $type . REQUEST_TIME . '.' . $type);
-    $options = array('timeout' => 10);
+  if (!variable_get('maintenance_mode', FALSE) && !variable_get('advagg_skip_404_check', FALSE)) {
+    foreach ($types as $type) {
+      if ($type == 'css') {
+        $path = $css_path[0];
+      }
+      elseif ($type == 'js') {
+        $path = $js_path[0];
+      }
+      // Set arguments for drupal_http_request().
+      // Make a 404 request to the advagg menu callback.
+      $url = file_create_url($path . '/' . $type . REQUEST_TIME . '.' . $type);
+      $options = array('timeout' => 10);
 
-    // Send request.
-    $request = drupal_http_request($url, $options);
+      // Send request.
+      $request = drupal_http_request($url, $options);
 
-    // Check response. Report an error if
-    //  Not a 404 OR
-    //   Headers do not contain "x-advagg" AND
-    //   Body does not contain "advagg_missing_fast404".
-    if (   $request->code != 404
-        || (   empty($request->headers['x-advagg'])
-            && strpos($request->data, '<!-- advagg_missing_fast404 -->') === FALSE
-              )
-          ) {
+      // Check response. Report an error if
+      //  Not a 404 OR
+      //   Headers do not contain "x-advagg" AND
+      //   Body does not contain "advagg_missing_fast404".
+      if (   $request->code != 404
+          || (   empty($request->headers['x-advagg'])
+              && strpos($request->data, '<!-- advagg_missing_fast404 -->') === FALSE
+                )
+            ) {
 
-      // Fast 404 check.
-      $parts = parse_url($url);
-      $exclude_paths = variable_get('404_fast_paths_exclude', FALSE);
-      $fast_404_html = variable_get('404_fast_html', '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>404 Not Found</title></head><body><h1>Not Found</h1><p>The requested URL "@path" was not found on this server.</p></body></html>');
-      // Replace @path in the variable with the page path.
-      $fast_404_html = trim(strtr($fast_404_html, array('@path' => check_plain($parts['path']))));
-      if ($fast_404_html == trim($request->data) && !empty($exclude_paths) && strpos($exclude_paths, 'advagg_') === FALSE) {
-        if ($exclude_paths == '/\/(?:styles)\//') {
-          $description = $t('Change it from <code>/\/(?:styles)\//</code> to <code>/\/(?:styles|advagg_(cs|j)s)\//</code> Current value: %value', array('%value' => $exclude_paths));
+        // Fast 404 check.
+        $parts = parse_url($url);
+        $exclude_paths = variable_get('404_fast_paths_exclude', FALSE);
+        $fast_404_html = variable_get('404_fast_html', '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>404 Not Found</title></head><body><h1>Not Found</h1><p>The requested URL "@path" was not found on this server.</p></body></html>');
+        // Replace @path in the variable with the page path.
+        $fast_404_html = trim(strtr($fast_404_html, array('@path' => check_plain($parts['path']))));
+        if ($fast_404_html == trim($request->data) && !empty($exclude_paths) && strpos($exclude_paths, 'advagg_') === FALSE) {
+          if ($exclude_paths == '/\/(?:styles)\//') {
+            $description = $t('Change it from <code>/\/(?:styles)\//</code> to <code>/\/(?:styles|advagg_(cs|j)s)\//</code> Current value: %value', array('%value' => $exclude_paths));
+          }
+          else {
+            $description = $t('Add in <code>advagg_(cs|j)s</code> into the regex. Current value: %value', array('%value' => $exclude_paths));
+          }
+          $requirements['advagg_404_fast_' . $type . '_generation'] = array(
+            'title' => $t('Adv CSS/JS Agg - Fast 404: HTTP Request'),
+            'severity' => REQUIREMENT_ERROR,
+            'value' => $t('HTTP requests to advagg for ' . $type . ' files are not getting through.'),
+            'description' => $t('If you have fast 404 enabled in your settings.php file, you need to change the <code>404_fast_paths_exclude</code> setting so advagg will work.') . ' ' . $description,
+          );
+        }
+        elseif (   module_exists('fast_404')
+                && defined('FAST_404_EXT_CHECKED')
+                && !in_array('/advagg_', variable_get('fast_404_string_whitelisting', array()))
+                && strpos(variable_get('fast_404_exts', '/^(?!robots).*\.(txt|png|gif|jpe?g|css|js|ico|swf|flv|cgi|bat|pl|dll|exe|asp)$/i'), $type)
+                  ) {
+          $requirements['advagg_404_fast_module_' . $type . '_generation'] = array(
+            'title' => $t('Adv CSS/JS Agg - Fast 404: HTTP Request'),
+            'severity' => REQUIREMENT_ERROR,
+            'value' => $t('HTTP requests to advagg for ' . $type . ' files are not getting through.'),
+            'description' => $t('The fast 404 module is enabled. You need to change the <code>fast_404_string_whitelisting</code> setting so advagg will work. In your settings.php file add in the code below: <pre>@code</pre>',
+              array('@code' => '$conf[\'fast_404_string_whitelisting\'][] = \'/advagg_\';')),
+          );
+        }
+        elseif (   module_exists('stage_file_proxy')
+                && variable_get('stage_file_proxy_origin', NULL)
+                && strpos(file_get_contents(drupal_get_path('module', 'stage_file_proxy') . '/stage_file_proxy.module'), 'advagg') === FALSE
+                  ) {
+          // Stage File Proxy patch is missing.
+          $requirements['advagg_stage_file_proxy_' . $type . '_generation'] = array(
+            'title' => $t('Adv CSS/JS Agg - Fast 404: HTTP Request'),
+            'severity' => REQUIREMENT_ERROR,
+            'value' => $t('HTTP requests to advagg for ' . $type . ' files are not getting through.'),
+            'description' => $t('If you have the <a href="@module">Stage File Proxy</a> module enabled, make sure <a href="@patch">this patch</a> has been applied.', array(
+              '@patch' => 'https://drupal.org/node/1977170#comment-7331810',
+              '@module' => 'https://drupal.org/project/stage_file_proxy',
+            )),
+          );
+        }
+        elseif (!variable_get('clean_url', 0)) {
+          $requirements['advagg_clean_url'] = array(
+            'title' => $t('Adv CSS/JS Agg - Clean URLs'),
+            'value' => $t('HTTP requests to advagg for ' . $type . ' files are not getting through.'),
+            'severity' => REQUIREMENT_ERROR,
+            'description' => $t('Go to the <a href="@settings">clean URL settings page</a> and enable Clean URLs.', array(
+              '@settings' => url('admin/config/search/clean-urls'),
+            )),
+          );
         }
         else {
-          $description = $t('Add in <code>advagg_(cs|j)s</code> into the regex. Current value: %value', array('%value' => $exclude_paths));
+          // Menu callback failed.
+          $requirements['advagg_' . $type . '_generation'] = array(
+            'title' => $t('Adv CSS/JS Agg - HTTP Request'),
+            'severity' => REQUIREMENT_ERROR,
+            'value' => $t('HTTP requests to advagg for ' . $type . ' files are not getting through.'),
+            'description' => $t('AdvAgg will issue a request for a file that does not exist inside of the AdvAgg directory. If AdvAgg sends a 404, everything is ok; if something else sends a 404 then that means that AdvAgg will not be able to generate an aggregate if it is missing as something else is handling the 404 before AdvAgg has a chance to do it. If you are reading this, it means that something else is handling the 404 before AdvAgg can. Raw request info: <pre>@request</pre>', array('@request' => print_r($request, TRUE)))
+          );
         }
-        $requirements['advagg_404_fast_' . $type . '_generation'] = array(
-          'title' => $t('Adv CSS/JS Agg - Fast 404: HTTP Request'),
-          'severity' => REQUIREMENT_ERROR,
-          'value' => $t('HTTP requests to advagg for ' . $type . ' files are not getting through.'),
-          'description' => $t('If you have fast 404 enabled in your settings.php file, you need to change the <code>404_fast_paths_exclude</code> setting so advagg will work.') . ' ' . $description,
-        );
-      }
-      else {
-        // Menu callback failed.
-        $requirements['advagg_' . $type . '_generation'] = array(
-          'title' => $t('Adv CSS/JS Agg - HTTP Request'),
-          'severity' => REQUIREMENT_ERROR,
-          'value' => $t('HTTP requests to advagg for ' . $type . ' files are not getting through.'),
-          'description' => $t('Raw request info: <pre>@request</pre>', array('@request' => print_r($request, TRUE)))
-        );
       }
     }
+  }
+  elseif (variable_get('maintenance_mode', FALSE)) {
+    $requirements['advagg_maintenance_mode'] = array(
+      'title' => $t('Adv CSS/JS Agg - HTTP Request'),
+      'severity' => REQUIREMENT_WARNING,
+      'value' => $t("HTTP requests to advagg's 404 handler can not be tested currently."),
+      'description' => $t('This can not be tested while the site is in <a href="@maintenance">maintenance mode</a>', array('@maintenance' => url('admin/config/development/maintenance'))),
+    );
   }
 
   // Check gzip encoding.
@@ -513,10 +620,20 @@ function advagg_install_check_via_http(&$requirements) {
         continue;
       }
 
+      // Skip if filename is empty.
+      if (empty($filename)) {
+        continue;
+      }
+
+      // Skip if filename is not long enough,
+      $len = strlen($filename);
+      if ($len < 91 + strlen(ADVAGG_SPACE)*3) {
+        continue;
+      }
+
       // See if this uri contains .gz near the end of it.
       $pos = strripos($filename, '.gz', 91 + strlen(ADVAGG_SPACE)*3);
       if (!empty($pos)) {
-        $len = strlen($filename);
         // If this is a .gz file skip.
         if ($pos == $len-3) {
           continue;
@@ -607,12 +724,27 @@ function advagg_install_check_via_http(&$requirements) {
             'title' => $t('Adv CSS/JS Agg - gzip'),
             'severity' => REQUIREMENT_WARNING,
             'value' => $t('Gzip is failing for %type files.', array('%type' => $type)),
-            'description' => $t('The web servers configuration will need to be adjusted. In most cases make sure that the webroots .htaccess file still contains this section "Rules to correctly serve gzip compressed CSS and JS files".', array(
-              '@advagg' => url($config_path . '/advagg'),
-            )),
+            'description' => $t('The web servers configuration will need to be adjusted. In most cases make sure that the webroots .htaccess file still contains this section "Rules to correctly serve gzip compressed CSS and JS files".'),
           );
         }
       }
+    }
+    $content_type = $type;
+    if ($content_type == 'js') {
+      $content_type = 'javascript';
+    }
+    if (empty($request->headers['content-type']) || $request->headers['content-type'] != 'text/' . $content_type) {
+      // Recommend servers configuration be adjusted.
+      $requirements['advagg_' . $type . '_type'] = array(
+        'title' => $t('Adv CSS/JS Agg - Content-Type'),
+        'severity' => REQUIREMENT_WARNING,
+        'value' => $t('The wrong Content-Type is being sent by your webserver.', array('%type' => $type)),
+        'description' => $t('The web servers configuration will need to be adjusted. Was looking for <code>@typematch</code>, actaully got <code>@received</code>. You might need to apply the drupal core patch located here <a href="@url">@url</a>.', array(
+          '@url' => 'https://drupal.org/node/1440534',
+          '@typematch' => 'text/' . $content_type,
+          '@received' => isset($request->headers['content-type']) ? $request->headers['content-type'] : 'NULL',
+        )),
+      );
     }
   }
 }

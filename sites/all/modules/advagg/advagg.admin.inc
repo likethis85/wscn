@@ -23,24 +23,36 @@ function advagg_admin_settings_form($form, $form_state) {
     '#type' => 'checkbox',
     '#title' => t('Enable advanced aggregation'),
     '#default_value' => variable_get('advagg_enabled', ADVAGG_ENABLED),
+    '#description' => t('Uncheck this box to completely disable AdvAgg functionality.'),
   );
   $form['global']['advagg_gzip'] = array(
     '#type' => 'checkbox',
     '#title' => t('Create .gz files'),
     '#default_value' => variable_get('advagg_gzip', ADVAGG_GZIP),
+    '#description' => t('All aggregated files can be pre-compressed into a .gz file and
+   served from Apache. This is faster then gzipping the file on each request.'),
   );
   $form['global']['advagg_core_groups'] = array(
     '#type' => 'checkbox',
     '#title' => t('Use cores grouping logic'),
     '#default_value' => variable_get('advagg_core_groups', ADVAGG_CORE_GROUPS),
+    '#description' => t('Will group files just like core does.'),
+    '#states' => array(
+      'enabled' => array(
+        '#edit-advagg-combine-css-media' => array('checked' => FALSE),
+        '#edit-advagg-ie-css-selector-limiter' => array('checked' => FALSE),
+      ),
+    ),
   );
   $form['global']['advagg_use_httprl'] = array(
     '#type' => 'checkbox',
     '#title' => t('Use HTTPRL to generate aggregates.'),
     '#default_value' => module_exists('httprl') ? variable_get('advagg_use_httprl', ADVAGG_USE_HTTPRL) : FALSE,
     '#disabled' => module_exists('httprl') ? FALSE : TRUE,
+    '#description' => t('If <a href="@link">HTTPRL</a> is installed, advagg will use it to generate aggregates on the fly in a background parallel process.', array('@link' => 'http://drupal.org/project/httprl')),
   );
   $options = array(
+    -1 => t('Development ~ 100ms'),
     0 => t('Disabled ~ 70ms'),
     1 => t('Normal ~ 10ms'),
     3 => t('Aggressive ~ 4ms'),
@@ -50,7 +62,7 @@ function advagg_admin_settings_form($form, $form_state) {
     '#title' => t('AdvAgg Cache Settings'),
     '#default_value' => variable_get('advagg_cache_level', ADVAGG_CACHE_LEVEL),
     '#options' => $options,
-    '#description' => t('Disabled is useful for testing hook_alters for CSS/JS. Normal is should be fine for all use cases. Aggressive might break depending on how various hook_alter for CSS/JS are implemented. As a reference, core takes about 7 ms to run.'),
+    '#description' => t('Development will scan all files for a change on every page load. Disabled is useful for testing hook_alters for CSS/JS. Normal is should be fine for all use cases. Aggressive might break depending on how various hook_alter for CSS/JS are implemented. As a reference, core takes about 7 ms to run.'),
   );
 
   $form['css'] = array(
@@ -61,13 +73,39 @@ function advagg_admin_settings_form($form, $form_state) {
     '#type' => 'checkbox',
     '#title' => t('Combine CSS files by using media queries'),
     '#default_value' => variable_get('advagg_combine_css_media', ADVAGG_COMBINE_CSS_MEDIA),
-    '#description' => t('Use cores grouping logic needs to be unchecked in order for this to work. Also noted is that due to an issue with IE9, compatibility mode is forced off if this is enabled.'),
+    '#description' => t('Will combine more CSS files together because different CSS media types can be used in the same file by using media queries. Use cores grouping logic needs to be unchecked in order for this to work. Also noted is that due to an issue with IE9, compatibility mode is forced off if this is enabled.'),
+    '#states' => array(
+      'disabled' => array(
+        '#edit-advagg-core-groups' => array('checked' => TRUE),
+      ),
+    ),
   );
   $form['css']['advagg_ie_css_selector_limiter'] = array(
     '#type' => 'checkbox',
     '#title' => t('Prevent more than 4095 CSS selectors in an aggregated CSS file'),
     '#default_value' => variable_get('advagg_ie_css_selector_limiter', ADVAGG_IE_CSS_SELECTOR_LIMITER),
-    '#description' => t('Internet Explorer before version 10; IE9, IE8, IE7, & IE6 all have 4095 as the limit for the maximum number of css selectors that can be in a file. Enabling this will prevent CSS aggregates from being created that exceed this limit. <a href="@link">More info</a>.', array('@link' => 'http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/10164546.aspx')),
+    '#description' => t('Internet Explorer before version 10; IE9, IE8, IE7, & IE6 all have 4095 as the limit for the maximum number of css selectors that can be in a file. Enabling this will prevent CSS aggregates from being created that exceed this limit. <a href="@link">More info</a>. Use cores grouping logic needs to be unchecked in order for this to work.', array('@link' => 'http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/10164546.aspx')),
+    '#states' => array(
+      'disabled' => array(
+        '#edit-advagg-core-groups' => array('checked' => TRUE),
+      ),
+    ),
+  );
+  $form['css']['advagg_css_fix_type'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Fix improperly set type'),
+    '#default_value' => variable_get('advagg_css_fix_type', ADVAGG_CSS_FIX_TYPE),
+    '#description' => t('If type is external but does not start with http, https, or // change it to be type file. If type is file but it starts with http, https, or // change type to be external.'),
+  );
+  $form['js'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('JS Options'),
+  );
+  $form['js']['advagg_js_fix_type'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Fix improperly set type'),
+    '#default_value' => variable_get('advagg_js_fix_type', ADVAGG_JS_FIX_TYPE),
+    '#description' => t('If type is external but does not start with http, https, or // change it to be type file. If type is file but it starts with http, https, or // change type to be external.'),
   );
 
   // Clear the cache bins on submit.
@@ -384,7 +422,8 @@ function advagg_admin_toggle_bypass_cookie() {
   }
   // If the cookie does not exist then set it.
   else {
-    setcookie($cookie_name, $key, 0, $GLOBALS['base_path'], '.' . $_SERVER['HTTP_HOST']);
+    // Cookie will last for 12 hours.
+    setcookie($cookie_name, $key, REQUEST_TIME+60*60*12, $GLOBALS['base_path'], '.' . $_SERVER['HTTP_HOST']);
     $_COOKIE[$cookie_name] = $key;
     drupal_set_message(t('AdvAgg Bypass Cookie Set.'));
   }

@@ -1,7 +1,10 @@
-name = AdvAgg CDN Javascript
-description = Use a shared CDN for javascript libraries, Google Libraries API currently.
+name = AdvAgg CSS/JS Validator
+description = Validate the CSS & JS files used in Aggregation for syntax errors.
 package = Advanced CSS/JS Aggregation
 core = 7.x
+dependencies[] = advagg
+
+configure = admin/config/development/performance/advagg/validator
 
 ; Information added by drupal.org packaging script on 2013-08-23
 version = "7.x-2.0-rc2+9-dev"
