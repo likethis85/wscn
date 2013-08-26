@@ -77,6 +77,9 @@
         <div class="item">
             <a target="_blank" href="/sponsor"><img src="/sites/all/themes/wallstcn/ads/sponsor_svsfx.jpg" alt=""></a>
         </div>
+        <div class="item">
+            <a target="_blank" href="/sponsor"><img src="/sites/all/themes/wallstcn/ads/shequ.jpg" alt=""></a>
+        </div>
     </div>
 </div>
 </div>
