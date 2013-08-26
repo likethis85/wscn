@@ -44,6 +44,12 @@ class views_plugin_display_services extends views_plugin_display {
           else {
             $new_item->{$field->field_alias} = $item->{$field->field_alias};
           }
+          // START CHANGE HERE
+          $data = $item->{$field->field_alias};
+          if (!empty($field->options['file_download_path']) && $data !== NULL && $data !== '') {
+              $new_item->{$field->field_alias} = file_create_url($new_item->{$field->field_alias});
+          }
+          // END CHANGE HERE
         }
       }
       if (!empty($new_item)) {
