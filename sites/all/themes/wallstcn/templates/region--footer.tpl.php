@@ -54,6 +54,7 @@
 <a href="http://www.eastmoney.com/" target="_blank">东方财富网</a> | 
 <a href="http://www.jrj.com.cn/" target="_blank">金融界</a> | 
 <a href="http://www.p5w.net/news/index.htm" target="_blank">全景财经</a> | 
+<a href="http://finance.kankanews.com/" target="_blank">看看新闻网</a> | 
 <a href="http://www.financialnews.com.cn/" target="_blank">中国金融新闻网</a> | 
 <a href="http://www.xinhua08.com/" target="_blank">中国金融信息网</a> | 
 <a href="http://finance.china.com/" target="_blank">中华网财经</a> | 
