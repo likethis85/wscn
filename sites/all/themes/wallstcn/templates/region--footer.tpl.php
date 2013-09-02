@@ -70,6 +70,7 @@
 <a href="http://www.citicsf.com/" target="_blank">中证期货有限公司</a> | 
 <a href="http://agri.sci99.com/" target="_blank">卓创资讯农业</a> | 
 <a href="http://www.howbuy.com/" target="_blank">好买基金网</a> | 
+<a href="http://www.igoldhk.com/" target="_blank">领峰贵金属</a> | 
 <a href="http://www.wolun.com.cn" target="_blank">港股通</a> | 
 <a href="http://www.guancha.cn" target="_blank">观察者网</a> | 
 <a href="http://www.jfinfo.com" target="_blank">丰华财经</a> | 
