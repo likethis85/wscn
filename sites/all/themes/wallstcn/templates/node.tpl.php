@@ -236,8 +236,8 @@ if(!empty($content['comments']['comments'])) {
     <?if(isset($node->field_upload) && $node->field_upload['und']):?>
     <a class="pull-left news-img" href="<?=url('node/'. $node->nid);?>" target="_blank">
         <div class="news-img-wrap">
-            <img class="lazy" src="/sites/all/themes/wallstcn/placeholder.gif" data-original="<?=wscn_image_domain(file_create_url($node->field_upload['und'][0]['uri']));?>" />
-            <noscript><img alt="" class="" src="<?=wscn_image_domain(file_create_url($node->field_upload['und'][0]['uri']));?>"></noscript>
+            <img class="lazy" src="/sites/all/themes/wallstcn/placeholder.gif" data-original="<?=wscn_image_domain(file_create_url($node->field_upload['und'][0]['uri']));?>" <?=$node->title?> />
+            <noscript><img class="" src="<?=wscn_image_domain(file_create_url($node->field_upload['und'][0]['uri']));?>"  alt="<?=$node->title?>"></noscript>
         </div>
     </a>
     <?endif?>
@@ -245,8 +245,8 @@ if(!empty($content['comments']['comments'])) {
     <?if(isset($node->upload['und']) && $node->upload['und']):?>
     <a class="pull-left news-img" href="<?=url('node/'. $node->nid);?>" target="_blank">
         <div class="news-img-wrap">
-            <img class="lazy" src="/sites/all/themes/wallstcn/placeholder.gif" data-original="<?=wscn_image_domain(file_create_url($node->upload['und'][0]['uri']));?>" />
-            <noscript><img alt="" class="" src="<?=wscn_image_domain(file_create_url($node->upload['und'][0]['uri']));?>"></noscript>
+            <img class="lazy" src="/sites/all/themes/wallstcn/placeholder.gif" data-original="<?=wscn_image_domain(file_create_url($node->upload['und'][0]['uri']));?>"  alt="<?=$node->title?>" />
+            <noscript><img class="" src="<?=wscn_image_domain(file_create_url($node->upload['und'][0]['uri']));?>"  alt="<?=$node->title?>"></noscript>
         </div>
     </a>
     <?endif?>

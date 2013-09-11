@@ -10,8 +10,8 @@
                 <li><a href="/user"><?=t('My account')?></a></li>
                 <li><a href="/user/logout"><?=t('Log out')?></a></li>
                 <?else:?>
-                <li><a href="/user">登录　|</a></li>
-                <li><a href="/user/register">注册</a></li>
+                <li><a href="/user" rel="nofollow">登录　|</a></li>
+                <li><a href="/user/register" rel="nofollow">注册</a></li>
                 <?endif?>
             </ul>
         </div>

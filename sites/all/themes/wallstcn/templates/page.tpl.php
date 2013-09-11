@@ -5,8 +5,8 @@
     <div class="container">
         <div class="row-fluid">
             <div class="span4"><h1>
-                    <a class="logo" href="<?php print $front_page; ?>" title="<?php print $site_name ? $site_name : t('Home'); ?>">
-                        <img src="<?=$logo?>" alt="<?php print $site_name ? $site_name : t('Home'); ?>" />
+                    <a class="logo" href="<?=$front_page; ?>" title="华尔街见闻">
+                        <img src="<?=$logo?>" alt="华尔街见闻" />
                     </a>
             </h1></div>
             <div class="span8">

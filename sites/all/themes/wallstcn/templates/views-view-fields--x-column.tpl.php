@@ -13,8 +13,8 @@ $title = str_replace('%1', $view->build_info['substitutions']['%1'], $view->buil
         <?if($item->file_managed_field_data_upload_uri || $item->field_field_image_1):?>
         <a class="pull-left news-img" href="<?=url('node/'. $item->nid);?>" target="_blank">
             <div class="news-img-wrap">
-            <img class="lazy" src="<?=path_to_theme()?>/placeholder.gif" data-original="<?=wscn_image_domain(wscn_image_url($item));?>" />
-            <noscript><img alt="" class="" src="<?=wscn_image_domain(wscn_image_url($item));?>"></noscript>
+                <img class="lazy" src="<?=path_to_theme()?>/placeholder.gif" data-original="<?=wscn_image_domain(wscn_image_url($item));?>" alt="<?=$item->node_title?>" />
+            <noscript><img class="" src="<?=wscn_image_domain(wscn_image_url($item));?>" alt="<?=$item->node_title?>" /></noscript>
             </div>
         </a>
         <?endif?>

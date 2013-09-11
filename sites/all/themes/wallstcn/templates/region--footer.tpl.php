@@ -2,17 +2,17 @@
     <div class="span3">
         <h6>相关信息</h6>
         <ul>
-            <li><a href="/about">关于华尔街见闻</a></li>
-            <li><a href="/terms">使用条款</a></li>
-            <li><a href="/copyrightstatement">版权声明</a></li>
-            <li><a href="/wanted">加入我们</a></li>
+            <li><a href="/about" rel="nofollow">关于华尔街见闻</a></li>
+            <li><a href="/terms" rel="nofollow">使用条款</a></li>
+            <li><a href="/copyrightstatement" rel="nofollow">版权声明</a></li>
+            <li><a href="/wanted" rel="nofollow">加入我们</a></li>
         </ul>
     </div>
     <div class="span3">
         <h6>联系我们</h6>
         <ul>
-            <li><a href="/contact">联系我们</a></li>
-            <li><a href="/contact">广告投放</a></li>
+            <li><a href="/contact" rel="nofollow">联系我们</a></li>
+            <li><a href="/contact" rel="nofollow">广告投放</a></li>
             <li>联系邮箱：ad@wallstreetcn.com</li>
         </ul>
 
@@ -20,15 +20,15 @@
     <div class="span3">
         <h6>关注我们</h6>
         <ul>
-            <li><a href="http://weibo.com/wallstreetcn" target="_blank">微博 @华尔街见闻</a></li>
-            <li><a href="http://t.qq.com/wallstreetcn" target="_blank">腾讯微博</a></li>
+            <li><a href="http://weibo.com/wallstreetcn" target="_blank" rel="nofollow">微博 @华尔街见闻</a></li>
+            <li><a href="http://t.qq.com/wallstreetcn" target="_blank" rel="nofollow">腾讯微博</a></li>
             <?if(0):?>
             <li><a href="#">微信公众帐号 wallstreetcn</a></li>
             <li><a href="http://wallstreetcn.t.sohu.com/" target="_blank">搜狐微博</a></li>
             <li><a href="http://twitter.com/wallstreetcn" target="_blank">Twitter</a></li>
             <?endif?>
             <li><a href="/rss.xml">RSS订阅</a></li>
-            <li><a href="http://feedburner.google.com/fb/a/mailverify?uri=wallstreetcn&loc=en_US" target="_blank">邮件订阅</a></li>
+            <li><a href="http://feedburner.google.com/fb/a/mailverify?uri=wallstreetcn&loc=en_US" target="_blank" rel="nofollow">邮件订阅</a></li>
         </ul>
     </div>
     <div class="offset1 span2">

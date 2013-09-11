@@ -19,7 +19,7 @@ if(!$item->field_field_related){
 
                         <a class="entry-img" href="<?=url('node/'. $item->nid);?>" target="_blank">
                             <div class="entry-img-wrap">
-                                <img alt="" class="span12" src="<?=wscn_image_domain(file_create_url($item->uri));?>" />
+                                <img class="span12" src="<?=wscn_image_domain(file_create_url($item->uri));?>"  alt="<?=$item->node_title?>" />
                             </div>
                         </a>
                         <?if(0):?>

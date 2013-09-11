@@ -20,7 +20,7 @@ if(!empty($wscn['x_click_rendered'])) return;
                 <?if($item->file_managed_field_data_upload_uri || $item->field_field_image_1):?>
                 <a class="pull-right news-img" href="<?=url('node/'. $item->nid);?>" target="_blank">
                     <div class="news-img-wrap">
-                        <img class="" src="<?=image_style_url('thumbnail', $item->file_managed_field_data_upload_uri);?>" />
+                        <img class="" src="<?=image_style_url('thumbnail', $item->file_managed_field_data_upload_uri);?>" alt="<?=$item->node_title?>" />
                     </div>
                 </a>
                 <?endif?>
