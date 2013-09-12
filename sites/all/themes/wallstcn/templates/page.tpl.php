@@ -59,6 +59,12 @@
                         <?=render($local_menu);?>
                     </ul>
                     <?endif?>
+
+                    <?if($title && wscn_is_channel()):?>
+                    <div class="page-header header-red top-header">
+                        <h2><?=$title?></h2>
+                    </div>
+                    <?endif?>
                     <?=render($page['content']); ?>
                 <?endif?>
             </div>

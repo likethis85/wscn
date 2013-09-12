@@ -32,7 +32,7 @@ if(!empty($wscn['x_comments_rendered'])) return;
                 <div class="media-content-body"><?=$item->field_comment_body[0]['raw']['safe_value']?></div>
                 <p class="media-meta">
                 <?=format_date($item->comment_created);?>
-                <a href="<?=url('node/'. $item->comment_nid);?>" target="_blank">回复</a>
+                <a href="<?=url('node/'. $item->comment_nid);?>" target="_blank" rel="nofollow">回复</a>
                 </p>
             </div>
 

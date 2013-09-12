@@ -56,6 +56,39 @@ function wscn_image_url($item) {
     return $url;
 }
 
+function wscn_is_channel() {
+    $path = current_path();
+    $path = explode('/', $path);
+    $path = $path[0];
+
+    $channels = array(
+        'breakfast',
+        'china',
+        'europe',
+        'america',
+        'economy',
+        'centralbank',
+        'market',
+        'company',
+        'taxonomy',
+    );
+    if(in_array($path, $channels)) {
+        return true;
+    }
+    return false;
+}
+
+function wallstcn_preprocess_html(&$variables) {
+    $parameters = drupal_get_query_parameters();
+    if(isset($parameters['page']) && $parameters['page'] > 0) {
+        $variables['head_title_array']['title'] .= '_第' .  ($parameters['page'] + 1) . '页';
+    }
+
+    $variables['head_title'] = $variables['head_title_array']['title'] ? 
+        $variables['head_title_array']['title'] . '_' . $variables['head_title_array']['name']
+        :  $variables['head_title_array']['name'] . '_' .  $variables['head_title_array']['slogan'];
+}
+
 function wallstcn_js_alter(&$javascript) {
     // Update jquery version for non-administration pages
     if (arg(0) != 'admin' && arg(0) != 'panels' && arg(0) != 'ctools') {
@@ -113,6 +146,7 @@ function wallstcn_menu_link(array $variables) {
 }
 
 
+/*
 function wallstcn_form_alter(&$form, &$form_state, $form_id) {
     if ($form_id == 'search_block_form') {
         $form['search_block_form']['#title_display'] = 'invisible';
@@ -123,7 +157,7 @@ function wallstcn_form_alter(&$form, &$form_state, $form_id) {
         //$form['actions']['submit']['#src'] = drupal_get_path('theme', 'open_framework') . '/images/searchbutton.png';
     }
 }
-
+*/
 
 
 function wallstcn_pager($variables) {
@@ -244,10 +278,8 @@ function wallstcn_pager($variables) {
     return $output;
 }
 
-/**
-* Implements hook_form_alter().
-*/
-function bootstrap_form_alter(&$form, &$form_state, $form_id) {
+/*
+function wallstcn_form_alter(&$form, &$form_state, $form_id) {
     // Id's of forms that should be ignored
     // Make this configurable?
     $form_ids = array(
@@ -263,10 +295,7 @@ function bootstrap_form_alter(&$form, &$form_state, $form_id) {
     }
 }  
 
-/**
-* Implements hook_form_FORM_ID_alter() for search_form().
-*/
-function bootstrap_form_search_form_alter(&$form, &$form_state) {
+function wallstcn_form_search_form_alter(&$form, &$form_state) {
     $form['#attributes']['class'][] = 'form-search';
     $form['#attributes']['class'][] = 'pull-left';
 
@@ -285,10 +314,7 @@ function bootstrap_form_search_form_alter(&$form, &$form_state) {
     $form['#attributes']['class'][] = 'content-search';
 }
 
-/**
-* Implements hook_form_FORM_ID_alter() for search_block_form().
-*/
-function bootstrap_form_search_block_form_alter(&$form, &$form_state) {
+function wallstcn_form_search_block_form_alter(&$form, &$form_state) {
     $form['#attributes']['class'][] = 'form-search';
     $form['#attributes']['class'][] = 'pull-left';
 
@@ -306,10 +332,7 @@ function bootstrap_form_search_block_form_alter(&$form, &$form_state) {
     $form['#attributes']['class'][] = 'content-search';
 }
 
-/**
-* Returns HTML for a form element.
-*/
-function bootstrap_form_element(&$variables) {
+function wallstcn_form_element(&$variables) {
     $element = &$variables['element'];
     // This is also used in the installer, pre-database setup.
     $t = get_t();
@@ -406,10 +429,7 @@ function bootstrap_form_element(&$variables) {
 return $output;
 }
 
-/**
-* Returns HTML for a form element label and required marker.
-*/
-function bootstrap_form_element_label(&$variables) {
+function wallstcn_form_element_label(&$variables) {
     $element = $variables['element'];
     // This is also used in the installer, pre-database setup.
     $t = get_t();
@@ -456,10 +476,7 @@ function bootstrap_form_element_label(&$variables) {
     return ' <label' . drupal_attributes($attributes) . '>' . $output . "</label>\n";
 }
 
-/**
-* Preprocessor for theme('button').
-*/
-function bootstrap_preprocess_button(&$vars) {
+function wallstcn_preprocess_button(&$vars) {
     $vars['element']['#attributes']['class'][] = 'btn';
 
     if (isset($vars['element']['#value'])) {
@@ -497,10 +514,7 @@ function bootstrap_preprocess_button(&$vars) {
     }
 }
 
-/**
-* Returns HTML for a button form element.
-*/
-function bootstrap_button($variables) {
+function wallstcn_button($variables) {
     $element = $variables['element'];
     $label = $element['#value'];
     element_set_attributes($element, array('id', 'name', 'value', 'type'));
@@ -520,10 +534,8 @@ function bootstrap_button($variables) {
         return '<button' . drupal_attributes($element['#attributes']) . '>'. $label ."</button>\n"; // This line break adds inherent margin between multiple buttons
     }
 }
-
-/**
-* Returns an array containing ids of any whitelisted drupal elements
 */
+
 function _bootstrap_element_whitelist() {
     /**
     * Why whitelist an element?
