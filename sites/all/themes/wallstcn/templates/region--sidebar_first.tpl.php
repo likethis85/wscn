@@ -25,7 +25,7 @@
         </div>
         <div class="item">
             <div style="margin:0 auto;">
-            <a target="_blank" href="http://www.svsfx.com.cn/hd/"><img src="/sites/all/themes/wallstcn/ads/ad_svsfx_medium_new.gif" alt=""></a>
+            <a target="_blank" href="http://www.svsfx.com.cn/"><img src="/sites/all/themes/wallstcn/ads/ad_svsfx_medium_new.gif" alt=""></a>
             </div>
         </div>
     </div>
