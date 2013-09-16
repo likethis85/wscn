@@ -96,7 +96,8 @@
         $('.carousel').carousel();
 
         $(".random-ad").each(function(){
-            var random = parseInt(Math.random() * 10 % 2);
+            var num = $(this).find('.item').length;
+            var random = parseInt(Math.random() * 10 % num);
             $(this).find('.item').each(function(index){
                 if(index === random) {
                     $(this).show();
