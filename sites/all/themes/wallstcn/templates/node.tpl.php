@@ -11,10 +11,23 @@ if(!empty($node->taxonomy_vocabulary_2)){
 $page_title .= '_' . $title_prefix;
 drupal_set_title($page_title, PASS_THROUGH);?>
 
+<!-- 内容页面包屑导航 -->
+<ul class="breadcrumb">
+    <li><a href="/" data-thmr="thmr_3">首页</a></li> >
+    <?if($node->taxonomy_vocabulary_2):?>
+    <li>
+    <?foreach($node->taxonomy_vocabulary_2['und'] as $key => $tag):?>
+    <?if($key != 0) print '/'?><a href="<?=wscn_tagmapping($tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a>
+    <?endforeach?>
+    </li>
+    <?endif?>
+    > <li><?= $title; ?></li>
+</ul>
+
 <article id="node-<?=$node->nid; ?>" class="<?=$classes; ?> clearfix node-article node-single" <?=$attributes; ?>>
 
 <header class="article-header">
-<h1><a href="<?=url('node/' . $node->nid)?>"><?=$node->title?></a></h1>
+<h1><?=$node->title?></h1>
 </header>
 
 <?if(!$node->status):?>
@@ -29,10 +42,15 @@ drupal_set_title($page_title, PASS_THROUGH);?>
     <span class="pull-left">
         <?if($node->taxonomy_vocabulary_2):?>
         <span class="meta-item">
-            <i class="icon-tags"></i> 
-        <?foreach($node->taxonomy_vocabulary_2['und'] as $tag):?>
-        <a href="<?=wscn_tagmapping($tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a>
-        <?endforeach?> 
+            <i class="icon-tags"></i>
+        <?foreach($node->taxonomy_vocabulary_3['und'] as $tag):?>
+        <a href="<?=url('taxonomy/term/' . $tag['tid'])?>" target="_blank"><?=$tag['taxonomy_term']->name?></a>
+        <?endforeach?>
+        <!-- old tags
+        <//?foreach($node->taxonomy_vocabulary_2['und'] as $tag):?>
+        <a href="</?=wscn_tagmapping($tag['tid'])?>"></?=$tag['taxonomy_term']->name?></a>
+        </?endforeach?>
+        -->
         </span>
         <?endif?>
         <span class="meta-item">
@@ -134,7 +152,7 @@ drupal_set_title($page_title, PASS_THROUGH);?>
 <div id="related-read" class="">
     <h5>关键字阅读：</h5>
     <ul class="nav nav-tabs">
-        <?foreach($node->taxonomy_vocabulary_3['und'] as $key => $tag):?>
+        <? foreach($node->taxonomy_vocabulary_3['und'] as $key => $tag):?>
         <li><a data-toggle="tab" href="#related-read-<?=$key?>" data-tab-url="<?=url('taxonomy/term/' . $tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a></li>
         <?endforeach?>
     </ul>
@@ -265,7 +283,7 @@ if(!empty($content['comments']['comments'])) {
                 <span class="meta-item">
                     <?=format_date($node->created);?>
                 </span>
-                <?if($node->taxonomy_vocabulary_2):?> 
+                <?if($node->taxonomy_vocabulary_2):?>
                 <span class="meta-item">
                 <?foreach($node->taxonomy_vocabulary_2['und'] as $tag):?>
                 <a href="<?=wscn_tagmapping($tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a>
