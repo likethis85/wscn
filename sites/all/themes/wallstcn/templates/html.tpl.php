@@ -7,7 +7,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title><?=$head_title; ?></title>
+    <?if($is_front):?>
     <meta name="description" content="华尔街见闻隶属上海阿牛信息科技有限公司，是一个专业的的全球金融资讯中文平台 商，为全球金融市场投资者和从业者提供经济和金融市场信息">
+    <?endif?>
     <meta name="viewport" content="width=device-width">
     <?=$head?>
     <?=$styles; ?>

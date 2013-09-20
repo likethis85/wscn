@@ -13,15 +13,15 @@ drupal_set_title($page_title, PASS_THROUGH);?>
 
 <!-- 内容页面包屑导航 -->
 <ul class="breadcrumb">
-    <li><a href="/" data-thmr="thmr_3">首页</a></li> >
+    <li><a href="/" data-thmr="thmr_3">首页</a></li> ›
     <?if($node->taxonomy_vocabulary_2):?>
     <li>
     <?foreach($node->taxonomy_vocabulary_2['und'] as $key => $tag):?>
-    <?if($key != 0) print '/'?><a href="<?=wscn_tagmapping($tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a>
+    <?if($key != 0) print '/ '?><a href="<?=wscn_tagmapping($tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a>
     <?endforeach?>
     </li>
     <?endif?>
-    > <li><?= $title; ?></li>
+    › <li><?= $title; ?></li>
 </ul>
 
 <article id="node-<?=$node->nid; ?>" class="<?=$classes; ?> clearfix node-article node-single" <?=$attributes; ?>>

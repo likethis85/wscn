@@ -43,7 +43,7 @@
             <div class="span8">
                 <!-- 频道页面包屑导航 -->
                 <?if($title && wscn_is_channel()):?>
-                <ul class="breadcrumb"><li><a href="/" data-thmr="thmr_3">首页</a></li> > <li><a href="<?= $_SERVER['REQUEST_URI'] ?>" data-thmr="thmr_3"><?= $title; ?></a></li></ul>
+                <ul class="breadcrumb"><li><a href="/" data-thmr="thmr_3">首页</a></li> › <li><a href="<?= $_SERVER['REQUEST_URI'] ?>" data-thmr="thmr_3"><?= $title; ?></a></li></ul>
                 <?endif?>
 
                 <?=$messages; ?>
@@ -64,12 +64,13 @@
                         <?=render($local_menu);?>
                     </ul>
                     <?endif?>
-
-                    <?if($title && wscn_is_channel()):?>
+                    <!-- 频道页标题
+                    </?if($title && wscn_is_channel()):?>
                     <div class="page-header header-red top-header">
-                        <h2><?=$title?></h2>
+                        <h2></h2>?=$title?></h2>
                     </div>
-                    <?endif?>
+                    </?endif?>
+                    -->
                     <?=render($page['content']); ?>
                 <?endif?>
             </div>
