@@ -41,9 +41,7 @@ drupal_set_title($page_title, PASS_THROUGH);?>
         <?if($node->taxonomy_vocabulary_2):?>
         <span class="meta-item">
             <i class="icon-tags"></i>
-        <?foreach($node->taxonomy_vocabulary_3['und'] as $tag):?>
-        <a href="<?=url('taxonomy/term/' . $tag['tid'])?>" target="_blank"><?=$tag['taxonomy_term']->name?></a>
-        <?endforeach?>
+        <?foreach($node->taxonomy_vocabulary_3['und'] as $key => $tag):?><?if($key != 0) print '<font color="black">/</font>'?><a href="<?=url('taxonomy/term/' . $tag['tid'])?>" target="_blank"><?=$tag['taxonomy_term']->name?></a><?endforeach?>
         <!-- old tags
         <//?foreach($node->taxonomy_vocabulary_2['und'] as $tag):?>
         <a href="</?=wscn_tagmapping($tag['tid'])?>"></?=$tag['taxonomy_term']->name?></a>
