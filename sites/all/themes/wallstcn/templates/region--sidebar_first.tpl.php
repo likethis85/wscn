@@ -28,6 +28,7 @@
             <a target="_blank" href="http://www.svsfx.com.cn/2013815/"><img src="/sites/all/themes/wallstcn/ads/ad_svsfx_medium_new_0923.gif" alt=""></a>
             </div>
         </div>
+
     </div>
 </div>
 </div>
@@ -45,6 +46,11 @@
         <div class="item">
             <div style="margin:0 auto;">
             <a target="_blank" href="http://www.svsfx.com.cn/2013815/"><img src="/sites/all/themes/wallstcn/ads/ad_svsfx_medium_new_0923.gif" alt=""></a>
+            </div>
+        </div>
+        <div class="item">
+            <div style="height:280px;margin:0 auto;">
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/ad_toty_medium.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/ad_toty_medium.swf" type="application/x-shockwave-flash" width="336"></embed></object>
             </div>
         </div>
     </div>
