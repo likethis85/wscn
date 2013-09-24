@@ -38,7 +38,7 @@
 <div class="ad-box ad-side">
 <div class="random-ad" style="margin-bottom:0;">
     <div class="carousel-inner">
-        <div class="active item">
+        <div class="active item"  data-probability="50">
             <div style="height:280px;margin:0 auto;">
                 <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/fxcm_07.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/fxcm_07.swf" type="application/x-shockwave-flash" width="336" wmode="transparent"></embed></object>
             </div>
