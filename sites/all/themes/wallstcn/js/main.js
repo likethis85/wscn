@@ -94,12 +94,65 @@
         //slider
         //$('.carousel').carousel({interval: 7000});
         $('.carousel').carousel();
-
-        $(".random-ad").each(function(){
+        $('.random-carousel').carousel();
+        $(".random-carousel").each(function(){
             var num = $(this).find('.item').length;
             var random = parseInt(Math.random() * 10 % num);
             $(this).find('.item').each(function(index){
                 if(index === random) {
+                    $(this).addClass('active');
+                } else {
+                    $(this).removeClass('active');
+                }
+            });
+            $(this).carousel();
+        });
+
+        $(".random-ad").each(function(){
+            var num = $(this).find('.item').length;
+            var probability = [];
+            var hasAttr = 0;
+            var totalProbability = 0;
+            $(this).find('.item').each(function(index){
+                if($(this).attr('data-probability')) {
+                    probability[index] = parseInt($(this).attr('data-probability'));
+                    hasAttr++;
+                    totalProbability += probability[index];
+                } else {
+                    probability[index] = 0;
+                }
+            });
+            var leftNum = num - hasAttr;
+            var step = leftNum > 0 ?  parseInt((100 - totalProbability) / leftNum) : 0;
+            var start = 0;
+            var res = [];
+            //console.log(probability);
+            for(var i in probability){
+                res[i] = probability[i] === 0 ? [start, start + step] : [start, start + probability[i]];
+                start = probability[i] === 0 ? start + step : start + probability[i];
+            }
+            //force set to 100
+            res[i][1] = 100;
+
+            //console.log(res);
+            //var random = parseInt(Math.random() * 10 % num);
+            var random = Math.floor(Math.random()*100 + 1);
+            for(i in res) {
+                
+                //console.log(random);
+                //console.log(res[i]);
+                if(random >= res[i][0] && random <= res[i][1]) {
+                    break;
+                }
+            }
+            
+            /*
+            console.log(res);
+            console.log(random);
+            console.log(i);
+            */
+            $(this).find('.item').each(function(index){
+                if(index == i) {
                     $(this).show();
                 } else {
                     $(this).hide();

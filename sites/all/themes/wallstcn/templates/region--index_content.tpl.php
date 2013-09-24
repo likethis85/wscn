@@ -17,7 +17,7 @@
         <div class="item">
             <a target="_blank" href="http://www.svsfx.com.cn/2013815/"><img src="/sites/all/themes/wallstcn/ads/ad_svsfx_new_0923.gif" alt=""></a>
         </div>
-        <div class="item">
+        <div class="item" data-probability="50">
             <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" width="234" height="60"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/ad_forexct0822.swf" /><embed pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/ad_forexct0822.swf" type="application/x-shockwave-flash" width="234" height="60"></embed></object>
         </div>
         <div class="item">
@@ -28,7 +28,17 @@
         </div>
 
         <div class="span8 right-align">
-            <a target="_blank" href="http://open.yuedu.163.com/?act=rdwst_20130916_01"><img src="/sites/all/themes/wallstcn/ads/ad_163yun.jpg" alt=""></a>
+
+            <div class="random-carousel">
+                <div class="carousel-inner">
+                    <div class="active item  right-align">
+                        <a target="_blank" href="http://open.yuedu.163.com/?act=rdwst_20130916_01" style="float:right;"><img src="/sites/all/themes/wallstcn/ads/ad_163yun.jpg" alt=""></a>
+                    </div>
+                    <div class="item right-align">
+                        <a target="_blank" href="http://www.myzaker.com/" style="float:right;"><img src="/sites/all/themes/wallstcn/ads/ad_zaker.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <?if(0): //google ad?>
