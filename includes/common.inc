@@ -2276,7 +2276,7 @@ function url($path = NULL, array $options = array()) {
           return '/node?' . drupal_http_build_query($options['query']) . $options['fragment'];
         } else {
           $arr = explode('?', $_SERVER['REQUEST_URI']);
-          $node = explode('/',time($arr[0], '/'));
+          $node = explode('/',trim($arr[0], '/'));
 
           return '/' . $node[0] . '?' . drupal_http_build_query($options['query']) . $options['fragment'];
         }
