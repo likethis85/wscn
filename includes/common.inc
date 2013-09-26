@@ -2277,8 +2277,9 @@ function url($path = NULL, array $options = array()) {
         } else {
           $arr = explode('?', $_SERVER['REQUEST_URI']);
           $node = explode('/',trim($arr[0], '/'));
-
-          return '/' . $node[0] . '?' . drupal_http_build_query($options['query']) . $options['fragment'];
+          if ($node != 'admin') {
+            return '/' . $node[0] . '?' . drupal_http_build_query($options['query']) . $options['fragment'];
+          }
         }
       }
 
