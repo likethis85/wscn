@@ -2271,6 +2271,15 @@ function url($path = NULL, array $options = array()) {
   if (!empty($GLOBALS['conf']['clean_url'])) {
     $path = drupal_encode_path($prefix . $path);
     if ($options['query']) {
+      if ($_SERVER['HTTP_HOST'] == 'live.wallstreetcn.com') {
+        if ($_SERVER['REQUEST_URI'] == '/') {
+          return '/node?' . drupal_http_build_query($options['query']) . $options['fragment'];
+        } else {
+          $arr = explode('?', $_SERVER['REQUEST_URI']);
+          return $arr[0] . '?' . drupal_http_build_query($options['query']) . $options['fragment'];
+        }
+      }
+
       return $base . $path . '?' . drupal_http_build_query($options['query']) . $options['fragment'];
     }
     else {
