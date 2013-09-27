@@ -36,7 +36,7 @@
 
         <div class="row-fluid">
 
-            <div class="span8"> 
+            <div class="span8">
                 <?php print $messages; ?>
 
                 <?if($is_front):?>
@@ -61,11 +61,20 @@
             <div class="span4">
                 <?if(variable_get('site_ad')):?>
                 <div class="ad-box ad-side">
+                <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:336px;height:280px"
+                     data-ad-client="ca-pub-0869270234052789"
+                     data-ad-slot="7550994990"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+<!--
 <script type="text/javascript">
 /*侧栏*/
 var cpro_id = "u1349094";
 </script>
-<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>-->
                 </div>
                 <?endif?>
 
