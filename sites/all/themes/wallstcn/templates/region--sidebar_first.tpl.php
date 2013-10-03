@@ -92,7 +92,7 @@
 <?if(variable_get('site_ad')):?>
 <div class="ad-box ad-side ad-margin-top">
     <div style="width:336px;margin:0 auto">
-        <a target="_blank" href="http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="/sites/all/themes/wallstcn/ads/forexct.jpg" alt=""></a>
+        <a target="_blank" href="http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="/sites/all/themes/wallstcn/ads/forexct_0923.jpg" alt=""></a>
 <!--        
 <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
