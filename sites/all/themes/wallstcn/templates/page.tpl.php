@@ -25,7 +25,22 @@
 </script>
                 <?endif?>
                 <?if(variable_get('site_ad')):?>
-                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="90" width="728"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/IronFX_0901.swf" /><embed height="90" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/IronFX_0901.swf" type="application/x-shockwave-flash" width="728"></embed></object>
+                <div class="carousel slide" style="margin-bottom:0;">
+                    <div class="carousel-inner">
+                        <div class="active item">
+                            <div style="margin:0 auto;">
+                                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="90" width="728"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/IronFX_0901.swf" /><embed height="90" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/IronFX_0901.swf" type="application/x-shockwave-flash" width="728"></embed></object>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div style="margin:0 auto;">
+                                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="90" width="728"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/GB513_720x90px_chin_94c.swf" /><embed height="90" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/IronFX_0901.swf" type="application/x-shockwave-flash" width="728"></embed></object>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
                 <?endif?>
             </div>
         </div>
