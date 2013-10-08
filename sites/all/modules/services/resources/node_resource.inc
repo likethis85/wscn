@@ -250,7 +250,14 @@ function _node_resource_definition() {
  * @see node_load()
  */
 function _node_resource_retrieve($nid) {
+
   $node = node_load($nid);
+
+  if (!empty($node->field_related['und'])) {
+    foreach($node->field_related['und'] as $key => $target_id) {
+      $node->field_related['und'][$key]['title'] = node_load($target_id)->title;
+    }
+  }
 
   if ($node) {
     $uri = entity_uri('node', $node);
