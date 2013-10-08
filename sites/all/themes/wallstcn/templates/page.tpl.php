@@ -29,7 +29,7 @@
                     <div class="carousel-inner">
                         <div class="active item"  data-probability="70">
                             <div style="margin:0 auto;">
-                                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="90" width="728"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/IronFX_1007.swf" /><embed height="90" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/IronFX_1007.swf" type="application/x-shockwave-flash" width="728"></embed></object>
+                                <a target="_blank" href="https://www.ironfx.com/zh/live-competition?utm_source=SZ_728_90&utm_medium=hp_LC&utm_campaign=wallstreetcn"><img src="/sites/all/themes/wallstcn/ads/IronFX_1007.jpeg" alt=""></a>
                             </div>
                         </div>
                         <div class="item">
