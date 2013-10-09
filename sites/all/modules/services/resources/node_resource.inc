@@ -250,14 +250,20 @@ function _node_resource_definition() {
  * @see node_load()
  */
 function _node_resource_retrieve($nid) {
-
   $node = node_load($nid);
 
-  if (!empty($node->field_related['und'])) {
-    foreach($node->field_related['und'] as $key => $target_id) {
-      $node->field_related['und'][$key]['title'] = node_load($target_id)->title;
+  if (isset($node->field_related['und']) && !empty($node->field_related['und'])) {
+    foreach($node->field_related['und'] as $k => $v) {
+      $node->field_related['und'][$k]['title'] = node_load($v['target_id'])->title;
     }
   }
+
+  if (isset($node->taxonomy_vocabulary_3['und']) && !empty($node->taxonomy_vocabulary_3['und'])) {
+    foreach($node->taxonomy_vocabulary_3['und'] as $k => $v) {
+      $node->taxonomy_vocabulary_3['und'][$k]['name'] = taxonomy_term_load($v['tid'])->name;
+    }
+  }
+
 
   if ($node) {
     $uri = entity_uri('node', $node);
@@ -266,6 +272,7 @@ function _node_resource_retrieve($nid) {
     // cause never ending recursion in rendering.
     unset($node->uri);
   }
+
   return $node;
 }
 
