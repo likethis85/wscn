@@ -60,6 +60,12 @@
 
             <div class="span4">
                 <?if(variable_get('site_ad')):?>
+
+                <div class="ad-box ad-side">
+                <a target="_blank" href="http://www.sojex.cn"><img src="/sites/all/themes/wallstcn/ads/KD_BANNER.png" alt=""></a>
+                </div>
+
+
                 <div class="ad-box ad-side">
                 <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <ins class="adsbygoogle"
