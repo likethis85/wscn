@@ -128,21 +128,6 @@ var cpro_id = "u1349094";
                 </div>
                 <?endif?>
 
-                <?if(variable_get('site_ad')):?>
-                <div class="ad-box ad-side">
-<!-- G-wallstreetcn.com/24option -->
-<script type="text/javascript">
-  var ord = window.ord || Math.floor(Math.random() * 1e16);
-  document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N6105/adj/G-wallstreetcn.com/24option;sz=300x250;ord=' + ord + '?"><\/script>');
-</script>
-<noscript>
-<a href="http://ad.doubleclick.net/N6105/jump/G-wallstreetcn.com/24option;sz=300x250;ord=[timestamp]?">
-<img src="http://ad.doubleclick.net/N6105/ad/G-wallstreetcn.com/24option;sz=300x250;ord=[timestamp]?" width="300" height="250" />
-</a>
-</noscript>
-
-                </div>
-                <?endif?>
             </div>
 
         </div>
