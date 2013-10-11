@@ -238,6 +238,9 @@ function _user_resource_create($account) {
   );
   $form_state['values']['op'] = variable_get('services_user_create_button_resource_create', t('Create new account'));
 
+  variable_set('user_email_verification', FALSE); // 接口邮件不验证
+  variable_set('user_mail_register_no_approval_required_notify', FALSE); // 接口不发送邮件
+
   // execute the register form
   drupal_form_submit('user_register_form', $form_state);
   // find and store the new user into the form_state
