@@ -10,6 +10,10 @@
     <title><?=$head_title; ?></title>
     <?if($is_front):?>
     <meta name="description" content="华尔街见闻是一个专业的的全球金融资讯中文平台提供商，为全球金融市场投资者和从业者提供经济和金融市场信息">
+    <?else:?>
+      <?if ($node = menu_get_object()):?>
+      <meta name="description" content="<?= rtrim(addslashes(html_entity_decode(strip_tags($node->body['und']['0']['summary']))), "\n\r"); ?>">
+      <?endif?>
     <?endif?>
     <meta name="viewport" content="width=device-width">
     <?=$head?>
