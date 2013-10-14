@@ -81,7 +81,9 @@ function _user_resource_definition() {
               'optional' => FALSE,
             ),
           ),
+
         ),
+
         'index' => array(
           'help' => 'List all users',
           'file' => array('type' => 'inc', 'module' => 'services', 'name' => 'resources/user_resource'),
@@ -154,6 +156,7 @@ function _user_resource_definition() {
           'callback' => '_user_resource_logout',
           'access callback' => 'services_access_menu',
         ),
+
         'token' => array(
           'file' => array(
             'type' => 'inc',
@@ -164,7 +167,25 @@ function _user_resource_definition() {
           'access callback' => 'services_access_menu',
           'help' => t('Returns the CSRF token.'),
         ),
+
+        'password_reset' => array(
+          'file' => array('type' => 'inc', 'module' => 'services', 'name' => 'resources/user_resource'),
+          'help' => 'targeted_actions',
+          'callback' => '_user_resource_password_reset',
+          'access callback' => 'services_access_menu',
+          'args' => array(
+            array(
+              'name' => 'mail',
+              'optional' => FALSE,
+              'source' => array('data' => 'mail'),
+              'type' => 'string',
+              'description' => 'The id of the user whose password to reset.',
+            ),
+          ),
+        ),
+
       ),
+
     ),
   );
 
@@ -173,7 +194,34 @@ function _user_resource_definition() {
   ));
 
   return $definition;
+
 }
+
+
+function _user_resource_password_reset($mail) {
+  global $language;
+
+  if(user_validate_mail($mail)) {
+      return services_error(t('Invalid Email address'), 406);
+  }
+
+  $account = user_load_by_mail($mail);
+  if (empty($account)) {
+    return services_error(t('There is no user with mail @mail.', array('@mail' => $mail)), 404);
+  }
+
+  // Mail one time login URL and instructions using current language.
+  $mail = _user_mail_notify('password_reset', $account, $language);
+  if (!empty($mail)) {
+    watchdog('user', 'Password reset instructions mailed to %name at %email.', array('%name' => $account->name, '%email' => $account->mail));
+  }
+  else {
+    watchdog('user', 'There was an error re-sending password reset instructions mailed to %name at %email', array('%name' => $account->name, '%email' => $account->mail));
+  }
+  // Everything went right.
+  return TRUE;
+}
+
 
 /**
  * Get user details.
