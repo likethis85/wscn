@@ -2603,7 +2603,7 @@ function node_feed($nids = FALSE, $channel = array()) {
   $items = '';
   foreach ($nodes as $node) {
     $item_text = '';
-
+    unset($node->upload);
     $node->link = url("node/$node->nid", array('absolute' => TRUE));
     $node->rss_namespaces = array();
     $node->rss_elements = array(
@@ -2616,6 +2616,13 @@ function node_feed($nids = FALSE, $channel = array()) {
     // and $node->rss_namespaces.
     $build = node_view($node, 'rss');
     unset($build['#theme']);
+
+    $build['taxonomy_vocabulary_2']['#weight'] = 100;
+
+    $build['taxonomy_vocabulary_6']['#weight'] = 101;
+
+    $build['taxonomy_vocabulary_3']['#weight'] = 102;
+
 
     if (!empty($node->rss_namespaces)) {
       $namespaces = array_merge($namespaces, $node->rss_namespaces);
