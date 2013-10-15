@@ -66,7 +66,7 @@ drupal_set_title($page_title, PASS_THROUGH);?>
 <?php endif; ?>
 
 <div class="article-content typo">
-    <?=$node->body['und']['0']['value']?>
+    <?=$node->body['und']['0']['safe_value']?>
 </div>
 
 <?if(!empty($node->field_related)):?>
@@ -121,9 +121,11 @@ drupal_set_title($page_title, PASS_THROUGH);?>
         <a class="jiathis_counter_style"></a>
     </div>
     <script type="text/javascript" >
+        <?$summary =  rtrim(addslashes(html_entity_decode(strip_tags($node->body['und']['0']['summary']))), "\n\r");?>
         var jiathis_config={
                 data_track_clickback:true,
-                summary:"",
+                title : "<?=$summary?> @华尔街见闻",
+                pic : "<?=wscn_image_domain(file_create_url($node->upload['und'][0]['uri']));?>",
                 hideMore:true
             }
         </script>
