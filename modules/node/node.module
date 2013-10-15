@@ -2603,7 +2603,6 @@ function node_feed($nids = FALSE, $channel = array()) {
   $items = '';
   foreach ($nodes as $node) {
     $item_text = '';
-    unset($node->upload);
     $node->link = url("node/$node->nid", array('absolute' => TRUE));
     $node->rss_namespaces = array();
     $node->rss_elements = array(
@@ -2631,6 +2630,9 @@ function node_feed($nids = FALSE, $channel = array()) {
     if ($item_length != 'title') {
       // We render node contents and force links to be last.
       $build['links']['#weight'] = 1000;
+      unset($build['upload']);
+      unset($build['taxonomy_vocabulary_6']);
+      unset($build['field_from']);
       $item_text .= drupal_render($build);
     }
 
