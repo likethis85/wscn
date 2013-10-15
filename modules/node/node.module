@@ -2603,7 +2603,6 @@ function node_feed($nids = FALSE, $channel = array()) {
   $items = '';
   foreach ($nodes as $node) {
     $item_text = '';
-
     $node->link = url("node/$node->nid", array('absolute' => TRUE));
     $node->rss_namespaces = array();
     $node->rss_elements = array(
@@ -2617,6 +2616,13 @@ function node_feed($nids = FALSE, $channel = array()) {
     $build = node_view($node, 'rss');
     unset($build['#theme']);
 
+    $build['taxonomy_vocabulary_2']['#weight'] = 100;
+
+    $build['taxonomy_vocabulary_6']['#weight'] = 101;
+
+    $build['taxonomy_vocabulary_3']['#weight'] = 102;
+
+
     if (!empty($node->rss_namespaces)) {
       $namespaces = array_merge($namespaces, $node->rss_namespaces);
     }
@@ -2624,6 +2630,9 @@ function node_feed($nids = FALSE, $channel = array()) {
     if ($item_length != 'title') {
       // We render node contents and force links to be last.
       $build['links']['#weight'] = 1000;
+      unset($build['upload']);
+      unset($build['taxonomy_vocabulary_6']);
+      unset($build['field_from']);
       $item_text .= drupal_render($build);
     }
 
