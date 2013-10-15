@@ -9,7 +9,7 @@
     <meta name="alexaVerifyID" content="86076a42-3d59-4329-b13f-0b55cd1606f2" />
     <title><?=$head_title; ?></title>
     <?if($is_front):?>
-    <meta name="description" content="华尔街见闻是一个专业的的全球金融资讯中文平台提供商，为全球金融市场投资者和从业者提供经济和金融市场信息">
+    <meta name="description" content="华尔街见闻是一个专业的全球金融资讯中文平台提供商，为全球金融市场投资者和从业者提供经济和金融市场信息">
     <?endif?>
     <meta name="viewport" content="width=device-width">
     <?=$head?>
