@@ -34,9 +34,11 @@
                     <div class="active item  right-align">
                         <a target="_blank" href="http://open.yuedu.163.com/?act=rdwst_20130916_01" style="float:right;"><img src="/sites/all/themes/wallstcn/ads/ad_163yun.jpg" alt=""></a>
                     </div>
+                    <?if(0): //google ad?>
                     <div class="item right-align">
                         <a target="_blank" href="http://www.myzaker.com/" style="float:right;"><img src="/sites/all/themes/wallstcn/ads/ad_zaker.jpg" alt=""></a>
                     </div>
+                    <?endif?>
                 </div>
             </div>
         </div>
