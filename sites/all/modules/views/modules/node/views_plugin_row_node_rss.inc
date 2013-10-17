@@ -141,6 +141,10 @@ class views_plugin_row_node_rss extends views_plugin_row {
     unset($build['taxonomy_vocabulary_3']);
     unset($build['field_from']);
 
+    if (isset($build['body']['#object']->title)) {
+        $build['body']['#object']->title = '[' . $build['body']['#object']->title . ']';
+    }
+
     if (!empty($node->rss_namespaces)) {
       $this->view->style_plugin->namespaces = array_merge($this->view->style_plugin->namespaces, $node->rss_namespaces);
     }
