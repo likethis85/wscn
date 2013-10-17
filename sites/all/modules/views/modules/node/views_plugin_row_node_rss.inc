@@ -101,6 +101,7 @@ class views_plugin_row_node_rss extends views_plugin_row {
 
     // Load the specified node:
     $node = $this->nodes[$nid];
+
     if (empty($node)) {
       return;
     }
@@ -132,7 +133,13 @@ class views_plugin_row_node_rss extends views_plugin_row {
     $build_mode = $display_mode;
 
     $build = node_view($node, $build_mode);
+
     unset($build['#theme']);
+    unset($build['upload']);
+    unset($build['taxonomy_vocabulary_2']);
+    unset($build['taxonomy_vocabulary_6']);
+    unset($build['taxonomy_vocabulary_3']);
+    unset($build['field_from']);
 
     if (!empty($node->rss_namespaces)) {
       $this->view->style_plugin->namespaces = array_merge($this->view->style_plugin->namespaces, $node->rss_namespaces);
