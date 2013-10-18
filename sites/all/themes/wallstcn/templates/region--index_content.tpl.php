@@ -26,7 +26,7 @@
     </div>
 </div>
         </div>
-
+        <?if(0): //google ad?>
         <div class="span8 right-align">
 
             <div class="random-carousel">
@@ -42,8 +42,8 @@
                 </div>
             </div>
         </div>
+        <?endif?>
 
-        <?if(0): //google ad?>
         <div class="span8">
             <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <ins class="adsbygoogle"
@@ -54,7 +54,7 @@
             (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </div>
-        <?endif?>
+
 
     </div>
 </div>
