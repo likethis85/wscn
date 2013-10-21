@@ -7,18 +7,25 @@
 <?if(variable_get('site_ad')):?>
 <div class="ad-box ad-middle">
     <div class="row-fluid">
-        <div class="span4">
 
+        <div class="span4">
+            <div class="item">
+                <a target="_blank" href="http://nordfx-chinese.com/?id=730026"><img src="/sites/all/themes/wallstcn/ads/ad_nordfx.gif" alt=""></a>
+            </div>
+
+        </div>
+
+        <div class="span4">
+            <div class="item">
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" width="234" height="60"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/ad_forexct0822.swf" /><embed pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/ad_forexct0822.swf" type="application/x-shockwave-flash" width="234" height="60"></embed></object>
+            </div>
+        </div>
+
+        <div class="span4">
 <div class="random-ad">
     <div class="carousel-inner">
         <div class="active item">
-            <a target="_blank" href="http://nordfx-chinese.com/?id=730026"><img src="/sites/all/themes/wallstcn/ads/ad_nordfx.gif" alt=""></a>
-        </div>
-        <div class="item">
             <a target="_blank" href="http://www.svsfx.com.cn/2013815/"><img src="/sites/all/themes/wallstcn/ads/ad_svsfx_new_0923.gif" alt=""></a>
-        </div>
-        <div class="item" data-probability="50">
-            <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" width="234" height="60"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/ad_forexct0822.swf" /><embed pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/ad_forexct0822.swf" type="application/x-shockwave-flash" width="234" height="60"></embed></object>
         </div>
         <div class="item">
             <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" width="234" height="60"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/ad_toty_new_1008.swf" /><embed pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/ad_toty_new_1008.swf" type="application/x-shockwave-flash" width="234" height="60"></embed></object>
@@ -26,6 +33,7 @@
     </div>
 </div>
         </div>
+
         <?if(0): //google ad?>
         <div class="span8 right-align">
 
@@ -43,7 +51,7 @@
             </div>
         </div>
         <?endif?>
-
+        <?if(0): ?>
         <div class="span8">
             <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <ins class="adsbygoogle"
@@ -54,7 +62,7 @@
             (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </div>
-
+        <?endif?>
 
     </div>
 </div>
