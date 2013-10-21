@@ -518,6 +518,7 @@ function views_arg_load($value, $name, $display_id, $index) {
  *   Either the HTML of a fully-executed view, or MENU_NOT_FOUND.
  */
 function views_page($name, $display_id) {
+
   $args = func_get_args();
   // Remove $name and $display_id from the arguments.
   array_shift($args);
