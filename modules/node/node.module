@@ -2630,7 +2630,8 @@ function node_feed($nids = FALSE, $channel = array()) {
     if ($item_length != 'title') {
       // We render node contents and force links to be last.
       $build['links']['#weight'] = 1000;
-      unset($build['field_select_rss']);
+
+      unset($build['field_features_rss']);
       unset($build['upload']);
       unset($build['taxonomy_vocabulary_6']);
       unset($build['field_from']);
