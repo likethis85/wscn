@@ -1216,7 +1216,16 @@ class view extends views_db_object {
     else {
       $cache = $this->display_handler->get_plugin('cache');
     }
-    if ($cache && $cache->cache_get('output')) {
+
+
+    // 解决实时新闻白屏问题，实时新闻不进入块缓存
+    $is_cache_get = true;
+    if (isset($this->name) && $this->name == 'x_livenews') {
+      $is_cache_get = false;
+    }
+
+    if ($cache && $cache->cache_get('output') && $is_cache_get) {
+
     }
     else {
       if ($cache) {
