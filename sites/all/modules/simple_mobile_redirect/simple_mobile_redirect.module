@@ -102,7 +102,7 @@ function simple_mobile_redirect_boot() {
     return;
   }
 
-  if ($http_host != 'www.wallstreetcn.com' && $http_host != 'wallstreetcn.com' && $http_host != 'live.wallstreetcn.com') {
+  if ($http_host != 'www.wallstreetcn.com' && $http_host != 'wallstreetcn.com') {
     return;
   }
 
