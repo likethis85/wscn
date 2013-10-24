@@ -28,7 +28,7 @@
 <div data-role="footer">
     <div class="copyright">
         &copy; 2010-2013 <a href="http://<?=variable_get('site_domain')?>/">华尔街见闻</a> , All Rights Reserved.
-        | <a href="http://<? $url = variable_get('site_domain') . $_SERVER['REQUEST_URI']; $nomobi = strpos($_SERVER['REQUEST_URI'], '?') === false ? '?nomobi=yes' : '&nomobi=yes'; echo $url . $nomobi ?>">网页版</a>
+        | <a href="http://<? $url = variable_get('site_domain') . $_SERVER['REQUEST_URI']; $nomobi = strpos($_SERVER['REQUEST_URI'], '?') === false ? '?nomobi=true' : '&nomobi=true'; echo $url . $nomobi ?>">网页版</a>
     </div>
 </div>
 
