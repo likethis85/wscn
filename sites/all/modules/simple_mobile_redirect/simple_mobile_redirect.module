@@ -115,7 +115,7 @@ function simple_mobile_redirect_boot() {
     case (preg_match('/opera mini/i', $user_agent)):
       $simplemobileredirect = variable_get('simple_mobile_redirect_opera', '');
     break;
-
+    /*
     // we find blackberry in the user agent
     case (preg_match('/blackberry/i', $user_agent)):
       $simplemobileredirect = variable_get('simple_mobile_redirect_blackberry', '');
@@ -138,7 +138,7 @@ function simple_mobile_redirect_boot() {
     // is the device giving us a HTTP_X_WAP_PROFILE or HTTP_PROFILE header - only mobile devices would do this
     case (isset($_SERVER['HTTP_X_WAP_PROFILE']) || isset($_SERVER['HTTP_PROFILE'])):
       $simplemobileredirect = variable_get('simple_mobile_redirect_mobileredirect', '');
-    break;
+    break;*/
 
     default:
       break;
