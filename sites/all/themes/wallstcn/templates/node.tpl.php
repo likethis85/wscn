@@ -96,7 +96,7 @@ drupal_set_title($page_title, PASS_THROUGH);?>
 
 
 <div class="article-copyright">
-    <p> <b>*欢迎加入见闻外汇读者QQ群（13157383）交流互动，申请时请注明“公司（行业）-城市-姓名”，谢谢配合。</b></p>
+    <p> <b>*欢迎加入见闻外汇读者QQ群（76356189）交流互动，申请时请注明“公司（行业）-城市-姓名”，谢谢配合。</b></p>
     <p>本文内容仅供读者参考，并非投资建议。 转载请注明来源并加上本站链接，华尔街见闻将保留所有法律权益。</p>
     <p>版权采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh">知识共享署名-非商业性使用 3.0 未本地化版本许可协议</a> 进行许可 <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a></p>
     <p></p>
