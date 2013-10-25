@@ -50,7 +50,7 @@
         </div>
         <div class="item">
             <div style="height:280px;margin:0 auto;">
-                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/ad_toty_medium_new_1008.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/ad_toty_medium_new_1008.swf" type="application/x-shockwave-flash" width="336"></embed></object>
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/CFBAGREY_336x280px_chin_UA0d8.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/CFBAGREY_336x280px_chin_UA0d8.swf" type="application/x-shockwave-flash" width="336"></embed></object>
             </div>
         </div>
     </div>
