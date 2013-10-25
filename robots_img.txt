@@ -62,8 +62,8 @@ Disallow: /?q=user/logout/
 
 # new 20130920 huangzhong
 Disallow: /user/
-Disallow: */node/*
-Disallow:/europe
+Disallow: /node/*
+Disallow: /europe
 Disallow: /america
 Disallow: /china
 Disallow: /economy
@@ -72,4 +72,6 @@ Disallow: /market
 Disallow: /company
 Disallow: /columns/
 Disallow: /taxonomy/term/
+Disallow: /*/feed
+Disallow: /taxonomy/term/*?page=*
 

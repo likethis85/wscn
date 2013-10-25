@@ -63,4 +63,6 @@ Disallow: /?q=user/logout/
 # new 20130920 huangzhong
 Disallow: /user/
 Disallow: /live*
+Disallow: /*/feed
+Disallow: /taxonomy/term/*?page=*
 
