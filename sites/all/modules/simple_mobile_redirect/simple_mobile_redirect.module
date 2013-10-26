@@ -165,7 +165,7 @@ function simple_mobile_redirect_boot() {
     fb(222);
     fb($simplemobileredirect);
     // redirect to the right url for this device
-    //header('Location: ' . $simplemobileredirect, TRUE, 302);
+    header('Location: ' . $simplemobileredirect, TRUE, 302);
     exit;
   }
   else {
