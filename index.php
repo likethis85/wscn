@@ -16,6 +16,12 @@
  */
 define('DRUPAL_ROOT', getcwd());
 
+
+require_once DRUPAL_ROOT . '/vendor/firephp/firephp-core/lib/FirePHPCore/fb.php';
+
+fb('Hello World');
+
+
 require_once DRUPAL_ROOT . '/includes/bootstrap.inc';
 drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
 menu_execute_active_handler();
