@@ -71,7 +71,7 @@ function simple_mobile_redirect_boot() {
   global $base_url;
   // if we've already redirected break out so we don't loop.
   // check for nomobi to skip out as well
-  fb($_COOKIE);
+
   if ((isset($_COOKIE['smr_redirect']) && $_COOKIE['smr_redirect'] == 1) ||
       (isset($_COOKIE['nomobi']) && $_COOKIE['nomobi'] == 'yes') ||
       (isset($_GET['mobi_redirect']))) {
@@ -158,6 +158,6 @@ function simple_mobile_redirect_boot() {
   }
   else {
     // set a cookie so we don't need to go through that again.
-    //_simple_mobile_redirect_setcookie();
+    _simple_mobile_redirect_setcookie();
   }
 }
