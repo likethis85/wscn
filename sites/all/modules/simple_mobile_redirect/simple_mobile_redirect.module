@@ -38,6 +38,7 @@ function simple_mobile_redirect_permission() {
  * Function to clear the do not redirect cookie.
  */
 function _simple_mobile_redirect_clearcookie() {
+  fb(333);
   setcookie("nomobi", "", REQUEST_TIME - 3600);
   $simplemobileredirect = variable_get('simple_mobile_redirect_mobileredirect', '/');
   if ($simplemobileredirect == '/') {
