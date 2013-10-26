@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Implements hook_menu().
  */
@@ -38,7 +39,6 @@ function simple_mobile_redirect_permission() {
  * Function to clear the do not redirect cookie.
  */
 function _simple_mobile_redirect_clearcookie() {
-  fb(333);
   setcookie("nomobi", "", REQUEST_TIME - 3600);
   $simplemobileredirect = variable_get('simple_mobile_redirect_mobileredirect', '/');
   if ($simplemobileredirect == '/') {
@@ -54,7 +54,7 @@ function _simple_mobile_redirect_setcookie($redirect = FALSE) {
   global $base_url;
   $simplemobilehome = variable_get('simple_mobile_redirect_home', '/');
   $expire = REQUEST_TIME + 60 * 60 * 24 * 30;
-  setcookie("nomobi", "yes", $expire, '/');
+  setcookie("nomobi", "yes", $expire);
   // drupal_goto() does not exist here, as we are triggering at boot.
   // suggestions to work around this, perhaps a variable setting to get the full URL via the admin.
   if ($redirect) {
@@ -69,8 +69,6 @@ function _simple_mobile_redirect_setcookie($redirect = FALSE) {
  */
 function simple_mobile_redirect_boot() {
   global $base_url;
-  fb($_COOKIE);
-
   // if we've already redirected break out so we don't loop.
   // check for nomobi to skip out as well
   if ((isset($_COOKIE['smr_redirect']) && $_COOKIE['smr_redirect'] == 1) ||
@@ -79,18 +77,9 @@ function simple_mobile_redirect_boot() {
     return;
   }
 
-  if (isset($_GET['nomobi']) && $_GET['nomobi'] == 'true') {
+  if (isset($_GET['nomobi']) && $_GET['nomobi'] === TRUE) {
     _simple_mobile_redirect_setcookie();
-    return;
   }
-
-  $http_host = $_SERVER['HTTP_HOST'];
-
-  //if ($http_host == 'm.w.cn') {
-  if ($http_host == 'm.wallstreetcn.com') {
-    return;
-  }
-
 
   $simplemobileredirect = '';
   // get the user agent
@@ -117,7 +106,7 @@ function simple_mobile_redirect_boot() {
     case (preg_match('/opera mini/i', $user_agent)):
       $simplemobileredirect = variable_get('simple_mobile_redirect_opera', '');
     break;
-    /*
+
     // we find blackberry in the user agent
     case (preg_match('/blackberry/i', $user_agent)):
       $simplemobileredirect = variable_get('simple_mobile_redirect_blackberry', '');
@@ -140,17 +129,16 @@ function simple_mobile_redirect_boot() {
     // is the device giving us a HTTP_X_WAP_PROFILE or HTTP_PROFILE header - only mobile devices would do this
     case (isset($_SERVER['HTTP_X_WAP_PROFILE']) || isset($_SERVER['HTTP_PROFILE'])):
       $simplemobileredirect = variable_get('simple_mobile_redirect_mobileredirect', '');
-    break;*/
+    break;
 
     default:
       break;
   }
-  fb($simplemobileredirect);
-  fb(111);
+
   // if redirect (either the value of the mobile or desktop redirect depending on the value of $is_mobile_browser) is TRUE redirect else we return the status of $is_mobile_browser
   if ($simplemobileredirect != '') {
     // set a cookie so we don't loop.
-    //setcookie('smr_redirect', 1);
+    setcookie('smr_redirect', 1);
 
     $simplemobileredirect = ltrim($simplemobileredirect, '/');
 
@@ -158,18 +146,12 @@ function simple_mobile_redirect_boot() {
     if (strpos($simplemobileredirect, '://') === FALSE) {
       $simplemobileredirect = $base_url . '/' . $simplemobileredirect;
     }
-
-    if ($_SERVER['REQUEST_URI'] != '/') {
-      $simplemobileredirect .= trim($_SERVER['REQUEST_URI'], '/');
-    }
-    fb(222);
-    fb($simplemobileredirect);
     // redirect to the right url for this device
-    header('Location: ' . $simplemobileredirect);
+    header('Location: ' . $simplemobileredirect, TRUE, 302);
     exit;
   }
   else {
     // set a cookie so we don't need to go through that again.
-    //_simple_mobile_redirect_setcookie();
+    _simple_mobile_redirect_setcookie();
   }
 }
