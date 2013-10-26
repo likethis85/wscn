@@ -143,7 +143,7 @@ function simple_mobile_redirect_boot() {
     default:
       break;
   }
-
+  print_r($simplemobileredirect);
   // if redirect (either the value of the mobile or desktop redirect depending on the value of $is_mobile_browser) is TRUE redirect else we return the status of $is_mobile_browser
   if ($simplemobileredirect != '') {
     // set a cookie so we don't loop.
