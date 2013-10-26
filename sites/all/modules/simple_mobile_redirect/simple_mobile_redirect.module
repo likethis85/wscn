@@ -78,7 +78,7 @@ function simple_mobile_redirect_boot() {
     return;
   }
 
-  if (isset($_GET['nomobi']) && $_GET['nomobi'] === TRUE) {
+  if (isset($_GET['nomobi']) && $_GET['nomobi'] == 'true') {
     _simple_mobile_redirect_setcookie();
   }
 
