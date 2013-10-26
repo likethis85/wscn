@@ -147,6 +147,11 @@ function simple_mobile_redirect_boot() {
     if (strpos($simplemobileredirect, '://') === FALSE) {
       $simplemobileredirect = $base_url . '/' . $simplemobileredirect;
     }
+
+    if ($_SERVER['REQUEST_URI'] != '/') {
+      $simplemobileredirect .= trim($_SERVER['REQUEST_URI'], '/');
+    }
+
     // redirect to the right url for this device
     header('Location: ' . $simplemobileredirect, TRUE, 302);
     exit;
