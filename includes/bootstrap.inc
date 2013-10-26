@@ -2343,6 +2343,7 @@ function _drupal_bootstrap_page_cache() {
     $user = drupal_anonymous_user();
     // Get the page from the cache.
     $cache = drupal_page_get_cache();
+    $cache = false;
     // If there is a cached page, display it.
     if (is_object($cache)) {
       header('X-Drupal-Cache: HIT');
