@@ -170,6 +170,6 @@ function simple_mobile_redirect_boot() {
   }
   else {
     // set a cookie so we don't need to go through that again.
-    _simple_mobile_redirect_setcookie();
+    //_simple_mobile_redirect_setcookie();
   }
 }
