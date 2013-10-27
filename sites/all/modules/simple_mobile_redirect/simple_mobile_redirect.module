@@ -72,8 +72,7 @@ function simple_mobile_redirect_boot() {
   // if we've already redirected break out so we don't loop.
   // check for nomobi to skip out as well
 
-  if ((isset($_COOKIE['smr_redirect']) && $_COOKIE['smr_redirect'] == 1) ||
-      (isset($_COOKIE['nomobi']) && $_COOKIE['nomobi'] == 'yes') ||
+  if ((isset($_COOKIE['nomobi']) && $_COOKIE['nomobi'] == 'yes') ||
       (isset($_GET['mobi_redirect']))) {
     return;
   }
@@ -140,6 +139,10 @@ function simple_mobile_redirect_boot() {
 
     default:
       break;
+  }
+
+  if ((isset($_COOKIE['smr_redirect']) && $_COOKIE['smr_redirect'] == 1) && $simplemobileredirect == '') {
+    return;
   }
 
   // if redirect (either the value of the mobile or desktop redirect depending on the value of $is_mobile_browser) is TRUE redirect else we return the status of $is_mobile_browser
