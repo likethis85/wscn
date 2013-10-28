@@ -10,7 +10,7 @@
         <?if($node->taxonomy_vocabulary_2):?>
         <?foreach($node->taxonomy_vocabulary_2['und'] as $tag):?>
         <a href="<?=url('taxonomy/term/' . $tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a>
-         / <?endforeach?> 
+         / <?endforeach?>
         文 <?=$node->name?> / <?=format_date($node->created);?>
         <?endif?>
     </span>
@@ -50,16 +50,16 @@
 <?if(variable_get('site_ad')):?>
 <div class="ad-box">
 <script type="text/javascript">
-	google_ad_client = "ca-pub-0869270234052789";
-	google_ad_slot = "2492112899";
-	google_ad_width = 320;
-	google_ad_height = 50;
+    google_ad_client = "ca-pub-0869270234052789";
+    google_ad_slot = "2492112899";
+    google_ad_width = 320;
+    google_ad_height = 50;
 </script>
 <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
 </div>
 <?endif?>
 
-<a href="http://<?=variable_get('site_domain')?>/<?=url('node/' . $node->nid)?>" data-role="button" data-icon="arrow-r" data-theme="b">去网页版参与评论</a>
+<a href="http://<?=variable_get('site_domain')?><?=url('node/' . $node->nid)?>?nomobi=true" data-role="button" data-icon="arrow-r" data-theme="b">去网页版参与评论</a>
 
 </article>
 
@@ -72,7 +72,7 @@
         <h3><?=$node->title?></h3>
         <p>
             文 <?=$node->name?> / <?=format_date($node->created);?>
-            <?if($node->taxonomy_vocabulary_2):?> / 
+            <?if($node->taxonomy_vocabulary_2):?> /
             <?foreach($node->taxonomy_vocabulary_2['und'] as $tag):?>
             <a href="<?=url('taxonomy/term/' . $tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a>
             <?endforeach?>
