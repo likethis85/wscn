@@ -142,7 +142,8 @@ class views_plugin_row_node_rss extends views_plugin_row {
     unset($build['field_from']);
 
     if (isset($build['body']['#object']->title)) {
-        $build['body']['#object']->title = '[' . $build['body']['#object']->title . ']';
+        //$build['body']['#object']->title = '[' . $build['body']['#object']->title . ']';
+        $build['body']['#object']->title = $build['body']['#object']->title;
     }
 
     if (!empty($node->rss_namespaces)) {
