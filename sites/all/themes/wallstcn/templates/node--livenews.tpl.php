@@ -2,7 +2,7 @@
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix node-article node-livenews" <?php print $attributes; ?>>
 
-<div class="page-header header-red">
+<div class="page-header header-red" id="livenews_page_sign">
     <h3>实时新闻 <?=format_date($node->created);?></h3>
 </div>
 

@@ -1,91 +1,91 @@
 (function($){
-	$.fn.backToTop = function(options) {
+    $.fn.backToTop = function(options) {
 
- 		var defaults = {
-    			text: '<i class="icon-chevron-up"></i>',
-    			min: 200,
-    			inDelay:600,
-    			outDelay:400,
-      			containerID: 'to-top',
-    			containerHoverID: 'to-top-hover',
-    			scrollSpeed: 1200,
-    			easingType: 'linear'
- 		    },
+        var defaults = {
+                text: '<i class="icon-chevron-up"></i>',
+                min: 200,
+                inDelay:600,
+                outDelay:400,
+                containerID: 'to-top',
+                containerHoverID: 'to-top-hover',
+                scrollSpeed: 1200,
+                easingType: 'linear'
+            },
             settings = $.extend(defaults, options),
             containerIDhash = '#' + settings.containerID,
             containerHoverIDHash = '#'+settings.containerHoverID;
-		
-		$('body').append('<a href="#" id="'+settings.containerID+'">'+settings.text+'</a>');
-		$(containerIDhash).hide().on('click.UItoTop',function(){
-			$('html, body').animate({scrollTop:0}, settings.scrollSpeed, settings.easingType);
-			$('#'+settings.containerHoverID, this).stop().animate({'opacity': 0 }, settings.inDelay, settings.easingType);
-			return false;
-		})
-		.prepend('<span id="'+settings.containerHoverID+'"></span>')
-		.hover(function() {
-				$(containerHoverIDHash, this).stop().animate({
-					'opacity': 1
-				}, 600, 'linear');
-			}, function() { 
-				$(containerHoverIDHash, this).stop().animate({
-					'opacity': 0
-				}, 700, 'linear');
-			});
-					
-		$(window).scroll(function() {
-			var sd = $(window).scrollTop();
-			if(typeof document.body.style.maxHeight === "undefined") {
-				$(containerIDhash).css({
-					'position': 'absolute',
-					'top': sd + $(window).height() - 50
-				});
-			}
-			if ( sd > settings.min ) 
-				$(containerIDhash).fadeIn(settings.inDelay);
-			else 
-				$(containerIDhash).fadeOut(settings.Outdelay);
-		});
+
+        $('body').append('<a href="#" id="'+settings.containerID+'">'+settings.text+'</a>');
+        $(containerIDhash).hide().on('click.UItoTop',function(){
+            $('html, body').animate({scrollTop:0}, settings.scrollSpeed, settings.easingType);
+            $('#'+settings.containerHoverID, this).stop().animate({'opacity': 0 }, settings.inDelay, settings.easingType);
+            return false;
+        })
+        .prepend('<span id="'+settings.containerHoverID+'"></span>')
+        .hover(function() {
+                $(containerHoverIDHash, this).stop().animate({
+                    'opacity': 1
+                }, 600, 'linear');
+            }, function() {
+                $(containerHoverIDHash, this).stop().animate({
+                    'opacity': 0
+                }, 700, 'linear');
+            });
+
+        $(window).scroll(function() {
+            var sd = $(window).scrollTop();
+            if(typeof document.body.style.maxHeight === "undefined") {
+                $(containerIDhash).css({
+                    'position': 'absolute',
+                    'top': sd + $(window).height() - 50
+                });
+            }
+            if ( sd > settings.min )
+                $(containerIDhash).fadeIn(settings.inDelay);
+            else
+                $(containerIDhash).fadeOut(settings.Outdelay);
+        });
 };
 })(jQuery);
 
 (function ($) {
 
     //Url解析
-	var parseUri = function(url){
-		function parseUri (str) {
-			var	o   = parseUri.options,
-				m   = o.parser[o.strictMode ? "strict" : "loose"].exec(str),
-				uri = {},
-				i   = 14;
+    var parseUri = function(url){
+        function parseUri (str) {
+            var o   = parseUri.options,
+                m   = o.parser[o.strictMode ? "strict" : "loose"].exec(str),
+                uri = {},
+                i   = 14;
 
-			while (i) {
-				i--;
-				uri[o.key[i]] = m[i] || "";
-			}
+            while (i) {
+                i--;
+                uri[o.key[i]] = m[i] || "";
+            }
 
-			uri[o.q.name] = {};
-			uri[o.key[12]].replace(o.q.parser, function ($0, $1, $2) {
-				if ($1) uri[o.q.name][$1] = $2;
-			});
+            uri[o.q.name] = {};
+            uri[o.key[12]].replace(o.q.parser, function ($0, $1, $2) {
+                if ($1) uri[o.q.name][$1] = $2;
+            });
 
-			return uri;
-		}
+            return uri;
+        }
 
-		parseUri.options = {
-			strictMode: false,
-			key: ["source","protocol","authority","userInfo","user","password","host","port","relative","path","directory","file","query","anchor"],
-			q:   {
-				name:   "queryKey",
-				parser: /(?:^|&)([^&=]*)=?([^&]*)/g
-			},
-			parser: {
-				strict: /^(?:([^:\/?#]+):)?(?:\/\/((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?))?((((?:[^?#\/]*\/)*)([^?#]*))(?:\?([^#]*))?(?:#(.*))?)/,
-				loose:  /^(?:(?![^:@]+:[^:@\/]*@)([^:\/?#.]+):)?(?:\/\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#\/]*\.[^?#\/.]+(?:[?#]|$)))*\/?)?([^?#\/]*))(?:\?([^#]*))?(?:#(.*))?)/
-			}
-		};
+        parseUri.options = {
+            strictMode: false,
+            key: ["source","protocol","authority","userInfo","user","password","host","port","relative","path","directory","file","query","anchor"],
+            q:   {
+                name:   "queryKey",
+                parser: /(?:^|&)([^&=]*)=?([^&]*)/g
+            },
+            parser: {
+                strict: /^(?:([^:\/?#]+):)?(?:\/\/((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?))?((((?:[^?#\/]*\/)*)([^?#]*))(?:\?([^#]*))?(?:#(.*))?)/,
+                loose:  /^(?:(?![^:@]+:[^:@\/]*@)([^:\/?#.]+):)?(?:\/\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#\/]*\.[^?#\/.]+(?:[?#]|$)))*\/?)?([^?#\/]*))(?:\?([^#]*))?(?:#(.*))?)/
+            }
+        };
 
-		return url ? parseUri(url) : parseUri(window.location.href);
-	};
+        return url ? parseUri(url) : parseUri(window.location.href);
+    };
 
 
 
@@ -138,14 +138,14 @@
             //var random = parseInt(Math.random() * 10 % num);
             var random = Math.floor(Math.random()*100 + 1);
             for(i in res) {
-                
+
                 //console.log(random);
                 //console.log(res[i]);
                 if(random >= res[i][0] && random <= res[i][1]) {
                     break;
                 }
             }
-            
+
             /*
             console.log(res);
             console.log(random);
@@ -159,7 +159,7 @@
                 }
             });
         });
-            
+
 
         //图片延迟加载
         $("img.lazy").show().lazyload({
@@ -176,7 +176,7 @@
         window.onload = function() {
             $(window).resize()
         };
-        
+
 
         //回到顶部
         $().backToTop({ easingType: 'easeOutQuart' });
@@ -220,7 +220,7 @@
                     }
                     $("#realtime-news ul").html(realtimeNews.join(""));
                 }
-            });        
+            });
            */
            if(!$("#realtime-news")[0]){
                 return false;
@@ -267,7 +267,7 @@
 
         //固定头部
         $(window).scroll(function(){
-			var scrollT = $(window).scrollTop();
+            var scrollT = $(window).scrollTop();
             if(scrollT > 100){
                 $("#nav-area").addClass('nav-area-fixed');
             } else {
@@ -318,38 +318,38 @@
         }).on('mouseout', function(){
             qrcode.css({
                 position : 'static'
-            }).hide();        
+            }).hide();
         });
 
 
         //添加收藏夹
         $(".add-tofavor").on('click', function(){
-              title = document.title; 
-              url = document.location; 
-              try { 
-                // Internet Explorer 
-                window.external.AddFavorite( url, title ); 
-              } 
-              catch (e) { 
-                try { 
-                  // Mozilla 
-                  window.sidebar.addPanel( title, url, "" ); 
-                } 
-                catch (e) { 
-                  // Opera 
-                  if( typeof( opera ) == "object" ) { 
-                    a.rel = "sidebar"; 
-                    a.title = title; 
-                    a.url = url; 
-                    return true; 
-                  } 
-                  else { 
-                    // Unknown 
-                    alert( '请按Ctrl+D键收藏本站' ); 
-                  } 
-                } 
-              } 
-              return false; 
+              title = document.title;
+              url = document.location;
+              try {
+                // Internet Explorer
+                window.external.AddFavorite( url, title );
+              }
+              catch (e) {
+                try {
+                  // Mozilla
+                  window.sidebar.addPanel( title, url, "" );
+                }
+                catch (e) {
+                  // Opera
+                  if( typeof( opera ) == "object" ) {
+                    a.rel = "sidebar";
+                    a.title = title;
+                    a.url = url;
+                    return true;
+                  }
+                  else {
+                    // Unknown
+                    alert( '请按Ctrl+D键收藏本站' );
+                  }
+                }
+              }
+              return false;
         });
 
         //tab 切换
@@ -411,7 +411,7 @@
         $('#related-read a:first').tab('show');
 
 
-        
+
         //自定义搜索
         var searchForm = $("#search-form");
         var searchPage = 0;
@@ -450,7 +450,7 @@
             searchForm.submit();
         });
 
-        
+
         var showSearchResults = function(results, reset){
             searchHideLoading();
             $("#main-content").hide();
@@ -461,7 +461,7 @@
                 $("#search-results-js").after(t);
             } else {
                 $("#search-result .news-list").append(t);
-            }            
+            }
         }
         var searchShowLoading = function(){
             searchForm.find('button').html('<span class="icon-spinner icon-spin"></span>').attr('disabled', 'disabled');
@@ -514,8 +514,8 @@
                 searchForm.find('input[name=title]').val(title);
                 $("#livenews-list").prepend('<div class="page-header header-red"><h3>正在搜索 : ' +  title + '</h3></div>');
             }
-            
-        
+
+
         } else {
             searchForm.on('submit', function(){
                 var currentQ = $(this).find('input[name=q]').val();
@@ -527,7 +527,7 @@
                     googleCustomSearch(q, 1);
                 }
                 return false;
-            });       
+            });
         }
 
         $(document).on('click', "#search-results-close", function(){
@@ -548,7 +548,7 @@
                     var t = tmpl(template.html(), response);
                     template.after(t);
                 }
-            });		
+            });
         });
 
         //实时新闻时钟
@@ -647,7 +647,7 @@
                     }
                     item = prepareItem(items[i]);
                     livenewsTmpl.after(tmpl(livenewsTmpl.html(), item));
-                    
+
                     var lowlight = function(nid){
                         setTimeout(function(){
                             $("#livenews-id-" + nid).animate({
@@ -659,7 +659,7 @@
                     }
 
                     lowlight(items[i].nid);
-                    
+
 
                     foundNew = true;
                 }
@@ -696,7 +696,7 @@
                     data = pathMapping[uri.path];
                 }
                 $.ajax({
-                    url : url, 
+                    url : url,
                     dataType : 'json',
                     data : data,
                     ifModified:true,
@@ -785,6 +785,20 @@
 
         //Google 访问滚动事件追踪
         $.scrollDepth();
+
+
+        // 主站文章显示在live域名下自动跳转
+        var live_redirect = function(){
+            var livenews_page_sign = $('#livenews_page_sign');
+            var not_livenews_page_sign = $('#not_livenews_page_sign');
+            var current_url = window.location.href.toLowerCase();
+
+            if (livenews_page_sign.length == 0 && not_livenews_page_sign.length == 1 && current_url.indexOf('live') != -1) {
+                window.location.href = current_url.replace('live.', '');
+            }
+            //alert(window.location.href);
+        }
+        live_redirect();
     });
 })(jQuery);
 

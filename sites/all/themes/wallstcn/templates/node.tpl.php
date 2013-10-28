@@ -24,7 +24,7 @@ drupal_set_title($page_title, PASS_THROUGH);?>
 
 <article id="node-<?=$node->nid; ?>" class="<?=$classes; ?> clearfix node-article node-single" <?=$attributes; ?>>
 
-<header class="article-header">
+<header class="article-header" id="not_livenews_page_sign">
 <h1><?=$node->title?></h1>
 </header>
 
