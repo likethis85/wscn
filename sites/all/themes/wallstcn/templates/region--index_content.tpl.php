@@ -37,16 +37,14 @@
 
         <div class="span8 right-align">
 
-            <div class="random-carousel">
+            <div class="random-ad">
                 <div class="carousel-inner">
                     <div class="active item  right-align">
                         <a target="_blank" href="http://open.yuedu.163.com/?act=rdwst_20130916_01" style="float:right;"><img src="/sites/all/themes/wallstcn/ads/ad_163yun.jpg" alt=""></a>
                     </div>
-                    <?if(0): //google ad?>
                     <div class="item right-align">
-                        <a target="_blank" href="http://www.myzaker.com/" style="float:right;"><img src="/sites/all/themes/wallstcn/ads/ad_zaker.jpg" alt=""></a>
+                        <a target="_blank" href="http://xianguo.com/apps" style="float:right;"><img src="/sites/all/themes/wallstcn/ads/xianguo_468_60.png" alt=""></a>
                     </div>
-                    <?endif?>
                 </div>
             </div>
         </div>

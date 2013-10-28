@@ -32,11 +32,13 @@
                                 <a target="_blank" href="https://www.ironfx.com/zh/forex-demo-competition?utm_source=SZ_728_90&utm_medium=hp_DC&utm_campaign=wallstreetcn"><img src="/sites/all/themes/wallstcn/ads/IronFX_1017.jpg" alt=""></a>
                             </div>
                         </div>
+                        <?if(0):?>
                         <div class="item">
                             <div style="margin:0 auto;">
                             <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="90" width="728"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/GB513_720x90px_chin_UA94c.swf" /><embed height="90" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/GB513_720x90px_chin_UA94c.swf" type="application/x-shockwave-flash" width="728"></embed></object>
                             </div>
                         </div>
+                        <?endif?>
                     </div>
                 </div>
                 <?endif?>
@@ -56,7 +58,7 @@
             <div class="span8">
                 <!-- 频道页面包屑导航 -->
                 <?if($title && wscn_is_channel()):?>
-                <ul class="breadcrumb"><li><a href="/" data-thmr="thmr_3">首页</a></li> › <li><a href="<?= $_SERVER['REQUEST_URI'] ?>" data-thmr="thmr_3"><?= $title; ?></a></li></ul>
+                <ul class="breadcrumb"><li><a href="/" data-thmr="thmr_3">首页</a></li> › <li><a href="<?= $_SERVER['REQUEST_URI'] ?>" data-thmr="thmr_3"><?= $title;  ?> </a></li></ul>
                 <?endif?>
 
                 <?=$messages; ?>
