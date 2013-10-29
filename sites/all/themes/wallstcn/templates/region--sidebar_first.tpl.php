@@ -126,7 +126,7 @@
 <?if(variable_get('site_ad')):?>
 <div class="ad-box ad-side ad-margin-top">
     <div style="width:336px;margin:0 auto">
-        <a target="_blank" href="http://xianguo.com/apps"><img src="/sites/all/themes/wallstcn/ads/xianguo_360_160.png" alt=""></a>
+        <a target="_blank" href="http://xianguo.com/section/9163D6A8FF6494B79424131CF7BA0D55"><img src="/sites/all/themes/wallstcn/ads/xianguo_360_160.png" alt=""></a>
     </div>
 </div>
 <?endif?>

@@ -43,7 +43,7 @@
                         <a target="_blank" href="http://open.yuedu.163.com/?act=rdwst_20130916_01" style="float:right;"><img src="/sites/all/themes/wallstcn/ads/ad_163yun.jpg" alt=""></a>
                     </div>
                     <div class="item right-align">
-                        <a target="_blank" href="http://xianguo.com/apps" style="float:right;"><img src="/sites/all/themes/wallstcn/ads/xianguo_468_60.png" alt=""></a>
+                        <a target="_blank" href="http://xianguo.com/section/9163D6A8FF6494B79424131CF7BA0D55" style="float:right;"><img src="/sites/all/themes/wallstcn/ads/xianguo_468_60.png" alt=""></a>
                     </div>
                 </div>
             </div>
