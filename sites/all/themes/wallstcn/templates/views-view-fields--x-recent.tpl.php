@@ -9,6 +9,7 @@ $items = $view->result;
 </div>
 <div class="news-list <?=$classes;?>" <?=$attributes;?>>
     <?foreach($items as $item):?>
+    <?if($item->_field_data['nid']['entity']->promote == 1):?>
     <?if($item->field_field_from && $item->field_field_from[0]['raw']['value'] == 2):?>
     <div class="media textonly">
     <?else:?>
@@ -30,11 +31,11 @@ $items = $view->result;
             <span class="meta-item">
                 文 / <a href="<?=url('columns/'. $item->node_uid);?>" target="blank"><?=$item->users_node_name?></a>
             </span>
-            
+
             <span class="meta-item">
                 <?=format_date($item->node_created);?>
             </span>
-           <?if(0 && $item->_field_data['nid']['entity']->taxonomy_vocabulary_2):?> / 
+           <?if(0 && $item->_field_data['nid']['entity']->taxonomy_vocabulary_2):?> /
            /
            <?foreach($item->_field_data['nid']['entity']->taxonomy_vocabulary_2['und'] as $tag):?>
            <a href="<?=url('taxonomy/term/' . $tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a>
@@ -49,6 +50,7 @@ $items = $view->result;
            </div>
         </div>
     </div>
+    <?endif?>
     <?endforeach?>
 </div>
 
