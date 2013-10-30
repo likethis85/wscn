@@ -11,10 +11,10 @@ if(!$item->field_field_related){
 <div id="top-news" class="<?if(!$item->field_field_related):?>no-related<?endif?> <?=$classes;?>" <?=$attributes;?>>
     <div class="row-fluid">
         <div class="span12">
-            <div class="top-news-entry">
+            <div class="top-news-entry" style="height:auto;">
                 <div class="row-fluid">
-                    <div class="top-new-extra span6">
-                        <h2 class="entry-title span6"><a href="<?=url('node/'. $item->nid);?>"  target="_blank"><?=$item->node_title?></a></h2>
+                    <div class="span6">
+                        <h2 class="entry-title" style="margin-top;0;"><a href="<?=url('node/'. $item->nid);?>"  target="_blank"><?=$item->node_title?></a></h2>
                         <?if($item->field_body):?>
                         <?=$item->field_body[0]['raw']['summary']?>
                         <?endif?>
