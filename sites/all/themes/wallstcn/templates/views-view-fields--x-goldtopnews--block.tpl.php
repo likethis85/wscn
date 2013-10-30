@@ -14,7 +14,7 @@ if(!$item->field_field_related){
             <div class="top-news-entry" style="height:auto;">
                 <div class="row-fluid">
                     <div class="span6">
-                        <h2 class="entry-title" style="margin-top;0;font-size:25px;"><a href="<?=url('node/'. $item->nid);?>"  target="_blank"><?=$item->node_title?></a></h2>
+                        <h2 class="entry-title" style="margin-top;0;font-size:25px;line-height:30px;"><a href="<?=url('node/'. $item->nid);?>"  target="_blank"><?=$item->node_title?></a></h2>
                         <?if($item->field_body):?>
                         <?=$item->field_body[0]['raw']['summary']?>
                         <?endif?>
