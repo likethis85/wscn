@@ -5,6 +5,7 @@ unset($items[0]);
 if(!$item->field_field_related){
     unset($items[count($items) - 1]);
 }
+
 ?>
 
 <div id="top-news" class="<?if(!$item->field_field_related):?>no-related<?endif?> <?=$classes;?>" <?=$attributes;?>>
@@ -28,7 +29,7 @@ if(!$item->field_field_related){
                     <div class="span6">
                         <a class="entry-img" href="<?=url('node/'. $item->nid);?>" target="_blank">
                             <div class="entry-img-wrap">
-                                <img class="span12" src="<?=wscn_image_domain(file_create_url($item->uri));?>"  alt="<?=$item->node_title?>" />
+                                <img class="span12" src="<?=wscn_image_domain(file_create_url($item->file_managed_file_usage_uri));?>"  alt="<?=$item->node_title?>" />
                             </div>
                         </a>
                     </div>
