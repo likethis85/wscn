@@ -15,14 +15,17 @@ function GetRequest() {
     if(url.indexOf("?") != -1)
     {
         var str = url.substr(1);
-        strs = str.split("&");
+        var loc = str.indexOf('&');
+        var strs = new Array(str.substr(0, loc), str.substr(loc+1, str.length));
 
         for(var i = 0; i < strs.length; i ++)
         {
-            theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+            var loc = strs[i].indexOf('=');
+            theRequest[strs[i].substr(0, loc)] = unescape(strs[i].substr(loc+1, str.length));
+            //theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
         }
     }
-
+    console.log(theRequest);
     return theRequest;
 }
 
