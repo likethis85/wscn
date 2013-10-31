@@ -92,8 +92,8 @@
     $(document).ready(function(){
 
         //slider
-        //$('.carousel').carousel({interval: 7000});
-        $('.carousel').carousel();
+        $('.carousel').carousel({interval: 7000});
+        //$('.carousel').carousel();
         $('.random-carousel').carousel();
         $(".random-carousel").each(function(){
             var num = $(this).find('.item').length;
