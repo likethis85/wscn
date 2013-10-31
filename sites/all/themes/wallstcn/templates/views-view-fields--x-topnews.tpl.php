@@ -17,13 +17,12 @@ if(!$item->field_field_related){
                 <div class="row-fluid">
                     <div class="span12">
 
-                        <?if(0):?>
                         <a class="entry-img" href="<?=url('node/'. $item->nid);?>" target="_blank">
                             <div class="entry-img-wrap">
                                 <img class="span12" src="<?=wscn_image_domain(file_create_url($item->uri));?>"  alt="<?=$item->node_title?>" />
                             </div>
                         </a>
-                        <?endif?>
+                        <?if(0):?>
                         <div id="top-carousel" class="carousel slide">
                             <ol class="carousel-indicators">
                                 <li data-target="#top-carousel" data-slide-to="0" class="active"></li>
@@ -50,6 +49,7 @@ if(!$item->field_field_related){
                             <a class="carousel-control left" href="#top-carousel" data-slide="prev">&lsaquo;</a>
                             <a class="carousel-control right" href="#top-carousel" data-slide="next">&rsaquo;</a>
                         </div>
+                        <?endif?>
 
                     </div>
                     <?if(0):?>
