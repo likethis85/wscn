@@ -38,7 +38,7 @@ if(!$item->field_field_related){
                                     </a>
                                 </div>
                                 <div class="item">
-                                    <a class="entry-img" href="http://www.119gold.com/activity/moni/?referer=7001" target="_blank">
+                                    <a class="entry-img" href="redirect.htm?type=index_topnew_ad_hit_1&url=http://www.119gold.com/activity/moni/?referer=7001" target="_blank">
                                         <div class="entry-img-wrap">
                                             <img alt="" class="" src="/sites/all/themes/wallstcn/ads/index_topnew_ad_1_119gold.jpg" width="406" height="240" />
                                         </div>
@@ -55,7 +55,7 @@ if(!$item->field_field_related){
                     <?if(0):?>
                     <div class="entry-meta">
                         <?=format_date($item->node_created);?>
-                    </div>                    
+                    </div>
                     <?endif?>
                     <h2 class="entry-title"><a href="<?=url('node/'. $item->nid);?>"  target="_blank"><?=$item->node_title?></a></h2>
                     <div class="top-new-extra">
