@@ -93,17 +93,24 @@
 
 <?if(variable_get('site_ad')):?>
 <div class="ad-box ad-side ad-margin-top">
-    <div style="width:336px;margin:0 auto">
-        <a target="_blank" href="redirect.htm?type=index_left_middle1_ad_hit_1&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="/sites/all/themes/wallstcn/ads/index_left_middle1_ad_1_forexct.jpg" alt=""></a>
-<!--
-<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:inline-block;width:336px;height:280px"
-     data-ad-client="ca-pub-0869270234052789"
-     data-ad-slot="2352258047"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>-->
+    <div class="random-ad" style="margin-bottom:0;">
+        <div class="carousel-inner">
+            <div class="active item"  data-probability="30">
+                <div style="width:336px;margin:0 auto">
+                    <a target="_blank" href="redirect.htm?type=index_left_middle1_ad_hit_1&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="/sites/all/themes/wallstcn/ads/index_left_middle1_ad_1_forexct.jpg" alt=""></a>
+                    <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                </div>
+            </div>
+            <div class="item">
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:336px;height:280px"
+                    data-ad-client="ca-pub-0869270234052789"
+                    data-ad-slot="2911844489"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
     </div>
 </div>
 <?endif?>
