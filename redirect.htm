@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>华尔街见闻 &ndash; 正在跳转到... </title>
+<link rel="shortcut icon" href="http://wallstreetcn.com/favicon.ico" type="image/vnd.microsoft.icon" />
+</head>
+<body>
+<script type="text/javascript">
+
+function GetRequest() {
+    var url = location.search; //获取url中"?"符后的字串
+    var theRequest = new Object();
+
+    if(url.indexOf("?") != -1)
+    {
+        var str = url.substr(1);
+        strs = str.split("&");
+
+        for(var i = 0; i < strs.length; i ++)
+        {
+            theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+        }
+    }
+
+    return theRequest;
+}
+
+(function (d) {
+    var Request = new Object();
+    Request = GetRequest();
+
+    if (Request['url']) {
+        window.location.href = Request['url'];
+    } else {
+        window.location.href = 'http://wallstreetcn.com/';
+    }
+})(document);
+
+</script>
+
+<noscript>你的浏览器不支持JavaScript!</noscript>
+</body>
+</html>

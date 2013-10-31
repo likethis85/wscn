@@ -20,12 +20,12 @@
     <div class="carousel-inner">
         <div class="active item">
             <div style="height:280px;margin:0 auto;">
-                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/fxcm_07.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/fxcm_07.swf" type="application/x-shockwave-flash" width="336"></embed></object>
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/fxcm.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/fxcm.swf" type="application/x-shockwave-flash" width="336"></embed></object>
             </div>
         </div>
         <div class="item">
             <div style="margin:0 auto;">
-            <a target="_blank" href="http://www.svsfx.com.cn/2013815/"><img src="/sites/all/themes/wallstcn/ads/ad_svsfx_medium_new_0923.gif" alt=""></a>
+            <a target="_blank" href="redirect.htm?type=index_left_top_ad_hit_2&url=http://www.svsfx.com.cn/2013815/"><img src="/sites/all/themes/wallstcn/ads/svsfx.gif" alt=""></a>
             </div>
         </div>
 
@@ -40,12 +40,12 @@
     <div class="carousel-inner">
         <div class="active item"  data-probability="50">
             <div style="height:280px;margin:0 auto;">
-                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/fxcm_07.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/fxcm_07.swf" type="application/x-shockwave-flash" width="336" wmode="transparent"></embed></object>
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/index_left_top_ad_1_fxcm.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/index_left_top_ad_1_fxcm.swf" type="application/x-shockwave-flash" width="336" wmode="transparent"></embed></object>
             </div>
         </div>
         <div class="item">
             <div style="margin:0 auto;">
-            <a target="_blank" href="http://www.svsfx.com.cn/2013815/"><img src="/sites/all/themes/wallstcn/ads/ad_svsfx_medium_new_0923.gif" alt=""></a>
+            <a target="_blank" href="redirect.htm?type=index_left_top_ad_hit_2&url=http://www.svsfx.com.cn/2013815/"><img src="/sites/all/themes/wallstcn/ads/index_left_top_ad_2_svsfx.gif" alt=""></a>
             </div>
         </div>
         <?if(0):?>
@@ -94,7 +94,7 @@
 <?if(variable_get('site_ad')):?>
 <div class="ad-box ad-side ad-margin-top">
     <div style="width:336px;margin:0 auto">
-        <a target="_blank" href="http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="/sites/all/themes/wallstcn/ads/forexct_0923.jpg" alt=""></a>
+        <a target="_blank" href="redirect.htm?type=index_left_middle1_ad_hit_1&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="/sites/all/themes/wallstcn/ads/index_left_middle1_ad_1_forexct.jpg" alt=""></a>
 <!--
 <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
@@ -126,7 +126,7 @@
 <?if(variable_get('site_ad')):?>
 <div class="ad-box ad-side ad-margin-top">
     <div style="width:336px;margin:0 auto">
-        <a target="_blank" href="http://xianguo.com/section/9163D6A8FF6494B79424131CF7BA0D55"><img src="/sites/all/themes/wallstcn/ads/xianguo_360_160.png" alt=""></a>
+        <a target="_blank" href="redirect.htm?type=index_left_middle2_ad_hit_1&url=http://xianguo.com/section/9163D6A8FF6494B79424131CF7BA0D55"><img src="/sites/all/themes/wallstcn/ads/index_left_middle2_ad_1_xianguo.png" alt=""></a>
     </div>
 </div>
 <?endif?>
@@ -155,7 +155,7 @@
 <?if(variable_get('site_ad')):?>
 <div class="ad-box ad-side ad-margin-top">
     <div style="width:336px;margin:0 auto">
-        <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" width="336" height="406"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/ad_aefc0813.swf" /><embed pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/ad_aefc0813.swf" type="application/x-shockwave-flash" width="336" height="406"></embed></object>
+        <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" width="336" height="406"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/index_left_bottom_ad_1_aefc.swf" /><embed pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/index_left_bottom_ad_1_aefc.swf" type="application/x-shockwave-flash" width="336" height="406"></embed></object>
     </div>
 </div>
 <?endif?>

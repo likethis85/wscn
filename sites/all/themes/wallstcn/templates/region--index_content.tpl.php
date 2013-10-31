@@ -10,7 +10,7 @@
 
         <div class="span4">
             <div class="item">
-                <a target="_blank" href="http://nordfx-chinese.com/?id=730026"><img src="/sites/all/themes/wallstcn/ads/ad_nordfx.gif" alt=""></a>
+                <a target="_blank" href="redirect.htm?type=index_middle_left_ad_hit_1&url=http://nordfx-chinese.com/?id=730026"><img src="/sites/all/themes/wallstcn/ads/index_middle_left_ad_1_nordfx.gif" alt=""></a>
             </div>
 
         </div>
@@ -40,10 +40,10 @@
             <div class="random-ad">
                 <div class="carousel-inner">
                     <div class="active item  right-align">
-                        <a target="_blank" href="http://open.yuedu.163.com/?act=rdwst_20130916_01" style="float:right;"><img src="/sites/all/themes/wallstcn/ads/ad_163yun.jpg" alt=""></a>
+                        <a target="_blank" href="redirect.htm?type=index_middle_right_ad_hit_1&url=http://open.yuedu.163.com/?act=rdwst_20130916_01" style="float:right;"><img src="/sites/all/themes/wallstcn/ads/index_middle_right_ad_1_163yun.jpg" alt=""></a>
                     </div>
                     <div class="item right-align">
-                        <a target="_blank" href="http://xianguo.com/section/9163D6A8FF6494B79424131CF7BA0D55" style="float:right;"><img src="/sites/all/themes/wallstcn/ads/xianguo_468_60.png" alt=""></a>
+                        <a target="_blank" href="redirect.htm?type=index_middle_right_ad_hit_2&url=http://xianguo.com/section/9163D6A8FF6494B79424131CF7BA0D55" style="float:right;"><img src="/sites/all/themes/wallstcn/ads/index_middle_right_ad_2_xianguo.png" alt=""></a>
                     </div>
                 </div>
             </div>
