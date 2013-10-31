@@ -67,6 +67,8 @@
 
 
                 <div class="ad-box ad-side">
+                <a target="_blank" href="http://www.119gold.com/activity/moni/?referer=7002"><img src="/sites/all/themes/wallstcn/ads/get_offpic2.jpeg" alt=""></a>
+                <?if(0):?>
                 <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <ins class="adsbygoogle"
                      style="display:inline-block;width:336px;height:280px"
@@ -75,6 +77,7 @@
                 <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
+                <?endif?>
 <!--
 <script type="text/javascript">
 /*侧栏*/
