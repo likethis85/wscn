@@ -6377,6 +6377,11 @@ a:hover {
 .top-news-entry h2 a:hover {
   color: #d24747;
 }
+.top-news-entry .carousel-caption h2 {
+  margin: 0;
+  font-size: 13px;
+  color: #FFF;
+}
 .top-new-extra {
   margin: 0;
   padding-top: 5px;

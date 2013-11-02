@@ -55,6 +55,10 @@ if(count($items) > 8) {
                                         <div class="entry-img-wrap">
                                             <img alt="" class="span12" src="<?=wscn_image_domain(file_create_url($picitem->uri));?>" />
                                         </div>
+                                        <div class="carousel-caption">
+                                            <h2><?=$picitem->node_title?></h2>
+                                        </div>
+
                                     </a>
                                 </div>
                                 <?endforeach?>
