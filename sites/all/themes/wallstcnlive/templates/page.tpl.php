@@ -14,6 +14,23 @@
                     <img alt="华尔街见闻新版上线" src="/sites/all/themes/wallstcn/banner.jpg" />
                     <?endif?>
                     <?if(variable_get('site_ad')):?>
+<div class="random-ad" style="margin-bottom:0;">
+    <div class="carousel-inner">
+        <div class="active item"  data-probability="75">
+            <div style="height:90px;margin:0 auto;">
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="90" width="728"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/live_728_90_MT4_75.swf" /><embed height="90" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/live_728_90_MT4_75.swf" type="application/x-shockwave-flash" width="728" wmode="transparent"></embed></object>
+            </div>
+        </div>
+        <?if(0):?>
+        <div class="active item">
+            <div style="height:90px;margin:0 auto;">
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="90" width="728"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/live_728_90.swf" /><embed height="90" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/live_728_90.swf" type="application/x-shockwave-flash" width="728" wmode="transparent"></embed></object>
+            </div>
+        </div>
+        <?endif?>
+    </div>
+</div>
+<?if(0):?>
 <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:inline-block;width:728px;height:90px"
@@ -22,7 +39,7 @@
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-
+<?endif?>
                     <?endif?>
                 </div>
             </div>

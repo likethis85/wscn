@@ -43,6 +43,15 @@
                 <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/index_left_top_ad_1_fxcm.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/index_left_top_ad_1_fxcm.swf" type="application/x-shockwave-flash" width="336" wmode="transparent"></embed></object>
             </div>
         </div>
+        <?if(0):?>
+        <div class="active item">
+            <div style="height:280px;margin:0 auto;">
+                <a target="_blank" href="redirect.htm?type=index_left_top_ad_hit_2&url=http://www.svsfx.com.cn/2013815/">
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/index_left_top_ad_2.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/index_left_top_ad_2.swf" type="application/x-shockwave-flash" width="336" wmode="transparent"></embed></object>
+                </a>
+            </div>
+        </div>
+        <?endif?>
         <div class="item">
             <div style="margin:0 auto;">
             <a target="_blank" href="redirect.htm?type=index_left_top_ad_hit_2&url=http://www.svsfx.com.cn/2013815/"><img src="/sites/all/themes/wallstcn/ads/index_left_top_ad_2_svsfx.gif" alt=""></a>
