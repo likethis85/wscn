@@ -97,10 +97,14 @@
         <div class="carousel-inner">
             <div class="active item"  data-probability="30">
                 <div style="width:336px;margin:0 auto">
-                    <a target="_blank" href="redirect.htm?type=index_left_middle1_ad_hit_1&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="/sites/all/themes/wallstcn/ads/index_left_middle1_ad_1_forexct.jpg" alt=""></a>
+                    <a target="_blank" href="redirect.htm?type=index_left_middle1_ad_hit_1&url=http://www.119gold.com/activity/moni/?referer=7002"><img src="/sites/all/themes/wallstcn/ads/get_offpic2.jpeg" alt=""></a>
+                    <?if(0):?>
+                    <a target="_blank" href="redirect.htm?type=index_left_middle1_ad_hit_1&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="/sites/all/themes/wallstcn/ads/index_left_middle1_ad_1_offpic2.jpeg" alt=""></a>
                     <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <?endif?>
                 </div>
             </div>
+            <?if(0):?>
             <div class="item">
                 <ins class="adsbygoogle"
                     style="display:inline-block;width:336px;height:280px"
@@ -110,6 +114,7 @@
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
+            <?endif?>
         </div>
     </div>
 </div>
