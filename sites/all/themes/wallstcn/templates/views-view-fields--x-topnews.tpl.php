@@ -9,12 +9,10 @@ if(!$item->field_field_related){
     unset($items[count($items) - 1]);
 }
 $picNews = array();
-if(count($items) > 8) {
-    foreach($items as $key => $news) {
-        if(isset($news->field_data_field_weight_field_weight_value) && $news->field_data_field_weight_field_weight_value == 123 ) {
-            $picNews[] = $news;
-            unset($items[$key]);
-        }
+foreach($items as $key => $news) {
+    if(isset($news->field_data_field_weight_field_weight_value) && $news->field_data_field_weight_field_weight_value == 123 ) {
+        $picNews[] = $news;
+        unset($items[$key]);
     }
 }
 ?>
