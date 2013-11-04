@@ -8,6 +8,15 @@ unset($items[0]);
 if(!$item->field_field_related){
     unset($items[count($items) - 1]);
 }
+$picNews = array();
+if(count($items) > 8) {
+    foreach($items as $key => $news) {
+        if(isset($news->field_data_field_weight_field_weight_value) && $news->field_data_field_weight_field_weight_value == 123 ) {
+            $picNews[] = $news;
+            unset($items[$key]);
+        }
+    }
+}
 ?>
 
 <div id="top-news" class="<?if(!$item->field_field_related):?>no-related<?endif?> <?=$classes;?>" <?=$attributes;?>>
@@ -28,6 +37,8 @@ if(!$item->field_field_related){
                             <ol class="carousel-indicators">
                                 <li data-target="#top-carousel" data-slide-to="0" class="active"></li>
                                 <li data-target="#top-carousel" data-slide-to="1"></li>
+                                <li data-target="#top-carousel" data-slide-to="2"></li>
+                                <li data-target="#top-carousel" data-slide-to="3"></li>
                             </ol>
                             <!-- Carousel items -->
                             <div class="carousel-inner">
@@ -38,6 +49,21 @@ if(!$item->field_field_related){
                                         </div>
                                     </a>
                                 </div>
+                                <?if($picNews):?>
+                                <?foreach($picNews as $picitem):?>
+                                <div class="item">
+                                    <a class="entry-img" href="<?=url('node/'. $picitem->nid);?>" target="_blank">
+                                        <div class="entry-img-wrap">
+                                            <img alt="" class="span12" src="<?=wscn_image_domain(file_create_url($picitem->uri));?>" />
+                                        </div>
+                                        <div class="carousel-caption">
+                                            <h2><?=$picitem->node_title?></h2>
+                                        </div>
+
+                                    </a>
+                                </div>
+                                <?endforeach?>
+                                <?endif?>
                                 <div class="item">
                                     <a class="entry-img" href="redirect.htm?type=index_topnew_ad_hit_1&url=http://www.119gold.com/activity/moni/?referer=7001" target="_blank">
                                         <div class="entry-img-wrap">

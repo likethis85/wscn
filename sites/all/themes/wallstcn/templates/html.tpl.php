@@ -47,12 +47,15 @@ _atrk_opts = { atrk_acct:"+YhCf1a8Md00aX", domain:"wallstreetcn.com",dynamic: tr
     <?=$page_top; ?>
     <?=$page; ?>
     <?=$page_bottom; ?>
+
+<?if(0):?>
 <script type="text/javascript">//<![CDATA[
 ac_as_id = 2107398;
 ac_click_track_url = "";ac_format = 0;ac_mode = 1;
 ac_width = 280;ac_height = 210;
 //]]></script>
 <script type="text/javascript" src="http://static.acs86.com/g.js"></script>
+<?endif?>
 
 
 
