@@ -148,7 +148,25 @@
 </div>
 <?endif?>
 
+<?if(variable_get('site_ad')):?>
+<div class="ad-box ad-side ad-margin-top">
+    <div style="width:336px;margin:0 auto">
+        <a target="_blank" href="redirect.htm?type=index_left_middle3_ad_hit_1&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="/sites/all/themes/wallstcn/ads/index_left_middle3_ad_1_forexct.jpg" alt=""></a>
+    </div>
+</div>
+<?endif?>
 
+<?if(isset($elements['views_x_tags-block']) && $elements['views_x_tags-block']):?>
+<?=render($elements['views_x_tags-block'])?>
+<?endif?>
+
+<?if(variable_get('site_ad')):?>
+<div class="ad-box ad-side ad-margin-top">
+    <div style="width:336px;margin:0 auto">
+        <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" width="336" height="406"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/index_left_bottom_ad_1_aefc.swf" /><embed pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/index_left_bottom_ad_1_aefc.swf" type="application/x-shockwave-flash" width="336" height="406"></embed></object>
+    </div>
+</div>
+<?endif?>
 
 <?if($is_front):?>
 <div class="page-header">
@@ -165,17 +183,6 @@
 </div>
 <?endif?>
 
-<?if(isset($elements['views_x_tags-block']) && $elements['views_x_tags-block']):?>
-<?=render($elements['views_x_tags-block'])?>
-<?endif?>
-
-<?if(variable_get('site_ad')):?>
-<div class="ad-box ad-side ad-margin-top">
-    <div style="width:336px;margin:0 auto">
-        <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" width="336" height="406"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/index_left_bottom_ad_1_aefc.swf" /><embed pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/index_left_bottom_ad_1_aefc.swf" type="application/x-shockwave-flash" width="336" height="406"></embed></object>
-    </div>
-</div>
-<?endif?>
 
 <?if(variable_get('site_ad')):?>
 <div class="ad-box ad-side ad-margin-top">
