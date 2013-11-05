@@ -29,7 +29,7 @@
                     <div class="carousel-inner">
                         <div class="active item"  data-probability="70">
                             <div style="margin:0 auto;">
-                                <a target="_blank" href="redirect.htm?type=index_top_ad_hit_1&url=https://www.ironfx.com/zh/forex-demo-competition?utm_source=SZ_728_90&utm_medium=hp_DC&utm_campaign=wallstreetcn"><img src="/sites/all/themes/wallstcn/ads/index_top_ad_1_IronFX.jpg" alt=""></a>
+                                <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=index_top_ad_hit_1&url=https://www.ironfx.com/zh/forex-demo-competition?utm_source=SZ_728_90&utm_medium=hp_DC&utm_campaign=wallstreetcn"><img src="/sites/all/themes/wallstcn/ads/index_top_ad_1_IronFX.jpg" alt=""></a>
                             </div>
                         </div>
                         <?if(0):?>

@@ -82,7 +82,7 @@
 
 
                 <div class="ad-box ad-side">
-                <a target="_blank" href="redirect.htm?type=live_left_top_ad_hit_1&url=http://www.119gold.com/activity/moni/?referer=7002"><img src="/sites/all/themes/wallstcn/ads/live_left_top_ad_1_get_offpic2.jpeg" alt=""></a>
+                <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=live_left_top_ad_hit_1&url=http://www.119gold.com/activity/moni/?referer=7002"><img src="/sites/all/themes/wallstcn/ads/live_left_top_ad_1_get_offpic2.jpeg" alt=""></a>
                 <?if(0):?>
                 <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <ins class="adsbygoogle"
