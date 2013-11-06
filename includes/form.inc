@@ -303,6 +303,8 @@ function drupal_build_form($form_id, &$form_state) {
   // Ensure some defaults; if already set they will not be overridden.
   $form_state += form_state_defaults();
 
+
+
   if (!isset($form_state['input'])) {
     $form_state['input'] = $form_state['method'] == 'get' ? $_GET : $_POST;
   }
@@ -314,6 +316,16 @@ function drupal_build_form($form_id, &$form_state) {
     unset($_SESSION['batch_form_state']);
     return drupal_rebuild_form($form_id, $form_state);
   }
+  // 替换上传图片的路径，加入img.wallstreetcn.com
+  $form_state['input']['body']['und']['0']['value'] = str_replace(
+                      array('"/ckuploadimg/images/' ,
+                            '"/sites/default/files/images/',
+                            '"/sites/default/files/styles/large/public/images/') ,
+                      array('"http://img.wallstreetcn.com/ckuploadimg/images/' ,
+                            '"http://img.wallstreetcn.com/sites/default/files/images/',
+                            '"http://img.wallstreetcn.com/sites/default/files/styles/large/public/images/') ,
+                      $form_state['input']['body']['und']['0']['value']
+                   );
 
   // If the incoming input contains a form_build_id, we'll check the cache for a
   // copy of the form in question. If it's there, we don't have to rebuild the
@@ -338,6 +350,7 @@ function drupal_build_form($form_id, &$form_state) {
 
     $form = drupal_retrieve_form($form_id, $form_state);
     drupal_prepare_form($form_id, $form, $form_state);
+
 
     // form_set_cache() removes uncacheable $form_state keys defined in
     // form_state_keys_no_cache() in order for multi-step forms to work
