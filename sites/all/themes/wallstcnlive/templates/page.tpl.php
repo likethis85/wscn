@@ -18,12 +18,12 @@
     <div class="carousel-inner">
         <div class="active item"  data-probability="75">
             <div style="height:90px;margin:0 auto;">
-                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="90" width="728"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/live_top_ad_1_MT4.swf" /><embed height="90" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/live_top_ad_1_MT4.swf" type="application/x-shockwave-flash" width="728" wmode="transparent"></embed></object>
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="90" width="728"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/live_top_ad_1_MT4.swf" /><embed height="90" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/live_top_ad_1_MT4.swf" type="application/x-shockwave-flash" width="728" wmode="transparent"></embed></object>
             </div>
         </div>
-        <div class="active item">
+        <div class="item">
             <div style="height:90px;margin:0 auto;">
-                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="90" width="728"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/live_top_ad_2_svsfx.swf" /><embed height="90" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/live_top_ad_2_svsfx.swf" type="application/x-shockwave-flash" width="728" wmode="transparent"></embed></object>
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="90" width="728"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/live_top_ad_2_svsfx.swf" /><embed height="90" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/live_top_ad_2_svsfx.swf" type="application/x-shockwave-flash" width="728" wmode="transparent"></embed></object>
             </div>
         </div>
     </div>
@@ -82,7 +82,7 @@
 
 
                 <div class="ad-box ad-side">
-                <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=live_left_top_ad_hit_1&url=http://www.119gold.com/activity/moni/?referer=7002"><img src="/sites/all/themes/wallstcn/ads/live_left_top_ad_1_get_offpic2.jpeg" alt=""></a>
+                <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=live_left_top_ad_hit_1&url=http://www.119gold.com/activity/moni/?referer=7002"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/live_left_top_ad_1_get_offpic2.jpeg" alt=""></a>
                 <?if(0):?>
                 <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <ins class="adsbygoogle"
