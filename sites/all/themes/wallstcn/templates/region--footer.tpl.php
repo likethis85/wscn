@@ -76,6 +76,7 @@
 <a href="http://www.jfinfo.com" target="_blank">丰华财经</a> | 
 <a href="http://www.168jinc.com/" target="_blank">中国金融理财网</a> | 
 <a href="http://www.oilchem.net/" target="_blank">隆众石化网</a> | 
+<a href="http://www.roadoor.com/" target="_blank">银行贷款</a> | 
 <a href="http://www.forexpress.hk/" target="_blank">汇商网</a>
 <p>
 <?endif?>
