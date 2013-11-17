@@ -38,28 +38,39 @@
 <div class="ad-box ad-side">
 <div class="random-ad" style="margin-bottom:0;">
     <div class="carousel-inner">
-        <div class="active item"  data-probability="70">
+        <div class="active item"  data-probability="20">
             <div style="height:280px;margin:0 auto;">
                 <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_top_ad_1_fxcm.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_top_ad_1_fxcm.swf" type="application/x-shockwave-flash" width="336" wmode="transparent"></embed></object>
             </div>
         </div>
-        <div class="item" data-probability="15">
-            <div style="height:280px;margin:0 auto;">
-                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_top_ad_2_svsfx.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_top_ad_2_svsfx.swf" type="application/x-shockwave-flash" width="336" wmode="transparent"></embed></object>
+
+        <div class="item">
+            <div style="margin:0 auto;">
+                <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=index_left_top_ad_hit_4&url=http://www.xinwaihui.com/?utm_source=hej&utm_medium=cpc&utm_term=hej336280&utm_content=logolink&utm_campaign=hegnmj"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_top_ad_4_xinwaihui.jpg" alt=""></a>
             </div>
         </div>
+
         <?if(0):?>
         <div class="item">
             <div style="margin:0 auto;">
             <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=index_left_top_ad_hit_2&url=http://www.svsfx.com.cn/2013815/"><img src="/sites/all/themes/wallstcn/ads/index_left_top_ad_2_svsfx.gif" alt=""></a>
             </div>
         </div>
-        <?endif?>
+
+        <!--下面2个准备移动到实时新闻-->
+        <div class="item" data-probability="15">
+            <div style="height:280px;margin:0 auto;">
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_top_ad_2_svsfx.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_top_ad_2_svsfx.swf" type="application/x-shockwave-flash" width="336" wmode="transparent"></embed></object>
+            </div>
+        </div>
+
         <div class="item" data-probability="15">
             <div style="height:280px;margin:0 auto;">
                 <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_top_ad_3_CFBAGREY.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_top_ad_3_CFBAGREY.swf" type="application/x-shockwave-flash" width="336"></embed></object>
             </div>
         </div>
+
+        <?endif?>
 
     </div>
 </div>
