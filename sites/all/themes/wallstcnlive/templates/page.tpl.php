@@ -82,8 +82,24 @@
 
 
                 <div class="ad-box ad-side">
-                <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=live_left_top_ad_hit_1&url=http://www.119gold.com/activity/moni/?referer=7002"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/live_left_top_ad_1_get_offpic2.jpeg" alt=""></a>
+<div class="random-ad" style="margin-bottom:0;">
+    <div class="carousel-inner">
+        <div class="item" data-probability="15">
+            <div style="height:280px;margin:0 auto;">
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_top_ad_2_svsfx.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_top_ad_2_svsfx.swf" type="application/x-shockwave-flash" width="336" wmode="transparent"></embed></object>
+            </div>
+        </div>
+
+        <div class="item" data-probability="15">
+            <div style="height:280px;margin:0 auto;">
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_top_ad_3_CFBAGREY.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_top_ad_3_CFBAGREY.swf" type="application/x-shockwave-flash" width="336"></embed></object>
+            </div>
+        </div>
+    </div>
+</div>
+
                 <?if(0):?>
+                <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=live_left_top_ad_hit_1&url=http://www.119gold.com/activity/moni/?referer=7002"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/live_left_top_ad_1_get_offpic2.jpeg" alt=""></a>
                 <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <ins class="adsbygoogle"
                      style="display:inline-block;width:336px;height:280px"
@@ -125,7 +141,14 @@ var cpro_id = "u1349094";
                 <?endif?>
                 </div>
 
+
                 <?if(variable_get('site_ad')):?>
+                <div class="ad-box ad-side">
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/live_left_top_ad_2_get_hantec.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/live_left_top_ad_2_get_hantec.swf" type="application/x-shockwave-flash" width="336" wmode="transparent"></embed></object>
+                </div>
+                <?endif?>
+
+                <?if(0 && variable_get('site_ad')):?>
                 <div class="ad-box ad-side">
                 <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <ins class="adsbygoogle"
