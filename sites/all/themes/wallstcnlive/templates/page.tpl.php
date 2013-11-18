@@ -82,6 +82,11 @@
 
 
                 <div class="ad-box ad-side">
+                    <a href="http://wallstreetcn.com/redirect.htm?type=index_left_middle1_ad_hit_1&amp;url=http://www.119gold.com/activity/moni/?referer=7002" target="_blank"><img alt="" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_middle1_ad_1_offpic2.jpeg"></a>
+
+
+                <?if(0):?>
+
 <div class="random-ad" style="margin-bottom:0;">
     <div class="carousel-inner">
         <div class="item" data-probability="15">
@@ -98,7 +103,6 @@
     </div>
 </div>
 
-                <?if(0):?>
                 <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=live_left_top_ad_hit_1&url=http://www.119gold.com/activity/moni/?referer=7002"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/live_left_top_ad_1_get_offpic2.jpeg" alt=""></a>
                 <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <ins class="adsbygoogle"
