@@ -14,6 +14,19 @@
             </div>
 
         </div>
+        <div class="span4">
+            <div class="item">
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" width="234" height="60"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/index_middle_center_ad_2_svsfx.swf" /><embed pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/index_middle_center_ad_2_svsfx.swf" type="application/x-shockwave-flash" width="234" height="60"></embed></object>
+            </div>
+        </div>
+
+        <div class="span4">
+            <div class="item">
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" width="234" height="60"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/index_middle_center_ad_3_hantec.swf" /><embed pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/index_middle_center_ad_3_hantec.swf" type="application/x-shockwave-flash" width="234" height="60"></embed></object>
+            </div>
+        </div>
+
+
         <?if(0): //google ad?>
         <div class="span4">
             <div class="item">
@@ -33,8 +46,6 @@
     </div>
 </div>
         </div>
-    <?endif?>
-
         <div class="span8 right-align">
 
             <div class="random-ad">
@@ -48,6 +59,7 @@
                 </div>
             </div>
         </div>
+        <?endif?>
 
         <?if(0): ?>
         <div class="span8">
