@@ -167,7 +167,7 @@
 <div class="ad-box ad-side ad-margin-top">
     <div class="random-ad" style="margin-bottom:0;">
         <div class="carousel-inner">
-            <div class="active item"  data-probability="70">
+            <div class="active item"  data-probability="30">
                 <div style="width:336px;margin:0 auto">
                     <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=index_left_middle3_ad_hit_1&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_middle3_ad_1_forexct.jpg" alt=""></a>
                 </div>
