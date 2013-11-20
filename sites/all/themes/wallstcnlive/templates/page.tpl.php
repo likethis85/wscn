@@ -84,7 +84,6 @@
                     <div class="ad-box ad-side">
                         <a href="http://wallstreetcn.com/redirect.htm?type=index_left_middle1_ad_hit_1&amp;url=http://www.119gold.com/activity/moni/?referer=7002" target="_blank"><img alt="" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_middle1_ad_1_offpic2.jpeg"></a>
 
-
                         <?if(0):?>
 
                         <div class="random-ad" style="margin-bottom:0;">
@@ -133,7 +132,19 @@
                             (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
                     </div>
+
+                    <div class="ad-box ad-side">
+                        <a href="http://wallstreetcn.com/redirect.htm?type=index_left_middle1_ad_hit_1&amp;url=http://www.119gold.com/activity/moni/?referer=7002" target="_blank"><img alt="" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_middle1_ad_1_offpic2.jpeg"></a>
+
+                        <a href="http://wallstreetcn.com/redirect.htm?type=live_left_middle2_ad_hit_1&amp;url=http://www.xinwaihui.com/?utm_source=hej&utm_medium=cpc&utm_term=hejnews&utm_content=textlink&utm_campaign=livenews" target="_blank"><img alt="" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/live_left_middle2_ad_1.jpeg"></a>
+
+
                     <?endif?>
+
+                    <div class="ad-box ad-side">
+                        <a href="http://wallstreetcn.com/redirect.htm?type=live_left_middle2_ad_hit_1&amp;url=http://www.xinwaihui.com/?utm_source=hej&utm_medium=cpc&utm_term=hejnews&utm_content=textlink&utm_campaign=livenews" target="_blank"><img alt="" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/live_left_middle2_ad_1.jpeg"></a>
+                    </div>
+
 
                     <div class="page-header header-red">
                         <h3>经济日历</h3>
