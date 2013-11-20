@@ -165,8 +165,19 @@
 
 <?if(variable_get('site_ad')):?>
 <div class="ad-box ad-side ad-margin-top">
-    <div style="width:336px;margin:0 auto">
-        <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=index_left_middle3_ad_hit_1&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_middle3_ad_1_forexct.jpg" alt=""></a>
+    <div class="random-ad" style="margin-bottom:0;">
+        <div class="carousel-inner">
+            <div class="active item"  data-probability="70">
+                <div style="width:336px;margin:0 auto">
+                    <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=index_left_middle3_ad_hit_1&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_middle3_ad_1_forexct.jpg" alt=""></a>
+                </div>
+            </div>
+            <div class="item">
+                <div style="width:336px;margin:0 auto">
+                    <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=index_left_middle3_ad_hit_2&url=http://www.xinwaihui.com/?utm_source=hej&utm_medium=cpc&utm_term=hej336280&utm_content=logolink&utm_campaign=hegnmj"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_middle3_ad_2.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <?endif?>
