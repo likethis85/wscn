@@ -27,18 +27,16 @@
                 <?if(variable_get('site_ad')):?>
                 <div class="random-ad" style="margin-bottom:0;">
                     <div class="carousel-inner">
-                        <div class="active item"  data-probability="100">
+                        <div class="active item"  data-probability="60">
                             <div style="margin:0 auto;">
                                 <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=index_top_ad_hit_1&url=https://www.ironfx.com/zh/forex-demo-competition?utm_source=SZ_728_90&utm_medium=hp_DC&utm_campaign=wallstreetcn"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_top_ad_1_IronFX.jpg" alt=""></a>
                             </div>
                         </div>
-                        <?if(0):?>
                         <div class="item">
                             <div style="margin:0 auto;">
-                            <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="90" width="728"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_top_ad_2_GB513.swf" /><embed height="90" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_top_ad_2_GB513.swf" type="application/x-shockwave-flash" width="728"></embed></object>
+                            <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="90" width="728"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_top_ad_2_svsfx.swf" /><embed height="90" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_top_ad_2_svsfx.swf" type="application/x-shockwave-flash" width="728"></embed></object>
                             </div>
                         </div>
-                        <?endif?>
                     </div>
                 </div>
                 <?endif?>
