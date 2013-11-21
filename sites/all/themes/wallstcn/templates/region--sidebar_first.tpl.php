@@ -174,7 +174,7 @@
             </div>
             <div class="item">
                 <div style="width:336px;margin:0 auto">
-                    <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=index_left_middle3_ad_hit_2&url=http://www.xinwaihui.com/?utm_source=hej&utm_medium=cpc&utm_term=hej336280&utm_content=logolink&utm_campaign=hegnmj"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_middle3_ad_2.jpg" alt=""></a>
+                    <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=index_left_middle3_ad_hit_2&url=http://www.xinwaihui.com/?utm_source=hej&utm_medium=cpc&utm_term=hej_home&utm_content=textlink&utm_campaign=hejhonme1"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_middle3_ad_2.jpg" alt=""></a>
                 </div>
             </div>
         </div>
