@@ -573,6 +573,33 @@
             setTimeout('window.location.reload();', 1000 * 60 * 6);
         }
 
+
+
+
+        //添加 自动刷新 和 声音提醒 功能的 禁用 start
+
+            
+        var $ebFresh = $("#enable-fresh");
+
+        var $ebSound = $("#enable-sound");
+
+        if (store.get("enable-fresh") != undefined) {
+            $ebFresh[0].checked =  store.get("enable-fresh");
+        }
+
+        if (store.get("enable-sound") != undefined) {
+            $ebSound[0].checked =  store.get("enable-sound");
+        }
+
+        $("#block-views-x-livenews-block").on("click.check", function(){
+            store.set("enable-fresh", $ebFresh[0].checked);
+            store.set("enable-sound", $ebSound[0].checked);
+        });
+
+        //添加 自动刷新 和 声音提醒 功能的 禁用 end
+
+
+
         //实时新闻刷新
         if($('#livenews-list')[0]){
             var jplayer = $('<div id="jplayer" />').appendTo('body');
