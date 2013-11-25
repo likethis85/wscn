@@ -21,8 +21,15 @@
         </div>
 
         <div class="span4">
-            <div class="item">
-                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" width="234" height="60"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_middle_center_ad_3_hantec.swf" /><embed pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_middle_center_ad_3_hantec.swf" type="application/x-shockwave-flash" width="234" height="60"></embed></object>
+            <div class="random-ad">
+                <div class="carousel-inner">
+                    <div class="active item" data-probability="50">
+                        <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" width="234" height="60"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_middle_center_ad_3_hantec.swf" /><embed pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_middle_center_ad_3_hantec.swf" type="application/x-shockwave-flash" width="234" height="60"></embed></object>
+                    </div>
+                    <div class="item">
+                        <a target="_blank" href="redirect.htm?type=index_middle_center_ad_hit_3&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_middle_center_ad_3_forexct.jpg" alt=""></a>
+                    </div>
+                </div>
             </div>
         </div>
 
