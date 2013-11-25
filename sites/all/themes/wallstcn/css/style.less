@@ -2099,10 +2099,12 @@ body.toolbar, body.toolbar-drawer {
 .lt-ie9 {
    #wrapper {
        padding:0;
+       width: 1160px;
+       max-width: 1200px;
    }
 
    .container{
-        overflow:hidden;
+        //overflow:hidden;
     }
 
     #search-query {
@@ -2112,6 +2114,33 @@ body.toolbar, body.toolbar-drawer {
     #footer {
         background:#000;
     }
+
+
+    .row-fluid {
+        
+    }
+
+
+    // Fixed grid
+  #grid > .core(@gridColumnWidth1200, @gridGutterWidth1200);
+
+  // Fluid grid
+  #grid > .fluid(@fluidGridColumnWidth1200, @fluidGridGutterWidth1200);
+
+  // Input grid
+  #grid > .input(@gridColumnWidth1200, @gridGutterWidth1200);
+
+  // Thumbnails
+  .thumbnails {
+    margin-left: -@gridGutterWidth1200;
+  }
+  .thumbnails > li {
+    margin-left: @gridGutterWidth1200;
+  }
+  .row-fluid .thumbnails {
+    margin-left: 0;
+  }
+
 } 
 
 
