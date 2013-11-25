@@ -127,6 +127,7 @@ drupal_set_title($page_title, PASS_THROUGH);?>
         var jiathis_config={
                 data_track_clickback:true,
                 title : "<?=$summary?> @华尔街见闻",
+                summary : " ",
                 pic : "<?=wscn_image_domain(file_create_url($node->upload['und'][0]['uri']));?>",
                 hideMore:true
             }

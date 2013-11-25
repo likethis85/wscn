@@ -46,6 +46,7 @@
 
 <?if($is_front):?>
 <p>友情链接： 
+<a href="http://www.hao123.com/" target="_blank">hao123</a> | 
 <a href="http://finance.sina.com.cn/" target="_blank">新浪财经</a> | 
 <a href="http://finance.qq.com/" target="_blank">腾讯财经</a> | 
 <a href="http://www.caijing.com.cn" target="_blank">财经网</a> | 
