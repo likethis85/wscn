@@ -82,7 +82,7 @@
 
 
                     <div class="ad-box ad-side">
-                        <a href="http://wallstreetcn.com/redirect.htm?type=index_left_middle1_ad_hit_1&amp;url=http://www.119gold.com/landing/wallstreet/1/?referer=7005" target="_blank"><img alt="" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_middle1_ad_1_offpic2.jpeg"></a>
+                        <a href="http://wallstreetcn.com/redirect.htm?type=index_left_middle1_ad_hit_1&amp;url=http://www.119gold.com/landing/wallstreet/1/?referer=7005" target="_blank"><img alt="" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_middle1_ad_1_offpic2.gif"></a>
 
                         <?if(0):?>
 
