@@ -123,10 +123,11 @@ drupal_set_title($page_title, PASS_THROUGH);?>
         <a class="jiathis_counter_style"></a>
     </div>
     <script type="text/javascript" >
-        <?$summary =  rtrim(addslashes(html_entity_decode(strip_tags($node->body['und']['0']['summary']))), "\n\r");?>
+        <?$summary = rtrim(addslashes(html_entity_decode(strip_tags($node->body['und']['0']['summary']))), "\n\r");
+          $summary = mb_strlen($summary) > 100 ? mb_substr($summary, 0, 100, 'utf-8') . '...'  : $summary;?>
         var jiathis_config={
                 data_track_clickback:true,
-                title : "<?=$summary?> @华尔街见闻",
+                title : "好文分享：【<?=$summary?>】。本文来自华尔街见闻网站：",
                 summary : " ",
                 pic : "<?=wscn_image_domain(file_create_url($node->upload['und'][0]['uri']));?>",
                 hideMore:true
