@@ -6947,6 +6947,28 @@ a:hover {
   font-weight: normal;
   line-height: 20px;
 }
+.node-article.gold {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.node-article.gold .media-meta {
+  margin-bottom: 0;
+}
+.node-article.gold .news-img-wrap,
+.node-article.gold .news-img {
+  width: 110px;
+  height: 75px;
+}
+.node-article.gold img {
+  width: 100px;
+}
+.node-article.gold .media-content {
+  font-size: 12px;
+  min-height: inherit;
+}
+.node-article.gold .media-content p {
+  margin-bottom: 0;
+}
 .node-single {
   margin-right: 10px;
 }
