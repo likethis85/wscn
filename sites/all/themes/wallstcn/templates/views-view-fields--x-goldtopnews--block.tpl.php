@@ -27,7 +27,7 @@ foreach($items as $key => $news) {
 
                         <a class="entry-img" href="<?=url('node/'. $item->nid);?>" target="_blank">
                             <div class="entry-img-wrap">
-                                <img class="span12" src="<?=wscn_image_domain(file_create_url($item->uri));?>"  alt="<?=$item->node_title?>" />
+                                <img class="span12" src="<?=wscn_image_domain(file_create_url($item->file_managed_file_usage_uri));?>"  alt="<?=$item->node_title?>" />
                             </div>
                         </a>
 
