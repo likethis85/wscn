@@ -20,7 +20,7 @@ foreach($items as $key => $news) {
 <div id="top-news" class="<?if(!$item->field_field_related):?>no-related<?endif?> <?=$classes;?>" <?=$attributes;?>>
     <div class="row-fluid">
         <div class="span7">
-            <div class="top-news-entry">
+            <div class="top-news-entry top-news-entry-gold">
                 <div class="row-fluid">
                     <div class="span12">
 

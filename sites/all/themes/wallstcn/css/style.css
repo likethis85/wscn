@@ -6382,6 +6382,13 @@ a:hover {
   font-size: 13px;
   color: #FFF;
 }
+.top-news-entry-gold {
+  height: 352px !important;
+}
+.top-news-entry-gold .top-new-extra {
+  height: 40px;
+  overflow: hidden;
+}
 .top-new-extra {
   margin: 0;
   padding-top: 5px;
