@@ -7902,6 +7902,9 @@ body.toolbar, body.toolbar-drawer {
     display: none;
   }
 }
+.mark-new {
+  position: absolute;
+}
 /* ===========================
  * IE fix
  * ===========================

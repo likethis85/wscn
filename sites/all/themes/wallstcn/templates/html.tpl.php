@@ -58,6 +58,6 @@ ac_width = 280;ac_height = 210;
 <?endif?>
 
 
-
+<img class="mark-new" src="/sites/all/themes/wallstcn/css/img/new.gif" alt="new"/>
 </body>
 </html>
