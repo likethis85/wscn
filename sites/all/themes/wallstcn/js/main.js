@@ -598,6 +598,24 @@
 
         //添加 自动刷新 和 声音提醒 功能的 禁用 end
 
+        //添加 黄金 new 标识 start
+
+        $(".nav .leaf a").each(function(){
+            var $this = $(this);
+            if ($this.text() == "黄金") {
+                
+                var offset = $this.offset();
+                $(".mark-new").css({
+                    left : offset.left + $this.width()  + "px",
+                    top  : offset.top  - 10 + "px"
+                });
+            }
+        });
+
+        
+
+        //添加 黄金 new 标识 end
+
 
 
         //实时新闻刷新
