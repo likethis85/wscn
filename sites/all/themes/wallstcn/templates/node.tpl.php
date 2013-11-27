@@ -49,7 +49,7 @@ drupal_set_title($page_title, PASS_THROUGH);?>
         -->
         </span>
         <?endif?>
-        <span class="meta-item">
+        <span class="meta-item" >
             <i class="icon-pencil"></i>  文 / <a href="<?=url('columns/'. $node->uid);?>" target="blank"><?=$node->name?></a>
         </span>
         <span class="meta-item">
@@ -272,7 +272,7 @@ if(!empty($content['comments']['comments'])) {
 <?if(isset($node->field_from) && isset($node->field_from['und'][0]['value']) && $node->field_from['und'][0]['value'] == 2):?>
 <div id="node-<?=$node->nid; ?>" class="<?=$classes;?> clearfix node-article media textonly" <?=$attributes;?>>
 <?else:?>
-<div id="node-<?=$node->nid; ?>" class="<?=$classes;?> clearfix node-article media" <?=$attributes;?>>
+<div id="node-<?=$node->nid; ?>" class="<?=$classes;?> clearfix node-article media <?=$view->name=='gold'?'gold':''?>" <?=$attributes;?>>
 <?endif?>
 
     <?if(isset($node->field_upload) && $node->field_upload['und']):?>
