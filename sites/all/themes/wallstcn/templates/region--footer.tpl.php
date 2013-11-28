@@ -80,7 +80,7 @@
 <a href="http://www.roadoor.com/" target="_blank">银行贷款</a> |
 <a href="http://www.forexpress.hk/" target="_blank">汇商网</a> |
 <a href="http://hao.rising.cn/" target="_blank">瑞星安全网址导航</a> |
-<a href="http://www.duba.com/gupiaojijin.html" target="_blank">金山导航</a> |
+<a href="http://www.duba.com/gupiaojijin.html" target="_blank">安全网址导航</a> |
 <a href="http://hao.360.cn/" target="_blank" >360安全网址导航</a>
 <p>
 <?endif?>
