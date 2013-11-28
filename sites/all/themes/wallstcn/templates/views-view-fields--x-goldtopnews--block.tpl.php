@@ -83,7 +83,7 @@ foreach($items as $key => $news) {
                     </div>
                     <?endif?>
                     <h2 class="entry-title"><a href="<?=url('node/'. $item->nid);?>"  target="_blank"><?=$item->node_title?></a></h2>
-                    <div class="top-new-extra">
+                    <div class="top-new-extra ellipsis">
                         <?if($item->field_body):?>
                         <?=$item->field_body[0]['raw']['summary']?>
                         <?endif?>

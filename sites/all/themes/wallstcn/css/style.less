@@ -2124,6 +2124,60 @@ body.toolbar, body.toolbar-drawer {
     position: absolute;   
 }
 
+// add ellipsis 
+.ellipsis {
+  overflow: hidden;
+}
+
+.ellipsis:before {
+    content:"";
+    float: left;
+    width: 5px; 
+    height: 100%; 
+}
+
+.ellipsis > *:first-child {
+    float: right;
+    width: 100%;
+    margin-left: -5px; 
+}        
+
+.ellipsis:after {
+    
+    content: "\02026\02026";  
+    font-weight: bold;
+    color: #474747;
+    text-indent: 0.7em;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+
+    float: right; 
+    position: relative;
+    top: -20px; 
+    left: 100%; 
+    width: 2em; 
+    margin-left: -2em;
+    padding-right: 5px;
+    text-align: right;
+
+  
+    background-size: 100% 100%;
+    /* 512x1 image, gradient for IE9. Transparent at 0% -> white at 50% -> white at 100%.*/
+    
+    background-color: #EFEFEF;
+  
+    //background: -webkit-gradient(linear, left top, right top, from(rgba(239, 239, 239, 0)), to(rgb(239, 239, 239)), color-stop(50%, rgb(239, 239, 239)));
+    //background: -moz-linear-gradient(to right, rgba(239, 239, 239, 0), rgb(239, 239, 239) 50%, rgb(239, 239, 239));           
+    //background: -o-linear-gradient(to right, rgba(239, 239, 239, 0), rgb(239, 239, 239) 50%, rgb(239, 239, 239));
+    //background: -ms-linear-gradient(to right, rgba(239, 239, 239, 0), rgb(239, 239, 239) 50%, rgb(239, 239, 239));
+    //background: linear-gradient(to right, rgba(239, 239, 239, 0), rgb(239, 239, 239) 50%, rgb(239, 239, 239));
+
+}
+
+
 
 
 /* ===========================
@@ -2133,13 +2187,23 @@ body.toolbar, body.toolbar-drawer {
 
 /* IE8  */
 .lt-ie9 {
-   #wrapper {
-       padding:0;
-       width: 1160px;
-       max-width: 1200px;
-   }
 
-   .container{
+
+    // fixed ie8 ellipsis
+
+    .ellipsis:after {
+        width: 2em; 
+        margin-left: -2em;
+    }
+
+
+    #wrapper {
+        padding:0;
+        width: 1160px;
+        max-width: 1200px;
+    }
+
+    .container{
         //overflow:hidden;
     }
 
@@ -2152,30 +2216,26 @@ body.toolbar, body.toolbar-drawer {
     }
 
 
-    .row-fluid {
-        
+    // Fixed grid
+    #grid > .core(@gridColumnWidth1200, @gridGutterWidth1200);
+
+    // Fluid grid
+    #grid > .fluid(@fluidGridColumnWidth1200, @fluidGridGutterWidth1200);
+
+    // Input grid
+    #grid > .input(@gridColumnWidth1200, @gridGutterWidth1200);
+
+    // Thumbnails
+    .thumbnails {
+        margin-left: -@gridGutterWidth1200;
+    }
+    .thumbnails > li {
+        margin-left: @gridGutterWidth1200;
+    }
+    .row-fluid .thumbnails {
+        margin-left: 0;
     }
 
-
-    // Fixed grid
-  #grid > .core(@gridColumnWidth1200, @gridGutterWidth1200);
-
-  // Fluid grid
-  #grid > .fluid(@fluidGridColumnWidth1200, @fluidGridGutterWidth1200);
-
-  // Input grid
-  #grid > .input(@gridColumnWidth1200, @gridGutterWidth1200);
-
-  // Thumbnails
-  .thumbnails {
-    margin-left: -@gridGutterWidth1200;
-  }
-  .thumbnails > li {
-    margin-left: @gridGutterWidth1200;
-  }
-  .row-fluid .thumbnails {
-    margin-left: 0;
-  }
 
 } 
 

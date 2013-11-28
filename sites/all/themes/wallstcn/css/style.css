@@ -7934,11 +7934,52 @@ body.toolbar, body.toolbar-drawer {
 .mark-new {
   position: absolute;
 }
+.ellipsis {
+  overflow: hidden;
+}
+.ellipsis:before {
+  content: "";
+  float: left;
+  width: 5px;
+  height: 100%;
+}
+.ellipsis > *:first-child {
+  float: right;
+  width: 100%;
+  margin-left: -5px;
+}
+.ellipsis:after {
+  content: "\02026\02026";
+  font-weight: bold;
+  color: #474747;
+  text-indent: 0.7em;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  float: right;
+  position: relative;
+  top: -20px;
+  left: 100%;
+  width: 2em;
+  margin-left: -2em;
+  padding-right: 5px;
+  text-align: right;
+  background-size: 100% 100%;
+  /* 512x1 image, gradient for IE9. Transparent at 0% -> white at 50% -> white at 100%.*/
+
+  background-color: #EFEFEF;
+}
 /* ===========================
  * IE fix
  * ===========================
  */
 /* IE8  */
+.lt-ie9 .ellipsis:after {
+  width: 2em;
+  margin-left: -2em;
+}
 .lt-ie9 #wrapper {
   padding: 0;
   width: 1160px;
