@@ -97,7 +97,7 @@ drupal_set_title($page_title, PASS_THROUGH);?>
 
 <div class="article-copyright">
     <p> <b>*欢迎添加见闻微信公众号：wallstreetcn，每天精选最重要的资讯及时送达你手机。</b></p>
-    <p> <b>*欢迎加入见闻读者贵金属QQ群（152103904）交流互动，申请时请注明“公司（行业）-城市-姓名”，谢谢配合。</b></p>
+    <p> <b>*欢迎加入华尔街见闻读者QQ群（196387008）交流互动，申请时请注明“公司（行业）-城市-姓名”，谢谢配合。</b></p>
     <p>本文内容仅供读者参考，并非投资建议。 转载请注明来源并加上本站链接，华尔街见闻将保留所有法律权益。</p>
     <p>版权采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh">知识共享署名-非商业性使用 3.0 未本地化版本许可协议</a> 进行许可 <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a></p>
     <p></p>
@@ -153,7 +153,7 @@ drupal_set_title($page_title, PASS_THROUGH);?>
 <?if(variable_get('site_ad')):?>
 <div class="random-ad" style="margin-bottom:0;">
     <div class="carousel-inner">
-        <div class="active item"  data-probability="50">
+        <div class="active item"  data-probability="25">
             <div style="height:90px;margin:0 auto;">
                 <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="90" width="728"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/live_top_ad_1_MT4.swf" /><embed height="90" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/live_top_ad_1_MT4.swf" type="application/x-shockwave-flash" width="728" wmode="transparent"></embed></object>
             </div>
@@ -166,6 +166,11 @@ drupal_set_title($page_title, PASS_THROUGH);?>
         <div class="item"   data-probability="25">
             <div style="margin:0 auto;">
                 <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="90" width="728"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_top_ad_2_GB513.swf" /><embed height="90" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_top_ad_2_GB513.swf" type="application/x-shockwave-flash" width="728"></embed></object>
+            </div>
+        </div>
+        <div class="item" data-probability="25">
+            <div style="margin:0 auto;">
+                <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ad_wscn_h_ironfx_3&url=https://www.ironfx.com/zh/wb-register?utm_source=SZ_728_90&utm_medium=hp_WB&utm_campaign=wallstreetcn"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ad_wscn_e_ironfx_3.jpeg" alt=""></a>
             </div>
         </div>
     </div>
