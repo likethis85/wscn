@@ -605,10 +605,15 @@
             if ($this.text() == "黄金") {
                 
                 var offset = $this.offset();
-                $(".mark-new").css({
-                    left : offset.left + $this.width()  + "px",
-                    top  : offset.top  - 10 + "px"
-                });
+                var img = new Image();    
+                img.alt = "new";
+                img.className = "mark-new";    
+                img.style.left = offset.left + $this.width()  + "px";
+                img.style.top  = offset.top  - 10 + "px";
+                img.src = "/sites/all/themes/wallstcn/css/img/new.gif";
+
+                document.body.appendChild(img);
+                
             }
         });
 
