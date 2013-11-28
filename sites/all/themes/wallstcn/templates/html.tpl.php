@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="alexaVerifyID" content="86076a42-3d59-4329-b13f-0b55cd1606f2" />
     <title><?=$head_title; ?></title>
+    <meta name="baidu-site-verification" content="U0xyHxD1O6" />
     <?if($is_front):?>
     <meta name="description" content="华尔街见闻是一个专业的的全球金融资讯中文平台提供商，为全球金融市场投资者和从业者提供经济和金融市场信息">
     <?else:?>
@@ -57,7 +58,5 @@ ac_width = 280;ac_height = 210;
 <script type="text/javascript" src="http://static.acs86.com/g.js"></script>
 <?endif?>
 
-
-<img class="mark-new" src="/sites/all/themes/wallstcn/css/img/new.gif" alt="new"/>
 </body>
 </html>
