@@ -18,12 +18,12 @@
                         <div class="carousel-inner">
                             <div class="active item"  data-probability="75">
                                 <div style="height:90px;margin:0 auto;">
-                                    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="90" width="728"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/live_top_ad_1_MT4.swf" /><embed height="90" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/live_top_ad_1_MT4.swf" type="application/x-shockwave-flash" width="728" wmode="transparent"></embed></object>
+                                    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="90" width="728"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_live_mt4_1.swf" /><embed height="90" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_live_mt4_1.swf" type="application/x-shockwave-flash" width="728" wmode="transparent"></embed></object>
                                 </div>
                             </div>
                             <div class="item">
                                 <div style="height:90px;margin:0 auto;">
-                                    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="90" width="728"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/live_top_ad_2_svsfx.swf" /><embed height="90" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/live_top_ad_2_svsfx.swf" type="application/x-shockwave-flash" width="728" wmode="transparent"></embed></object>
+                                    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="90" width="728"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_live_svsfx_1.swf" /><embed height="90" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_live_svsfx_1.swf" type="application/x-shockwave-flash" width="728" wmode="transparent"></embed></object>
                                 </div>
                             </div>
                         </div>
@@ -77,12 +77,12 @@
                     <?if(variable_get('site_ad')):?>
 
                     <div class="ad-box ad-side">
-                        <a target="_blank" href="http://www.sojex.cn"><img src="/sites/all/themes/wallstcn/ads/KD_BANNER.png" alt=""></a>
+                        <a target="_blank" href="http://www.sojex.cn"><img src="/sites/all/themes/wallstcn/ads/__ads_wscn_live_kb_1.png" alt=""></a>
                     </div>
 
 
                     <div class="ad-box ad-side">
-                        <a href="http://wallstreetcn.com/redirect.htm?type=index_left_middle1_ad_hit_1&amp;url=http://www.119gold.com/landing/wallstreet/1/?referer=7005" target="_blank"><img alt="" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_middle1_ad_1_offpic2.gif"></a>
+                        <a href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_live_hit_offpic2_1&amp;url=http://www.119gold.com/landing/wallstreet/1/?referer=7005" target="_blank"><img alt="" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_live_offpic2_1.gif"></a>
 
                         <?if(0):?>
 
@@ -102,7 +102,7 @@
                             </div>
                         </div>
 
-                        <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=live_left_top_ad_hit_1&url=http://www.119gold.com/activity/moni/?referer=7002"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/live_left_top_ad_1_get_offpic2.jpeg" alt=""></a>
+                        <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_live_hit_xinwaihui_1&url=http://www.119gold.com/activity/moni/?referer=7002"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_live_xinwaihui_1.jpeg" alt=""></a>
                         <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                         <ins class="adsbygoogle"
                             style="display:inline-block;width:336px;height:280px"
@@ -161,13 +161,13 @@
 
                                 <div class="active item" data-probability="80">
                                     <div style="height:280px;margin:0 auto;">
-                                        <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_top_ad_2_svsfx.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_top_ad_2_svsfx.swf" type="application/x-shockwave-flash" width="336" wmode="transparent"></embed></object>
+                                        <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_live_svsfx_2.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_live_svsfx_2.swf" type="application/x-shockwave-flash" width="336" wmode="transparent"></embed></object>
                                     </div>
                                 </div>
 
                                 <div class="item" data-probability="20">
                                     <div style="height:280px;margin:0 auto;">
-                                        <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/live_left_top_ad_2_get_hantec.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/live_left_top_ad_2_get_hantec.swf" type="application/x-shockwave-flash" width="336" wmode="transparent"></embed></object>
+                                        <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_live_hantec_1.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_live_hantec_1.swf" type="application/x-shockwave-flash" width="336" wmode="transparent"></embed></object>
                                     </div>
                                 </div>
 
