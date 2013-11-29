@@ -16,7 +16,7 @@
     <?endif?>
     <meta name="description" content="<?= rtrim(addslashes(html_entity_decode(strip_tags($node->body['und']['0']['summary']))), "\n\r"); ?>">
     <?else:?>
-    <title>华尔街见闻_中国最专业金融资讯平台_外汇期货_大宗商品_贵金属_黄金_股市_行情</title>
+    <title>华尔街见闻_中国最专业金融资讯平台_外汇_期货_大宗商品_贵金属_黄金_股市_行情</title>
     <meta name="keywords" content="直播,外汇,期货,金融,黄金,白银,债券,股市,投资,财经日历,银行,新闻,美元,欧元,日元,人民币," />
     <meta name="description" content="华尔街新闻——中国最专业的金融资讯平台；直播外汇、期货、黄金、债券、证券等金融领域的实时新闻。华人投资者可以在这里获得最快速、最精准、最深入的全球财经资讯和市场行情。" />
     <?endif?>
