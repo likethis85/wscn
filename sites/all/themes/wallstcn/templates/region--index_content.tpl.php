@@ -10,13 +10,13 @@
 
         <div class="span4">
             <div class="item">
-                <a target="_blank" href="redirect.htm?type=index_middle_left_ad_hit_1&url=http://nordfx-chinese.com/?id=730026"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_middle_left_ad_1_nordfx.gif" alt=""></a>
+                <a target="_blank" href="redirect.htm?type=__ads_wscn_index_hit_nordfx_1&url=http://nordfx-chinese.com/?id=730026"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_nordfx_1.gif" alt=""></a>
             </div>
 
         </div>
         <div class="span4">
             <div class="item">
-                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" width="234" height="60"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_middle_center_ad_2_svsfx.swf" /><embed pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_middle_center_ad_2_svsfx.swf" type="application/x-shockwave-flash" width="234" height="60"></embed></object>
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" width="234" height="60"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_svsfx_2.swf" /><embed pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_svsfx_2.swf" type="application/x-shockwave-flash" width="234" height="60"></embed></object>
             </div>
         </div>
 
@@ -24,10 +24,10 @@
             <div class="random-ad">
                 <div class="carousel-inner">
                     <div class="active item" data-probability="50">
-                        <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" width="234" height="60"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_middle_center_ad_3_hantec.swf" /><embed pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_middle_center_ad_3_hantec.swf" type="application/x-shockwave-flash" width="234" height="60"></embed></object>
+                        <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" width="234" height="60"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_hantec_1.swf" /><embed pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_hantec_1.swf" type="application/x-shockwave-flash" width="234" height="60"></embed></object>
                     </div>
                     <div class="item">
-                        <a target="_blank" href="redirect.htm?type=index_middle_center_ad_hit_3&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_middle_center_ad_3_forexct.jpg" alt=""></a>
+                        <a target="_blank" href="redirect.htm?type=__ads_wscn_index_hit_forexct_1&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_forexct_1.jpg" alt=""></a>
                     </div>
                 </div>
             </div>
