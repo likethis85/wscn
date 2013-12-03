@@ -861,23 +861,37 @@
         }
         live_redirect();
 
-        // 主页右边实时新闻板块切换
-        $("#livenews_swith").on('click', function(){
-            if($("#livenews_block").css('display') == "block") {
-                return;
-            }
-            $("#livenews_block").show();
-            $("#social_block").hide();
-        });
 
-        $("#social_swith").on('click', function(){
-            if($("#social_block").css('display') == "block") {
-                alert($("#social_block").css('display'));
-                return;
-            }
-            $("#livenews_block").hide();
-            $("#social_block").show();
-        });
+        // 主页右边实时新闻板块切换
+
+        (function(){
+
+            var $livenews = $("#livenews_block");
+            var $social   = $("#social_block");
+
+            $("#livenews_swith").on('click', function(){
+                if($livenews.css('display') == "block") {
+                    return;
+                }
+                $("#social_swith").removeClass("social-nav-active");
+                $(this).addClass("social-nav-active");
+                $livenews.show();
+                $social.hide();
+            });
+
+            $("#social_swith").on('click', function(){
+                if($social.css('display') == "block") {
+                    return;
+                }
+                $("#livenews_swith").removeClass("social-nav-active");
+                $(this).addClass("social-nav-active");
+                $livenews.hide();
+                $social.show();
+            });
+            
+        })();
+
+        
 
 
     });
