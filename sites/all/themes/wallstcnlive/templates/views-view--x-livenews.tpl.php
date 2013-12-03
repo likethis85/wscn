@@ -20,7 +20,7 @@ $lastdate = '';
             <div class="media-body {%=o.colorClass%} {%=o.format == '加粗' ? 'media-format-bold' : ''%}">
                 <time datetime="">{%=o.time%}</time>
                 <span class="icon">
-                    <i class="icon-file-alt"></i> 
+                    <i class="icon-file-alt"></i>
                 </span>
 
                 <h2 class="media-heading">{%#o.body%}</h2>
@@ -57,21 +57,21 @@ $lastdate = '';
             <span class="icon">
                 <?$icon = isset($item->field_field_icon[0]) ? $item->field_field_icon[0]['raw']['value'] : '';?>
                 <?if($icon == 'chart'):?>
-                <i class="icon-external-link"></i>
+                <img width="13" height="15" src="/sites/all/themes/wallstcn/css/img/icon_chart.png"/>
                 <?elseif($icon == 'calendar'):?>
-                <i class="icon-calendar"></i>
+                <img width="13" height="15" src="/sites/all/themes/wallstcn/css/img/icon_common.png"/>
                 <?elseif($icon == 'download'):?>
-                <i class="icon-download-alt"></i>
+                <img width="13" height="15" src="/sites/all/themes/wallstcn/css/img/icon_common.png"/>
                 <?elseif($icon == 'warning'):?>
-                <i class="icon-warning-sign"></i>
+                <img width="13" height="15" src="/sites/all/themes/wallstcn/css/img/icon_warning.png"/>
                 <?elseif($icon == 'alert'):?>
-                <i class="icon-bullhorn"></i>
+                <img width="13" height="15" src="/sites/all/themes/wallstcn/css/img/icon_alert.png"/>
                 <?elseif($icon == 'chart_pie'):?>
-                <i class="icon-signal"></i>
+                <img width="13" height="15" src="/sites/all/themes/wallstcn/css/img/icon_chart_pie.png"/>
                 <?elseif($icon == 'rumor'):?>
-                <i class="icon-twitter"></i>
+                <img width="13" height="15" src="/sites/all/themes/wallstcn/css/img/icon_rumor.png"/>
                 <?else:?>
-                <i class="icon-file-alt"></i> 
+                <img width="13" height="15" src="/sites/all/themes/wallstcn/css/img/icon_common.png"/>
                 <?endif?>
             </span>
 
