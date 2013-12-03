@@ -278,7 +278,7 @@
 
                         realtimeNews.push(
                             //'<li><span class="time">' + time + '</span> <a href="' + domain + '/node/' + entries[i].nid + '" target="_blank">' + entries[i].node_title + '</a></li>'
-                            '<li><img width="20" height="22" src="/sites/all/themes/wallstcn/css/img/icon_' + icon + '.png"/> &nbsp;&nbsp;&nbsp; <a href="live.wallstreetcn.com/" target="_blank"><span style="' + formart + font_color + '">' + entries[i].node_title + '</span></a></li>'
+                            '<li><img width="18" height="20" src="/sites/all/themes/wallstcn/css/img/icon_' + icon + '.png"/>&emsp;<a href="live.wallstreetcn.com/" target="_blank"><span style="' + formart + font_color + '">' + entries[i].node_title + '</span></a></li>'
                         );
                     }
                     $("#realtime-news ul").html(realtimeNews.join(""));

@@ -6805,13 +6805,13 @@ a:hover {
   border: none;
   height: 150px;
   overflow: hidden;
-  background: #F9F9F9;
+  background-color: inherit;
   vertical-align: top;
 }
 .social-icons #realtime-news li {
   color: #6D6D6D;
-  background: #F9F9F9;
-  border-bottom: 1px dotted #e6e6e6;
+  background-color: inherit;
+  border-bottom: 1px dotted #e3e3e3;
 }
 .social-icons #realtime-news li span {
   color: #6D6D6D;
@@ -6819,6 +6819,7 @@ a:hover {
 }
 .social-icons #realtime-news li a {
   color: #6D6D6D;
+  font-size: 14px;
   font-weight: normal;
 }
 /* ===========================
