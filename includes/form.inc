@@ -327,6 +327,12 @@ function drupal_build_form($form_id, &$form_state) {
                       $form_state['input']['body']['und']['0']['value']
                    );
 
+  // “实时新闻”自动加链接
+  if (stripos($form_state['input']['body']['und']['0']['value'], '实时新闻</a>') === false) {
+    $form_state['input']['body']['und']['0']['value'] = str_replace('实时新闻', '<a href="http://live.wallstreetcn.com/" target="_blank">实时新闻</a>',
+                      $form_state['input']['body']['und']['0']['value']);
+  }
+
   // If the incoming input contains a form_build_id, we'll check the cache for a
   // copy of the form in question. If it's there, we don't have to rebuild the
   // form to proceed. In addition, if there is stored form_state data from a
