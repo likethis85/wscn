@@ -10,15 +10,37 @@
     <meta name="baidu-site-verification" content="U0xyHxD1O6" />
 
     <?if ($node = menu_get_object()):?>
-    <title><?=$head_title; ?></title>
-    <?if (isset($node->taxonomy_vocabulary_3['und'])):?>
-    <meta name="keywords" content="<?foreach($node->taxonomy_vocabulary_3['und'] as $tag):?><?=$tag['taxonomy_term']->name?>,<?endforeach?>" />
-    <?endif?>
-    <meta name="description" content="<?= rtrim(addslashes(html_entity_decode(strip_tags($node->body['und']['0']['summary']))), "\n\r"); ?>">
+        <title><?=$head_title; ?></title>
+        <?if (isset($node->taxonomy_vocabulary_3['und'])):?>
+        <meta name="keywords" content="<?foreach($node->taxonomy_vocabulary_3['und'] as $tag):?><?=$tag['taxonomy_term']->name?>,<?endforeach?>" />
+        <?endif?>
+        <meta name="description" content="<?= rtrim(addslashes(html_entity_decode(strip_tags($node->body['und']['0']['summary']))), "\n\r"); ?>">
     <?else:?>
-    <title>华尔街见闻_中国最专业金融资讯平台_外汇_期货_大宗商品_贵金属_黄金_股市_行情</title>
-    <meta name="keywords" content="直播,外汇,期货,金融,黄金,白银,债券,股市,投资,财经日历,银行,新闻,美元,欧元,日元,人民币," />
-    <meta name="description" content="华尔街新闻——中国最专业的金融资讯平台；直播外汇、期货、黄金、债券、证券等金融领域的实时新闻。华人投资者可以在这里获得最快速、最精准、最深入的全球财经资讯和市场行情。" />
+        <title>华尔街见闻_中国最专业金融资讯平台_外汇_期货_大宗商品_贵金属_黄金_股市_行情</title>
+        <?if($item = menu_get_item()):?>
+            <?if($item['path'] == 'breakfast'):?>
+            <meta name="keywords" content="见闻早餐页面：见闻早餐,华尔街见闻早餐,华尔街早餐,早餐见闻,华尔街早餐见闻" />
+            <?elseif($item['path'] == 'europe'):?>
+            <meta name="keywords" content="欧洲外汇,欧洲期货,欧洲金融,欧洲黄金,欧洲白银,欧洲债券,欧洲股市,欧洲投资,欧洲财经日历,欧洲银行,欧洲新闻,欧元,欧洲直播,英镑,瑞郎,欧元区,欧洲央行,ECB,欧盟,欧盟委员会,德国,英国" />
+            <?elseif($item['path'] == 'america'):?>
+            <meta name="keywords" content="美国外汇,美国期货,美国金融,美国黄金,美国白银,美国债券,美国股市,美国投资,美国财经日历,美国银行,美国新闻,美元,美国直播,美联储,美国央行,美国政府" />
+            <?elseif($item['path'] == 'china'):?>
+            <meta name="keywords" content="中国直播,比特币中国,中国外汇,中国期货,中国金融,中国黄金,中国白银,中国债券,中国股市,中国投资,中国财经日历,中国银行,中国人民银行,中国央行,中国新闻,人民币" />
+            <?elseif($item['path'] == 'economy'):?>
+            <meta name="keywords" content="经济直播,欧洲经济,美国经济,中国经济,经济新闻,经济行情,经济走势,经济日历,经济报道,经济市场" />
+            <?elseif($item['path'] == 'centralbank'):?>
+            <meta name="keywords" content="美联储,欧洲央行,日本央行,英国央行,中国央行,中国人民银行,中央银行,美国联邦储备委员会,英格兰银行,瑞士中央银行,德意志联邦银行,德国央行,银监会,央行,央行新闻,澳洲联储,澳大利亚联储,澳联储" />
+            <?elseif($item['path'] == 'market'):?>
+            <meta name="keywords" content="市场,欧洲市场,欧元市场,中国市场,美国市场,美元市场,外汇市场,黄金市场,期货市场,白银市场,债券市场,投资市场,市场新闻" />
+            <?elseif($item['path'] == 'company'):?>
+            <meta name="keywords" content="公司,欧洲公司,中国公司,美国公司,外汇公司,黄金公司,期货公司,白银公司,债券公司,投资公司,公司新闻" />
+            <?elseif($item['path'] == 'gold'):?>
+            <meta name="keywords" content="黄金,金价,黄金价格,今日金价,今日黄金价格,黄金T+D,黄金价格走势,黄金投资,中国黄金,炒黄金,黄金现价,黄金期货,纸黄金,贵金属" />
+            <?else:?>
+            <meta name="keywords" content="直播,外汇,期货,金融,黄金,白银,债券,股市,投资,财经日历,银行,新闻,美元,欧元,日元,人民币," />
+            <?endif?>
+        <?endif?>
+        <meta name="description" content="华尔街新闻——中国最专业的金融资讯平台；直播外汇、期货、黄金、债券、证券等金融领域的实时新闻。华人投资者可以在这里获得最快速、最精准、最深入的全球财经资讯和市场行情。" />
     <?endif?>
 
     <?if (0):?>
