@@ -245,9 +245,40 @@
                     for(var i in entries){
                         var date = new Date(parseInt(entries[i].node_created) * 1000);
                         var time = ('0' + date.getHours()).slice(-2)  + ':' + ('0' + date.getMinutes()).slice(-2);
+                        var icon = '';
+                        if (entries[i].icon == '折线') {
+                            icon = 'chart';
+                        } else if (entries[i].icon == '日程') {
+                            icon = 'calendar';
+                        } else if (entries[i].icon == '警告') {
+                            icon = 'warning';
+                        } else if (entries[i].icon == '提醒') {
+                            icon = 'alert';
+                        } else if (entries[i].icon == '柱状') {
+                            icon = 'chart_pie';
+                        } else if (entries[i].icon == '传言') {
+                            icon = 'rumor';
+                        } else {
+                            icon = 'common';
+                        }
+
+                        var formart = '';
+                        if (entries[i].formart == '加粗') {
+                            formart = 'font-weight:bold;';
+                        }
+
+                        var font_color = '';
+                        if (entries[i].font_color == '红色') {
+                            font_color = 'color:#D24747;';
+                        } else if (entries[i].icon == '蓝色') {
+                            font_color = 'color:#D24747;';
+                        } else if (entries[i].icon == '黑色') {
+                            font_color = 'color:#00000;';
+                        }
+
                         realtimeNews.push(
                             //'<li><span class="time">' + time + '</span> <a href="' + domain + '/node/' + entries[i].nid + '" target="_blank">' + entries[i].node_title + '</a></li>'
-                            '<li><span class="time">' + time + '</span> <a href="live.wallstreetcn.com/" target="_blank">' + entries[i].node_title + '</a></li>'
+                            '<li><img width="20" height="22" src="/sites/all/themes/wallstcn/css/img/icon_' + icon + '.png"/> &nbsp;&nbsp;&nbsp; <a href="live.wallstreetcn.com/" target="_blank"><span style="' + formart + font_color + '">' + entries[i].node_title + '</span></a></li>'
                         );
                     }
                     $("#realtime-news ul").html(realtimeNews.join(""));
@@ -266,7 +297,7 @@
 
 
 
-        var timerHandler = setInterval(scrollingNews, 5000);
+        //var timerHandler = setInterval(scrollingNews, 5000);
         initRealtimeNews();
         $(document).on('mouseover', '#realtime-news', function(){
             //clearInterval(timerHandler);
@@ -888,10 +919,10 @@
                 $livenews.hide();
                 $social.show();
             });
-            
+
         })();
 
-        
+
 
 
     });
