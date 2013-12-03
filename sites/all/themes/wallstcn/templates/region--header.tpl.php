@@ -35,6 +35,7 @@
     <div class="container">
         <div class="row-fluid">
             <div class="span12">
+                <?if(0):?>
                 <div id="realtime-news">
                     <p class="control-buttons pull-left">
                     <a id="livenews-navbar-prev" href="http://live.<?=variable_get('site_domain')?>" class="btn prev"><span class="icon-angle-up"></span></a>
@@ -47,6 +48,7 @@
                     </p>
                     <a href="http://live.<?=variable_get('site_domain')?>" class="more" target="_blank">即时刷新»</a>
                 </div>
+                <?endif?>
             </div><!--span12 end-->
         </div><!--rows end-->
     </div><!--container end-->
