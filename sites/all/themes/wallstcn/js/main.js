@@ -247,7 +247,7 @@
                         var time = ('0' + date.getHours()).slice(-2)  + ':' + ('0' + date.getMinutes()).slice(-2);
                         realtimeNews.push(
                             //'<li><span class="time">' + time + '</span> <a href="' + domain + '/node/' + entries[i].nid + '" target="_blank">' + entries[i].node_title + '</a></li>'
-                            '<li><span class="time">' + time + '</span> <a href="' + domain + '/" target="_blank">' + entries[i].node_title + '</a></li>'
+                            '<li><span class="time">' + time + '</span> <a href="live.wallstreetcn.com/" target="_blank">' + entries[i].node_title + '</a></li>'
                         );
                     }
                     $("#realtime-news ul").html(realtimeNews.join(""));
@@ -269,10 +269,10 @@
         var timerHandler = setInterval(scrollingNews, 5000);
         initRealtimeNews();
         $(document).on('mouseover', '#realtime-news', function(){
-            clearInterval(timerHandler);
+            //clearInterval(timerHandler);
         });
         $(document).on('mouseout', '#realtime-news', function(){
-            timerHandler = setInterval(scrollingNews, 5000);
+            //timerHandler = setInterval(scrollingNews, 5000);
         });
 
 
@@ -578,7 +578,7 @@
 
         //添加 自动刷新 和 声音提醒 功能的 禁用 start
 
-            
+
         var $ebFresh = $("#enable-fresh");
 
         var $ebSound = $("#enable-sound");
@@ -603,21 +603,21 @@
         $(".nav .leaf a").each(function(){
             var $this = $(this);
             if ($this.text() == "黄金") {
-                
+
                 var offset = $this.offset();
-                var img = new Image();    
+                var img = new Image();
                 img.alt = "new";
-                img.className = "mark-new";    
+                img.className = "mark-new";
                 img.style.left = offset.left + $this.width()  + "px";
                 img.style.top  = offset.top  - 10 + "px";
                 img.src = "/sites/all/themes/wallstcn/css/img/new.gif";
 
                 document.body.appendChild(img);
-                
+
             }
         });
 
-        
+
 
         //添加 黄金 new 标识 end
 
@@ -860,6 +860,26 @@
             //alert(window.location.href);
         }
         live_redirect();
+
+        // 主页右边实时新闻板块切换
+        $("#livenews_swith").on('click', function(){
+            if($("#livenews_block").css('display') == "block") {
+                return;
+            }
+            $("#livenews_block").show();
+            $("#social_block").hide();
+        });
+
+        $("#social_swith").on('click', function(){
+            if($("#social_block").css('display') == "block") {
+                alert($("#social_block").css('display'));
+                return;
+            }
+            $("#livenews_block").hide();
+            $("#social_block").show();
+        });
+
+
     });
 })(jQuery);
 

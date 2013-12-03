@@ -5851,7 +5851,7 @@ a.badge:focus {
   }
 }
 /*
-@import "bootstrap/less/metro/variables.less"; 
+@import "bootstrap/less/metro/variables.less";
 @import "bootstrap/less/metro/type.less";
 @import "bootstrap/less/metro/tiles.less";
 @import "bootstrap/less/metro/navbar.less";
@@ -5970,7 +5970,7 @@ a:hover {
 .navbar-search .input-append {
   margin-bottom: 0;
 }
-#realtime-news {
+#realtime-news-bak {
   margin-bottom: 30px;
   height: 38px;
   padding-left: 75px;
@@ -5985,6 +5985,23 @@ a:hover {
   background: #d24747;
   font-weight: bold;
 }
+
+#realtime-news {
+  margin-bottom: 30px;
+  height: 120px;
+  #padding-left: 75px;
+  #border-bottom: 3px solid #E9E9E9;
+  clear: both;
+  overflow: hidden;
+  #background: #FFF;
+  position: relative;
+  vertical-align: top;
+  #padding-left: 130px;
+  #padding-right: 80px;
+  #background: #d24747;
+  font-weight: bold;
+}
+
 #realtime-news .news {
   position: absolute;
   left: 5px;
@@ -5993,7 +6010,7 @@ a:hover {
   margin-left: 0;
 }
 #realtime-news li {
-  color: #888;
+  color: #000;
   line-height: 38px;
   list-style-type: none;
   height: 38px;
@@ -6005,7 +6022,7 @@ a:hover {
 #realtime-news a,
 #realtime-news p,
 #realtime-news .time {
-  color: #888;
+  color: #333;
   font-size: 12px;
   line-height: 38px;
 }
@@ -6040,12 +6057,12 @@ a:hover {
   display: inline;
 }
 #realtime-news li {
-  color: #FFF;
+  color: #333;
 }
 #realtime-news a,
 #realtime-news p,
 #realtime-news .time {
-  color: #FFF;
+  color: #333;
   font-weight: bold;
 }
 #realtime-news a:hover {
@@ -6055,7 +6072,7 @@ a:hover {
   color: #333;
 }
 #realtime-news .more {
-  color: #FFF;
+  color: #333;
 }
 /* ===========================
  * User navbar
@@ -6288,7 +6305,7 @@ a:hover {
         list-style-type:none;
         white-space: nowrap;
         width: 100%;
-        overflow: hidden;           
+        overflow: hidden;
         -o-text-overflow: ellipsis;
         text-overflow:    ellipsis;
     }
