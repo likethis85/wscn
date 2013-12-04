@@ -1114,7 +1114,7 @@ a:hover {
         width: 100%;
         height: 30px;
         line-height: 30px;
-        cursor: pointer;
+        
 
         .social-nav {
             display:block;
@@ -1128,6 +1128,9 @@ a:hover {
             border-bottom: 1px dotted #B2B2B2;
             background-color : #E9E9E9;
             color : #989898;
+
+            text-decoration: none;
+            cursor: pointer;
 
             .social-nav-img-active {
                 display : none;
@@ -1151,6 +1154,14 @@ a:hover {
                 color : #5F5F5F;
                 border-bottom: 1px dotted transparent;
 
+                &:hover{
+                    color: #000;
+                }
+
+                & a:hover {
+                    color: #000;
+                }
+
                 .social-nav-img-normal {
                     display: none;
                 }
@@ -1166,10 +1177,15 @@ a:hover {
         padding:20px;
     }
 
+    #livenews_block {
+        height: 150px;
+        position: relative;
+    }
 
     #realtime-news {
         margin: 0;
         padding: 0;
+        margin-top: -10px;
         //padding-bottom: 20px;
         border: none;
         height: 150px;
@@ -1179,6 +1195,8 @@ a:hover {
         li {
             color: #6D6D6D;
             background-color: inherit;
+            vertical-align: middle;
+
             span {
                 color: #6D6D6D;
                 font-weight: normal; 
@@ -1188,9 +1206,31 @@ a:hover {
                 color: #6D6D6D;
                 font-size: 14px;
                 font-weight: normal; 
+                
+                &:hover span{
+                    color: #000;
+                }
             }
 
+
             border-bottom: 1px dotted #e3e3e3;
+        }
+    }
+
+    #realtime-news-more {
+        
+        color:#D24747;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 13px;
+        line-height: 30px;
+        
+        position: absolute;
+        right: 0;
+        bottom: -15px;
+
+        &:hover {
+            color: #EB2429;
         }
     }
 

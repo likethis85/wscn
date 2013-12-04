@@ -6759,7 +6759,6 @@ a:hover {
   width: 100%;
   height: 30px;
   line-height: 30px;
-  cursor: pointer;
 }
 .social-icons .social-navbar .social-nav {
   display: block;
@@ -6772,6 +6771,8 @@ a:hover {
   border-bottom: 1px dotted #B2B2B2;
   background-color: #E9E9E9;
   color: #989898;
+  text-decoration: none;
+  cursor: pointer;
 }
 .social-icons .social-navbar .social-nav .social-nav-img-active {
   display: none;
@@ -6790,6 +6791,12 @@ a:hover {
   color: #5F5F5F;
   border-bottom: 1px dotted transparent;
 }
+.social-icons .social-navbar .social-nav.social-nav-active:hover {
+  color: #000;
+}
+.social-icons .social-navbar .social-nav.social-nav-active a:hover {
+  color: #000;
+}
 .social-icons .social-navbar .social-nav.social-nav-active .social-nav-img-normal {
   display: none;
 }
@@ -6799,9 +6806,14 @@ a:hover {
 .social-icons .social-content {
   padding: 20px;
 }
+.social-icons #livenews_block {
+  height: 150px;
+  position: relative;
+}
 .social-icons #realtime-news {
   margin: 0;
   padding: 0;
+  margin-top: -10px;
   border: none;
   height: 150px;
   overflow: hidden;
@@ -6811,6 +6823,7 @@ a:hover {
 .social-icons #realtime-news li {
   color: #6D6D6D;
   background-color: inherit;
+  vertical-align: middle;
   border-bottom: 1px dotted #e3e3e3;
 }
 .social-icons #realtime-news li span {
@@ -6821,6 +6834,22 @@ a:hover {
   color: #6D6D6D;
   font-size: 14px;
   font-weight: normal;
+}
+.social-icons #realtime-news li a:hover span {
+  color: #000;
+}
+.social-icons #realtime-news-more {
+  color: #D24747;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 30px;
+  position: absolute;
+  right: 0;
+  bottom: -15px;
+}
+.social-icons #realtime-news-more:hover {
+  color: #EB2429;
 }
 /* ===========================
  * Comments list

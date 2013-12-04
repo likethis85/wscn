@@ -1,10 +1,10 @@
 <div class="social-icons well well-small media-list">
     
     <div class="social-navbar">
-        <span class="social-nav social-nav-active" id="livenews_swith">
+        <span class="social-nav social-nav-active" id="livenews_swith" >
             <img class="social-nav-img-normal" src="/sites/all/themes/wallstcn/css/img/livenews.png" />
             <img class="social-nav-img-active" src="/sites/all/themes/wallstcn/css/img/livenews-active.png" />
-            实时新闻
+            <a href="http://live.wallstreetcn.com/" target="_blank">实时新闻</a>
         </span>  
         <span class="social-nav" id="social_swith">
             <img class="social-nav-img-normal" src="/sites/all/themes/wallstcn/css/img/social.png" />
@@ -21,9 +21,9 @@
             <div id="realtime-news" style="">
                 <ul>
                     <li>正在载入...</li>
-                </ul>
+                </ul>               
             </div>
-
+            <a id="realtime-news-more" href="http://live.wallstreetcn.com/" target="_blank">more &gt;&gt;</a>
         </div>
      
 
