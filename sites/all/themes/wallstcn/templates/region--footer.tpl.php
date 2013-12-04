@@ -84,7 +84,8 @@
 <a href="http://hao.360.cn/" target="_blank" >360安全网址导航</a> |
 <a href="http://hao.qq.com/" target="_blank" >QQ导航</a> |
 <a href="http://www.2345.com/" target="_blank" >2345.com网址导航</a> |
-<a href="http://www.114.com.cn/" target="_blank" >114网址导航</a>
+<a href="http://www.114.com.cn/" target="_blank" >114网址导航</a> |
+<a href="http://www.chouti.com/" target="_blank" >抽屉新热榜</a>
 <p>
 <?endif?>
 
