@@ -6837,6 +6837,7 @@ a:hover {
 }
 .social-icons #realtime-news li a:hover span {
   color: #000;
+  font-weight: bold;
 }
 .social-icons #realtime-news-more {
   color: #D24747;
