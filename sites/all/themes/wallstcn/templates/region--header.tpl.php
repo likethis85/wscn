@@ -31,7 +31,10 @@
     </div><!-- #navbar end -->
 </div></div>
 
-    <?if(!isset($elements['menu_menu-live-menu']) || !$elements['menu_menu-live-menu']):?>
+ 
+<!-- 
+
+<?if(!isset($elements['menu_menu-live-menu']) || !$elements['menu_menu-live-menu']):?>
     <div class="container">
         <div class="row-fluid">
             <div class="span12">
@@ -49,11 +52,12 @@
                     <a href="http://live.<?=variable_get('site_domain')?>" class="more" target="_blank">即时刷新»</a>
                 </div>
                 <?endif?>
-            </div><!--span12 end-->
-        </div><!--rows end-->
-    </div><!--container end-->
+            </div>span12 end
+        </div>rows end
+    </div>container end
 <?endif?>
 
+ -->
 </div><!--navbar area end-->
 </div><!--outer container end-->
 
