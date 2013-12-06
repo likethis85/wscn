@@ -117,11 +117,12 @@
         <div class="carousel-inner">
             <div class="active item"  data-probability="30">
                 <div style="width:336px;margin:0 auto">
-                    <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_offpic2_1&url=http://www.119gold.com/landing/wallstreet/1/?referer=7006"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_offpic2_1.gif" alt=""></a>
-                    <?if(0):?>
-                    <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=index_left_middle1_ad_hit_1&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="/sites/all/themes/wallstcn/ads/index_left_middle1_ad_1_offpic2.jpeg" alt=""></a>
-                    <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <?endif?>
+                    <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_forexct_3&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_forexct_3.jpg" alt=""></a>
+                </div>
+            </div>
+            <div class="item"  data-probability="70">
+                <div style="width:336px;margin:0 auto">
+                    <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_ironfx_3&url=https://www.ironfx.cn/zh/wb-register?utm_source=SZ_728_90&utm_medium=hp_WB&utm_campaign=wallstreetcn"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_ironfx_3.jpg" alt=""></a>
                 </div>
             </div>
             <?if(0):?>
