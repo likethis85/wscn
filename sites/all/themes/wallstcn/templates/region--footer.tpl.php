@@ -87,7 +87,8 @@
 <a href="http://www.114la.com" target="_blank">114啦网址导航</a> |
 <a href="http://www.chouti.com/" target="_blank" >抽屉新热榜</a> |
 <a href="http://www.1616.net/" target="_blank">1616个人门户</a> |
-<a href="http://www.svsga.com/" target="_blank">SVS金盛集团</a>
+<a href="http://www.svsga.com/" target="_blank">SVS金盛集团</a> |
+<a href="http://www.topnews9.com/" target="_blank">头条新闻</a>
 <p>
 <?endif?>
 

@@ -53,13 +53,13 @@
         </div>
         <?endif?>
 
-        <div class="item" data-probability="17">
+        <div class="item" data-probability="40">
             <div style="height:280px;margin:0 auto;">
                 <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_fxcm_1.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_fxcm_1.swf" type="application/x-shockwave-flash" width="336" wmode="transparent"></embed></object>
             </div>
         </div>
 
-        <div class="item" data-probability="33">
+        <div class="item" data-probability="10">
             <div style="height:280px;margin:0 auto;">
                 <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_cfbagrey_1.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_cfbagrey_1.swf" type="application/x-shockwave-flash" width="336" wmode="transparent"></embed></object>
             </div>
@@ -115,27 +115,27 @@
 <div class="ad-box ad-side ad-margin-top">
     <div class="random-ad" style="margin-bottom:0;">
         <div class="carousel-inner">
-            <div class="active item"  data-probability="30">
+            <div class="active item"  data-probability="<?if(time() > strtotime(date('Y-m-d') . ' 09:00:00') && time() < strtotime(date('Y-m-d') . ' 18:00:00')):?>30<?else:?>15<?endif;?>">
                 <div style="width:336px;margin:0 auto">
                     <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_forexct_3&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_forexct_3.jpg" alt=""></a>
                 </div>
             </div>
-            <div class="item"  data-probability="70">
+            <div class="item"  data-probability="<?if(time() > strtotime(date('Y-m-d') . ' 09:00:00') && time() < strtotime(date('Y-m-d') . ' 18:00:00')):?>70<?else:?>35<?endif;?>">
                 <div style="width:336px;margin:0 auto">
                     <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_ironfx_3&url=https://www.ironfx.cn/zh/wb-register?utm_source=SZ_728_90&utm_medium=hp_WB&utm_campaign=wallstreetcn"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_ironfx_3.jpg" alt=""></a>
                 </div>
             </div>
-            <?if(0):?>
-            <div class="item">
+            <div class="item"  data-probability="<?if(time() > strtotime(date('Y-m-d') . ' 09:00:00') && time() < strtotime(date('Y-m-d') . ' 18:00:00')):?>0<?else:?>50<?endif;?>">
                 <ins class="adsbygoogle"
                     style="display:inline-block;width:336px;height:280px"
                     data-ad-client="ca-pub-0869270234052789"
                     data-ad-slot="2911844489"></ins>
+                <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <script>
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
-            <?endif?>
+
         </div>
     </div>
 </div>
@@ -168,15 +168,25 @@
 <div class="ad-box ad-side ad-margin-top">
     <div class="random-ad" style="margin-bottom:0;">
         <div class="carousel-inner">
-            <div class="active item"  data-probability="30">
+            <div class="active item"  data-probability="<?if(time() > strtotime(date('Y-m-d') . ' 09:00:00') && time() < strtotime(date('Y-m-d') . ' 18:00:00')):?>30<?else:?>15<?endif;?>">
                 <div style="width:336px;margin:0 auto">
                     <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_forexct_2&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_forexct_2.jpg" alt=""></a>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" data-probability="<?if(time() > strtotime(date('Y-m-d') . ' 09:00:00') && time() < strtotime(date('Y-m-d') . ' 18:00:00')):?>70<?else:?>35<?endif;?>">
                 <div style="width:336px;margin:0 auto">
                     <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_xinwaihui_2&url=http://www.xinwaihui.com/?utm_source=hej&utm_medium=cpc&utm_term=hej_home&utm_content=textlink&utm_campaign=hejhonme1"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_xinwaihui_2.jpg" alt=""></a>
                 </div>
+            </div>
+            <div class="item"  data-probability="<?if(time() > strtotime(date('Y-m-d') . ' 09:00:00') && time() < strtotime(date('Y-m-d') . ' 18:00:00')):?>0<?else:?>50<?endif;?>">
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:336px;height:280px"
+                    data-ad-client="ca-pub-0869270234052789"
+                    data-ad-slot="2911844489"></ins>
+                <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
             </div>
         </div>
     </div>
