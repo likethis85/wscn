@@ -6405,6 +6405,20 @@ a:hover {
   margin: 0;
   list-style: square inside;
 }
+#top-news.align-bottom > .row-fluid {
+  position: relative;
+}
+#top-news.align-bottom > .row-fluid > .span7 {
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+}
+#top-news.align-bottom > .row-fluid > .span5 {
+  float: right;
+}
+#top-news.align-bottom > .row-fluid > .span5 .media-heading {
+  min-height: 20px;
+}
 /* ===========================
  * top list
  * ===========================

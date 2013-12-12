@@ -708,6 +708,25 @@ a:hover {
     }
 }
 
+//top news fixed 底部对齐
+
+#top-news.align-bottom > .row-fluid {
+    position: relative;
+}
+
+#top-news.align-bottom > .row-fluid >.span7{
+    position: absolute; 
+    overflow: hidden; 
+    height: 100%;
+}
+#top-news.align-bottom > .row-fluid >.span5{
+    
+    float: right;
+    
+    .media-heading {
+        min-height: 20px;
+    }
+}
 
 /* ===========================
  * top list
@@ -2325,6 +2344,10 @@ body.toolbar, body.toolbar-drawer {
     //background: linear-gradient(to right, rgba(239, 239, 239, 0), rgb(239, 239, 239) 50%, rgb(239, 239, 239));
 
 }
+
+
+
+
 
 
 
