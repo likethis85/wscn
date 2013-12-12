@@ -12,7 +12,7 @@ $items = $view->result;
     <li><a href="<?=url('node/'. $item->nid);?>">
         <h2 class="full-title"><?=$item->node_title?></h2>
         <?if($item->uri):?>
-        <img alt="" class="" src="<?=image_style_url('thumbnail', $item->uri);?>">
+        <img alt="<?=$item->node_title?>" class="" src="<?=image_style_url('thumbnail', $item->uri);?>">
         <?endif?>
         <?if(0):?>
         <p><?=strip_tags($item->field_body[0]['raw']['summary'])?></p>

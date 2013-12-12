@@ -10,7 +10,7 @@ if($wscn['x_recent_rendered']) return;
     <li><a href="<?=url('node/'. $item->nid);?>">
         <h2 class="full-title"><?=$item->node_title?></h2>
         <?if($item->file_managed_field_data_upload_uri):?>
-        <img alt="" class="" src="<?=image_style_url('thumbnail', $item->file_managed_field_data_upload_uri);?>">
+        <img alt="<?=$item->node_title?>" class="" src="<?=image_style_url('thumbnail', $item->file_managed_field_data_upload_uri);?>">
         <?endif?>
         <?if(0):?>
         <p><?=strip_tags($item->field_body[0]['raw']['summary'])?></p>
