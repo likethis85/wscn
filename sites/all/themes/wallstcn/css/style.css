@@ -6412,6 +6412,7 @@ a:hover {
   position: absolute;
   overflow: hidden;
   height: 100%;
+  background: #efefef;
 }
 #top-news.align-bottom > .row-fluid > .span5 {
   float: right;
