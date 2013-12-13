@@ -85,10 +85,10 @@
 
                 <div class="span4">
                     <?if(variable_get('site_ad')):?>
-
+                    <!--
                     <div class="ad-box ad-side">
                         <a target="_blank" href="http://www.zsgjs.com/"><img src="/sites/all/themes/wallstcn/ads/__ads_wscn_live_zsgjs_1.jpg" alt=""></a>
-                    </div>
+                    </div> -->
 
 
                     <div class="ad-box ad-side">
