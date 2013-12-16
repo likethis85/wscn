@@ -103,7 +103,7 @@
 
                                 <div class="item" data-probability="70">
                                     <div style="height:280px;margin:0 auto;">
-                                        <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_live_hit_ironfx_1&url=https://www.ironfx.cn/zh/wb-register?utm_source=SZ_728_90&utm_medium=hp_WB&utm_campaign=wallstreetcn"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_live_ironfx_1.jpg" alt=""></a>
+                                        <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_live_hit_ironfx_1&url=https://www.ironfx.cn/zh/wb-register?utm_source=WALLSTREETWN720_90&utm_medium=hp_WN&utm_campaign=wallstreetcn"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_live_ironfx_1.jpg" alt=""></a>
                                     </div>
                                 </div>
                             </div>
