@@ -5851,7 +5851,7 @@ a.badge:focus {
   }
 }
 /*
-@import "bootstrap/less/metro/variables.less";
+@import "bootstrap/less/metro/variables.less"; 
 @import "bootstrap/less/metro/type.less";
 @import "bootstrap/less/metro/tiles.less";
 @import "bootstrap/less/metro/navbar.less";
@@ -6291,7 +6291,7 @@ a:hover {
         list-style-type:none;
         white-space: nowrap;
         width: 100%;
-        overflow: hidden;
+        overflow: hidden;           
         -o-text-overflow: ellipsis;
         text-overflow:    ellipsis;
     }
@@ -7716,10 +7716,9 @@ a:hover {
   line-height: 24px;
 }
 .live-top-ad a {
-  color: #0063B6;
-}
-.live-top-ad a:hover {
   color: #d24747;
+  font-size: 14px;
+  font-weight: bold;
 }
 .node-livenews .page-header {
   margin-top: 0;
