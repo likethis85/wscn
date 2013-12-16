@@ -25,11 +25,11 @@ $title = str_replace('%1', $view->build_info['substitutions']['%1'], $view->buil
             <span class="meta-item">
                 文 / <a href="<?=url('columns/'. $item->node_uid);?>" target="blank"><?=$item->users_node_name?></a>
             </span>
-            
+
             <span class="meta-item">
                 <?=format_date($item->node_created);?>
             </span>
-           <?if(0 && $item->_field_data['nid']['entity']->taxonomy_vocabulary_2):?> / 
+           <?if(0 && $item->_field_data['nid']['entity']->taxonomy_vocabulary_2):?> /
            /
            <?foreach($item->_field_data['nid']['entity']->taxonomy_vocabulary_2['und'] as $tag):?>
            <a href="<?=url('taxonomy/term/' . $tag['tid'])?>"><?=$tag['taxonomy_term']->name?></a>

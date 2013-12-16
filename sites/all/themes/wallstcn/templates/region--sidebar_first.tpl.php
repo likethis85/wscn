@@ -97,10 +97,10 @@
 <div class="carousel slide">
     <div class="carousel-inner">
         <div class="active item">
-            <a target="_blank" href="/sponsor"><img src="/sites/all/themes/wallstcn/ads/sponsor_fxcm.jpg" alt=""></a>
+            <a target="_blank" href="/sponsor"><img src="/sites/all/themes/wallstcn/ads/sponsor_ironfx.jpg" alt=""></a>
         </div>
         <div class="item">
-            <a target="_blank" href="/sponsor"><img src="/sites/all/themes/wallstcn/ads/sponsor_ironfx.jpg" alt=""></a>
+            <a target="_blank" href="/sponsor"><img src="/sites/all/themes/wallstcn/ads/sponsor_fxcm.jpg" alt=""></a>
         </div>
         <div class="item">
             <a target="_blank" href="/sponsor"><img src="/sites/all/themes/wallstcn/ads/sponsor_svsfx.jpg" alt=""></a>
