@@ -7716,7 +7716,10 @@ a:hover {
   line-height: 24px;
 }
 .live-top-ad a {
-  color: #29527A;
+  color: #0063B6;
+}
+.live-top-ad a:hover {
+  color: #d24747;
 }
 .node-livenews .page-header {
   margin-top: 0;
