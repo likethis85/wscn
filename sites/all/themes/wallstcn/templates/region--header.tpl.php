@@ -96,6 +96,7 @@
         </div><!--container end-->
     </script>
     </div>
+    <?if(0):?>
     <div class="live-top-ad row-fluid">
         <div class="span12">
             <a href="http://www.kuaixun360.com/?jw" target="_blank">炒金、炒银、炒外汇必备资讯软件，下载即送“土豪金iphone 5S”</a>
@@ -103,6 +104,7 @@
             <a href="http://www.hxylpme.com/?jw" target="_blank">鸿鑫御隆（新华社08号综合会员），广招“经纪类会员”和“代理商”</a>
         </div>
     </div>
+    <?endif?>
 </div>
 <?endif?>
 
