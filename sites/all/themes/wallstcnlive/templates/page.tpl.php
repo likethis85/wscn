@@ -178,7 +178,7 @@
 
 
                     <?if(variable_get('site_ad')):?>
-
+                    <?if(0):?>
                     <div class="ad-box ad-side">
 
                         <div class="random-ad" style="margin-bottom:0;">
@@ -209,7 +209,7 @@
                             </div>
                         </div>
                     </div>
-
+                    <?endif;?>
                     <div class="ad-box ad-side">
                         <div class="random-ad" style="margin-bottom:0;">
                             <div class="carousel-inner">
@@ -237,7 +237,7 @@
 
                     <?endif?>
 
-                    <?if(0 && variable_get('site_ad')):?>
+                    <?if(variable_get('site_ad')):?>
                     <div class="ad-box ad-side">
                         <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                         <ins class="adsbygoogle"
