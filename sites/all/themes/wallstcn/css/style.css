@@ -5920,7 +5920,7 @@ a:hover {
  * ===========================
  */
 #nav-area {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .nav-area-fixed {
   position: fixed;
@@ -7679,7 +7679,7 @@ a:hover {
 }
 #live-topnews {
   margin-bottom: 30px;
-  padding: 10px 0;
+  padding-bottom: 10px;
   border-bottom: 3px solid #E9E9E9;
   vertical-align: top;
   font-size: 12px;
@@ -7712,12 +7712,11 @@ a:hover {
 }
 .live-top-ad {
   margin: 10px 0;
-  line-height: 24px;
 }
 .live-top-ad a {
-  color: #d24747;
-  font-size: 14px;
-  font-weight: bold;
+  color: #0052e3;
+  line-height: 24px;
+  font-size: 13px;
 }
 .node-livenews .page-header {
   margin-top: 0;

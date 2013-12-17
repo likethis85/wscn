@@ -96,13 +96,23 @@
         </div><!--container end-->
     </script>
     </div>
-    <?if(0):?>
+    <?if(1):?>
     <div class="live-top-ad row-fluid">
-        <div class="span12">
-            <a href="http://www.kuaixun360.com/?jw" target="_blank">炒金、炒银、炒外汇必备资讯软件，下载即送“土豪金iphone 5S”</a>
-            &emsp;&emsp;
-            <a href="http://www.hxylpme.com/?jw" target="_blank">鸿鑫御隆（新华社08号综合会员），广招“经纪类会员”和“代理商”</a>
+        <div class="span4">
+			<i class="icon-gift"></i>
+            <a href="http://www.kuaixun360.com/?jw" target="_blank">炒金/炒银/炒外汇必备软件，下载送“iPhone 5S”</a>  	               
         </div>
+        <div class="span4">
+        	<i class="icon-male"></i>
+            <a href="http://www.hxylpme.com/?jw" target="_blank">鸿鑫御隆，新华社平台，广招代理商和经纪类会员</a>
+        </div>
+        <div class="span4">
+        	<i class="icon-bullhorn" ></i>
+            <a href="http://www.fxcm-chinese.com/gb/sh/overview/?CMP=SFS-70160000000NjycAAC" target="_blank">福汇上海外汇培训中心现已开幕！</a>    
+        </div>
+        <!-- <div class="span3">
+            <a href="https://www.ironfx.cn/zh/wb-register?utm_source=WALLSTREETWN720_90&utm_medium=hp_WN&utm_campaign=wallstreetcn" target="_blank">铁汇在线交易解盘室 一对一名家实战指导</a>
+        </div> -->
     </div>
     <?endif?>
 </div>
