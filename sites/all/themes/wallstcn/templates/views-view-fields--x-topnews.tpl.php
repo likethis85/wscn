@@ -63,9 +63,9 @@ foreach($items as $key => $news) {
                                 <?endforeach?>
                                 <?endif?>
                                 <div class="item">
-                                    <a class="entry-img" href="redirect.htm?type=__ads_wscn_index_hit_119gold_1&url=http://www.119gold.com/landing/wallstreet/1/?referer=7004" target="_blank">
+                                    <a class="entry-img" href="redirect.htm?type=__ads_wscn_index_hit_zsgjs_1&url=http://www.zsgjs.com/ws/" target="_blank">
                                         <div class="entry-img-wrap">
-                                            <img alt="" class="" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_119gold_1.jpg" width="406" height="240" />
+                                            <img alt="" class="" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_zsgjs_1.jpg" width="406" height="240" />
                                         </div>
                                     </a>
                                 </div>
