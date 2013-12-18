@@ -845,7 +845,7 @@
             jplayer.jPlayer({
                 ready: function () {
                     $(this).jPlayer("setMedia", {
-                        mp3 : "/sites/all/themes/wallstcn/js/notification.mp3"
+                        mp3 : "http://wallstreetcn.com/sites/all/themes/wallstcn/js/notification.mp3"
                     });
                 },
                 swfPath: "/sites/all/themes/wallstcn/js/Jplayer.swf",
