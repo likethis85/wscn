@@ -298,7 +298,9 @@
         });
 
         // 右上角实时新闻自动刷新
-        setInterval(initRealtimeNews, 10000);
+        //访问量过大，暂时停止
+        //setInterval(initRealtimeNews, 10000);
+        initRealtimeNews();
 
         //var timerHandler = setInterval(scrollingNews, 5000);
         //initRealtimeNews();
