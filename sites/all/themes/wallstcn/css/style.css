@@ -8114,22 +8114,17 @@ body.toolbar, body.toolbar-drawer {
   margin-bottom: 0;
   width: auto;
   height: 40px;
-  overflow-y: hidden;
   border-bottom: 2px solid #CCCCCC;
   position: relative;
 }
 .hot-news .hot-news-header:after {
   display: block;
-  width: 20px;
-  height: 20px;
-  transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  border-bottom: 2px solid #CCCCCC;
+  width: 22px;
+  height: 10px;
+  background: url(img/text-decoration.png) no-repeat;
   position: absolute;
-  bottom: -12px;
+  bottom: -2px;
+  content: "";
   left: 60px;
 }
 .hot-news .hot-news-header .hot-news-more {
@@ -8182,6 +8177,7 @@ body.toolbar, body.toolbar-drawer {
   width: 380px;
 }
 .hot-news-sidebar .hot-news-sidebar-wrapper:after {
+  content: "";
   display: table;
   clear: all;
 }
