@@ -242,6 +242,7 @@
                 dataType : 'json',
                 success : function(entries){
                     var domain = $("#livenews-navbar-prev").attr('href');
+                    realtimeNews = [];
                     for(var i in entries){
                         var date = new Date(parseInt(entries[i].node_created) * 1000);
                         var time = ('0' + date.getHours()).slice(-2)  + ':' + ('0' + date.getMinutes()).slice(-2);
@@ -281,6 +282,7 @@
                             '<li><img width="18" height="20" src="/sites/all/themes/wallstcn/css/img/icon_' + icon + '.png"/>&emsp;<a href="http://live.wallstreetcn.com/" target="_blank"><span style="' + formart + font_color + '">' + entries[i].node_title + '</span></a></li>'
                         );
                     }
+                    $("#realtime-news ul").html("");
                     $("#realtime-news ul").html(realtimeNews.join(""));
                 }
             });
@@ -295,10 +297,13 @@
             return false;
         });
 
-
+        // 右上角实时新闻自动刷新
+        //访问量过大，暂时停止
+        //setInterval(initRealtimeNews, 10000);
+        initRealtimeNews();
 
         //var timerHandler = setInterval(scrollingNews, 5000);
-        initRealtimeNews();
+        //initRealtimeNews();
         $(document).on('mouseover', '#realtime-news', function(){
             //clearInterval(timerHandler);
         });
@@ -840,7 +845,7 @@
             jplayer.jPlayer({
                 ready: function () {
                     $(this).jPlayer("setMedia", {
-                        mp3 : "/sites/all/themes/wallstcn/js/notification.mp3"
+                        mp3 : "http://wallstreetcn.com/sites/all/themes/wallstcn/js/notification.mp3"
                     });
                 },
                 swfPath: "/sites/all/themes/wallstcn/js/Jplayer.swf",
