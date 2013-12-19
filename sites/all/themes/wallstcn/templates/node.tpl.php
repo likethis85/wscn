@@ -187,6 +187,72 @@ drupal_set_title($page_title, PASS_THROUGH);?>
 </div>
 <?endif?>
 
+
+<!-- add  -->
+
+<div class="hot-news">
+	
+	<h2 class="hot-news-header">
+		更多热点
+		<a href="" class="hot-news-more">MORE»</a>
+	</h2>
+
+	<div class="hot-news-list row-fluid">
+		<div class="span4">
+			<div class="hot-news-content">
+				<a href="" class="hot-news-img">
+					<img src="" alt="" />
+				</a>
+				<a href="" class="hot-news-title">12月FOMC声明中文全文：TAPER降临！QE规模削减至每月750亿美元</a>
+			</div>
+		</div>
+		<div class="span4">
+			<div class="hot-news-content">
+				<a href="" class="hot-news-img">
+					<img src="" alt="" />
+				</a>
+				<a href="" class="hot-news-title">美联储缩减QE成真 道指暴涨近300点，收盘创历史新高，黄金跳水</a>
+			</div>
+		</div>
+		<div class="span4">
+			<div class="hot-news-content">
+				<a href="" class="hot-news-img">
+					<img src="" alt="" />
+				</a>
+				<a href="" class="hot-news-title">一句话告诉你为何美联储宣布缩减QE后美股不跌反涨</a>
+			</div>
+		</div>		
+	</div>
+
+	<div class="hot-news-list row-fluid">
+		<div class="span4">
+			<div class="hot-news-content">
+				<a href="" class="hot-news-img">
+					<img src="" alt="" />
+				</a>
+				<a href="" class="hot-news-title">华尔街投行点评缩减QE：很鸽派</a>
+			</div>
+		</div>
+		<div class="span4">
+			<div class="hot-news-content">
+				<a href="" class="hot-news-img">
+					<img src="" alt="" />
+				</a>
+				<a href="" class="hot-news-title">历史上央行退出QE会发生什么？</a>
+			</div>
+		</div>
+		<div class="span4">
+			<div class="hot-news-content">
+				<a href="" class="hot-news-img">
+					<img src="" alt="" />
+				</a>
+				<a href="" class="hot-news-title">伯南克筹划已久的策略：用增强前瞻指引抵消收缩QE的冲击</a>
+			</div>
+		</div>		
+	</div>
+
+</div>
+
 <?if(!empty($node->taxonomy_vocabulary_3)):?>
 <div id="related-read" class="">
     <h5>关键字阅读：</h5>

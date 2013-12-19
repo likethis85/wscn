@@ -141,6 +141,60 @@
 </div>
 <?endif?>
 
+
+<!-- add -->
+
+<div class="page-header">
+    <a href="" class="more pull-right" target="_blank">MORE»</a>
+    <h3>热门阅读</h3>
+</div>
+
+<div class="hot-news-sidebar">
+    
+    <div class="hot-news-sidebar-wrapper">
+        <div class="hot-news-content">
+            <a href="" class="hot-news-img">
+                <img src="" alt="" />
+            </a>
+            <a href="" class="hot-news-title">12月FOMC声明中文全文：TAPER降临！QE规模削减至每月750亿美元</a>
+        </div>
+        <div class="hot-news-content">
+            <a href="" class="hot-news-img">
+                <img src="" alt="" />
+            </a>
+            <a href="" class="hot-news-title">12月FOMC声明中文全文：TAPER降临！QE规模削减至每月750亿美元</a>
+        </div>
+        <div class="hot-news-content">
+            <a href="" class="hot-news-img">
+                <img src="" alt="" />
+            </a>
+            <a href="" class="hot-news-title">12月FOMC声明中文全文：TAPER降临！QE规模削减至每月750亿美元</a>
+        </div>
+        <div class="hot-news-content">
+            <a href="" class="hot-news-img">
+                <img src="" alt="" />
+            </a>
+            <a href="" class="hot-news-title">12月FOMC声明中文全文：TAPER降临！QE规模削减至每月750亿美元</a>
+        </div>
+        <div class="hot-news-content">
+            <a href="" class="hot-news-img">
+                <img src="" alt="" />
+            </a>
+            <a href="" class="hot-news-title">12月FOMC声明中文全文：TAPER降临！QE规模削减至每月750亿美元</a>
+        </div>
+        <div class="hot-news-content">
+            <a href="" class="hot-news-img">
+                <img src="" alt="" />
+            </a>
+            <a href="" class="hot-news-title">12月FOMC声明中文全文：TAPER降临！QE规模削减至每月750亿美元</a>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- add end -->
+
 <?if($is_front && $elements['views_x_comments-block']):?>
 <?=render($elements['views_x_comments-block'])?>
 <?endif?>

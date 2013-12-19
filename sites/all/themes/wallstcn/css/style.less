@@ -2364,7 +2364,147 @@ body.toolbar, body.toolbar-drawer {
 
 
 
+//add hot-news 
 
+.hot-news {
+    
+    .hot-news-header {
+
+        font-size: 20px;
+        font-weight: bold;
+        color: #444;
+        padding: 0 20px 0 30px;
+        margin-top: 10px;
+        margin-bottom: 0;
+        width: auto;
+        height: 40px;
+        overflow-y: hidden;
+        border-bottom: 2px solid #CCCCCC;
+        position: relative;
+
+        &:after {
+            display: block;
+            width: 20px;
+            height: 20px;
+            transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            border-bottom: 2px solid #CCCCCC;
+            position: absolute;
+            bottom: -12px;
+            left: 60px;
+        }
+
+        .hot-news-more {
+            color: #06B8DD;
+            font-size: 16px;
+            font-weight: normal;
+            float: right;
+
+            &:hover {
+                color: #d24747;
+            }
+        }
+
+    }
+
+    .hot-news-list {
+        border-bottom: 1px dotted #C2C2C2;
+    }
+
+    .hot-news-content {
+        width: 210px; 
+        margin: 20px auto; 
+    }
+
+    .hot-news-img {
+        display: block;
+        width: 210px; 
+        height: 130px;
+        margin-bottom: 5px;
+        outline-style: none;
+
+        img {
+            width: 210px; 
+            height: 130px;
+        }
+    }
+
+    .hot-news-title {
+        display: block;
+        width: 210px; 
+        height: auto;
+        word-break: break-all;
+        color: #333;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: bold;
+        outline-style: none;
+        text-decoration: none;
+
+        &:hover {
+            color: #d24747;
+        }
+    }
+
+}
+
+
+.hot-news-sidebar {
+    
+    width: 100%;
+
+    overflow-x: hidden;
+
+    .hot-news-sidebar-wrapper {
+        width: 380px;
+
+        &:after {
+            display: table;
+            clear: all;
+        }
+    }
+
+    .hot-news-content {
+        width: 170px;
+        float: left;
+        height: auto;
+        margin: 0 20px 20px 0;
+    }
+
+
+    .hot-news-img {
+        display: block;
+        width: 100%; 
+        margin-bottom: 5px;
+        outline-style: none;
+
+        img {
+            width: 170px; 
+            height: 110px;
+        }
+    }
+
+    .hot-news-title {
+        display: block;
+        width: 100%; 
+        height: auto;
+        word-break: break-all;
+        color: #333;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: normal;
+        outline-style: none;
+        text-decoration: none;
+
+        &:hover {
+            color: #d24747;
+        }
+    }
+
+}
 
 
 
