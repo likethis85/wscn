@@ -170,7 +170,7 @@ drupal_set_title($page_title, PASS_THROUGH);?>
         </div>
         <div class="item" data-probability="<?if(time() > strtotime(date('Y-m-d') . ' 09:00:00') && time() < strtotime(date('Y-m-d') . ' 18:00:00')):?>25<?else:?>12.5<?endif;?>">
             <div style="margin:0 auto;">
-                <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_ironfx_2&url=https://www.ironfx.cn/zh/wb-register?utm_source=WALLSTREETWN720_90&utm_medium=hp_WN&utm_campaign=wallstreetcn"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_ironfx_2.jpg" alt=""></a>
+                <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_ironfx_2&url=https://www.ironfx.cn/zh/register?utm_source=wallstreetcn728_90HPIB&utm_mediumwallstreetcn728_90HPIB&utm_campaign=wallstreetcn"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_ironfx_2.jpg" alt=""></a>
             </div>
         </div>
         <div class="item"  data-probability="<?if(time() > strtotime(date('Y-m-d') . ' 09:00:00') && time() < strtotime(date('Y-m-d') . ' 18:00:00')):?>0<?else:?>50<?endif;?>">
@@ -188,70 +188,31 @@ drupal_set_title($page_title, PASS_THROUGH);?>
 <?endif?>
 
 
-<!-- add  -->
-
+<?if(isset($GLOBALS['essence_left'])):?>
 <div class="hot-news">
-	
-	<h2 class="hot-news-header">
-		更多热点
-		<a href="" class="hot-news-more">MORE»</a>
-	</h2>
 
-	<div class="hot-news-list row-fluid">
-		<div class="span4">
-			<div class="hot-news-content">
-				<a href="" class="hot-news-img">
-					<img src="" alt="" />
-				</a>
-				<a href="" class="hot-news-title">12月FOMC声明中文全文：TAPER降临！QE规模削减至每月750亿美元</a>
-			</div>
-		</div>
-		<div class="span4">
-			<div class="hot-news-content">
-				<a href="" class="hot-news-img">
-					<img src="" alt="" />
-				</a>
-				<a href="" class="hot-news-title">美联储缩减QE成真 道指暴涨近300点，收盘创历史新高，黄金跳水</a>
-			</div>
-		</div>
-		<div class="span4">
-			<div class="hot-news-content">
-				<a href="" class="hot-news-img">
-					<img src="" alt="" />
-				</a>
-				<a href="" class="hot-news-title">一句话告诉你为何美联储宣布缩减QE后美股不跌反涨</a>
-			</div>
-		</div>		
-	</div>
-
-	<div class="hot-news-list row-fluid">
-		<div class="span4">
-			<div class="hot-news-content">
-				<a href="" class="hot-news-img">
-					<img src="" alt="" />
-				</a>
-				<a href="" class="hot-news-title">华尔街投行点评缩减QE：很鸽派</a>
-			</div>
-		</div>
-		<div class="span4">
-			<div class="hot-news-content">
-				<a href="" class="hot-news-img">
-					<img src="" alt="" />
-				</a>
-				<a href="" class="hot-news-title">历史上央行退出QE会发生什么？</a>
-			</div>
-		</div>
-		<div class="span4">
-			<div class="hot-news-content">
-				<a href="" class="hot-news-img">
-					<img src="" alt="" />
-				</a>
-				<a href="" class="hot-news-title">伯南克筹划已久的策略：用增强前瞻指引抵消收缩QE的冲击</a>
-			</div>
-		</div>		
-	</div>
-
+    <h2 class="hot-news-header">
+        更多热点
+        <a href="" class="hot-news-more">MORE»</a>
+    </h2>
+    <div class="hot-news-list row-fluid">
+    <?foreach($GLOBALS['essence_left'] as $k => $e):?>
+        <div class="span4">
+            <div class="hot-news-content">
+                <a href="<?=$e['url']?>" target="_blank" class="hot-news-img">
+                    <img src="<?=$e['img']?>" alt="<?=$e['title']?>" />
+                </a>
+                <a href="<?=$e['url']?>" target="_blank" class="hot-news-title"><?=$e['title']?></a>
+            </div>
+        </div>
+    <?if($k == 2):?>
+    </div>
+    <div class="hot-news-list row-fluid">
+    <?endif;?>
+    <?endforeach;?>
+    </div>
 </div>
+<?endif?>
 
 <?if(!empty($node->taxonomy_vocabulary_3)):?>
 <div id="related-read" class="">

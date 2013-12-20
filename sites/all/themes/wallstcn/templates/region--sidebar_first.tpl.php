@@ -122,7 +122,7 @@
             </div>
             <div class="item"  data-probability="35">
                 <div style="width:336px;margin:0 auto">
-                    <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_ironfx_3&url=https://www.ironfx.cn/zh/wb-register?utm_source=WALLSTREETWN720_90&utm_medium=hp_WN&utm_campaign=wallstreetcn"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_ironfx_3.jpg" alt=""></a>
+                    <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_ironfx_3&url=https://www.ironfx.cn/zh/register?utm_source=wallstreetcn728_90HPIB&utm_mediumwallstreetcn728_90HPIB&utm_campaign=wallstreetcn"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_ironfx_3.jpg" alt=""></a>
                 </div>
             </div>
             <div class="item"  data-probability="30">
@@ -142,62 +142,36 @@
 <?endif?>
 
 
+<?if($is_front && $elements['views_x_comments-block']):?>
+<?=render($elements['views_x_comments-block'])?>
+<?endif?>
+
 <!-- add -->
 
+
+<?if(isset($GLOBALS['essence_right'])):?>
 <div class="page-header">
     <a href="" class="more pull-right" target="_blank">MORE»</a>
     <h3>热门阅读</h3>
 </div>
 
 <div class="hot-news-sidebar">
-    
     <div class="hot-news-sidebar-wrapper">
+
+        <?foreach($GLOBALS['essence_right'] as $k => $e):?>
         <div class="hot-news-content">
-            <a href="" class="hot-news-img">
-                <img src="" alt="" />
+            <a href="<?=$e['url']?>" target="_blank" class="hot-news-img">
+                <img src="<?=$e['img']?>" alt="<?=$e['title']?>" />
             </a>
-            <a href="" class="hot-news-title">12月FOMC声明中文全文：TAPER降临！QE规模削减至每月750亿美元</a>
+            <a href="<?=$e['url']?>" target="_blank" class="hot-news-title"><?=$e['title']?></a>
         </div>
-        <div class="hot-news-content">
-            <a href="" class="hot-news-img">
-                <img src="" alt="" />
-            </a>
-            <a href="" class="hot-news-title">12月FOMC声明中文全文：TAPER降临！QE规模削减至每月750亿美元</a>
-        </div>
-        <div class="hot-news-content">
-            <a href="" class="hot-news-img">
-                <img src="" alt="" />
-            </a>
-            <a href="" class="hot-news-title">12月FOMC声明中文全文：TAPER降临！QE规模削减至每月750亿美元</a>
-        </div>
-        <div class="hot-news-content">
-            <a href="" class="hot-news-img">
-                <img src="" alt="" />
-            </a>
-            <a href="" class="hot-news-title">12月FOMC声明中文全文：TAPER降临！QE规模削减至每月750亿美元</a>
-        </div>
-        <div class="hot-news-content">
-            <a href="" class="hot-news-img">
-                <img src="" alt="" />
-            </a>
-            <a href="" class="hot-news-title">12月FOMC声明中文全文：TAPER降临！QE规模削减至每月750亿美元</a>
-        </div>
-        <div class="hot-news-content">
-            <a href="" class="hot-news-img">
-                <img src="" alt="" />
-            </a>
-            <a href="" class="hot-news-title">12月FOMC声明中文全文：TAPER降临！QE规模削减至每月750亿美元</a>
-        </div>
+        <?endforeach;?>
+
     </div>
-
 </div>
-
+<?endif?>
 
 <!-- add end -->
-
-<?if($is_front && $elements['views_x_comments-block']):?>
-<?=render($elements['views_x_comments-block'])?>
-<?endif?>
 
 <div class="page-header">
     <a href="http://weibo.com/wallstreetcn" class="more pull-right" target="_blank">MORE»</a>
