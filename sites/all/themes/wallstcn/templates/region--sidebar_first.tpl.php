@@ -125,6 +125,11 @@
                     <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_ironfx_3&url=https://www.ironfx.cn/zh/register?utm_source=wallstreetcn728_90HPIB&utm_mediumwallstreetcn728_90HPIB&utm_campaign=wallstreetcn"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_ironfx_3.jpg" alt=""></a>
                 </div>
             </div>
+            <div class="item"  data-probability="35">
+                <div style="width:336px;margin:0 auto">
+                    <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_nordfx_2&url=http://realcontest.nordfx-chinese.com/real/2014"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_nordfx_2.gif" alt=""></a>
+                </div>
+            </div>
             <div class="item"  data-probability="30">
                 <ins class="adsbygoogle"
                     style="display:inline-block;width:336px;height:280px"

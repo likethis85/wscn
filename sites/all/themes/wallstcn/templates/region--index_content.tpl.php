@@ -10,7 +10,7 @@
 
         <div class="span4">
             <div class="item">
-                <a target="_blank" href="redirect.htm?type=__ads_wscn_index_hit_nordfx_1&url=http://nordfx-chinese.com/?id=730026"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_nordfx_1.gif" alt=""></a>
+                <a target="_blank" href="redirect.htm?type=__ads_wscn_index_hit_nordfx_1&url=http://realcontest.nordfx-chinese.com/real/2014"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_nordfx_1.gif" alt=""></a>
             </div>
 
         </div>
