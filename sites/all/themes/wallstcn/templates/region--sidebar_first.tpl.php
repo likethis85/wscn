@@ -115,17 +115,17 @@
 <div class="ad-box ad-side ad-margin-top">
     <div class="random-ad" style="margin-bottom:0;">
         <div class="carousel-inner">
-            <div class="active item"  data-probability="35">
+            <div class="active item"  data-probability="30">
                 <div style="width:336px;margin:0 auto">
                     <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_forexct_3&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_forexct_3.jpg" alt=""></a>
                 </div>
             </div>
-            <div class="item"  data-probability="35">
+            <div class="item"  data-probability="30">
                 <div style="width:336px;margin:0 auto">
                     <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_ironfx_3&url=https://www.ironfx.cn/zh/register?utm_source=wallstreetcn728_90HPIB&utm_mediumwallstreetcn728_90HPIB&utm_campaign=wallstreetcn"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_ironfx_3.jpg" alt=""></a>
                 </div>
             </div>
-            <div class="item"  data-probability="35">
+            <div class="item"  data-probability="10">
                 <div style="width:336px;margin:0 auto">
                     <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_nordfx_2&url=http://realcontest.nordfx-chinese.com/real/2014"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_nordfx_2.gif" alt=""></a>
                 </div>
