@@ -89,7 +89,8 @@
 <a href="http://www.1616.net/" target="_blank">1616个人门户</a> |
 <a href="http://www.svsga.com/" target="_blank">SVS金盛集团</a> |
 <a href="http://www.topnews9.com/" target="_blank">头条新闻</a> |
-<a href="http://www.dijiuke.com/" target="_blank">第九课堂</a>
+<a href="http://www.dijiuke.com/" target="_blank">第九课堂</a> |
+<a href="http://www.gaodun.com/" target="_blank">高顿网校</a>
 <p>
 <?endif?>
 
