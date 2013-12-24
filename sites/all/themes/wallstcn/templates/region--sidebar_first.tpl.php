@@ -127,7 +127,7 @@
             </div>
             <div class="item"  data-probability="10">
                 <div style="width:336px;margin:0 auto">
-                    <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_nordfx_2&url=http://realcontest.nordfx-chinese.com/real/2014"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_nordfx_2.gif" alt=""></a>
+                    <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_nordfx_2&url=http://realcontest.nordfx-chinese.com/real/2014"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_nordfx_2.jpg" alt=""></a>
                 </div>
             </div>
             <div class="item"  data-probability="30">
@@ -154,21 +154,21 @@
 <!-- add -->
 
 
-<?if(isset($GLOBALS['essence_right'])):?>
+<?if(isset($GLOBALS['fun_2'])):?>
 <div class="page-header">
-    <a href="" class="more pull-right" target="_blank">MORE»</a>
+    <a href="/fun" class="more pull-right" target="_blank">MORE»</a>
     <h3>热门阅读</h3>
 </div>
 
 <div class="hot-news-sidebar">
     <div class="hot-news-sidebar-wrapper">
 
-        <?foreach($GLOBALS['essence_right'] as $k => $e):?>
+        <?foreach($GLOBALS['fun_2'] as $k => $e):?>
         <div class="hot-news-content">
-            <a href="<?=$e['url']?>" target="_blank" class="hot-news-img">
+            <a href="http://<?=$e['url']?>" target="_blank" class="hot-news-img">
                 <img src="<?=$e['img']?>" alt="<?=$e['title']?>" />
             </a>
-            <a href="<?=$e['url']?>" target="_blank" class="hot-news-title"><?=$e['title']?></a>
+            <a href="http://<?=$e['url']?>" target="_blank" class="hot-news-title"><?=$e['title']?></a>
         </div>
         <?endforeach;?>
 
