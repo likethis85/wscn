@@ -97,13 +97,13 @@
 <div class="carousel slide">
     <div class="carousel-inner">
         <div class="active item">
-            <a target="_blank" href="/sponsor"><img src="/sites/all/themes/wallstcn/ads/sponsor_ironfx.jpg" alt=""></a>
+            <a target="_blank" href="/sponsor"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/sponsor_ironfx.jpg" alt=""></a>
         </div>
         <div class="item">
-            <a target="_blank" href="/sponsor"><img src="/sites/all/themes/wallstcn/ads/sponsor_fxcm.jpg" alt=""></a>
+            <a target="_blank" href="/sponsor"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/sponsor_fxcm.jpg" alt=""></a>
         </div>
         <div class="item">
-            <a target="_blank" href="/sponsor"><img src="/sites/all/themes/wallstcn/ads/sponsor_svsfx.jpg" alt=""></a>
+            <a target="_blank" href="/sponsor"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/sponsor_svsfx.jpg" alt=""></a>
         </div>
     </div>
 </div>
@@ -154,16 +154,16 @@
 <!-- add -->
 
 
-<?if(isset($GLOBALS['fun_2'])):?>
+<?if(isset($GLOBALS['discovery_2'])):?>
 <div class="page-header">
-    <a href="/fun" class="more pull-right" target="_blank">MORE»</a>
+    <a href="/discovery" class="more pull-right" target="_blank">MORE»</a>
     <h3>热门阅读</h3>
 </div>
 
 <div class="hot-news-sidebar">
     <div class="hot-news-sidebar-wrapper">
 
-        <?foreach($GLOBALS['fun_2'] as $k => $e):?>
+        <?foreach($GLOBALS['discovery_2'] as $k => $e):?>
         <div class="hot-news-content">
             <a href="http://<?=$e['url']?>" target="_blank" class="hot-news-img">
                 <img src="<?=$e['img']?>" alt="<?=$e['title']?>" />
@@ -179,6 +179,7 @@
 
 <!-- add end -->
 
+<?if(!isset($GLOBALS['discovery_2'])):?>
 <div class="page-header">
     <a href="http://weibo.com/wallstreetcn" class="more pull-right" target="_blank">MORE»</a>
     <h3>最新微博</h3>
@@ -188,7 +189,7 @@
 <iframe width="100%" height="800" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&amp;width=0&amp;height=800&amp;fansRow=2&amp;ptype=1&amp;speed=0&amp;skin=1&amp;isTitle=0&amp;noborder=0&amp;isWeibo=1&amp;isFans=0&amp;uid=1875034341&amp;verifier=7ef13898&amp;dpc=1"></iframe>
 <?endif?>
 </div>
-
+<?endif?>
 
 <?if(variable_get('site_ad') && 0):?>
 <div class="ad-box ad-side ad-margin-top">
