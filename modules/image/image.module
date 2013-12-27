@@ -1025,6 +1025,7 @@ function image_style_url($style_name, $path) {
   }
 
   $file_url = file_create_url($uri);
+  $file_url = str_ireplace('http://wallstreetcn.com', 'http://img.wallstreetcn.com', $file_url);
   // Append the query string with the token.
   return $file_url . (strpos($file_url, '?') !== FALSE ? '&' : '?') . drupal_http_build_query($token_query);
 }
