@@ -38,12 +38,15 @@
 <div class="ad-box ad-side">
 <div class="random-ad" style="margin-bottom:0;">
     <div class="carousel-inner">
+
+        <?if(0):?>
         <div class="active item"  data-probability="70">
             <div style="margin:0 auto;">
                 <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_xinwaihui_1&url=http://www.xinwaihui.com/?utm_source=hej&utm_medium=cpc&utm_term=hej336280&utm_content=logolink&utm_campaign=hegnmj"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_xinwaihui_1.jpg" alt=""></a>
             </div>
 
         </div>
+        <?endif?>
 
         <?if(0):?>
         <div class="item" data-probability="15">
@@ -53,13 +56,13 @@
         </div>
         <?endif?>
 
-        <div class="item" data-probability="30">
+        <div class="active item" data-probability="70">
             <div style="height:280px;margin:0 auto;">
                 <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_fxcm_1.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_fxcm_1.swf" type="application/x-shockwave-flash" width="336" wmode="transparent"></embed></object>
             </div>
         </div>
 
-        <div class="item" data-probability="10">
+        <div class="item" data-probability="30">
             <div style="height:280px;margin:0 auto;">
                 <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_cfbagrey_1.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_cfbagrey_1.swf" type="application/x-shockwave-flash" width="336" wmode="transparent"></embed></object>
             </div>
