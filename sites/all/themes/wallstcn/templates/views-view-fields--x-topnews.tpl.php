@@ -31,6 +31,8 @@ foreach($items as $key => $news) {
                             </div>
                         </a>
                         <?endif?>
+
+
                         <div id="top-carousel" class="carousel slide">
                             <ol class="carousel-indicators">
                                 <li data-target="#top-carousel" data-slide-to="0" class="active"></li>
@@ -43,7 +45,7 @@ foreach($items as $key => $news) {
                                 <div class="active item">
                                     <a class="entry-img" href="<?=url('node/'. $item->nid);?>" target="_blank">
                                         <div class="entry-img-wrap">
-                                            <img alt="" class="span12" src="<?=wscn_image_domain(file_create_url($item->uri));?>" />
+                                            <img alt="" class="span12" src="<?=wscn_get_image_thumbnail(wscn_image_domain(file_create_url($item->uri)), 406, 271);?>" />
                                         </div>
                                     </a>
                                 </div>
@@ -52,7 +54,7 @@ foreach($items as $key => $news) {
                                 <div class="item">
                                     <a class="entry-img" href="<?=url('node/'. $picitem->nid);?>" target="_blank">
                                         <div class="entry-img-wrap">
-                                            <img alt="" class="span12" src="<?=wscn_image_domain(file_create_url($picitem->uri));?>" />
+                                            <img alt="" class="span12" src="<?=wscn_get_image_thumbnail(wscn_image_domain(file_create_url($picitem->uri)), 406, 271);?>" />
                                         </div>
                                         <div class="carousel-caption">
                                             <h2><?=$picitem->node_title?></h2>

@@ -84,7 +84,7 @@ function wallstcn_preprocess_html(&$variables) {
         $variables['head_title_array']['title'] .= '_第' .  ($parameters['page'] + 1) . '页';
     }
 
-    $variables['head_title'] = $variables['head_title_array']['title'] ? 
+    $variables['head_title'] = $variables['head_title_array']['title'] ?
         $variables['head_title_array']['title'] . '_' . $variables['head_title_array']['name']
         :  $variables['head_title_array']['name'] . '_' .  $variables['head_title_array']['slogan'];
 }
@@ -205,14 +205,14 @@ function wallstcn_pager($variables) {
         /*
         if ($li_first) {
             $items[] = array(
-                'class' => array('pager-first'), 
+                'class' => array('pager-first'),
                 'data' => $li_first,
             );
         }
         */
         if ($li_previous) {
             $items[] = array(
-                'class' => array('prev'), 
+                'class' => array('prev'),
                 'data' => $li_previous,
             );
         }
@@ -229,19 +229,19 @@ function wallstcn_pager($variables) {
             for (; $i <= $pager_last && $i <= $pager_max; $i++) {
                 if ($i < $pager_current) {
                     $items[] = array(
-                        // 'class' => array('pager-item'), 
+                        // 'class' => array('pager-item'),
                         'data' => theme('pager_previous', array('text' => $i, 'element' => $element, 'interval' => ($pager_current - $i), 'parameters' => $parameters)),
                     );
                 }
                 if ($i == $pager_current) {
                     $items[] = array(
-                        'class' => array('active'), // Add the active class 
+                        'class' => array('active'), // Add the active class
                         'data' => l($i, '#', array('fragment' => '','external' => TRUE)),
                     );
                 }
                 if ($i > $pager_current) {
                     $items[] = array(
-                        //'class' => array('pager-item'), 
+                        //'class' => array('pager-item'),
                         'data' => theme('pager_next', array('text' => $i, 'element' => $element, 'interval' => ($i - $pager_current), 'parameters' => $parameters)),
                     );
                 }
@@ -256,26 +256,38 @@ function wallstcn_pager($variables) {
         // End generation.
         if ($li_next) {
             $items[] = array(
-                'class' => array('next'), 
+                'class' => array('next'),
                 'data' => $li_next,
             );
         }
         /*
         if ($li_last) {
             $items[] = array(
-                'class' => array('pager-last'), 
+                'class' => array('pager-last'),
                 'data' => $li_last,
             );
         }
         */
 
         return '<div class="pagination pagination-centered">'. theme('item_list', array(
-                'items' => $items, 
+                'items' => $items,
                 //'attributes' => array('class' => array('pager')),
             )) . '</div>';
     }
 
     return $output;
+}
+
+function wscn_get_image_thumbnail($url, $width, $height) {
+    $url = str_ireplace('img.wallstreetcn.com', 'thumbnail.wallstreetcn.com/thumb', $url);
+
+    $url_arr = explode('.', $url);
+
+    $suffix = array_pop($url_arr);
+
+    $new_url = implode('.', $url_arr) . ",h_$width,w_$height" . '.' . $suffix;
+
+    return $new_url;
 }
 
 /*
@@ -293,7 +305,7 @@ function wallstcn_form_alter(&$form, &$form_state, $form_id) {
     if (isset($form['#form_id']) && !in_array($form['#form_id'], $form_ids) && !isset($form['#node_edit_form'])) {
         $form['actions']['#theme_wrappers'] = array();
     }
-}  
+}
 
 function wallstcn_form_search_form_alter(&$form, &$form_state) {
     $form['#attributes']['class'][] = 'form-search';
