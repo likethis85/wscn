@@ -187,8 +187,6 @@ drupal_set_title($page_title, PASS_THROUGH);?>
 </div>
 <?endif?>
 
-
-<?if(isset($GLOBALS['discovery_1'])):?>
 <div class="hot-news">
 
     <h2 class="hot-news-header">
@@ -196,7 +194,7 @@ drupal_set_title($page_title, PASS_THROUGH);?>
         <a href="/discovery" target="_blank" class="hot-news-more">MORE»</a>
     </h2>
     <div class="hot-news-list row-fluid">
-    <?foreach($GLOBALS['discovery_1'] as $k => $e):?>
+    <? $discovery_arr=get_discovery_item(); foreach($discovery_arr as $k => $e):?>
         <div class="span4">
             <div class="hot-news-content">
                 <a href="http://<?=$e['url']?>" target="_blank" class="hot-news-img">
@@ -212,7 +210,6 @@ drupal_set_title($page_title, PASS_THROUGH);?>
     <?endforeach;?>
     </div>
 </div>
-<?endif?>
 
 <?if(!empty($node->taxonomy_vocabulary_3)):?>
 <div id="related-read" class="">
