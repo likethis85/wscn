@@ -157,7 +157,6 @@
 <!-- add -->
 
 
-<?if(isset($GLOBALS['discovery_2'])):?>
 <div class="page-header">
     <a href="/discovery" class="more pull-right" target="_blank">MORE»</a>
     <h3>热门阅读</h3>
@@ -166,7 +165,7 @@
 <div class="hot-news-sidebar">
     <div class="hot-news-sidebar-wrapper">
 
-        <?foreach($GLOBALS['discovery_2'] as $k => $e):?>
+        <? $discovery_arr=get_discovery_item(); foreach($discovery_arr as $k => $e):?>
         <div class="hot-news-content">
             <a href="http://<?=$e['url']?>" target="_blank" class="hot-news-img">
                 <img src="<?=$e['img']?>" alt="<?=$e['title']?>" />
@@ -178,11 +177,11 @@
 
     </div>
 </div>
-<?endif?>
+
 
 <!-- add end -->
 
-<?if(!isset($GLOBALS['discovery_2'])):?>
+<?if(0):?>
 <div class="page-header">
     <a href="http://weibo.com/wallstreetcn" class="more pull-right" target="_blank">MORE»</a>
     <h3>最新微博</h3>

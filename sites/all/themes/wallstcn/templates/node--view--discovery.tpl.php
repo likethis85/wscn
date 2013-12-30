@@ -1,5 +1,4 @@
-<?  //include_once 'discovery.php';
-
+<?
     $discovery = get_discovery_arr();
     $discovery_1  = array();
     // 这里加外部广告
