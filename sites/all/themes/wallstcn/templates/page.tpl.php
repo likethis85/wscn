@@ -1,5 +1,3 @@
-<? //include_once 'discovery.php'; ?>
-
 <div id="wrapper">
 
     <header id="header">

@@ -23,8 +23,8 @@ $rows = ceil($max / 3);
                 <a class="media-image news-img" href="<?=url('node/'. $item->nid);?>" target="_blank">
                 <?if($item->file_managed_field_data_upload_uri || $item->field_field_image_1):?>
                     <div class="news-img-wrap">
-                        <img class="lazy" src="<?=path_to_theme()?>/placeholder.gif" data-original="<?=wscn_image_domain(wscn_image_url($item));?>" alt="<?=$item->node_title?>" />
-                        <noscript><img class="" src="<?=wscn_image_domain(wscn_image_url($item));?>" alt="<?=$item->node_title?>"></noscript>
+                        <img class="lazy" src="<?=path_to_theme()?>/placeholder.gif" data-original="<?=wscn_get_image_thumbnail(wscn_image_domain(wscn_image_url($item)), 210, 140);?>" alt="<?=$item->node_title?>" />
+                        <noscript><img class="" src="<?=wscn_get_image_thumbnail(wscn_image_domain(wscn_image_url($item)), 210, 140);?>" alt="<?=$item->node_title?>"></noscript>
                     </div>
                 <?endif?>
                 </a>
