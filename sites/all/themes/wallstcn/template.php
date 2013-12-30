@@ -285,7 +285,7 @@ function wscn_get_image_thumbnail($url, $width, $height) {
 
     $suffix = array_pop($url_arr);
 
-    $new_url = implode('.', $url_arr) . ",h_$width,w_$height" . '.' . $suffix;
+    $new_url = implode('.', $url_arr) . ",c_fill,h_$height,w_$width" . '.' . $suffix;
 
     return $new_url;
 }
