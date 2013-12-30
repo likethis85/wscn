@@ -1,4 +1,4 @@
-<? include_once 'discovery.php'; ?>
+<? //include_once 'discovery.php'; ?>
 
 <div class="hot-news">
 
