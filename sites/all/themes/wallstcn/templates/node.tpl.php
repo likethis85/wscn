@@ -188,21 +188,21 @@ drupal_set_title($page_title, PASS_THROUGH);?>
 <?endif?>
 
 
-<?if(isset($GLOBALS['essence_left'])):?>
+<?if(isset($GLOBALS['discovery_1'])):?>
 <div class="hot-news">
 
     <h2 class="hot-news-header">
         更多热点
-        <a href="" class="hot-news-more">MORE»</a>
+        <a href="/discovery" target="_blank" class="hot-news-more">MORE»</a>
     </h2>
     <div class="hot-news-list row-fluid">
-    <?foreach($GLOBALS['essence_left'] as $k => $e):?>
+    <?foreach($GLOBALS['discovery_1'] as $k => $e):?>
         <div class="span4">
             <div class="hot-news-content">
-                <a href="<?=$e['url']?>" target="_blank" class="hot-news-img">
+                <a href="http://<?=$e['url']?>" target="_blank" class="hot-news-img">
                     <img src="<?=$e['img']?>" alt="<?=$e['title']?>" />
                 </a>
-                <a href="<?=$e['url']?>" target="_blank" class="hot-news-title"><?=$e['title']?></a>
+                <a href="http://<?=$e['url']?>" target="_blank" class="hot-news-title"><?=$e['title']?></a>
             </div>
         </div>
     <?if($k == 2):?>

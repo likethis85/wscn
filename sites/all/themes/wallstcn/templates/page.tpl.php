@@ -1,6 +1,5 @@
-<?php
-    //include_once 'essence.php';
-?>
+<? include_once 'discovery.php'; ?>
+
 <div id="wrapper">
 
     <header id="header">
