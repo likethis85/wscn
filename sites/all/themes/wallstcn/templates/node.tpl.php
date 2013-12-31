@@ -198,7 +198,7 @@ drupal_set_title($page_title, PASS_THROUGH);?>
         <div class="span4">
             <div class="hot-news-content">
                 <a href="http://<?=$e['url']?>" target="_blank" class="hot-news-img">
-                    <img src="<?=$e['img']?>" alt="<?=$e['title']?>" />
+                    <img src="<?=wscn_get_image_thumbnail($e['img'], 210, 130)?>" alt="<?=$e['title']?>" />
                 </a>
                 <a href="http://<?=$e['url']?>" target="_blank" class="hot-news-title"><?=$e['title']?></a>
             </div>

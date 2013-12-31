@@ -168,7 +168,7 @@
         <? $discovery_arr=get_discovery_item(); foreach($discovery_arr as $k => $e):?>
         <div class="hot-news-content">
             <a href="http://<?=$e['url']?>" target="_blank" class="hot-news-img">
-                <img src="<?=$e['img']?>" alt="<?=$e['title']?>" />
+                <img src="<?=wscn_get_image_thumbnail($e['img'], 170, 110)?>" alt="<?=$e['title']?>" />
             </a>
             <a href="http://<?=$e['url']?>" target="_blank" class="hot-news-title"><?=$e['title']?></a>
         </div>
