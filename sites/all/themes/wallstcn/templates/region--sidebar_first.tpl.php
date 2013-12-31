@@ -99,10 +99,12 @@
 <div class="ad-box">
 <div class="carousel slide">
     <div class="carousel-inner">
+		<!--
         <div class="active item">
             <a target="_blank" href="/sponsor"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/sponsor_ironfx.jpg" alt=""></a>
         </div>
-        <div class="item">
+        -->
+        <div class="active item">
             <a target="_blank" href="/sponsor"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/sponsor_fxcm.jpg" alt=""></a>
         </div>
         <div class="item">
