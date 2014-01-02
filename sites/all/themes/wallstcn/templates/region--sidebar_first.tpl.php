@@ -219,7 +219,7 @@
                     <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_xinwaihui_2&url=http://www.xinwaihui.com/?utm_source=hej&utm_medium=cpc&utm_term=hej_home&utm_content=textlink&utm_campaign=hejhonme1"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_xinwaihui_2.jpg" alt=""></a>
                 </div>
             </div>
-            <?if(time() < strtotime('2014-01-03 03:00:00') || time() > strtotime('2014-01-04 03:00:00')):?>
+            <?if(time() < strtotime('2014-01-03 02:00:00') || time() > strtotime('2014-01-04 02:00:00')):?>
             <div class="item"  data-probability="100">
                 <ins class="adsbygoogle"
                     style="display:inline-block;width:336px;height:280px"
