@@ -99,7 +99,7 @@
 <div class="ad-box">
 <div class="carousel slide">
     <div class="carousel-inner">
-		<!--
+        <!--
         <div class="active item">
             <a target="_blank" href="/sponsor"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/sponsor_ironfx.jpg" alt=""></a>
         </div>
@@ -219,7 +219,8 @@
                     <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_xinwaihui_2&url=http://www.xinwaihui.com/?utm_source=hej&utm_medium=cpc&utm_term=hej_home&utm_content=textlink&utm_campaign=hejhonme1"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_xinwaihui_2.jpg" alt=""></a>
                 </div>
             </div>
-            <div class="item"  data-probability="<?if(time() > strtotime(date('Y-m-d') . ' 09:00:00') && time() < strtotime(date('Y-m-d') . ' 18:00:00')):?>100<?else:?>100<?endif;?>">
+            <?if(time() < strtotime('2014-01-03 03:00:00') || time() > strtotime('2014-01-04 03:00:00')):?>
+            <div class="item"  data-probability="100">
                 <ins class="adsbygoogle"
                     style="display:inline-block;width:336px;height:280px"
                     data-ad-client="ca-pub-0869270234052789"
@@ -229,6 +230,12 @@
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
+            <?else:?>
+            <div class="item"  data-probability="100">
+                <IFRAME WIDTH="336" HEIGHT="280" MARGINWIDTH="0" MARGINHEIGHT="0" HSPACE="0" VSPACE="0" FRAMEBORDER="0" SCROLLING="no"
+    SRC="http://pbid.fxdepo.com/engine?site=134262;size=336x280;linktarget=_blank;rnd=(randomNumber)"></IFRAME>
+            </div>
+           <?endif;?>
         </div>
     </div>
 </div>
