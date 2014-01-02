@@ -1,5 +1,5 @@
 <?php
-//exit('The website is being upgraded, is expected to be 2-3 hours...');
+exit('The website is being upgraded, is expected to be 2-3 hours...');
 /**
  * @file
  * The PHP page that serves all page requests on a Drupal installation.
