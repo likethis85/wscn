@@ -1,7 +1,11 @@
 <div class="<?=$classes;?>" <?=$attributes;?>>
-<?include 'box-icons.php'?>
 
-<?if(0 && variable_get('site_ad')):?>
+<? $item= menu_get_item(); if ($item['path'] != 'discovery'):?>
+<?include 'box-icons.php'?>
+<?endif?>
+
+<?if ($item['path'] == 'discovery'):?>
+<?if(variable_get('site_ad')):?>
 <div class="ad-box ad-side">
 <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
@@ -13,48 +17,13 @@
 </script>
 </div>
 <?endif?>
-
-<?if(0 && variable_get('site_ad')): //slider ads?>
-<div class="ad-box ad-side">
-<div class="carousel slide" style="margin-bottom:0;">
-    <div class="carousel-inner">
-        <div class="active item">
-            <div style="height:280px;margin:0 auto;">
-                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="/sites/all/themes/wallstcn/ads/fxcm.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/sites/all/themes/wallstcn/ads/fxcm.swf" type="application/x-shockwave-flash" width="336"></embed></object>
-            </div>
-        </div>
-        <div class="item">
-            <div style="margin:0 auto;">
-            <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=index_left_top_ad_hit_2&url=http://www.svsfx.com.cn/2013815/"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/svsfx.gif" alt=""></a>
-            </div>
-        </div>
-
-    </div>
-</div>
-</div>
 <?endif?>
 
+<?if ($item['path'] != 'discovery'):?>
 <?if(variable_get('site_ad')): //slider ads?>
 <div class="ad-box ad-side">
 <div class="random-ad" style="margin-bottom:0;">
     <div class="carousel-inner">
-
-        <?if(0):?>
-        <div class="active item"  data-probability="70">
-            <div style="margin:0 auto;">
-                <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_xinwaihui_1&url=http://www.xinwaihui.com/?utm_source=hej&utm_medium=cpc&utm_term=hej336280&utm_content=logolink&utm_campaign=hegnmj"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_xinwaihui_1.jpg" alt=""></a>
-            </div>
-
-        </div>
-        <?endif?>
-
-        <?if(0):?>
-        <div class="item" data-probability="15">
-            <div style="height:280px;margin:0 auto;">
-                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="280" width="336"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_top_ad_2_svsfx.swf" /><embed height="280" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_top_ad_2_svsfx.swf" type="application/x-shockwave-flash" width="336" wmode="transparent"></embed></object>
-            </div>
-        </div>
-        <?endif?>
 
         <div class="active item" data-probability="70">
             <div style="height:280px;margin:0 auto;">
@@ -68,27 +37,12 @@
             </div>
         </div>
 
-        <?if(0):?>
-        <div class="item">
-            <div style="margin:0 auto;">
-            <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=index_left_top_ad_hit_2&url=http://www.svsfx.com.cn/2013815/"><img src="/sites/all/themes/wallstcn/ads/index_left_top_ad_2_svsfx.gif" alt=""></a>
-            </div>
-        </div>
 
-
-        <?endif?>
 
     </div>
 </div>
 </div>
 <?endif?>
-
-<?if(0 && variable_get('site_ad')):?>
-<div class="ad-box ad-side">
-    <div style="width:336px;margin:0 auto">
-        <a href="http://www.sinolending.com/" target="_blank"><img src="/sites/all/themes/wallstcn/ads/ad_sinolending.gif" alt="" /></a>
-    </div>
-</div>
 <?endif?>
 
 <?if(isset($elements['views_x_click-twodays']) && $elements['views_x_click-twodays']):?>
@@ -115,7 +69,22 @@
 </div>
 <?endif?>
 
+<?if ($item['path'] == 'discovery'):?>
+<?if(variable_get('site_ad')):?>
+<div class="ad-box ad-side">
+<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-0869270234052789"
+     data-ad-slot="2911844489"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<?endif?>
+<?endif?>
 
+<?if ($item['path'] != 'discovery'):?>
 <?if(variable_get('site_ad')):?>
 <div class="ad-box ad-side ad-margin-top">
     <div class="random-ad" style="margin-bottom:0;">
@@ -152,6 +121,7 @@
     </div>
 </div>
 <?endif?>
+<?endif?>
 
 
 <?if($is_front && $elements['views_x_comments-block']):?>
@@ -172,7 +142,7 @@
         if($is_front) {
             $discovery_arr = get_discovery_index_side_item();
         } else {
-            if($item = menu_get_item()) {
+            if($item) {
                 if ($item['path'] == 'discovery') {
                     $discovery_arr = get_discovery_discovery_side_item();
                 } else {
@@ -219,6 +189,22 @@
 </div>
 <?endif?>
 
+<?if ($item['path'] == 'discovery'):?>
+<?if(variable_get('site_ad')):?>
+<div class="ad-box ad-side">
+<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-0869270234052789"
+     data-ad-slot="2911844489"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<?endif?>
+<?endif?>
+
+<?if ($item['path'] != 'discovery'):?>
 <?if(variable_get('site_ad')):?>
 <div class="ad-box ad-side ad-margin-top">
     <div class="random-ad" style="margin-bottom:0;">
@@ -253,6 +239,7 @@
         </div>
     </div>
 </div>
+<?endif?>
 <?endif?>
 
 <?if(isset($elements['views_x_tags-block']) && $elements['views_x_tags-block']):?>
