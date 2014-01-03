@@ -168,8 +168,22 @@
 
 <div class="hot-news-sidebar">
     <div class="hot-news-sidebar-wrapper">
-
-        <? $discovery_arr=get_discovery_item(); foreach($discovery_arr as $k => $e):?>
+        <?
+        if($is_front) {
+            $discovery_arr = get_discovery_index_side_item();
+        } else {
+            if($item = menu_get_item()) {
+                if ($item['path'] == 'discovery') {
+                    $discovery_arr = get_discovery_discovery_side_item();
+                } else {
+                    $discovery_arr = get_discovery_item();
+                }
+            } else {
+                $discovery_arr = get_discovery_item();
+            }
+        }
+        ?>
+        <?foreach($discovery_arr as $k => $e):?>
         <div class="hot-news-content">
             <a href="http://<?=$e['url']?>" target="_blank" class="hot-news-img">
                 <img src="<?=wscn_get_image_thumbnail($e['img'], 170, 110)?>" alt="<?=$e['title']?>" />

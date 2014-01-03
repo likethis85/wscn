@@ -565,6 +565,61 @@ function _bootstrap_element_whitelist() {
     );
 }
 
+function get_discovery_index_side_item() {
+    $discovery = get_discovery_arr();
+
+    $discovery_item  = array();
+    // 这里加外部广告
+    // 亿邦动力
+    $discovery_item[4] = array('title' => '刘强东高调的背后 可能快没钱了',
+                               'url'   => 'home.ebrun.com/blog-44231.html',
+                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_ebrun_1.jpg',
+                         );
+    $discovery_item[5] = array('title' => '房奴最想逃离的10大城市',
+                               'url'   =>'esf.sh.soufun.com/newsecond/news/11803634.htm?utm_source=shhezuo&utm_medium=click&utm_term=lgq_sh&utm_content=shwalls&utm_campaign=20140102walls',
+                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_soufun_1.jpg',
+                         );
+
+    $numbers = range(0, 400);
+    shuffle($numbers);
+
+    $key  = array_slice($numbers, 0, 6);
+
+    for ($i=0; $i<6; $i++) {
+        if (isset($discovery_item[$i])) {
+            continue;
+        }
+
+        $discovery_item[$i] = $discovery[$key[$i]];
+    }
+    ksort($discovery_item);
+    return $discovery_item;
+}
+
+function get_discovery_discovery_side_item() {
+    $discovery = get_discovery_arr();
+
+    $discovery_item  = array();
+    // 这里加外部广告
+
+    $numbers = range(0, 400);
+    shuffle($numbers);
+
+    $key  = array_slice($numbers, 0, 6);
+
+    for ($i=0; $i<6; $i++) {
+        if (isset($discovery_item[$i])) {
+            continue;
+        }
+
+        $discovery_item[$i] = $discovery[$key[$i]];
+    }
+    ksort($discovery_item);
+    return $discovery_item;
+}
+
+
+
 function get_discovery_item() {
     $discovery = get_discovery_arr();
 
@@ -583,6 +638,7 @@ function get_discovery_item() {
 
         $discovery_item[$i] = $discovery[$key[$i]];
     }
+    ksort($discovery_item);
     return $discovery_item;
 }
 
