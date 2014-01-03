@@ -89,6 +89,7 @@
 <div class="ad-box ad-side ad-margin-top">
     <div class="random-ad" style="margin-bottom:0;">
         <div class="carousel-inner">
+            <?if(time() < strtotime('2014-01-04 00:00:00') || time() > strtotime('2014-01-05 00:00:00')):?>
             <div class="active item"  data-probability="50">
                 <div style="width:336px;margin:0 auto">
                     <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_forexct_3&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_forexct_3.jpg" alt=""></a>
@@ -116,10 +117,15 @@
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
-
+            <?else:?>
+            <div class="item"  data-probability="100">
+            <IFRAME WIDTH="336" HEIGHT="280" MARGINWIDTH="0" MARGINHEIGHT="0" HSPACE="0" VSPACE="0" FRAMEBORDER="0" SCROLLING="no" SRC="http://pbid.fxdepo.com/engine?site=134264;size=336x280;linktarget=_blank;rnd=(randomNumber)"></IFRAME>
+            </div>
+            <?endif;?>
         </div>
     </div>
 </div>
+
 <?endif?>
 <?endif?>
 
