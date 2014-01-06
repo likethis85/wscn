@@ -89,8 +89,8 @@
 <div class="ad-box ad-side ad-margin-top">
     <div class="random-ad" style="margin-bottom:0;">
         <div class="carousel-inner">
-            <?if(time() < strtotime('2014-01-04 00:00:00') || time() > strtotime('2014-01-05 00:00:00')):?>
-            <div class="active item"  data-probability="50">
+            <?if(time() < strtotime('2014-01-06 18:00:00') || time() > strtotime('2014-01-13 18:00:00')):?>
+            <div class="active item"  data-probability="70">
                 <div style="width:336px;margin:0 auto">
                     <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_forexct_3&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_forexct_3.jpg" alt=""></a>
                 </div>
@@ -101,12 +101,12 @@
                     <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_ironfx_3&url=https://www.ironfx.cn/zh/register?utm_source=wallstreetcn728_90HPIB&utm_mediumwallstreetcn728_90HPIB&utm_campaign=wallstreetcn"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_ironfx_3.jpg" alt=""></a>
                 </div>
             </div>
-            -->
             <div class="item"  data-probability="20">
                 <div style="width:336px;margin:0 auto">
                     <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_nordfx_2&url=http://nordfx-chinese.com/?id=859276"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_nordfx_2.jpg" alt=""></a>
                 </div>
             </div>
+            -->
             <div class="item"  data-probability="30">
                 <ins class="adsbygoogle"
                     style="display:inline-block;width:336px;height:280px"
@@ -119,7 +119,9 @@
             </div>
             <?else:?>
             <div class="item"  data-probability="100">
-            <IFRAME WIDTH="336" HEIGHT="280" MARGINWIDTH="0" MARGINHEIGHT="0" HSPACE="0" VSPACE="0" FRAMEBORDER="0" SCROLLING="no" SRC="http://pbid.fxdepo.com/engine?site=134264;size=336x280;linktarget=_blank;rnd=(randomNumber)"></IFRAME>
+                <div style="width:336px;margin:0 auto">
+                    <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_pingan_1&url=http://1010-0000.pingan.com/index.shtml?WT.mc_id=CXX-a20130628WLY-007"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_pingan_1.jpg" alt=""></a>
+                </div>
             </div>
             <?endif;?>
         </div>
