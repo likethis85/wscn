@@ -572,18 +572,18 @@ function get_discovery_index_side_item() {
     // 这里加外部广告
 
     // 第9头条
-    /*
+
     $topnews9_response = curl_get('http://www.topnews9.com/plus/api/wallstreetcn.php');
     $topnews9 = json_decode($topnews9_response, 1);
     if ($topnews9 !== false) {
         $topnews9 = array_shift($topnews9);
         $discovery_item[1] = array('title' => $topnews9['title'],
-                                   'url'   => $topnews9['arcurl'],
+                                   'url'   => substr($topnews9['arcurl'], 7),
                                    'img'   => $topnews9['litpic'],
                                    'not_thumbnail' => true,
                              );
     }
-    */
+
     // pingwest
     $pingwest_response = curl_get('http://www.pingwest.com/feed/?f&b');
     if ($pingwest_response != '') {
