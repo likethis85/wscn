@@ -196,7 +196,16 @@ drupal_set_title($page_title, PASS_THROUGH);?>
         <a href="/discovery" target="_blank" class="hot-news-more">MORE»</a>
     </h2>
     <div class="hot-news-list row-fluid">
-    <? $discovery_arr=get_discovery_item(); foreach($discovery_arr as $k => $e):?>
+    <? $discovery_arr=get_discovery_item();
+       $item = menu_get_item();
+       if ($item['href'] == 'node/70962' || $item['href'] == 'node/70836' || $item['href'] == 'node/71029') {
+           $discovery_arr[0] = array('title' => '华尔街“男神”2014着装行头',
+                               'url'   => 'shangchang.55bbs.com/2013/1101/2148079.shtml ',
+                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_55bbs_1.jpg',
+                         );
+       }
+
+    foreach($discovery_arr as $k => $e):?>
         <div class="span4">
             <div class="hot-news-content">
                 <a href="http://<?=$e['url']?>" target="_blank" class="hot-news-img">
