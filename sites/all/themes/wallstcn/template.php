@@ -570,6 +570,35 @@ function get_discovery_index_side_item() {
 
     $discovery_item  = array();
     // 这里加外部广告
+
+    // 第9头条
+    /*
+    $topnews9_response = curl_get('http://www.topnews9.com/plus/api/wallstreetcn.php');
+    $topnews9 = json_decode($topnews9_response, 1);
+    if ($topnews9 !== false) {
+        $topnews9 = array_shift($topnews9);
+        $discovery_item[1] = array('title' => $topnews9['title'],
+                                   'url'   => $topnews9['arcurl'],
+                                   'img'   => $topnews9['litpic'],
+                                   'not_thumbnail' => true,
+                             );
+    }
+    */
+    // pingwest
+    $pingwest_response = curl_get('http://www.pingwest.com/feed/?f&b');
+    if ($pingwest_response != '') {
+        $pingwest_xml = simplexml_load_string($pingwest_response);
+        if ($pingwest_xml !== false) {
+            $pingwest_arr = @json_decode(@json_encode($pingwest_xml),1);
+            $pingwest_item = $pingwest_arr['channel']['item'][0];
+            $discovery_item[2] = array('title' => $pingwest_item['title'],
+                                       'url'   => substr($pingwest_item['link'], 7),
+                                       'img'   => trim($pingwest_item['img']),
+                                       'not_thumbnail' => true,
+                                 );
+        }
+    }
+
     // 亿邦动力
     $discovery_item[4] = array('title' => '刘强东高调的背后 可能快没钱了',
                                'url'   => 'home.ebrun.com/blog-44231.html',
@@ -616,6 +645,20 @@ function get_discovery_discovery_side_item() {
     }
     ksort($discovery_item);
     return $discovery_item;
+}
+
+function curl_get($url, $timeout=3) {
+    $ch = curl_init($url) ;
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true) ;
+    curl_setopt($ch, CURLOPT_BINARYTRANSFER, true) ;
+    curl_setopt($ch, CURLOPT_TIMEOUT, $timeout);
+    $response = curl_exec($ch) ;
+
+    if($response === false) {
+        //$error = curl_error($ch);
+        return '';
+    }
+    return $response;
 }
 
 
