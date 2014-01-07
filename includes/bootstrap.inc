@@ -1305,7 +1305,7 @@ function drupal_serve_page_from_cache(stdClass $cache) {
   // session cookie is present unless the Vary header has been replaced or
   // unset in hook_boot().
   $max_age = !isset($_COOKIE[session_name()]) || isset($hook_boot_headers['vary']) ? variable_get('page_cache_maximum_age', 0) : 0;
-  $default_headers['Cache-Control'] = 'public, max-age=' . $max_age;
+  //$default_headers['Cache-Control'] = 'public, max-age=' . $max_age;
 
   // Entity tag should change if the output changes.
   $etag = '"' . $cache->created . '-' . intval($return_compressed) . '"';
@@ -1334,7 +1334,7 @@ function drupal_serve_page_from_cache(stdClass $cache) {
   // by sending an Expires date in the past. HTTP/1.1 clients ignores the
   // Expires header if a Cache-Control: max-age= directive is specified (see RFC
   // 2616, section 14.9.3).
-  $default_headers['Expires'] = 'Sun, 19 Nov 1978 05:00:00 GMT';
+  //$default_headers['Expires'] = 'Sun, 19 Nov 1978 05:00:00 GMT';
 
   drupal_send_headers($default_headers);
 
