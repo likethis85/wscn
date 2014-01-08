@@ -631,6 +631,27 @@ function get_discovery_discovery_side_item() {
     $discovery_item  = array();
     // 这里加外部广告
 
+    // 第9头条
+    $topnews9_response = curl_get('http://www.topnews9.com/plus/api/wallstreetcn.php');
+    $topnews9 = json_decode($topnews9_response, 1);
+    if ($topnews9 !== false) {
+        array_shift($topnews9);
+        $topnews9_1 = array_shift($topnews9);
+        $topnews9_2 = array_shift($topnews9);
+        $discovery_item[0] = array('title' => $topnews9_1['title'],
+                                   'url'   => substr($topnews9_1['arcurl'], 7),
+                                   'img'   => $topnews9_1['litpic'],
+                                   'not_thumbnail' => true,
+                             );
+
+        $discovery_item[1] = array('title' => $topnews9_2['title'],
+                                   'url'   => substr($topnews9_2['arcurl'], 7),
+                                   'img'   => $topnews9_2['litpic'],
+                                   'not_thumbnail' => true,
+                             );
+    }
+
+
     $numbers = range(0, 400);
     shuffle($numbers);
 
