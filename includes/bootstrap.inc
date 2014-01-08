@@ -1305,7 +1305,7 @@ function drupal_serve_page_from_cache(stdClass $cache) {
   // session cookie is present unless the Vary header has been replaced or
   // unset in hook_boot().
   $max_age = !isset($_COOKIE[session_name()]) || isset($hook_boot_headers['vary']) ? variable_get('page_cache_maximum_age', 0) : 0;
-  $default_headers['Cache-Control'] = 'public, max-age=' . $max_age;
+  //$default_headers['Cache-Control'] = 'public, max-age=' . $max_age;
 
   // Entity tag should change if the output changes.
   $etag = '"' . $cache->created . '-' . intval($return_compressed) . '"';

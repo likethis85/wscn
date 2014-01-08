@@ -1835,6 +1835,13 @@ function user_menu() {
  * Implements hook_menu_site_status_alter().
  */
 function user_menu_site_status_alter(&$menu_site_status, $path) {
+  if (user_is_logged_in()) {
+    //setcookie('nocache', 1, time()+3600*24, '/');
+  } else {
+    //setcookie('nocache', 1, time()-3600, '/');
+  }
+
+
   if ($menu_site_status == MENU_SITE_OFFLINE) {
     // If the site is offline, log out unprivileged users.
     if (user_is_logged_in() && !user_access('access site in maintenance mode')) {
@@ -2143,7 +2150,8 @@ function user_login_authenticate_validate($form, &$form_state) {
     }
     $account = db_query("SELECT * FROM {users} WHERE name = :name AND status = 1", array(':name' => $form_state['values']['name']))->fetchObject();
     if ($account) {
-      setcookie('nocache', 0);
+        setcookie('nocache', 1, time()+3600*24, '/');
+
       if (variable_get('user_failed_login_identifier_uid_only', FALSE)) {
         // Register flood events based on the uid only, so they apply for any
         // IP address. This is the most secure option.
