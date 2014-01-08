@@ -2150,7 +2150,7 @@ function user_login_authenticate_validate($form, &$form_state) {
     }
     $account = db_query("SELECT * FROM {users} WHERE name = :name AND status = 1", array(':name' => $form_state['values']['name']))->fetchObject();
     if ($account) {
-        setcookie('nocache', 1, time()+3600*24, '/');
+        setcookie('nocache', 1, time()+3600*24, '/', '.wallstreetcn.com');
 
       if (variable_get('user_failed_login_identifier_uid_only', FALSE)) {
         // Register flood events based on the uid only, so they apply for any

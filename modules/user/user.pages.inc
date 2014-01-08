@@ -175,7 +175,7 @@ function user_logout() {
 
   // Destroy the current session, and reset $user to the anonymous user.
   session_destroy();
-  setcookie('nocache', 1, time()-3600, '/');
+  setcookie('nocache', 1, time()-3600, '/', '.wallstreetcn.com');
   drupal_goto();
 }
 
