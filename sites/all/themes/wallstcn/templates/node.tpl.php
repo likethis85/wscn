@@ -200,7 +200,7 @@ drupal_set_title($page_title, PASS_THROUGH);?>
        $item = menu_get_item();
        if ($item['href'] == 'node/70962' || $item['href'] == 'node/70836' || $item['href'] == 'node/71029') {
            $discovery_arr[0] = array('title' => '华尔街“男神”2014着装行头',
-                               'url'   => 'shangchang.55bbs.com/2013/1101/2148079.shtml ',
+                               'url'   => 't.55bbs.com/pin/891460/?tuiguangid=huaerjie',
                                'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_55bbs_1.jpg',
                          );
        }
