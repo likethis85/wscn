@@ -98,7 +98,7 @@
                                 <?if(time() < strtotime('2014-01-03 02:00:00') || time() > strtotime('2014-01-04 02:00:00')):?>
                                 <div class="item" data-probability="50">
                                     <div style="height:280px;margin:0 auto;">
-                                        <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_live_hit_forexct_1&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_live_forexct_1.jpg" alt=""></a>
+                                        <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_live_hit_forexct_1&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_live_forexct_1.jpg" alt="广告"></a>
                                     </div>
                                 </div>
                                 <!--

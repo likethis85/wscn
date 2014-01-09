@@ -59,10 +59,10 @@
         </div>
         -->
         <div class="active item">
-            <a target="_blank" href="/sponsor"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/sponsor_fxcm.jpg" alt=""></a>
+            <a target="_blank" href="/sponsor"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/sponsor_fxcm.jpg" alt="广告"></a>
         </div>
         <div class="item">
-            <a target="_blank" href="/sponsor"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/sponsor_svsfx.jpg" alt=""></a>
+            <a target="_blank" href="/sponsor"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/sponsor_svsfx.jpg" alt="广告"></a>
         </div>
     </div>
 </div>
@@ -92,7 +92,7 @@
             <?if(time() < strtotime('2014-01-06 18:00:00') || time() > strtotime('2014-01-13 18:00:00')):?>
             <div class="active item"  data-probability="70">
                 <div style="width:336px;margin:0 auto">
-                    <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_forexct_3&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_forexct_3.jpg" alt=""></a>
+                    <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_forexct_3&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_forexct_3.jpg" alt="广告"></a>
                 </div>
             </div>
             <!--
@@ -120,7 +120,7 @@
             <?else:?>
             <div class="item"  data-probability="100">
                 <div style="width:336px;margin:0 auto">
-                    <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_pingan_1&url=http://1010-0000.pingan.com/index.shtml?WT.mc_id=CXX-a20130628WLY-007"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_pingan_1.jpg" alt=""></a>
+                    <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_pingan_1&url=http://1010-0000.pingan.com/index.shtml?WT.mc_id=CXX-a20130628WLY-007"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_pingan_1.jpg" alt="广告"></a>
                 </div>
             </div>
             <?endif;?>
@@ -196,7 +196,7 @@
 <?if(variable_get('site_ad') && 0):?>
 <div class="ad-box ad-side ad-margin-top">
     <div style="width:336px;margin:0 auto">
-        <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=index_left_middle2_ad_hit_1&url=http://xianguo.com/section/9163D6A8FF6494B79424131CF7BA0D55"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_middle2_ad_1_xianguo.png" alt=""></a>
+        <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=index_left_middle2_ad_hit_1&url=http://xianguo.com/section/9163D6A8FF6494B79424131CF7BA0D55"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/index_left_middle2_ad_1_xianguo.png" alt="广告"></a>
     </div>
 </div>
 <?endif?>
@@ -274,7 +274,7 @@
     <div class="row-fluid">
         <div class="span12">
             <a href="/contact">
-                <img class="" src="/sites/all/themes/wallstcn/css/img/advertising.gif" width="360" />
+                <img class="" src="/sites/all/themes/wallstcn/css/img/advertising.gif" width="360" alt="广告"/>
             </a>
         </div>
     </div>
