@@ -38,7 +38,7 @@ foreach($items as $key => $news) {
                                 <li data-target="#top-carousel" data-slide-to="0" class="active"></li>
                                 <li data-target="#top-carousel" data-slide-to="1"></li>
                                 <li data-target="#top-carousel" data-slide-to="2"></li>
-                                <li data-target="#top-carousel" data-slide-to="3"></li>
+                                <!--<li data-target="#top-carousel" data-slide-to="3"></li>-->
                             </ol>
                             <!-- Carousel items -->
                             <div class="carousel-inner">
@@ -64,6 +64,7 @@ foreach($items as $key => $news) {
                                 </div>
                                 <?endforeach?>
                                 <?endif?>
+                                <!--
                                 <div class="item">
                                     <a class="entry-img" href="redirect.htm?type=__ads_wscn_index_hit_zsgjs_1&url=http://www.zsgjs.com/ws/" target="_blank">
                                         <div class="entry-img-wrap">
@@ -71,6 +72,7 @@ foreach($items as $key => $news) {
                                         </div>
                                     </a>
                                 </div>
+                                -->
                             </div>
                             <!-- Carousel nav -->
                             <a class="carousel-control left" href="#top-carousel" data-slide="prev">&lsaquo;</a>
