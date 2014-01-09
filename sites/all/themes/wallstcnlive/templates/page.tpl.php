@@ -231,7 +231,7 @@
                     <div class="ad-box ad-side">
                         <div class="random-ad" style="margin-bottom:0;">
                             <div class="carousel-inner">
-
+                                <!--
                                 <div class="active item" data-probability="<?if(time() > strtotime(date('Y-m-d') . ' 09:00:00') && time() < strtotime(date('Y-m-d') . ' 18:00:00')):?>100<?else:?>50<?endif;?>">
                                     <div style="height:280px;margin:0 auto;">
                                         <a href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_live_hit_xinwaihui_2&amp;url=http://www.xinwaihui.com/?utm_source=hej&utm_medium=cpc&utm_term=hejnews&utm_content=textlink&utm_campaign=livenews" target="_blank"><img alt="" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_live_xinwaihui_2.jpeg"></a>
@@ -248,7 +248,13 @@
                                         (adsbygoogle = window.adsbygoogle || []).push({});
                                     </script>
                                 </div>
-
+                                -->
+                                <div class="active item" data-probability="100">
+                                    <div style="height:280px;margin:0 auto;">
+                                        <IFRAME WIDTH="336" HEIGHT="280" MARGINWIDTH="0" MARGINHEIGHT="0" HSPACE="0" VSPACE="0" FRAMEBORDER="0" SCROLLING="no"
+SRC="http://pbid.fxdepo.com/engine?site=134334;size=336x280;linktarget=_blank;rnd=(randomNumber)"></IFRAME>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
