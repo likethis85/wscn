@@ -604,8 +604,9 @@ function get_discovery_index_side_item() {
                                'url'   => 'home.ebrun.com/blog-44231.html',
                                'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_ebrun_1.jpg',
                          );
-    $discovery_item[5] = array('title' => '房奴最想逃离的10大城市',
-                               'url'   =>'esf.sh.soufun.com/newsecond/news/11803634.htm?utm_source=shhezuo&utm_medium=click&utm_term=lgq_sh&utm_content=shwalls&utm_campaign=20140102walls',
+    // 搜房网
+    $discovery_item[5] = array('title' => '中国房价坚不可摧的15个城市',
+                               'url'   =>'http://esf.sh.soufun.com/newsecond/news/11862870.htm?utm_source=shhezuo&utm_medium=click&utm_term=lgq_sh&utm_content=shwalls&utm_campaign=20140110walls',
                                'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_soufun_1.jpg',
                          );
 
