@@ -8212,6 +8212,9 @@ body.toolbar, body.toolbar-drawer {
 .hot-news-sidebar .hot-news-title:hover {
   color: #d24747;
 }
+.page-header-link:hover {
+  color: #aeaeae;
+}
 /* ===========================
  * IE fix
  * ===========================
