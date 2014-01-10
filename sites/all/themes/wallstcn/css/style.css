@@ -8212,7 +8212,7 @@ body.toolbar, body.toolbar-drawer {
 .hot-news-sidebar .hot-news-title:hover {
   color: #d24747;
 }
-header.header-red h3 a.page-header-link:hover {
+.page-header.header-red h3 a.page-header-link:hover {
   color: #aeaeae;
 }
 /* ===========================
