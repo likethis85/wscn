@@ -3,7 +3,7 @@
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix node-article node-livenews" <?php print $attributes; ?>>
 
 <div class="page-header header-red" id="livenews_page_sign">
-    <h3>实时新闻 <?=format_date($node->created);?></h3>
+    <h3><a href="http://live.wallstreetcn.com/">实时新闻</a> &nbsp;&nbsp;&nbsp;&nbsp;<?=format_date($node->created);?></h3>
 </div>
 
 <div class="article-meta clearfix">

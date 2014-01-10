@@ -11,6 +11,7 @@ $scripts = str_ireplace('http://wallstreetcn.com', 'http://img.wallstreetcn.com'
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="alexaVerifyID" content="86076a42-3d59-4329-b13f-0b55cd1606f2" />
+    <meta name="chinaz-site-verification" content="081e7651-48c6-4c2f-a569-99321685eab1" />
     <meta name="baidu-site-verification" content="U0xyHxD1O6" />
 
     <?if ($node = menu_get_object()):?>
