@@ -600,8 +600,8 @@ function get_discovery_index_side_item() {
     }
 
     // 亿邦动力
-    $discovery_item[4] = array('title' => '刘强东高调的背后 可能快没钱了',
-                               'url'   => 'home.ebrun.com/blog-44231.html',
+    $discovery_item[4] = array('title' => '阿里巴巴IPO：2014年仍很悬',
+                               'url'   => 'home.ebrun.com/blog-44486.html',
                                'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_ebrun_1.jpg',
                          );
     // 搜房网
