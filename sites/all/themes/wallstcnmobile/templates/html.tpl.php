@@ -59,7 +59,7 @@
     <link rel="alternate" type="application/rss+xml" title="华尔街见闻" href="http://wallstreetcn.com/rss.xml" />
     <script>var _hmt = _hmt || []; (function() {  var hm = document.createElement("script");  hm.src = "//hm.baidu.com/hm.js?c9477ef9d8ebaa27c94f86cc3f505fa5";  var s = document.getElementsByTagName("script")[0];   s.parentNode.insertBefore(hm, s); })(); </script>
 </head>
-<body class="<?=$classes; ?>" <?=$attributes;?>>
+<body class="<?=$classes; ?>" <?=$attributes;?> onselectstart="return false"; onpaste="return false"; oncopy="return false;" oncontextmenu="return false">
     <?=$page_top; ?>
     <?=$page; ?>
     <?=$page_bottom; ?>
