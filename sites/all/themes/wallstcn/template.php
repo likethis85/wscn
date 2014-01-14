@@ -599,6 +599,12 @@ function get_discovery_index_side_item() {
         }
     }
 
+    // 搜房网北京
+    $discovery_item[3] = array('title' => '楼市辛辣热点全面盘点 哪些直戳你的内心',
+                               'url'   => 'esf.soufun.com/zt/201401/sxxesf35.html?utm_source=bjhezuo&utm_medium=click&utm_term=&utm_content=&utm_campaign=hejjwzyd',
+                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_soufun_2.jpg',
+                         );
+
     // 亿邦动力
     $discovery_item[4] = array('title' => '阿里巴巴IPO：2014年仍很悬',
                                'url'   => 'home.ebrun.com/blog-44486.html',
@@ -633,7 +639,7 @@ function get_discovery_discovery_side_item() {
     // 这里加外部广告
 
     // 第9头条
-    $topnews9_response = curl_get('http://www.topnews9.com/plus/api/wallstreetcn.php');
+    $topnews9_response = curl_get('http://topnews9.com:82/plus/api/wallstreetcn.php');
     $topnews9 = json_decode($topnews9_response, 1);
     if ($topnews9 !== false) {
         array_shift($topnews9);
