@@ -13,6 +13,7 @@ $scripts = str_ireplace('http://wallstreetcn.com', 'http://img.wallstreetcn.com'
     <meta name="alexaVerifyID" content="86076a42-3d59-4329-b13f-0b55cd1606f2" />
     <meta name="chinaz-site-verification" content="081e7651-48c6-4c2f-a569-99321685eab1" />
     <meta name="baidu-site-verification" content="U0xyHxD1O6" />
+    <meta name="baidu-tc-verification" content="062f47a612ece7154d1293c31020508d" />
 
     <?if ($node = menu_get_object()):?>
         <title><?=$head_title; ?></title>
