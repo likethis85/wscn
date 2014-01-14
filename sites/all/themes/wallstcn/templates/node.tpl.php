@@ -65,37 +65,6 @@ drupal_set_title($page_title, PASS_THROUGH);?>
 </div>
 <?php endif; ?>
 
-<div class="article-share">
-    <div class="jiathis_style_32x32">
-        <a class="jiathis_button_tsina"></a>
-        <a class="jiathis_button_tqq"></a>
-        <a class="jiathis_button_weixin"></a>
-        <a class="jiathis_button_twitter"></a>
-        <a class="jiathis_button_googleplus"></a>
-        <a class="jiathis_button_fb"></a>
-        <a class="jiathis_button_renren"></a>
-        <a class="jiathis_button_email"></a>
-        <a class="jiathis_button_copy"></a>
-        <a class="jiathis_button_fav"></a>
-        <a class="jiathis_button_print"></a>
-        <a class="jiathis_counter_style"></a>
-    </div>
-    <script type="text/javascript" >
-        <?$summary = rtrim(addslashes(html_entity_decode(strip_tags($node->body['und']['0']['summary']))), "\n\r");
-          $summary = mb_strlen($summary) > 100 ? mb_substr($summary, 0, 100, 'utf-8') . '...'  : $summary;
-          $summary = str_ireplace(array('&ldquo;', '&rdquo;'), array('“', '“'), $summary);
-          ?>
-        var jiathis_config={
-                data_track_clickback:true,
-                title : "好文分享：【<?=$summary?>】。本文来自华尔街见闻网站：",
-                summary : " ",
-                pic : "<?=wscn_image_domain(file_create_url($node->upload['und'][0]['uri']));?>",
-                hideMore:true
-            }
-        </script>
-        <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1673372" charset="utf-8"></script>
-</div>
-
 <div class="article-content typo">
     <?=$node->body['und']['0']['safe_value']?>
 </div>
@@ -135,8 +104,6 @@ drupal_set_title($page_title, PASS_THROUGH);?>
 </div>
 
 
-
-<!--
 <div class="article-share">
     <div class="jiathis_style_32x32">
         <a class="jiathis_button_tsina"></a>
@@ -167,7 +134,7 @@ drupal_set_title($page_title, PASS_THROUGH);?>
         </script>
         <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1673372" charset="utf-8"></script>
 </div>
--->
+
 <?if(0 && variable_get('site_ad')):?>
 <div class="ad-box">
 <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
