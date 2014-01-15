@@ -29,6 +29,7 @@
 
         $discovery_1[$i] = $discovery[$key_1[$i]];
     }
+    ksort($discovery_1);
 
     for ($i=0; $i<6; $i++) {
         if (isset($discovery_2[$i])) {
@@ -37,14 +38,22 @@
 
         $discovery_2[$i] = $discovery[$key_2[$i]];
     }
+    ksort($discovery_2);
 
     for ($i=0; $i<6; $i++) {
+
+        $discovery_3[4] = array('title' => '金银首次主升奠定中期上涨行情',
+                                   'url'   => 'blog.sina.com.cn/s/blog_a179a5410101c0r4.html',
+                                   'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_sina_1.jpeg',
+                             );
+
         if (isset($discovery_3[$i])) {
             continue;
         }
 
         $discovery_3[$i] = $discovery[$key_3[$i]];
     }
+    ksort($discovery_3);
 
     for ($i=0; $i<6; $i++) {
         if (isset($discovery_4[$i])) {
@@ -53,6 +62,7 @@
 
         $discovery_4[$i] = $discovery[$key_4[$i]];
     }
+    ksort($discovery_4);
 
 
  ?>
