@@ -43,8 +43,13 @@
     for ($i=0; $i<6; $i++) {
 
         $discovery_3[4] = array('title' => '金银首次主升奠定中期上涨行情',
-                                   'url'   => 'blog.sina.com.cn/s/blog_a179a5410101c0r4.html',
-                                   'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_sina_1.jpeg',
+                                'url'   => 'blog.sina.com.cn/s/blog_a179a5410101c0r4.html',
+                                'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_sina_1.jpeg',
+                             );
+
+        $discovery_3[2] = array('title' => '骏马霓裳 灵结织梦',
+                                'url'   => 'www.luxtarget.com/theme/SpringFestival2014/',
+                                'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_luxtarget_1.jpeg',
                              );
 
         if (isset($discovery_3[$i])) {
