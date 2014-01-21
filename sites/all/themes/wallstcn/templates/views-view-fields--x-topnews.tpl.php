@@ -38,7 +38,7 @@ foreach($items as $key => $news) {
                                 <li data-target="#top-carousel" data-slide-to="0" class="active"></li>
                                 <li data-target="#top-carousel" data-slide-to="1"></li>
                                 <li data-target="#top-carousel" data-slide-to="2"></li>
-                                <!--<li data-target="#top-carousel" data-slide-to="3"></li>-->
+                                <li data-target="#top-carousel" data-slide-to="3"></li>
                             </ol>
                             <!-- Carousel items -->
                             <div class="carousel-inner">
@@ -64,15 +64,15 @@ foreach($items as $key => $news) {
                                 </div>
                                 <?endforeach?>
                                 <?endif?>
-                                <!--
+
                                 <div class="item">
-                                    <a class="entry-img" href="redirect.htm?type=__ads_wscn_index_hit_zsgjs_1&url=http://www.zsgjs.com/ws/" target="_blank">
+                                    <a class="entry-img" href="redirect.htm?type=__ads_wscn_index_hit_ibkr_3&url=https://www.ibkr.com.cn/mkt/?src=wstcn2&url=/cn/index.php?f=2356" target="_blank">
                                         <div class="entry-img-wrap">
-                                            <img alt="广告" class="" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_zsgjs_1.jpg" width="406" height="240" />
+                                            <img alt="广告" class="" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_ibkr_3.jpg" width="406" height="240" />
                                         </div>
                                     </a>
                                 </div>
-                                -->
+
                             </div>
                             <!-- Carousel nav -->
                             <a class="carousel-control left" href="#top-carousel" data-slide="prev">&lsaquo;</a>
