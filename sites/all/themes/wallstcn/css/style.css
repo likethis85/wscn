@@ -5920,7 +5920,7 @@ a:hover {
  * ===========================
  */
 #nav-area {
-  margin-bottom: 20px;
+  font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 .nav-area-fixed {
   position: fixed;
@@ -5936,7 +5936,7 @@ a:hover {
 }
 #navbar {
   background: #333;
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 #navbar .brand {
   margin-left: 10px;
@@ -6061,11 +6061,203 @@ a:hover {
   color: #FFF;
 }
 /* ===========================
+ * body fixed 
+ * ===========================
+ */
+body {
+  background: #FFF;
+}
+/* ===========================
+ * header fixed 
+ * ===========================
+ */
+#header {
+  margin-top: 30px;
+  position: relative;
+  width: 100%;
+}
+#header .header-bg {
+  background-color: #000;
+  height: 110px;
+  width: 100%;
+  border-bottom: 43px solid #2D3542;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+#header .header-title {
+  height: 100px;
+  overflow: hidden;
+}
+#header .header-title h1 {
+  margin: 0;
+  padding: 0;
+  height: 100px;
+}
+#header .header-title h1 a.logo {
+  display: block;
+  height: 100px;
+}
+#header .header-title h1 a.logo img {
+  margin-top: 15px;
+}
+/* ===========================
+ * wrapper fixed 
+ * ===========================
+ */
+#wrapper {
+  padding: 0;
+  width: 1120px;
+  margin-top: 0;
+  max-width: 1120px;
+}
+/* ===========================
+ * Navbar add bg color and fixed #search-form 
+ * ===========================
+ */
+#navbar {
+  background-color: #2D3542;
+}
+#navbar .navbar-inner {
+  background-color: #2D3542;
+}
+#navbar #search-form {
+  margin-top: 9px;
+}
+#navbar .brand {
+  border-top: 3px solid #333;
+  color: #fff;
+}
+#navbar .nav a {
+  border-top: 3px solid #BA1500;
+}
+#navbar .nav a:hover {
+  color: #fff;
+}
+#navbar .nav a.bg-0 {
+  border-top-color: #BA1500;
+}
+#navbar .nav a.bg-0:hover {
+  background-color: #BA1500;
+}
+#navbar .nav a.bg-0.active {
+  background-color: #BA1500;
+}
+#navbar .nav a.bg-1 {
+  border-top-color: #B81800;
+}
+#navbar .nav a.bg-1:hover {
+  background-color: #B81800;
+}
+#navbar .nav a.bg-1.active {
+  background-color: #B81800;
+}
+#navbar .nav a.bg-2 {
+  border-top-color: #00A53C;
+}
+#navbar .nav a.bg-2:hover {
+  background-color: #00A53C;
+}
+#navbar .nav a.bg-2.active {
+  background-color: #00A53C;
+}
+#navbar .nav a.bg-3 {
+  border-top-color: #6E7FAE;
+}
+#navbar .nav a.bg-3:hover {
+  background-color: #6E7FAE;
+}
+#navbar .nav a.bg-3.active {
+  background-color: #6E7FAE;
+}
+#navbar .nav a.bg-4 {
+  border-top-color: #FA5F00;
+}
+#navbar .nav a.bg-4:hover {
+  background-color: #FA5F00;
+}
+#navbar .nav a.bg-4.active {
+  background-color: #FA5F00;
+}
+#navbar .nav a.bg-5 {
+  border-top-color: #00C3C3;
+}
+#navbar .nav a.bg-5:hover {
+  background-color: #00C3C3;
+}
+#navbar .nav a.bg-5.active {
+  background-color: #00C3C3;
+}
+#navbar .nav a.bg-6 {
+  border-top-color: #FFC000;
+}
+#navbar .nav a.bg-6:hover {
+  background-color: #FFC000;
+}
+#navbar .nav a.bg-6.active {
+  background-color: #FFC000;
+}
+#navbar .nav a.bg-7 {
+  border-top-color: #67828B;
+}
+#navbar .nav a.bg-7:hover {
+  background-color: #67828B;
+}
+#navbar .nav a.bg-7.active {
+  background-color: #67828B;
+}
+#navbar .nav a.bg-8 {
+  border-top-color: #B0BF2F;
+}
+#navbar .nav a.bg-8:hover {
+  background-color: #B0BF2F;
+}
+#navbar .nav a.bg-8.active {
+  background-color: #B0BF2F;
+}
+#navbar .nav a.bg-9 {
+  border-top-color: #E87992;
+}
+#navbar .nav a.bg-9:hover {
+  background-color: #E87992;
+}
+#navbar .nav a.bg-9.active {
+  background-color: #E87992;
+}
+#navbar .nav a.bg-10 {
+  border-top-color: #FFB973;
+}
+#navbar .nav a.bg-10:hover {
+  background-color: #FFB973;
+}
+#navbar .nav a.bg-10.active {
+  background-color: #FFB973;
+}
+#navbar .nav a.bg-11 {
+  border-top-color: #B399FF;
+}
+#navbar .nav a.bg-11:hover {
+  background-color: #B399FF;
+}
+#navbar .nav a.bg-11.active {
+  background-color: #B399FF;
+}
+#navbar .nav a.bg-12 {
+  border-top-color: #AD7018;
+}
+#navbar .nav a.bg-12:hover {
+  background-color: #AD7018;
+}
+#navbar .nav a.bg-12.active {
+  background-color: #AD7018;
+}
+/* ===========================
  * User navbar
  * ===========================
  */
 #navbar-user {
-  background: #666;
+  background: #2D3542;
   height: 30px;
   position: absolute;
   top: 0;
@@ -6141,6 +6333,132 @@ a:hover {
 }
 #footer p {
   font-size: 12px;
+}
+/* ===========================
+ * Footer fixed 
+ * ===========================
+ */
+#footer > .container {
+  width: 100%;
+  max-width: 100%;
+}
+#footer {
+  padding: 30px 0;
+  background: url(img/bg-opacity.png) #e3e3e3;
+  color: #666;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.05) inset;
+  position: relative;
+  width: 1120px;
+  max-width: 1120px;
+}
+#footer ul.border-edge {
+  height: 3px;
+  width: 100%;
+  margin: 0 0 50px 0;
+  padding: 0;
+}
+#footer ul.border-edge li {
+  float: left;
+  marging: 0;
+  padding: 0;
+  border-top-style: solid;
+  border-top-width: 3px;
+  width: 16.666666666666664%;
+}
+#footer ul.border-edge .border-blue {
+  border-top-color: #399db3;
+}
+#footer ul.border-edge .border-red {
+  border-top-color: #b81800;
+}
+#footer ul.border-edge .border-green {
+  border-color: #009939;
+}
+#footer ul.border-edge .border-orange {
+  border-color: #c4590b;
+}
+#footer ul.border-edge .border-blue-light {
+  border-top-color: #00c3c3;
+}
+#footer ul.border-edge .border-yellow {
+  border-top-color: #d29e00;
+}
+#footer .copyright {
+  margin-top: 30px;
+  font-size: 11px;
+}
+#footer .footer-content {
+  padding: 0 20px;
+}
+#footer .footer-links {
+  clear: both;
+  margin-bottom: 20px;
+}
+#footer .friend-links {
+  margin-top: 20px;
+}
+#footer .text-right {
+  text-align: right;
+}
+#footer h6 {
+  margin: 0;
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: normal;
+  font-family: 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  color: #313131;
+  border: none;
+}
+#footer ul {
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+}
+#footer li {
+  margin-top: 10px;
+  list-style: inside none;
+  font-size: 13px;
+}
+#footer a {
+  color: #666;
+  text-decoration: none;
+}
+#footer a:hover {
+  color: #d24747;
+}
+#footer p {
+  font-size: 12px;
+}
+#footer .table {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+#footer .table td {
+  padding: 0;
+}
+.footer-edge {
+  background: url(img/footer-arrow.png) repeat-x scroll;
+  height: 5px;
+  position: absolute;
+  top: -5px;
+  width: 100%;
+}
+.footer-social {
+  width: 162px;
+  border-spacing: 0;
+}
+.footer-social .finance-code {
+  width: 120px;
+}
+.footer-social .footer-social-icon {
+  vertical-align: middle;
+  height: 40px;
+}
+.footer-social .footer-social-icon-first {
+  vertical-align: top;
+}
+.footer-social .footer-social-icon-last {
+  vertical-align: bottom;
 }
 /* ===========================
  * Page header
@@ -6393,6 +6711,7 @@ a:hover {
   overflow: hidden;
 }
 .top-new-extra {
+  font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   margin: 0;
   padding-top: 5px;
   margin-top: 5px;
@@ -6766,108 +7085,103 @@ a:hover {
   font-size: 12px;
 }
 /* ===========================
- * social icons modify
+ * 页面右侧顶部   modify
  * ===========================
  */
-.social-icons {
-  padding: 0;
-  background-color: #F9F9F9;
+.side-box {
+  background-color: #F1F1F1;
+  margin-bottom: 20px;
 }
-.social-icons .social-navbar {
+.side-box .side-navbar {
   width: 100%;
-  height: 30px;
-  line-height: 30px;
+  font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
-.social-icons .social-navbar .social-nav {
+.side-box .side-navbar .side-nav {
   display: block;
   float: left;
   width: 50%;
-  height: 30px;
+  height: 36px;
+  line-height: 36px;
   text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-  border-bottom: 1px dotted #B2B2B2;
-  background-color: #E9E9E9;
+  font-size: 16px;
   color: #989898;
+  font-weight: bold;
   text-decoration: none;
   cursor: pointer;
+  border-bottom: 1px dotted #B2B2B2;
+  background-color: #E9E9E9;
 }
-.social-icons .social-navbar .social-nav .social-nav-img-active {
+.side-box .side-navbar .side-nav .side-nav-img-active {
   display: none;
 }
-.social-icons .social-navbar .social-nav:hover {
+.side-box .side-navbar .side-nav:hover {
   color: #5F5F5F;
 }
-.social-icons .social-navbar .social-nav:hover .social-nav-img-normal {
+.side-box .side-navbar .side-nav:hover .side-nav-img-normal {
   display: none;
 }
-.social-icons .social-navbar .social-nav:hover .social-nav-img-active {
+.side-box .side-navbar .side-nav:hover .side-nav-img-active {
   display: inline-block;
 }
-.social-icons .social-navbar .social-nav.social-nav-active {
-  background-color: #F9F9F9;
-  color: #5F5F5F;
+.side-box .side-navbar .side-nav.side-nav-active {
+  background-color: #F1F1F1;
   border-bottom: 1px dotted transparent;
+  color: #5F5F5F;
 }
-.social-icons .social-navbar .social-nav.social-nav-active:hover {
+.side-box .side-navbar .side-nav.side-nav-active:hover {
   color: #000;
 }
-.social-icons .social-navbar .social-nav.social-nav-active a:hover {
-  color: #000;
-}
-.social-icons .social-navbar .social-nav.social-nav-active .social-nav-img-normal {
+.side-box .side-navbar .side-nav.side-nav-active .side-nav-img-normal {
   display: none;
 }
-.social-icons .social-navbar .social-nav.social-nav-active .social-nav-img-active {
+.side-box .side-navbar .side-nav.side-nav-active .side-nav-img-active {
   display: inline-block;
 }
-.social-icons .social-content {
-  padding: 20px;
-}
-.social-icons #livenews_block {
-  height: 150px;
-  position: relative;
-}
-.social-icons #realtime-news {
-  margin: 0;
-  padding: 0;
-  margin-top: -10px;
-  border: none;
-  height: 150px;
+.side-box .side-box-content {
+  width: 100%;
+  height: 293px;
   overflow: hidden;
+}
+.side-box #realtime-news {
+  padding: 0;
+  margin: 0;
+  margin: 15px 20px 0px;
+  height: 243px;
+  overflow: hidden;
+  border: none;
   background-color: inherit;
   vertical-align: top;
 }
-.social-icons #realtime-news li {
+.side-box #realtime-news li {
+  font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   color: #6D6D6D;
   background-color: inherit;
   vertical-align: middle;
   border-bottom: 1px dotted #e3e3e3;
 }
-.social-icons #realtime-news li span {
+.side-box #realtime-news li span {
   color: #6D6D6D;
   font-weight: normal;
 }
-.social-icons #realtime-news li a {
+.side-box #realtime-news li a {
   color: #6D6D6D;
   font-size: 14px;
   font-weight: normal;
 }
-.social-icons #realtime-news li a:hover span {
+.side-box #realtime-news li a:hover span {
   color: #000;
   font-weight: bold;
 }
-.social-icons #realtime-news-more {
+.side-box #realtime-news-more {
   color: #D24747;
   text-decoration: none;
   cursor: pointer;
   font-size: 13px;
   line-height: 30px;
-  position: absolute;
-  right: 0;
-  bottom: -15px;
+  float: right;
+  margin-right: 20px;
 }
-.social-icons #realtime-news-more:hover {
+.side-box #realtime-news-more:hover {
   color: #EB2429;
 }
 /* ===========================
@@ -8216,6 +8530,44 @@ body.toolbar, body.toolbar-drawer {
   color: #aeaeae;
 }
 /* ===========================
+ * 首页 编辑推荐
+ * ===========================
+ */
+.recommend-news.news-list.vlist .row-slider {
+  height: 175px;
+}
+.recommend-news.news-list.vlist .news-img-wrap {
+  position: relative;
+}
+.recommend-news.news-list.vlist .media-heading {
+  font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0;
+  padding: 0 5px;
+  text-align: left;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: bottom 1s;
+  -moz-transition: bottom 1s;
+  /* Firefox 4 */
+
+  -webkit-transition: bottom 1s;
+  /* Safari 和 Chrome */
+
+  -o-transition: bottom 1s;
+}
+.recommend-news.news-list.vlist a.news-img:hover .media-heading {
+  bottom: -50px;
+}
+/* ===========================
+ * add class
+ * ===========================
+ */
+.float-right {
+  float: right;
+}
+/* ===========================
  * IE fix
  * ===========================
  */
@@ -8226,14 +8578,11 @@ body.toolbar, body.toolbar-drawer {
 }
 .lt-ie9 #wrapper {
   padding: 0;
-  width: 1160px;
-  max-width: 1200px;
+  width: 1120px;
+  max-width: 1120px;
 }
 .lt-ie9 #search-query {
   width: 100px;
-}
-.lt-ie9 #footer {
-  background: #000;
 }
 .lt-ie9 .row {
   margin-left: -20px;

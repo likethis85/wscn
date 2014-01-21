@@ -619,12 +619,15 @@
 
         var $ebSound = $("#enable-sound");
 
-        if (store.get("enable-fresh") != undefined) {
-            $ebFresh[0].checked =  store.get("enable-fresh");
-        }
+        if ($ebFresh.length>0 && $ebSound>0) {
 
-        if (store.get("enable-sound") != undefined) {
-            $ebSound[0].checked =  store.get("enable-sound");
+            if (store.get("enable-fresh") != undefined) {
+                $ebFresh[0].checked =  store.get("enable-fresh");
+            }
+
+            if (store.get("enable-sound") != undefined) {
+                $ebSound[0].checked =  store.get("enable-sound");
+            }
         }
 
         $("#block-views-x-livenews-block").on("click.check", function(){
@@ -902,32 +905,109 @@
 
         (function(){
 
-            var $livenews = $("#livenews_block");
-            var $social   = $("#social_block");
+            var $livenews = $("#livenews-block");
+            var $markets   = $("#markets-block");
 
-            $("#livenews_swith").on('click', function(){
-                if($livenews.css('display') == "block") {
-                    return;
+            $("#livenews-swith").on('click', function(e){
+                
+                var $this = $(this);
+
+                if ($this.hasClass('side-nav-active')) {
+
+                } else {
+                    
+                    $("#markets-swith").removeClass("side-nav-active");
+                    $this.addClass("side-nav-active");
+                    
+                    $markets.hide();
+                    $livenews.show();
+                    
+                    return false;
                 }
-                $("#social_swith").removeClass("social-nav-active");
-                $(this).addClass("social-nav-active");
-                $livenews.show();
-                $social.hide();
+               
             });
 
-            $("#social_swith").on('click', function(){
-                if($social.css('display') == "block") {
-                    return;
+            $("#markets-swith").on('click', function(e){
+                
+                var $this = $(this);
+
+                if ($this.hasClass('side-nav-active')) {
+
+                } else {
+
+                    $("#livenews-swith").removeClass("side-nav-active");
+                    $this.addClass("side-nav-active");
+                    
+                    $livenews.hide();
+                    $markets.show();
+
+                    return false;
                 }
-                $("#livenews_swith").removeClass("social-nav-active");
-                $(this).addClass("social-nav-active");
-                $livenews.hide();
-                $social.show();
+                
             });
 
         })();
 
 
+
+        // 主站微改版    
+        $(document).ready(function(){
+
+            var uri = new URI(window.location);
+            var path = uri.path();
+
+            $('#navbar .nav a').each(function(){
+                
+                var item = $(this); 
+
+                var pattern = item.attr("data-active-url");
+
+                if (pattern) {
+
+                    pattern = pattern.replace(/\//g,"\\/");                    
+                    var reg = new RegExp(pattern);
+                    
+                    if(reg.test(path)) {                        
+                        item.addClass("active");                            
+                    }
+                
+                }
+                
+            });
+
+
+            /*$('#navbar .nav a').each(function(){
+                
+                var item = $(this); 
+
+                var result;
+
+                var subdomain = item.attr("data-subdomain");
+
+                if (subdomain !== undefined) {
+                    
+                    if (path === '/') {
+                        result = subdomain === uri.subdomain();
+                    }
+                            
+                } else {
+
+                    var pattern = item.attr("data-active-url");
+                    pattern = pattern.replace(/\//g,"\\/");                    
+                    var reg = new RegExp(pattern);
+                    //todo delete;
+                    console.log(path);    
+                    result = reg.test(path);
+
+                }
+
+                if(result) {                        
+                    item.addClass("active");                            
+                }
+
+            });*/
+
+        });    
 
 
     });

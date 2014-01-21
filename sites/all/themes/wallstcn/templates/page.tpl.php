@@ -1,29 +1,32 @@
-<div id="wrapper">
+<header id="header">
 
-    <header id="header">
+    <div class="header-bg"></div>
+
     <?php if (!empty($logo)): //logo start?>
     <div class="container">
-        <div class="row-fluid">
-            <div class="span4"><h1>
+        
+        <div class="header-title row-fluid">
+            <!-- logo -->
+            <div class="span4">
+                <h1>
                     <a class="logo" href="<?=$front_page; ?>" title="华尔街见闻">
                         <img src="<?=$logo?>" alt="华尔街见闻" />
                     </a>
-            </h1></div>
+                </h1>
+            </div>
+            <!-- ads start -->
             <div class="span8">
                 <div class="pull-right">
                     <?if(0):?>
-                    <img alt="华尔街见闻微博官方帐号" src="/sites/all/themes/wallstcn/banner.jpg" />
+                        <img alt="华尔街见闻微博官方帐号" src="/sites/all/themes/wallstcn/banner.jpg" />
                     <?endif?>
-                <?if(0 && variable_get('site_ad')):?>
-<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-0869270234052789"
-     data-ad-slot="9607908946"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-                <?endif?>
+                    <?if(0 && variable_get('site_ad')):?>
+                        <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-0869270234052789" data-ad-slot="9607908946"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    <?endif?>
                 <?if(variable_get('site_ad')):?>
                 <div class="random-ad" style="margin-bottom:0;">
                     <div class="carousel-inner">
@@ -56,13 +59,21 @@
                 </div>
                 <?endif?>
             </div>
+            <!-- ads end -->
         </div>
+        <!-- row-fluid end -->
     </div>
+    <!--  -->
     <?php endif; //logo end ?>
 
     <?=render($page['header']); ?>
 
-    </header>
+</header>
+
+
+<div id="wrapper">
+
+    
 
     <div id="main-content" class="container">
 

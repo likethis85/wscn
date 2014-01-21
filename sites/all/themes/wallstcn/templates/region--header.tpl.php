@@ -11,11 +11,40 @@
                 </a>
                 <a href="http://<?=variable_get('site_domain')?>" class="brand <?=!empty($elements['system_main-menu']) ? 'mainsite-brand' : ''?>"><i class="icon-home"></i> 华尔街见闻</a>
                 <div class="nav-collapse collapse navbar-responsive-collapse">
+                    
+                      
                     <?if(isset($elements['system_main-menu']) && $elements['system_main-menu']):?>
-                    <?=render($elements['system_main-menu']);?>
+                    <!-- <?=render($elements['system_main-menu']);?> -->
+                    <ul class="nav">
+                        <li class="leaf first"><a class="bg-0" data-active-url="^/$" href="/" title="">首页</a></li>
+                        <li class="leaf"><a class="bg-1" data-active-url="" href="http://live.wallstreetcn.com" title="市场直播系统" target="_blank">实时新闻</a></li>
+                        <li class="leaf"><a class="bg-2" data-active-url="" href="http://markets.wallstreetcn.com" title="" target="_blank">实时行情</a></li>
+                        <li class="leaf"><a class="bg-3" data-active-url="^/breakfast.*$" href="/breakfast" title="">见闻早餐</a></li>
+                        <li class="leaf"><a class="bg-4" data-active-url="^/europe.*$" href="/europe" title="">欧洲</a></li>
+                        <li class="leaf"><a class="bg-5" data-active-url="^/america.*$" href="/america" title="">美国</a></li>
+                        <li class="leaf"><a class="bg-6" data-active-url="^/china.*$" href="/china" title="">中国</a></li>
+                        <li class="leaf"><a class="bg-7" data-active-url="^/economy.*$" href="/economy" title="">经济</a></li>
+                        <li class="leaf"><a class="bg-8" data-active-url="^/centralbank.*$" href="/centralbank" title="">央行</a></li>
+                        <li class="leaf"><a class="bg-9" data-active-url="^/market.*$" href="/market" title="">市场</a></li>
+                        <li class="leaf"><a class="bg-10" data-active-url="^/company.*$" href="/company" title="">公司</a></li>
+                        <li class="leaf"><a class="bg-11" data-active-url="^/gold.*$" href="/gold" title="">黄金</a></li>
+                        <li class="leaf last"><a class="bg-12" data-active-url="^/wanted.*$" href="/wanted">招聘</a></li>
+                    </ul>
                     <?endif?>
                     <?if(isset($elements['menu_menu-live-menu']) && $elements['menu_menu-live-menu']):?>
-                    <?=render($elements['menu_menu-live-menu']);?>
+                    <!-- <?=render($elements['menu_menu-live-menu']);?> -->
+                    <ul class="nav">
+                        <li class="first leaf"><a class="bg-1" data-active-url="^/$" href="/" title="">实时新闻</a></li>
+                        <li class="leaf"><a class="bg-2" data-active-url="^/live-china.*$" href="/live-china" title="">中国</a></li>
+                        <li class="leaf"><a class="bg-4" data-active-url="^/live-europe.*$" href="/live-europe" title="">欧洲</a></li>
+                        <li class="leaf"><a class="bg-5" data-active-url="^/live-america.*$" href="/live-america" title="">美国</a></li>
+                        <li class="leaf"><a class="bg-6" data-active-url="^/live-japan.*$" href="/live-japan" title="">日本</a></li>
+                        <li class="leaf"><a class="bg-8" data-active-url="^/live-centralbank.*$" href="/live-centralbank" title="">央行</a></li>
+                        <li class="leaf"><a class="bg-9" data-active-url="^/live-market.*$" href="/live-market" title="">市场</a></li>
+                        <li class="leaf active-trail"><a class="bg-7" data-active-url="^/live-economy.*$" href="/live-economy" title="" class="active-trail active">经济数据</a></li>
+                        <li class="leaf"><a class="bg-11" data-active-url="" href="http://wallstreetcn.com/gold" title="" target="_blank">黄金</a></li>
+                        <li class="last leaf"><a class="bg-12" data-active-url="^/discovery.*$" href="/discovery" title="">发现</a></li>
+                    </ul>
                     <?endif?>
 
                     <form id="search-form" class="navbar-search pull-right form-search" action="/search/node/">

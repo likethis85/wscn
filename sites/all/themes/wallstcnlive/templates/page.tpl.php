@@ -1,8 +1,10 @@
-<div id="wrapper" class="livenews-channel">
-    <header id="header">
+<header id="header">
+
+    <div class="header-bg"></div>
+
     <?php if (!empty($logo)): //logo start?>
     <div class="container">
-        <div class="row-fluid">
+        <div class="header-title row-fluid">
             <div class="span4"><h1>
                     <a class="logo" href="<?php print $front_page; ?>" title="<?php print $site_name ? $site_name : t('Home'); ?>">
                         <img src="<?=$logo?>" alt="<?php print $site_name ? $site_name : t('Home'); ?>" />
@@ -55,8 +57,11 @@
         <?php endif; //logo end ?>
 
         <?=render($page['header']); ?>
-        </header>
+</header>
 
+
+<div id="wrapper" class="livenews-channel">
+    
         <div id="main-content" class="container">
 
             <div class="row-fluid">
