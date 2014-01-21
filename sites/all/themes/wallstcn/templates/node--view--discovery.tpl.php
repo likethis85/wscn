@@ -43,7 +43,7 @@
     for ($i=0; $i<6; $i++) {
 
         $discovery_3[4] = array('title' => '金银首次主升奠定中期上涨行情',
-                                'url'   => 'blog.sina.com.cn/s/blog_a179a5410101c0r4.html',
+                                'url'   => 'blog.sina.com.cn/s/blog_a179a5410101c531.html',
                                 'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_sina_1.jpeg',
                              );
 
