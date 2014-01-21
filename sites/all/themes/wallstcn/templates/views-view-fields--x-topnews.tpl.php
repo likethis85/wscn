@@ -37,8 +37,8 @@ foreach($items as $key => $news) {
                             <ol class="carousel-indicators">
                                 <li data-target="#top-carousel" data-slide-to="0" class="active"></li>
                                 <li data-target="#top-carousel" data-slide-to="1"></li>
-                                <li data-target="#top-carousel" data-slide-to="2"></li>
-                                <li data-target="#top-carousel" data-slide-to="3"></li>
+                                <!--<li data-target="#top-carousel" data-slide-to="2"></li>
+                                <li data-target="#top-carousel" data-slide-to="3"></li>-->
                             </ol>
                             <!-- Carousel items -->
                             <div class="carousel-inner">
