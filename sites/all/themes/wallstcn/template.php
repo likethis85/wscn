@@ -614,7 +614,7 @@ function get_discovery_index_side_item() {
 
     $discovery_item[0] = array('title' => '中国房价坚不可摧的10大城市 买在这里一生无惧房地产泡沫',
                                'url'   =>'esf.tj.soufun.com/newsecond/news/11952156.htm?utm_source=tjhezuo&utm_medium=click&utm_term=mei&utm_content=esf&utm_campaign=hua',
-                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_soufun_2.jpeg',
+                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_soufun_3.jpeg',
                          );
 
     $discovery_item[5] = array('title' => '不动产登记6月底前出台 能否撼动高房价难料',
