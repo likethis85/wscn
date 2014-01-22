@@ -5920,6 +5920,7 @@ a:hover {
  * ===========================
  */
 #nav-area {
+  margin-bottom: 20px;
   font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 .nav-area-fixed {
@@ -5936,7 +5937,7 @@ a:hover {
 }
 #navbar {
   background: #333;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 #navbar .brand {
   margin-left: 10px;
@@ -6128,6 +6129,8 @@ body {
 #navbar .brand {
   border-top: 3px solid #333;
   color: #fff;
+  height: 20px;
+  overflow-y: hidden;
 }
 #navbar .nav a {
   border-top: 3px solid #BA1500;

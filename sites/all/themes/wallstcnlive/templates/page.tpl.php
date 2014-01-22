@@ -54,9 +54,11 @@
                 </div>
             </div>
         </div>
-        <?php endif; //logo end ?>
+    </div>
+    <?php endif; //logo end ?>
 
-        <?=render($page['header']); ?>
+    <?=render($page['header']); ?>
+
 </header>
 
 
