@@ -38,7 +38,9 @@
                             </div>
                         </div>
                         <div class="item"  data-probability="<?if(time() > strtotime(date('Y-m-d') . ' 09:00:00') && time() < strtotime(date('Y-m-d') . ' 21:00:00')):?>34<?else:?>0<?endif;?>">
-                            <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_ibkr_1&url=https://www.ibkr.com.cn/mkt/?src=wstcn1&url=/cn/trading/pdfhighlights/PDF-Forex.php"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_ibkr_1.jpg" alt="广告"></a>
+                            <div style="margin:0 auto;">
+                            <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="90" width="728"><param name="quality" value="high" /><param name="movie" value="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_ibkr_1.swf" /><embed height="90" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_ibkr_1.swf" type="application/x-shockwave-flash" width="728"></embed></object>
+                            </div>
                         </div>
                         <!--
                         <div class="item"  data-probability="0">
@@ -99,7 +101,7 @@
                     </div>
                     </?endif?>
                     -->
-                    <?=render($page['content']); ?>
+                    <?=render($page['content']);?>
                 <?endif?>
             </div>
 
