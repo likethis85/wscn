@@ -1,22 +1,28 @@
 <div class="social-icons well well-small media-list">
     
     <div class="social-navbar">
-        <span class="social-nav social-nav-active" id="livenews_swith" >
+        <span class="social-nav social-nav-active" id="social_swith">
+            <img class="social-nav-img-normal" src="/sites/all/themes/wallstcn/css/img/social.png" />
+            <img class="social-nav-img-active" src="/sites/all/themes/wallstcn/css/img/social-active.png" />
+            实时行情
+        </span>
+        <span class="social-nav" id="livenews_swith" >
             <img class="social-nav-img-normal" src="/sites/all/themes/wallstcn/css/img/livenews.png" />
             <img class="social-nav-img-active" src="/sites/all/themes/wallstcn/css/img/livenews-active.png" />
             <a href="http://live.wallstreetcn.com/" target="_blank">实时新闻</a>
         </span>  
-        <span class="social-nav" id="social_swith">
-            <img class="social-nav-img-normal" src="/sites/all/themes/wallstcn/css/img/social.png" />
-            <img class="social-nav-img-active" src="/sites/all/themes/wallstcn/css/img/social-active.png" />
-            关注我们
-        </span>
+        
     </div>
 
 
     <div class="social-content">
         
-        <div class="row-fluid" id="livenews_block" style="display:block;">
+        <div id="social_block" style="display:block;">
+            <div style="margin-left:-20px;margin-top:-20px;">
+                <script src="http://markets.static.wallstreetcn.com/widget_side_v1.js?v=1" data-width="360px" data-height="290px"></script>
+            </div>
+        </div>
+        <div class="row-fluid" id="livenews_block" style="display:none;">
         
             <div id="realtime-news" style="">
                 <ul>
@@ -27,6 +33,7 @@
         </div>
      
 
+        <?if(0):?>
         <div id="social_block" style="display:none;">
             <div class="row-fluid">
                 <div class="span6">
@@ -127,6 +134,7 @@
                 </div><!--span6 end -->
             </div><!--row end -->
         </div><!-- social end-->
+        <?endif?>
 
     </div>
 
