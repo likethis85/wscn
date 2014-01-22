@@ -617,8 +617,8 @@ function get_discovery_index_side_item() {
                                'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_soufun_3.jpeg',
                          );
 
-    $discovery_item[5] = array('title' => '不动产登记6月底前出台 能否撼动高房价难料',
-                               'url'   =>'esf.sh.soufun.com/newsecond/news/11892879.htm?utm_source=shhezuo&utm_medium=click&utm_term=lgq_sh&utm_content=shwalls&utm_campaign=20140113walls',
+    $discovery_item[5] = array('title' => '2014买房买哪里？最宜居的中国10大城市',
+                               'url'   =>'esf.sh.soufun.com/newsecond/news/11964675.htm?utm_source=shhezuo&utm_medium=click&utm_term=lgq_sh&utm_content=shwalls&utm_campaign=20140122walls',
                                'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_soufun_1.jpg',
                          );
 
@@ -702,6 +702,11 @@ function get_discovery_item() {
 
     $discovery_item  = array();
     // 这里加外部广告
+    $discovery_item[0] = array('title' => '2014年中国房地产行业政策趋向分析',
+                               'url'   =>'www.qianzhan.com/indynews/detail/214/140115-de4bf39a.html',
+                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_qianzhan_1.jpg',
+                         );
+
 
     $numbers = range(0, 400);
     shuffle($numbers);
