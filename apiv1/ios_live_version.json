@@ -1,0 +1,7 @@
+{
+    "version" : "1.0.0",
+    "version_code" : "fed",
+    "upgrade_url" : "",
+    "upgrade_description" : "New version is coming!",
+    "force_upgrade" : false
+}
