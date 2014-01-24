@@ -1,166 +1,146 @@
-<?
-    $discovery = get_discovery_arr();
-    $discovery_1  = array();
-    // 这里加外部广告
+<div class="user-center">
 
-    $discovery_2 = array();
-    // 这里加外部广告
+    <p class="welcome-message">
+        <img class="avatar" src="" alt=""/>
+        您好，<span class="user-name"></span>，欢迎来到个人中心！
+    </p>
 
-    $discovery_3 = array();
-    // 这里加外部广告
-
-    $discovery_4 = array();
-    // 这里加外部广告
-
-    $numbers = range(0, 400);
-    shuffle($numbers);
-
-    $key_1  = array_slice($numbers, 0, 6);
-    $key_2  = array_slice($numbers, 50, 6);
-    $key_3  = array_slice($numbers, 100, 6);
-    $key_4  = array_slice($numbers, 150, 6);
-
-
-
-    for ($i=0; $i<6; $i++) {
-        if (isset($discovery_1[$i])) {
-            continue;
-        }
-
-        $discovery_1[$i] = $discovery[$key_1[$i]];
-    }
-    ksort($discovery_1);
-
-    for ($i=0; $i<6; $i++) {
-        if (isset($discovery_2[$i])) {
-            continue;
-        }
-
-        $discovery_2[$i] = $discovery[$key_2[$i]];
-    }
-    ksort($discovery_2);
-
-    for ($i=0; $i<6; $i++) {
-
-        $discovery_3[4] = array('title' => '金银首次主升奠定中期上涨行情',
-                                'url'   => 'blog.sina.com.cn/s/blog_a179a5410101c531.html',
-                                'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_sina_1.jpeg',
-                             );
-
-        $discovery_3[2] = array('title' => '骏马霓裳 灵结织梦',
-                                'url'   => 'www.luxtarget.com/theme/SpringFestival2014/',
-                                'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_luxtarget_1.jpeg',
-                             );
-
-        if (isset($discovery_3[$i])) {
-            continue;
-        }
-
-        $discovery_3[$i] = $discovery[$key_3[$i]];
-    }
-    ksort($discovery_3);
-
-    for ($i=0; $i<6; $i++) {
-        if (isset($discovery_4[$i])) {
-            continue;
-        }
-
-        $discovery_4[$i] = $discovery[$key_4[$i]];
-    }
-    ksort($discovery_4);
+    <ul class="user-nav clearfix">
+        <li>
+            <a class="nav-focus active" href="/user?type=focus">
+                <span class="user-nav-icon"><span></span></span>
+                <span class="user-nav-text">我的关注</span>
+            </a>
+        </li>
+        <li>
+            <a class="nav-comment" href="/user?type=comment">
+                <span class="user-nav-icon"><span></span></span>
+                <span class="user-nav-text">个人评论</span>
+            </a>
+        </li>
+        <li>
+            <a class="nav-favorites" href="/user?type=favorites">
+                <span class="user-nav-icon"><span></span></span>
+                <span class="user-nav-text">文章收藏</span>
+            </a>
+        </li>
+        <li>
+            <a class="nav-profile" href="/user/65375/edit?type=profile">
+                <span class="user-nav-icon"><span></span></span>
+                <span class="user-nav-text">个人资料</span>
+            </a>
+        </li>
+        <li class="last-item">
+            <a class="nav-feedback" href="/user?type=feedback">
+                <span class="user-nav-icon"><span></span></span>
+                <span class="user-nav-text">意见反馈</span>
+            </a>
+        </li>
+    </ul>
 
 
- ?>
+    <div class="feedback">
 
-<div class="hot-news">
+        <form action="" class="form">
+            <input type="text" class="input" placeholder="消息主题">
+            <textarea rows="6" placeholder="我们有什么能帮到您？"></textarea>
+            <input type="text" class="input" placeholder="您的邮箱地址">
+            <button type="submit" class="btn">发送消息</button>
+        </form>
 
-    <h2 class="hot-news-header">
-        新奇视角
-    </h2>
-    <div class="hot-news-list row-fluid">
-    <?foreach($discovery_1 as $k => $e):?>
-        <div class="span4">
-            <div class="hot-news-content">
-                <a href="http://<?=$e['url']?>" target="_blank" class="hot-news-img">
-                    <img src="<?=wscn_get_image_thumbnail($e['img'], 210, 130)?>" alt="<?=$e['title']?>" />
-                </a>
-                <a href="http://<?=$e['url']?>" target="_blank" class="hot-news-title"><?=$e['title']?></a>
+    </div>
+
+    <ul class="time-list user-comments">
+
+        <div class="decoration-line"></div>
+
+        <li class="time-list-item clearfix">
+
+            <div class="item-time">
+                2013-12-11<br/>12:22
             </div>
-        </div>
-    <?if($k == 2):?>
-    </div>
-    <div class="hot-news-list row-fluid">
-    <?endif;?>
-    <?endforeach;?>
-    </div>
-</div>
-<br /><br />
-<div class="hot-news">
 
-    <h2 class="hot-news-header">
-        独特发现
-    </h2>
-    <div class="hot-news-list row-fluid">
-    <?foreach($discovery_2 as $k => $e):?>
-        <div class="span4">
-            <div class="hot-news-content">
-                <a href="http://<?=$e['url']?>" target="_blank" class="hot-news-img">
-                    <img src="<?=wscn_get_image_thumbnail($e['img'], 210, 130)?>" alt="<?=$e['title']?>" />
-                </a>
-                <a href="http://<?=$e['url']?>" target="_blank" class="hot-news-title"><?=$e['title']?></a>
+            <span class="icon-circle"></span>
+
+            <div class="item-content">
+
+                <table>
+                    <tbody>
+                    <tr>
+                        <td class="item-text">评论了</td>
+                        <td class="item-title"><a href="">【付鹏专栏】十年大宗背后那些不为人知的故事（七）</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <p>
+                    刚开始以为是翻译的外文，建议作者修饰一下自己的语句，例如"中国银行通过想试图趁全球曼氏金融（MF Global）在LME的金属业务被拆分想抢得一席之地"。
+                </p>
+
             </div>
-        </div>
-    <?if($k == 2):?>
-    </div>
-    <div class="hot-news-list row-fluid">
-    <?endif;?>
-    <?endforeach;?>
-    </div>
-</div>
-<br /><br />
-<div class="hot-news">
 
-    <h2 class="hot-news-header">
-        热点指南
-    </h2>
-    <div class="hot-news-list row-fluid">
-    <?foreach($discovery_3 as $k => $e):?>
-        <div class="span4">
-            <div class="hot-news-content">
-                <a href="http://<?=$e['url']?>" target="_blank" class="hot-news-img">
-                    <img src="<?=wscn_get_image_thumbnail($e['img'], 210, 130)?>" alt="<?=$e['title']?>" />
-                </a>
-                <a href="http://<?=$e['url']?>" target="_blank" class="hot-news-title"><?=$e['title']?></a>
+        </li>
+
+    </ul>
+
+
+    <ul class="time-list user-favorites">
+
+        <div class="decoration-line"></div>
+
+        <li class="time-list-item clearfix">
+
+            <div class="item-time">
+                2013-12-11<br/>12:22
             </div>
-        </div>
-    <?if($k == 2):?>
-    </div>
-    <div class="hot-news-list row-fluid">
-    <?endif;?>
-    <?endforeach;?>
-    </div>
-</div>
-<br /><br />
-<div class="hot-news">
 
-    <h2 class="hot-news-header">
-        轻松阅读
-    </h2>
-    <div class="hot-news-list row-fluid">
-    <?foreach($discovery_4 as $k => $e):?>
-        <div class="span4">
-            <div class="hot-news-content">
-                <a href="http://<?=$e['url']?>" target="_blank" class="hot-news-img">
-                    <img src="<?=wscn_get_image_thumbnail($e['img'], 210, 130)?>" alt="<?=$e['title']?>" />
-                </a>
-                <a href="http://<?=$e['url']?>" target="_blank" class="hot-news-title"><?=$e['title']?></a>
+            <span class="icon-circle"></span>
+
+            <div class="item-content">
+                
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="item-text">收藏了</td>
+                            <td class="item-title"><a href="">【付鹏专栏】十年大宗背后那些不为人知的故事（七）</a></td>
+                            <td class="favorites-icon"><a href="" title="取消收藏"></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
             </div>
-        </div>
-    <?if($k == 2):?>
-    </div>
-    <div class="hot-news-list row-fluid">
-    <?endif;?>
-    <?endforeach;?>
-    </div>
-</div>
 
+        </li>
+
+        <li class="time-list-item clearfix">
+
+            <div class="item-time">
+                2013-12-11<br/>12:22
+            </div>
+
+            <span class="icon-circle"></span>
+
+            <div class="item-content">
+
+                <table>
+                    <tbody>
+                    <tr>
+                        <td class="item-text">收藏了</td>
+                        <td class="item-title"><a href="">【付鹏专栏】十年大宗背后那些不为人知的故事（六）</a></td>
+                        <td class="favorites-icon"><a href=""></a></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </li>
+
+
+    </ul>
+
+
+    <script data-userid="24517" src="http://finance.com/js/embed-focus.js"></script>
+
+
+</div>
