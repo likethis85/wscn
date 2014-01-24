@@ -975,37 +975,21 @@
                 
             });
 
+            $('input[type=submit].action-favorites').on('click', function(){
 
-            /*$('#navbar .nav a').each(function(){
-                
-                var item = $(this); 
+                $('.article-favorites .article-favorites-tip')
+                    .stop()
+                    .animate({
+                        width: '100px'
+                    }, 1000)
+                    .delay(1000)
+                    .animate({
+                        width: '0'
+                    }, 1000);
+                //todo delete
+                return false;
 
-                var result;
-
-                var subdomain = item.attr("data-subdomain");
-
-                if (subdomain !== undefined) {
-                    
-                    if (path === '/') {
-                        result = subdomain === uri.subdomain();
-                    }
-                            
-                } else {
-
-                    var pattern = item.attr("data-active-url");
-                    pattern = pattern.replace(/\//g,"\\/");                    
-                    var reg = new RegExp(pattern);
-                    //todo delete;
-                    console.log(path);    
-                    result = reg.test(path);
-
-                }
-
-                if(result) {                        
-                    item.addClass("active");                            
-                }
-
-            });*/
+            });
 
         });    
 

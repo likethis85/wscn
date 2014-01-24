@@ -6241,7 +6241,7 @@ body {
  * ===========================
  */
 #navbar-user {
-  background: #2D3542;
+  background: #161A21;
   height: 30px;
   position: absolute;
   top: 0;
@@ -8824,6 +8824,12 @@ body.toolbar, body.toolbar-drawer {
   color: #333;
   font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
+.article-slide-bar input:active {
+  outline-style: none;
+}
+.article-slide-bar input:focus {
+  outline-style: none;
+}
 .article-slide-bar .slide-bar-text {
   width: 32px;
   text-align: center;
@@ -8836,6 +8842,7 @@ body.toolbar, body.toolbar-drawer {
   padding: 16px;
   padding-right: 12px;
   width: 36px;
+  position: relative;
 }
 .article-slide-bar .article-favorites form {
   margin: 0;
@@ -8852,6 +8859,20 @@ body.toolbar, body.toolbar-drawer {
 .article-slide-bar .article-favorites input[type=submit]:hover {
   cursor: pointer;
   background-image: url(img/favorites-active.png);
+}
+.article-slide-bar .article-favorites-tip {
+  position: absolute;
+  top: 43px;
+  left: 65px;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #fff;
+  text-indent: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .article-slide-bar .article-share {
   border-radius: 5px;

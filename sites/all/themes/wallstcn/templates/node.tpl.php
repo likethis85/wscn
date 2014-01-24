@@ -107,9 +107,14 @@ drupal_set_title($page_title, PASS_THROUGH);?>
 
     <div class="article-favorites">
         <div class="slide-bar-text">收藏</div>
-        <form action="">
-            <input type="submit"  value=" "/>
+        <form >
+            <input class="action-favorites" type="submit"  value=" "/>
         </form>
+
+        <div class="article-favorites-tip">
+            收藏成功
+        </div>
+
     </div>
 
     <div class="article-share">
