@@ -55,7 +55,7 @@
             </div>
         </div>
     </div>
-    </div>
+
     <?php endif; //logo end ?>
 
     <?=render($page['header']); ?>
