@@ -8868,16 +8868,23 @@ body.toolbar, body.toolbar-drawer {
   padding: 0;
 }
 .article-slide-bar .article-favorites input[type=submit] {
-  background: url(img/favorites.png) 4px 0 no-repeat;
   border: 0;
   display: block;
   height: 24px;
   width: 32px;
   cursor: pointer;
 }
-.article-slide-bar .article-favorites input[type=submit]:hover {
-  cursor: pointer;
+.article-slide-bar .article-favorites .action-favorites {
+  background: url(img/favorites.png) 4px 0 no-repeat;
+}
+.article-slide-bar .article-favorites .action-favorites:hover {
   background-image: url(img/favorites-active.png);
+}
+.article-slide-bar .article-favorites .action-remove-favorites {
+  background: url(img/favorites-active.png) 4px 0 no-repeat;
+}
+.article-slide-bar .article-favorites .action-remove-favorites:hover {
+  background-image: url(img/favorites.png);
 }
 .article-slide-bar .article-favorites-tip {
   position: absolute;
