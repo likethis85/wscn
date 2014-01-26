@@ -107,13 +107,50 @@ drupal_set_title($page_title, PASS_THROUGH);?>
 
     <div class="article-favorites">
         <div class="slide-bar-text">收藏</div>
+        <!--
         <form >
             <input class="action-favorites" type="submit"  value=" "/>
         </form>
-
+        -->
+        <span id="article-favorites-node">
+        <?if($logged_in):?>
+            <?$fav = get_favorites($user->uid, 'node/' . $node->nid); if(empty($fav)):?>
+                <?$add_fav = favorites_block_view(0, 'add', 'node/' . $node->nid); if(!empty($add_fav)):?>
+                    <? echo $add_fav['content'] ?>
+                <?endif?>
+            <?else:?>
+                <? echo $fav ?>
+            <?endif?>
+        <?else:?>
+            <input type="submit" name="op" class="action-favorites" value=" " id="favorites_login_alert"/>
+        <?endif?>
+        </span>
         <div class="article-favorites-tip">
-            收藏成功
+            <span id="favorites_alert"></span>
         </div>
+<script>
+
+function favorites_cancel() {
+    var $ = window.jQuery;
+    var fid = $("#favorites_cancel_fid").val();
+    var token = $("#favorites_cancel_token").val();
+    $('#favorites_alert').html('取消收藏成功');
+    $.get("/favorites/remove/" + fid + "?js=2&token=" + token, function(data){
+        $('#article-favorites-node').html(data);
+
+        $('.article-favorites .article-favorites-tip')
+            .stop()
+            .animate({
+                width: '100px'
+            }, 1000)
+            .delay(1000)
+            .animate({
+                width: '0'
+            }, 1000);
+
+    });
+}
+</script>
 
     </div>
 

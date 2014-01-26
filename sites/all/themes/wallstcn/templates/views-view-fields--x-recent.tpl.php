@@ -37,7 +37,7 @@ $items = $view->result;
             </span>
 
             <span class="meta-item float-right read-count" title="阅读次数">
-                123456
+                <?=$item->node_counter_totalcount;?>
             </span>
 
            <?if(0 && $item->_field_data['nid']['entity']->taxonomy_vocabulary_2):?> /

@@ -3,9 +3,9 @@
     <div class="header-bg"></div>
 
     <?php if (!empty($logo)): ?>
-    
+
     <div class="container">
-        
+
         <div class="header-title row-fluid">
             <!-- logo -->
             <div class="span4">
@@ -59,13 +59,13 @@
                         </div>
                     </div>
                     <?endif?>
-                </div>    
+                </div>
             </div>
             <!-- ads end -->
         </div>
         <!-- row-fluid end -->
     </div>
-    
+
     <?php endif; ?>
 
     <?=render($page['header']); ?>
@@ -75,7 +75,7 @@
 
 <div id="wrapper">
 
-    
+
 
     <div id="main-content" class="container">
 
@@ -99,11 +99,15 @@
 
                 <?else:?>
 
-                    <?$local_menu = menu_local_tasks();?>
-                    <?if($local_menu['tabs']['count'] > 1):?>
-                    <ul class="nav nav-pills">
-                        <?=render($local_menu);?>
-                    </ul>
+                    <? $item = menu_get_item(); if($item['tab_root'] != 'user/%'): ?>
+                        <?$local_menu = menu_local_tasks();?>
+                        <?if($local_menu['tabs']['count'] > 1):?>
+                        <ul class="nav nav-pills">
+                            <?=render($local_menu);?>
+                        </ul>
+                        <?endif?>
+                    <?else:?>
+                        <? include 'user-menu.php'; ?>
                     <?endif?>
                     <!-- 频道页标题
                     </?if($title && wscn_is_channel()):?>
@@ -112,7 +116,30 @@
                     </div>
                     </?endif?>
                     -->
-                    <?=render($page['content']); ?>
+                    <?
+                        $type = '';
+                        if (isset($_GET['type'])) {
+                            $type = trim($_GET['type']);
+                        } else {
+                            if($item['tab_root'] == 'user/%') {
+                                $type = 'focus';
+                            }
+                        }
+
+                        if ($type == 'focus') {
+                            include 'user-focus.php';
+                        } elseif ($type == 'comment') {
+                            include 'user-comment.php';
+                        } elseif ($type == 'favorites') {
+                            include 'user-favorites.php';
+                        } elseif ($type == 'feedback') {
+                            include 'user-feedback.php';
+                        } else {
+                            echo render($page['content']);
+                        }
+
+                    ?>
+
                 <?endif?>
             </div>
 

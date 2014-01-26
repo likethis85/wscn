@@ -909,26 +909,26 @@
             var $markets   = $("#markets-block");
 
             $("#livenews-swith").on('click', function(e){
-                
+
                 var $this = $(this);
 
                 if ($this.hasClass('side-nav-active')) {
 
                 } else {
-                    
+
                     $("#markets-swith").removeClass("side-nav-active");
                     $this.addClass("side-nav-active");
-                    
+
                     $markets.hide();
                     $livenews.show();
-                    
+
                     return false;
                 }
-               
+
             });
 
             $("#markets-swith").on('click', function(e){
-                
+
                 var $this = $(this);
 
                 if ($this.hasClass('side-nav-active')) {
@@ -937,46 +937,46 @@
 
                     $("#livenews-swith").removeClass("side-nav-active");
                     $this.addClass("side-nav-active");
-                    
+
                     $livenews.hide();
                     $markets.show();
 
                     return false;
                 }
-                
+
             });
 
         })();
 
 
 
-        // 主站微改版    
+        // 主站微改版
         $(document).ready(function(){
 
             var uri = new URI(window.location);
             var path = uri.path();
 
             $('#navbar .nav a').each(function(){
-                
-                var item = $(this); 
+
+                var item = $(this);
 
                 var pattern = item.attr("data-active-url");
 
                 if (pattern) {
 
-                    pattern = pattern.replace(/\//g,"\\/");                    
+                    pattern = pattern.replace(/\//g,"\\/");
                     var reg = new RegExp(pattern);
-                    
-                    if(reg.test(path)) {                        
-                        item.addClass("active");                            
+
+                    if(reg.test(path)) {
+                        item.addClass("active");
                     }
-                
+
                 }
-                
+
             });
-
+            /*
             $('input[type=submit].action-favorites').on('click', function(){
-
+                $('#favorites_alert').html('收藏成功');
                 $('.article-favorites .article-favorites-tip')
                     .stop()
                     .animate({
@@ -989,9 +989,27 @@
                 //todo delete
                 return false;
 
+            });*/
+
+
+            $('#favorites_login_alert').on('click', function(){
+
+                $('#favorites_alert').html('请先登陆或注册');
+                $('.article-favorites .article-favorites-tip')
+                    .stop()
+                    .animate({
+                        width: '100px'
+                    }, 1000)
+                    .delay(1000)
+                    .animate({
+                        width: '0'
+                    }, 1000);
+
             });
 
-        });    
+
+
+        });
 
 
     });

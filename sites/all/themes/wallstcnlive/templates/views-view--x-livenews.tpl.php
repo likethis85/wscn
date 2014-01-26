@@ -84,6 +84,12 @@ $lastdate = '';
                 <?if(0 && $item->field_body[0]['raw']['summary']):?>
                 <span class="show-more pull-left">[more]</span>
                 <?endif?>
+                <?if (isset($item->_field_data['nid']['entity'])):?>
+                <? $entity = $item->_field_data['nid']['entity'];
+                if (isset($entity->upload['und'][0]['filename'])): ?>
+                <img class="" src="<?=wscn_get_image_thumbnail(wscn_image_domain(wscn_image_url($entity)), 50, 50);?>">
+                <?endif?>
+                <?endif?>
             </h2>
             <div class="media-meta clearfix">
                 <a href="/node/<?=$item->nid?>" target="_blank" class="pull-left"><?=format_date($item->node_created);?></a>
