@@ -38,7 +38,7 @@
 
         </div>
         
-        <div class="offset1 span3 text-right">
+        <div class="offset1 span3">
             <h6>相关信息</h6>
             <ul>
                 <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/about">关于华尔街见闻</a></li>
@@ -47,7 +47,7 @@
                 <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/wanted">加入我们</a></li>
             </ul>
         </div>
-        <div class="span3 text-right"> 
+        <div class="span3 ">
             <h6>联系我们</h6>
             <ul>
                 <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/contact">联系我们</a></li>
@@ -55,7 +55,7 @@
                 <li>联系邮箱<br/>ad@wallstreetcn.com</li>
             </ul>
         </div>
-        <div class="span3 text-right">
+        <div class="span3 ">
             <h6>关注我们</h6>
             <ul>
                 <li><a rel="nofollow" target="_blank" href="http://weibo.com/wallstreetcn">微博 @华尔街见闻</a></li>
