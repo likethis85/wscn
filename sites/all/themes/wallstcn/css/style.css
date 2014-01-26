@@ -8526,9 +8526,24 @@ body.toolbar, body.toolbar-drawer {
  * 主页微改版 阅读次数
  * ===========================
  */
-.read-count {
-  text-indent: 12px;
-  background: url(img/read-count.png) 0 3px no-repeat;
+.meta-item.read-count {
+  margin-right: 0;
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  background-color: #C00300;
+}
+.meta-item.read-count .read-count-img {
+  display: inline-block;
+  float: left;
+  width: 10px;
+  height: 12px;
+  margin: 3px 0 0 3px;
+  background: url(img/read-count.png) 0 0 no-repeat;
+}
+.meta-item.read-count .read-count-text {
+  display: inline-block;
+  width: 45px;
 }
 /* ===========================
  * 个人中心
@@ -8548,6 +8563,9 @@ body.toolbar, body.toolbar-drawer {
   height: 64px;
   vertical-align: bottom;
   margin-right: 5px;
+}
+.user-center .welcome-message .user-name {
+  color: #a42828;
 }
 .user-center ul,
 .user-center li {
@@ -8771,10 +8789,10 @@ body.toolbar, body.toolbar-drawer {
   display: block;
   width: 24px;
   height: 23px;
-  background: url(img/favorites.png) no-repeat;
+  background: url(img/favorites-active.png) no-repeat;
 }
 .user-center ul.time-list.user-favorites .item-content table td.favorites-icon a:hover {
-  background: url(img/favorites-active.png) no-repeat;
+  background: url(img/favorites.png) no-repeat;
 }
 .user-center .feedback .form {
   width: 100%;
@@ -8817,9 +8835,10 @@ body.toolbar, body.toolbar-drawer {
  * ===========================
  */
 .article-slide-bar {
+  z-index: 9;
   position: fixed;
-  top: 240px;
-  left: 300px;
+  top: 183px;
+  left: -300px;
   font-size: 14px;
   color: #333;
   font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
@@ -8849,30 +8868,38 @@ body.toolbar, body.toolbar-drawer {
   padding: 0;
 }
 .article-slide-bar .article-favorites input[type=submit] {
-  background: url(img/favorites.png) 4px 0 no-repeat;
   border: 0;
   display: block;
   height: 24px;
   width: 32px;
   cursor: pointer;
 }
-.article-slide-bar .article-favorites input[type=submit]:hover {
-  cursor: pointer;
+.article-slide-bar .article-favorites .action-favorites {
+  background: url(img/favorites.png) 4px 0 no-repeat;
+}
+.article-slide-bar .article-favorites .action-favorites:hover {
   background-image: url(img/favorites-active.png);
+}
+.article-slide-bar .article-favorites .action-remove-favorites {
+  background: url(img/favorites-active.png) 4px 0 no-repeat;
+}
+.article-slide-bar .article-favorites .action-remove-favorites:hover {
+  background-image: url(img/favorites.png);
 }
 .article-slide-bar .article-favorites-tip {
   position: absolute;
-  top: 43px;
-  left: 65px;
+  left: 70px;
+  bottom: 0;
   width: 0;
+  border-radius: 3px;
   white-space: nowrap;
   overflow: hidden;
-  height: 30px;
-  line-height: 30px;
+  height: 40px;
+  line-height: 40px;
   font-size: 14px;
-  color: #fff;
+  color: #000;
   text-indent: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(204, 204, 204, 0.7);
 }
 .article-slide-bar .article-share {
   border-radius: 5px;
@@ -8899,6 +8926,55 @@ body.toolbar, body.toolbar-drawer {
   background-image: none;
 }
 /* ===========================
+ * 文章评论
+ * ===========================
+ */
+.comments-list.with-avatar .media:before {
+  display: table;
+  clear: both;
+}
+.comments-list.with-avatar .media:after {
+  display: table;
+  clear: both;
+}
+.comments-list.with-avatar .media-avatar {
+  float: left;
+  margin-top: 5px;
+  width: 70px;
+  height: 70px;
+}
+.comments-list.with-avatar .media-avatar img {
+  width: 70px;
+  height: 70px;
+}
+.comments-list.with-avatar .media-body {
+  width: 650px;
+  float: right;
+}
+/* ===========================
+ * 实时新闻
+ * ===========================
+ */
+.media-heading.with-picture p:after {
+  width: auto;
+  height: auto;
+  line-height: normal;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0 0;
+  background-repeat: repeat;
+  margin-top: 0;
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  content: "\f03e";
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none;
+  color: #2A9DB5;
+}
+/* ===========================
  * IE fix
  * ===========================
  */
@@ -8908,6 +8984,10 @@ body.toolbar, body.toolbar-drawer {
 }
 .lt-ie9 .user-center ul.user-nav a:after {
   display: none;
+}
+.lt-ie9 .article-slide-bar .article-favorites-tip {
+  background-color: #ccc;
+  filter: alpha(opacity=70);
 }
 .lt-ie9 .ellipsis:after {
   width: 2em;

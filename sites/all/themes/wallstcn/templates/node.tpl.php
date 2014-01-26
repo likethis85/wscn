@@ -109,7 +109,7 @@ drupal_set_title($page_title, PASS_THROUGH);?>
         <div class="slide-bar-text">收藏</div>
         <!--
         <form >
-            <input class="action-favorites" type="submit"  value=" "/>
+            <input class="action-favorites" type="submit" title="收藏文章" value=" "/>
         </form>
         -->
         <span id="article-favorites-node">
@@ -334,6 +334,12 @@ if(!empty($content['comments']['comments'])) {
     <?foreach($comments as $item):?>
     <?$comment = $item['#comment'];?>
     <div id="comment-<?=$comment->cid?>" class="media">
+
+
+        <!--<div class="media-avatar">
+            <img src="" alt=""/>
+        </div>-->
+
         <div class="media-body">
             <p class="media-heading">
             <?if($comment->uid):?>

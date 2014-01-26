@@ -974,6 +974,19 @@
                 }
 
             });
+
+
+            var $wrapper = $('#wrapper');
+
+            var left = $wrapper.offset().left;
+
+            var $slideBar = $('.article-slide-bar');
+
+            $slideBar.css('left',  left - 20 - $slideBar.outerWidth() + 'px');
+
+
+
+
             /*
             $('input[type=submit].action-favorites').on('click', function(){
                 $('#favorites_alert').html('收藏成功');
@@ -986,8 +999,6 @@
                     .animate({
                         width: '0'
                     }, 1000);
-                //todo delete
-                return false;
 
             });*/
 
@@ -1006,6 +1017,7 @@
                     }, 1000);
 
             });
+
 
 
 
