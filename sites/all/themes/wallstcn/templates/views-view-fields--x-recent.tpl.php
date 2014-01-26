@@ -37,7 +37,8 @@ $items = $view->result;
             </span>
 
             <span class="meta-item float-right read-count" title="阅读次数">
-                123456
+                <span class="read-count-img"></span>
+                <span class="read-count-text">123456</span>
             </span>
 
            <?if(0 && $item->_field_data['nid']['entity']->taxonomy_vocabulary_2):?> /
