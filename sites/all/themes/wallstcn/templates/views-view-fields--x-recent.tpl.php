@@ -36,10 +36,8 @@ $items = $view->result;
                 <?=format_date($item->node_created);?>
             </span>
 
-            <span class="meta-item float-right read-count" title="阅读次数">
-                <span class="read-count-img"></span>
-                <span class="read-count-text"><?=$item->node_counter_totalcount;?></span>
-
+            <span class="meta-item read-count" title="阅读次数">
+                <?=$item->node_counter_totalcount;?>
             </span>
 
            <?if(0 && $item->_field_data['nid']['entity']->taxonomy_vocabulary_2):?> /

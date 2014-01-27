@@ -6385,8 +6385,8 @@ body {
   text-align: right;
 }
 #footer h6 {
-  margin: 0;
-  padding-bottom: 10px;
+  margin: 15px 0 20px;
+  padding: 0;
   font-size: 18px;
   font-weight: normal;
   font-family: 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
@@ -8527,23 +8527,9 @@ body.toolbar, body.toolbar-drawer {
  * ===========================
  */
 .meta-item.read-count {
-  margin-right: 0;
-  text-align: center;
+  background: url(img/read-count.png) 0 3px no-repeat;
+  text-indent: 12px;
   display: inline-block;
-  color: #fff;
-  background-color: #C00300;
-}
-.meta-item.read-count .read-count-img {
-  display: inline-block;
-  float: left;
-  width: 10px;
-  height: 12px;
-  margin: 3px 0 0 3px;
-  background: url(img/read-count.png) 0 0 no-repeat;
-}
-.meta-item.read-count .read-count-text {
-  display: inline-block;
-  width: 45px;
 }
 /* ===========================
  * 个人中心

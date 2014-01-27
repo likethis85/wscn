@@ -13,7 +13,7 @@
     
     <div class="row-fluid">
         
-        <div class="span2">
+        <div class="span3">
             <a href="/"><img src="/sites/all/themes/wallstcn/css/img/logo-footer.png" alt="华尔街见闻"></a>
             <table class="table footer-social">
                 <tbody>
@@ -38,24 +38,23 @@
 
         </div>
         
-        <div class="offset1 span3">
+        <div class=" span2">
             <h6>相关信息</h6>
             <ul>
                 <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/about">关于华尔街见闻</a></li>
                 <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/terms">使用条款</a></li>
                 <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/copyrightstatement">版权声明</a></li>
-                <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/wanted">加入我们</a></li>
             </ul>
         </div>
-        <div class="span3 ">
-            <h6>联系我们</h6>
+        <div class="span2">
+            <h6><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/contact">联系我们</a></h6>
             <ul>
-                <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/contact">联系我们</a></li>
                 <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/contact">广告投放</a></li>
-                <li>联系邮箱<br/>ad@wallstreetcn.com</li>
+                <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/contact">商业合作</a></li>
+                <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/contact">意见反馈</a></li>
             </ul>
         </div>
-        <div class="span3 ">
+        <div class="span2">
             <h6>关注我们</h6>
             <ul>
                 <li><a rel="nofollow" target="_blank" href="http://weibo.com/wallstreetcn">微博 @华尔街见闻</a></li>
@@ -64,6 +63,15 @@
                 <li><a rel="nofollow" target="_blank" href="http://feedburner.google.com/fb/a/mailverify?uri=wallstreetcn&amp;loc=en_US">邮件订阅</a></li>
             </ul>
         </div>
+
+        <div class="span2">
+            <h6>加入我们</h6>
+            <ul>
+                <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/wanted">全职岗位</a></li>
+                <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/wanted">实习岗位</a></li>
+            </ul>
+        </div>
+
     </div>
 
     <p class="friend-links">友情链接：
