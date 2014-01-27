@@ -47,7 +47,7 @@
             </ul>
         </div>
         <div class="span2">
-            <h6><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/contact">联系我们</a></h6>
+            <h6>联系我们</h6>
             <ul>
                 <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/contact">广告投放</a></li>
                 <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/contact">商业合作</a></li>
