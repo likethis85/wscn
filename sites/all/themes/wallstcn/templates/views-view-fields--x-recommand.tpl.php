@@ -12,7 +12,7 @@ $rows = ceil($max / 3);
     <a href="javascript:;" class="news-slider-btn btn pull-right prev"><span class="icon-angle-left"></span></a>
     <h2>编辑推荐</h2>
 </div>
-<div class="news-list vlist">
+<div class="news-list vlist recommend-news">
     <div id="news-slider" class="row-slider">
     <?for($i = 0; $i < $rows; $i++):?>
     <div class="row-fluid">
@@ -25,18 +25,18 @@ $rows = ceil($max / 3);
                     <div class="news-img-wrap">
                         <img class="lazy" src="<?=path_to_theme()?>/placeholder.gif" data-original="<?=wscn_get_image_thumbnail(wscn_image_domain(wscn_image_url($item)), 210, 140);?>" alt="<?=$item->node_title?>" />
                         <noscript><img class="" src="<?=wscn_get_image_thumbnail(wscn_image_domain(wscn_image_url($item)), 210, 140);?>" alt="<?=$item->node_title?>"></noscript>
+                        <h3 class="media-heading"><?=$item->node_title?></h3>
                     </div>
                 <?endif?>
+                
                 </a>
+
                 <div class="media-body">
                     <p class="media-meta">
                     by <?=$item->users_node_name?>
                     <?=format_date($item->node_created);?>
                     </p>
-                    <h3 class="media-heading"><a href="<?=url('node/'. $item->nid);?>" target="blank"><?=$item->node_title?></a></h3>
-                    <div>
-                        <p><?=strip_tags($item->_field_data['nid']['entity']->body['und'][0]['summary'])?></p>
-                    </div>
+                    
                 </div>
             </div>
         </div>

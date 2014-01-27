@@ -32,6 +32,17 @@
         <?endif?>
     <?endif?>
 
+    <style>
+
+        .ui-header .ui-title {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+    </style>
+
+
+
     <?if(0):?>
         <title><?=$head_title; ?></title>
         <?if($is_front):?>
@@ -64,4 +75,6 @@
     <?=$page; ?>
     <?=$page_bottom; ?>
 </body>
+
+
 </html>

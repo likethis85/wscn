@@ -75,7 +75,7 @@ $lastdate = '';
                 <?endif?>
             </span>
 
-            <h2 class="media-heading <?=$item->field_body[0]['raw']['summary'] ? 'has-more' : ''?>">
+            <h2 class="media-heading <?=$item->field_body[0]['raw']['summary'] ? 'has-more' : ''?> <?if (isset($item->_field_data['nid']['entity']->upload['und'][0]['filename'])):?>with-picture<?endif?>">
                 <?if(!$item->field_body[0]['raw']['summary'] && !$item->field_body[0]['raw']['safe_value']):?>
                 数据图表
                 <?else:?>
@@ -84,6 +84,7 @@ $lastdate = '';
                 <?if(0 && $item->field_body[0]['raw']['summary']):?>
                 <span class="show-more pull-left">[more]</span>
                 <?endif?>
+
             </h2>
             <div class="media-meta clearfix">
                 <a href="/node/<?=$item->nid?>" target="_blank" class="pull-left"><?=format_date($item->node_created);?></a>

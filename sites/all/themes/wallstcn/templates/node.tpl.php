@@ -57,7 +57,7 @@ drupal_set_title($page_title, PASS_THROUGH);?>
         </span>
         <span class="meta-item">
         <?if($logged_in && $content['links']['statistics']):?>
-        <i class="icon-desktop"></i> <?=$content['links']['statistics']['#links']['statistics_counter']['title']?>
+        <i class="icon-desktop"></i> <?=get_counter_totalcount($content['links']['statistics']['#links']['statistics_counter']['title'])?>
         <?endif?>
         </span>
     </span>
@@ -103,37 +103,89 @@ drupal_set_title($page_title, PASS_THROUGH);?>
     <p></p>
 </div>
 
+<div class="article-slide-bar">
 
-<div class="article-share">
-    <div class="jiathis_style_32x32">
-        <a class="jiathis_button_tsina"></a>
-        <a class="jiathis_button_tqq"></a>
-        <a class="jiathis_button_weixin"></a>
-        <a class="jiathis_button_twitter"></a>
-        <a class="jiathis_button_googleplus"></a>
-        <a class="jiathis_button_fb"></a>
-        <a class="jiathis_button_renren"></a>
-        <a class="jiathis_button_email"></a>
-        <a class="jiathis_button_copy"></a>
-        <a class="jiathis_button_fav"></a>
-        <a class="jiathis_button_print"></a>
-        <a class="jiathis_counter_style"></a>
+    <div class="article-favorites">
+        <div class="slide-bar-text">收藏</div>
+        <!--
+        <form >
+            <input class="action-favorites" type="submit" title="收藏文章" value=" "/>
+        </form>
+        -->
+        <span id="article-favorites-node">
+        <?if($logged_in):?>
+            <?$fav = get_favorites($user->uid, 'node/' . $node->nid); if(empty($fav)):?>
+                <?$add_fav = favorites_block_view(0, 'add', 'node/' . $node->nid); if(!empty($add_fav)):?>
+                    <? echo $add_fav['content'] ?>
+                <?endif?>
+            <?else:?>
+                <? echo $fav ?>
+            <?endif?>
+        <?else:?>
+            <input type="submit" name="op" class="action-favorites" value=" " id="favorites_login_alert"/>
+        <?endif?>
+        </span>
+        <div class="article-favorites-tip">
+            <span id="favorites_alert"></span>
+        </div>
+<script>
+
+function favorites_cancel() {
+    var $ = window.jQuery;
+    var fid = $("#favorites_cancel_fid").val();
+    var token = $("#favorites_cancel_token").val();
+    $('#favorites_alert').html('取消收藏成功');
+    $.get("/favorites/remove/" + fid + "?js=2&token=" + token, function(data){
+        $('#article-favorites-node').html(data);
+
+        $('.article-favorites .article-favorites-tip')
+            .stop()
+            .animate({
+                width: '120px'
+            }, 1000)
+            .delay(1000)
+            .animate({
+                width: '0'
+            }, 1000);
+
+    });
+}
+</script>
+
     </div>
-    <script type="text/javascript" >
-        <?$summary = rtrim(addslashes(html_entity_decode(strip_tags($node->body['und']['0']['summary']))), "\n\r");
-          $summary = mb_strlen($summary) > 100 ? mb_substr($summary, 0, 100, 'utf-8') . '...'  : $summary;
-          $summary = str_ireplace(array('&ldquo;', '&rdquo;'), array('“', '“'), $summary);
-          ?>
-        var jiathis_config={
+
+    <div class="article-share">
+
+        <div class="slide-bar-text">分享</div>
+        <div class="jiathis_style_32x32">
+            <a class="jiathis_button_tsina"></a>
+            <a class="jiathis_button_tqq"></a>
+            <a class="jiathis_button_weixin"></a>
+            <a class="jiathis_button_twitter"></a>
+            <a class="jiathis_counter_style"></a>
+            <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+        </div>
+        <script type="text/javascript" >
+            <?
+                $summary = rtrim(addslashes(html_entity_decode(strip_tags($node->body['und']['0']['summary']))), "\n\r");
+                $summary = mb_strlen($summary) > 100 ? mb_substr($summary, 0, 100, 'utf-8') . '...'  : $summary;
+                $summary = str_ireplace(array('&ldquo;', '&rdquo;'), array('“', '“'), $summary);
+            ?>
+            var jiathis_config={
+
                 data_track_clickback:true,
                 title : "好文分享：【<?=$summary?>】。本文来自华尔街见闻网站：",
                 summary : " ",
-                pic : "<?=wscn_image_domain(file_create_url($node->upload['und'][0]['uri']));?>",
-                hideMore:true
+                pic : "<?=wscn_image_domain(file_create_url($node->upload['und'][0]['uri']));?>"
             }
         </script>
         <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1673372" charset="utf-8"></script>
+    </div>
+
+
 </div>
+
+
 
 <?if(0 && variable_get('site_ad')):?>
 <div class="ad-box">
@@ -282,6 +334,12 @@ if(!empty($content['comments']['comments'])) {
     <?foreach($comments as $item):?>
     <?$comment = $item['#comment'];?>
     <div id="comment-<?=$comment->cid?>" class="media">
+
+
+        <!--<div class="media-avatar">
+            <img src="" alt=""/>
+        </div>-->
+
         <div class="media-body">
             <p class="media-heading">
             <?if($comment->uid):?>

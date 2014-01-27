@@ -53,6 +53,12 @@ function wscn_image_url($item) {
     } elseif($item->field_field_image_1) {
         $url = file_create_url($item->field_field_image_1[0]['raw']['uri']);
     }
+
+    if (isset($item->upload['und'][0]['filename'])) {
+        $url = file_create_url('./sites/default/files/' . $item->upload['und'][0]['filename']);
+    }
+
+
     return $url;
 }
 
@@ -289,6 +295,43 @@ function wscn_get_image_thumbnail($url, $width, $height) {
 
     return $new_url;
 }
+
+
+function wscn_get_user_comments($uid) {
+
+  $query = db_select('comment', 'c');
+  $query->join('node', 'n', 'c.nid = n.nid');
+  $query->condition('c.uid', $uid, '=');
+  //$query->condition('n.type', '&lt;content-type&gt;', '=');
+  //$query->condition('n.status', '1', '=');
+  $query->condition('c.status', '1', '=');
+  $query->addExpression('c.subject', 'subject');
+  $query->addExpression('c.created', 'created');
+  $query->addExpression('c.nid', 'nid');
+  $query->addExpression('n.title', 'title');
+  $result = $query->execute();
+  if ($comments = $result->fetchAll())
+        return $comments;
+
+  return array();
+}
+
+function wscn_get_user_picture($uid) {
+
+  $query = db_select('file_managed', 'f');
+  $query->condition('f.uid', $uid, '=');
+  $query->addExpression('filename', 'filename');
+  $result = $query->execute();
+  if ($row = $result->fetchAssoc())
+        return $row;
+
+  return array();
+}
+
+function get_counter_totalcount ($number) {
+    return round($number*2.1);
+}
+
 
 /*
 function wallstcn_form_alter(&$form, &$form_state, $form_id) {
