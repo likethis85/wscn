@@ -1,5 +1,5 @@
 <?php
-$conn = mysql_connect('localhost', 'root', 'admin');
+$conn = mysql_connect('10.4.6.164', 'root', 'huaerjie001');
 
 mysql_select_db("wscn", $conn);
 
