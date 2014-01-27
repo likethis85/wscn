@@ -17,7 +17,7 @@
 </div>
 <?php endif; ?>
 
-<div class="article-content typo">
+<div class="article-content resizing-picture typo">
     <?=$node->body['und']['0']['value']?>
 </div>
 
@@ -88,3 +88,23 @@
 <?=render($content);?>
 
 <?endif?>
+
+
+<script type="text/javascript">
+
+    (function($){
+
+        $(document).ready(function(){
+
+            var width = $(window).width() - 30;
+
+            $('.article-content img').css({
+                'max-width' : width + 'px',
+                'height': 'auto'
+            });
+
+        });
+
+    })(jQuery);
+
+</script>

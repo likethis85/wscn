@@ -13,24 +13,24 @@
     
     <div class="row-fluid">
         
-        <div class="span2">
+        <div class="span3">
             <a href="/"><img src="/sites/all/themes/wallstcn/css/img/logo-footer.png" alt="华尔街见闻"></a>
             <table class="table footer-social">
                 <tbody>
                     <tr>
                         <td class="finance-code" colspan="1" rowspan="3"><img src="/sites/all/themes/wallstcn/css/img/qrcode.png" alt="华尔街见闻二维码" id="weixin-qrcode"></td>
                         <td class="text-right footer-social-icon footer-social-icon-first"> <a target="_blank" href="http://weibo.com/wallstreetcn">
-                                <img src="http://markets.static.wallstreetcn.com/img/weibo.png?v=cc3c36f727" alt="华尔街见闻微博">
+                                <img src="http://markets.static.wallstreetcn.com/img/weibo.png?v=cc3c36f727" title="新浪微博" alt="华尔街见闻微博">
                         </a> </td>
                     </tr>
                     <tr>
                         <td class="text-right footer-social-icon"><a rel="nofollow" target="_blank" href="http://t.qq.com/wallstreetcn">
-                                <img src="http://markets.static.wallstreetcn.com/img/tqq.png?v=cc3c36f727" alt="华尔街见闻腾讯微博">
+                                <img src="http://markets.static.wallstreetcn.com/img/tqq.png?v=cc3c36f727" title="腾讯微博" alt="华尔街见闻腾讯微博">
                         </a></td>
                     </tr>
                     <tr>
                         <td class="text-right footer-social-icon footer-social-icon-last"><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/feed">
-                                <img src="http://markets.static.wallstreetcn.com/img/rss.png?v=cc3c36f727" alt="华尔街见闻腾讯微博">
+                                <img src="http://markets.static.wallstreetcn.com/img/rss.png?v=cc3c36f727" title="RSS订阅" alt="">
                         </a></td>
                     </tr>
                 </tbody>
@@ -38,24 +38,23 @@
 
         </div>
         
-        <div class="offset1 span3">
+        <div class=" span2">
             <h6>相关信息</h6>
             <ul>
                 <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/about">关于华尔街见闻</a></li>
                 <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/terms">使用条款</a></li>
                 <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/copyrightstatement">版权声明</a></li>
-                <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/wanted">加入我们</a></li>
             </ul>
         </div>
-        <div class="span3 ">
-            <h6>联系我们</h6>
+        <div class="span2">
+            <h6><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/contact">联系我们</a></h6>
             <ul>
-                <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/contact">联系我们</a></li>
                 <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/contact">广告投放</a></li>
-                <li>联系邮箱<br/>ad@wallstreetcn.com</li>
+                <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/contact">商业合作</a></li>
+                <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/contact">意见反馈</a></li>
             </ul>
         </div>
-        <div class="span3 ">
+        <div class="span2">
             <h6>关注我们</h6>
             <ul>
                 <li><a rel="nofollow" target="_blank" href="http://weibo.com/wallstreetcn">微博 @华尔街见闻</a></li>
@@ -64,6 +63,15 @@
                 <li><a rel="nofollow" target="_blank" href="http://feedburner.google.com/fb/a/mailverify?uri=wallstreetcn&amp;loc=en_US">邮件订阅</a></li>
             </ul>
         </div>
+
+        <div class="span2">
+            <h6>加入我们</h6>
+            <ul>
+                <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/wanted">全职岗位</a></li>
+                <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/wanted">实习岗位</a></li>
+            </ul>
+        </div>
+
     </div>
 
     <p class="friend-links">友情链接：

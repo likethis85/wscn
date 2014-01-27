@@ -76,19 +76,5 @@
     <?=$page_bottom; ?>
 </body>
 
-<script type="text/javascript">
-
-    jQuery(document).ready(function(){
-
-        var width = jQuery(window).width() - 30;
-
-        jQuery('.article-content img').css({
-            'width' : width + 'px',
-            'height': '100%'
-        });
-
-    });
-
-</script>
 
 </html>
