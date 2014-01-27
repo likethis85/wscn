@@ -673,7 +673,7 @@
                             top  : target.offset().top  - 10 + "px"
                         });
 
-                        console.log(target.offset().left + ", " + target.offset().top );
+                        //console.log(target.offset().left + ", " + target.offset().top );
 
                     }, 500);
 
