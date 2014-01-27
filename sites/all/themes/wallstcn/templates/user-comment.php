@@ -34,5 +34,7 @@
         </li>
         <?endforeach;?>
     </ul>
+ <?else:?>
+        <p style="width: 100%; text-align: center;">您目前还没有品论任何文章。</p>
 <?endif;?>
 </div>

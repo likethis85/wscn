@@ -38,7 +38,7 @@ $items = $view->result;
 
             <span class="meta-item float-right read-count" title="阅读次数">
                 <span class="read-count-img"></span>
-                <span class="read-count-text"><?=$item->node_counter_totalcount;?></span>
+                <span class="read-count-text"><?=get_counter_totalcount($item->node_counter_totalcount);?></span>
 
             </span>
 

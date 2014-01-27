@@ -1004,7 +1004,10 @@
 
 
             $('#favorites_login_alert').on('click', function(){
-
+                if(confirm("您还不是本站注册用户，请先注册或登陆。")){
+                    window.open('/user', '_blank');
+                }
+                /*
                 $('#favorites_alert').html('请先登陆或注册');
                 $('.article-favorites .article-favorites-tip')
                     .stop()
@@ -1015,6 +1018,7 @@
                     .animate({
                         width: '0'
                     }, 1000);
+                    */
 
             });
 

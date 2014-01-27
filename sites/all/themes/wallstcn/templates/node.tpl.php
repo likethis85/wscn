@@ -57,7 +57,7 @@ drupal_set_title($page_title, PASS_THROUGH);?>
         </span>
         <span class="meta-item">
         <?if($logged_in && $content['links']['statistics']):?>
-        <i class="icon-desktop"></i> <?=$content['links']['statistics']['#links']['statistics_counter']['title']?>
+        <i class="icon-desktop"></i> <?=get_counter_totalcount($content['links']['statistics']['#links']['statistics_counter']['title'])?>
         <?endif?>
         </span>
     </span>
@@ -141,7 +141,7 @@ function favorites_cancel() {
         $('.article-favorites .article-favorites-tip')
             .stop()
             .animate({
-                width: '100px'
+                width: '120px'
             }, 1000)
             .delay(1000)
             .animate({

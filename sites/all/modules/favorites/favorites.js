@@ -28,7 +28,7 @@
             // 替换
             $('#favorites_alert').html('收藏成功');
             $('#article-favorites-node').html(data);
-            $('input[type=submit].action-favorites').on('click', function(){
+            //$('input[type=submit].action-favorites').on('click', function(){
 
                 $('.article-favorites .article-favorites-tip')
                     .stop()
@@ -42,7 +42,7 @@
                 //todo delete
                 //return false;
 
-            });
+            //});
           /*
           Drupal.favorites.rebuild(data);
 
@@ -88,15 +88,16 @@
    */
   Drupal.behaviors.favoritesLinks = {
     attach: function(context) {
-      $('a.favorites-remove:not(.js-processed)',context).click(function(event){
+      $('a.favorites-remove',context).click(function(event){
         Drupal.favorites.remove($(this));
         event.preventDefault();
       }).addClass('js-processed');
       // We need to suppress any native submit options for the form before we add
-      $('form#favorites-add-favorite-form:not(.js-processed)', context).submit(function(event){
+      $('form#favorites-add-favorite-form', context).submit(function(event){
+
         Drupal.favorites.add();
         event.preventDefault();
-      }).addClass('js-processed');
+      });
     }
   }
 })(jQuery);

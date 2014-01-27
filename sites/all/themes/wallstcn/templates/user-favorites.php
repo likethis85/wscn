@@ -23,7 +23,7 @@
                         <tr>
                             <td class="item-text">收藏了</td>
                             <td class="item-title"><a target="_blank" href="<?=$f->path?>"><?=$f->title?></a></td>
-                            <td class="favorites-icon"><a href="/favorites/remove/<?=$f->fid?>?token=<?=$f->token?>"></a></td>
+                            <td class="favorites-icon"><a href="/favorites/remove/<?=$f->fid?>?token=<?=$f->token?>" title="取消收藏"></a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -34,5 +34,7 @@
         <?endforeach?>
 
     </ul>
+    <?else:?>
+        <p style="width: 100%; text-align: center;">您目前还未收藏文章。</p>
     <?endif?>
 </div>

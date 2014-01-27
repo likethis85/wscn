@@ -130,10 +130,12 @@ function favorites_block_view($delta = 0, $type = 'add', $path='') {
     $form_id = drupal_get_form('favorites_add_favorite_form');
     $output = '<div id="favorites-list">' . favorites_list() . '</div>';
       //. drupal_render($form_id);
-    //print_r(drupal_render($form_id));die;
+
     if ($type == 'add') {
         // <input type="submit" id="edit-submit--2" name="op" value="添加收藏" class="form-submit" /> <input type="submit" name="op" class="action-favorites" value=" "/>
-        $output = '<form action="/' . $path . '" method="post" id="favorites-add-favorite-form" accept-charset="UTF-8"><input style="width: 90%" class="favorites-add-textfield form-text" type="hidden" id="edit-title" name="title" value="' . $form_id['add']['title']['#default_value'] . '" size="20" maxlength="255" /><input type="submit" id="edit-submit--2" name="op" value=" " class="form-submit" />
+        $title = explode('_', $form_id['add']['title']['#default_value']);
+
+        $output = '<form action="/' . $path . '" method="post" id="favorites-add-favorite-form" accept-charset="UTF-8" onsubmit="return false"><input style="width: 90%" class="favorites-add-textfield form-text" type="hidden" id="edit-title" name="title" value="' . $title[0] . '" size="20" maxlength="255" /><input type="submit" id="edit-submit--2" name="op" value=" " class="action-favorites"/>
     <input type="hidden" name="form_build_id" value="form-' . $form_id['#build_id'] . '" />
     <input type="hidden" name="form_token" value="' . $form_id['form_token']['#default_value'] . '" />
     <input type="hidden" name="form_id" value="favorites_add_favorite_form" /></form>';
@@ -364,7 +366,7 @@ function get_favorites($uid = 0, $path = '') {
       $favorite->token = favorite_token($favorite);
       $favorite->path = drupal_get_path_alias($favorite->path);
 
-      $fav = '<input type="submit" name="op" class="action-favorites" value=" " id="favorites_cancel" onclick="favorites_cancel()"/>
+      $fav = '<input type="submit" name="op" class="action-remove-favorites" value=" " id="favorites_cancel" onclick="favorites_cancel()"/>
                 <input type="hidden" name="favorites_cancel_fid" value="' . $favorite->fid . '" id="favorites_cancel_fid"/>
                 <input type="hidden" name="favorites_cancel_token" value="' . $favorite->token . '" id="favorites_cancel_token"/>';
 

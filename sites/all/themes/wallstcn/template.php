@@ -328,6 +328,10 @@ function wscn_get_user_picture($uid) {
   return array();
 }
 
+function get_counter_totalcount ($number) {
+    return round($number*2.1);
+}
+
 
 /*
 function wallstcn_form_alter(&$form, &$form_state, $form_id) {
