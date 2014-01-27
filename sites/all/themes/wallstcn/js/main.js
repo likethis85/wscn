@@ -643,6 +643,7 @@
             var $this = $(this);
             if ($this.text() == "黄金") {
 
+                $this.addClass('mark-new-target');
                 var offset = $this.offset();
                 var img = new Image();
                 img.alt = "new";
@@ -652,6 +653,32 @@
                 img.src = "/sites/all/themes/wallstcn/css/img/new.gif";
 
                 document.body.appendChild(img);
+
+                //窗口大小改变时 ，初始化位置
+
+                var resizeTemp;
+
+                $(window).on('resize', function(){
+
+                    clearTimeout(resizeTemp);
+
+                    resizeTemp = setTimeout(function(){
+
+                        var img = $('.mark-new');
+
+                        var target = $('.mark-new-target');
+
+                        img.css({
+                            left : target.offset().left + target.width()  + "px",
+                            top  : target.offset().top  - 10 + "px"
+                        });
+
+                        console.log(target.offset().left + ", " + target.offset().top );
+
+                    }, 500);
+
+                });
+
 
             }
         });
@@ -949,9 +976,55 @@
         })();
 
 
+        /*
+         *
+         * 主站微改版  start
+         *
+         * */
+        (function(){
 
-        // 主站微改版
-        $(document).ready(function(){
+
+            //设置 侧边拦位置
+            function showSlideBar() {
+
+                var $wrapper = $('#wrapper');
+
+                var $slideBar = $('.article-slide-bar');
+
+                var left = $wrapper.offset().left - 20 - $slideBar.outerWidth();
+
+                if (left >= 0) {
+
+                    $slideBar.css('left',  left + 'px');
+
+                } else {
+
+                    $slideBar.css('left',  '0');
+
+                }
+
+            }
+
+            //设定 侧边拦位置
+            showSlideBar();
+
+            //缩放时重新设定位置
+            var resizeTemp;
+
+            $(window).on('resize', function(){
+
+                clearTimeout(resizeTemp);
+
+                resizeTemp = setTimeout(function(){
+
+                    showSlideBar();
+
+                }, 500)
+
+
+
+            });
+
 
             var uri = new URI(window.location);
             var path = uri.path();
@@ -976,38 +1049,8 @@
             });
 
 
-            var $wrapper = $('#wrapper');
-
-            var left = $wrapper.offset().left;
-
-            var $slideBar = $('.article-slide-bar');
-
-            $slideBar.css('left',  left - 20 - $slideBar.outerWidth() + 'px');
-
-
-
-
-            /*
-            $('input[type=submit].action-favorites').on('click', function(){
-                $('#favorites_alert').html('收藏成功');
-                $('.article-favorites .article-favorites-tip')
-                    .stop()
-                    .animate({
-                        width: '100px'
-                    }, 1000)
-                    .delay(1000)
-                    .animate({
-                        width: '0'
-                    }, 1000);
-
-            });*/
-
-
             $('#favorites_login_alert').on('click', function(){
-                if(confirm("您还不是本站注册用户，暂时不能收藏文章，请先注册或登录。")){
-                    window.open('/user', '_blank');
-                }
-                /*
+
                 $('#favorites_alert').html('请先登陆或注册');
                 $('.article-favorites .article-favorites-tip')
                     .stop()
@@ -1018,15 +1061,17 @@
                     .animate({
                         width: '0'
                     }, 1000);
-                    */
 
             });
 
 
+        })();
 
-
-        });
-
+        /*
+         *
+         * 主站微改版  end
+         *
+         * */
 
     });
 })(jQuery);
