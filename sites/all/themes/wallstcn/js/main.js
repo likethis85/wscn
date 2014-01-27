@@ -1004,7 +1004,7 @@
 
 
             $('#favorites_login_alert').on('click', function(){
-                if(confirm("您还不是本站注册用户，请先注册或登陆。")){
+                if(confirm("您还不是本站注册用户，暂时不能收藏文章，请先注册或登录。")){
                     window.open('/user', '_blank');
                 }
                 /*
