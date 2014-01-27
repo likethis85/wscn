@@ -1051,16 +1051,9 @@
 
             $('#favorites_login_alert').on('click', function(){
 
-                $('#favorites_alert').html('请先登陆或注册');
-                $('.article-favorites .article-favorites-tip')
-                    .stop()
-                    .animate({
-                        width: '100px'
-                    }, 1000)
-                    .delay(1000)
-                    .animate({
-                        width: '0'
-                    }, 1000);
+                if (confirm('您还不是本站的注册用户，暂时无法收藏文章，请先登录或注册。')) {
+                    window.open('/user', '_blank');
+                }
 
             });
 
