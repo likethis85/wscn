@@ -20,17 +20,17 @@
                     <tr>
                         <td class="finance-code" colspan="1" rowspan="3"><img src="/sites/all/themes/wallstcn/css/img/qrcode.png" alt="华尔街见闻二维码" id="weixin-qrcode"></td>
                         <td class="text-right footer-social-icon footer-social-icon-first"> <a target="_blank" href="http://weibo.com/wallstreetcn">
-                                <img src="http://markets.static.wallstreetcn.com/img/weibo.png?v=cc3c36f727" alt="华尔街见闻微博">
+                                <img src="http://markets.static.wallstreetcn.com/img/weibo.png?v=cc3c36f727" title="新浪微博" alt="华尔街见闻微博">
                         </a> </td>
                     </tr>
                     <tr>
                         <td class="text-right footer-social-icon"><a rel="nofollow" target="_blank" href="http://t.qq.com/wallstreetcn">
-                                <img src="http://markets.static.wallstreetcn.com/img/tqq.png?v=cc3c36f727" alt="华尔街见闻腾讯微博">
+                                <img src="http://markets.static.wallstreetcn.com/img/tqq.png?v=cc3c36f727" title="腾讯微博" alt="华尔街见闻腾讯微博">
                         </a></td>
                     </tr>
                     <tr>
                         <td class="text-right footer-social-icon footer-social-icon-last"><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/feed">
-                                <img src="http://markets.static.wallstreetcn.com/img/rss.png?v=cc3c36f727" alt="华尔街见闻腾讯微博">
+                                <img src="http://markets.static.wallstreetcn.com/img/rss.png?v=cc3c36f727" title="RSS订阅" alt="">
                         </a></td>
                     </tr>
                 </tbody>
