@@ -19,7 +19,7 @@
 
         <div class="" id="markets-block" style="display: block;">
 
-            <script src="http://markets.static.wallstreetcn.com/widget_side_v1.js?v=1" data-width="360px" data-height="290px"></script>
+            <script src="http://markets.static.wallstreetcn.com/widget_side_v2.js?v=1" data-height="380"></script>
 
         </div>
 
