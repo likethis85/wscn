@@ -192,7 +192,7 @@
                     <?endif?>
 
                     <div class="ad-box ad-side">
-                        <script src="http://markets.static.wallstreetcn.com/widget_side_v1.js?v=1" data-width="360px" data-height="290px"></script>
+                        <script src="http://markets.static.wallstreetcn.com/widget_side_v2.js?v=1" data-width="360" data-height="380"></script>
                     </div>
 
                     <div class="page-header header-red">
