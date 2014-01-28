@@ -649,9 +649,9 @@ function get_discovery_index_side_item() {
                          );
 
     // 亿邦动力
-    $discovery_item[4] = array('title' => '阿里巴巴IPO：2014年仍很悬',
-                               'url'   => 'home.ebrun.com/blog-44486.html',
-                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_ebrun_1.jpg',
+    $discovery_item[4] = array('title' => '腾讯未必生，阿里未必死',
+                               'url'   => 'home.ebrun.com/blog-45526.html',
+                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_ebrun_20140128_1.jpg',
                          );
     // 搜房网
 
@@ -660,9 +660,9 @@ function get_discovery_index_side_item() {
                                'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_soufun_3.jpeg',
                          );
 
-    $discovery_item[5] = array('title' => '2014买房买哪里？最宜居的中国10大城市',
-                               'url'   =>'esf.sh.soufun.com/newsecond/news/11964675.htm?utm_source=shhezuo&utm_medium=click&utm_term=lgq_sh&utm_content=shwalls&utm_campaign=20140122walls',
-                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_soufun_1.jpg',
+    $discovery_item[5] = array('title' => '2014房价跌50%？房价不可能下降的19个理由',
+                               'url'   =>'esf.sh.soufun.com/newsecond/news/12001458.htm?utm_source=shhezuo&utm_medium=click&utm_term=lgq_sh&utm_content=shwalls&utm_campaign=20140127walls',
+                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_soufun_20140128_1.jpg',
                          );
 
     $numbers = range(0, 400);
