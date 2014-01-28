@@ -309,6 +309,7 @@ function wscn_get_user_comments($uid) {
   $query->addExpression('c.created', 'created');
   $query->addExpression('c.nid', 'nid');
   $query->addExpression('n.title', 'title');
+  $query->orderBy('c.created', 'DESC');
   $result = $query->execute();
   if ($comments = $result->fetchAll())
         return $comments;
@@ -326,6 +327,21 @@ function wscn_get_user_picture($uid) {
         return $row;
 
   return array();
+}
+
+function wscn_get_node_totalcount($nid) {
+
+  $query = db_select('node_counter', 'n');
+  $query->condition('n.nid', $nid, '=');
+  $query->addExpression('totalcount', 'totalcount');
+  $result = $query->execute();
+
+  $totalcount = 0;
+  $row = $result->fetchAssoc();
+  if (isset($row['totalcount'])) {
+    return get_counter_totalcount($row['totalcount']);
+  }
+  return $totalcount;
 }
 
 function get_counter_totalcount ($number) {

@@ -421,6 +421,9 @@ if(!empty($content['comments']['comments'])) {
                 <?endforeach?>
                 </span>
                 <?endif?>
+                <span class="meta-item read-count" title="阅读次数">
+                    <?=wscn_get_node_totalcount($node->nid)?>
+                </span>
             </span>
         </div>
         <?php endif; ?>
