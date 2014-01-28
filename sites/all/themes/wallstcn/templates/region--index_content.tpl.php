@@ -4,7 +4,7 @@
 
 <div class="<?=$classes;?>" <?=$attributes;?>>
 
-<?if(variable_get('site_ad')):?>
+<?if(variable_get('site_ad') && 0):?>
 <div class="ad-box ad-middle">
     <div class="row-fluid">
 

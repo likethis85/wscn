@@ -11,7 +11,7 @@
             <div class="span4">
                 <h1>
                     <a class="logo" href="<?=$front_page; ?>" title="华尔街见闻">
-                        <img src="<?=$logo?>" alt="华尔街见闻" />
+                        <img src="<?=$logo?>?v=1.0" alt="华尔街见闻" />
                     </a>
                 </h1>
             </div>

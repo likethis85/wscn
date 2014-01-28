@@ -10,9 +10,9 @@
 </ul>
 
 <div class="footer-content">
-    
+
     <div class="row-fluid">
-        
+
         <div class="span3">
             <a href="/"><img src="/sites/all/themes/wallstcn/css/img/logo-footer.png" alt="华尔街见闻"></a>
             <table class="table footer-social">
@@ -37,7 +37,7 @@
             </table>
 
         </div>
-        
+
         <div class=" span2">
             <h6>相关信息</h6>
             <ul>
@@ -47,7 +47,7 @@
             </ul>
         </div>
         <div class="span2">
-            <h6><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/contact">联系我们</a></h6>
+            <h6>联系我们</h6>
             <ul>
                 <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/contact">广告投放</a></li>
                 <li><a rel="nofollow" target="_blank" href="http://wallstreetcn.com/contact">商业合作</a></li>
@@ -135,3 +135,15 @@
 
 </div>
 
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19303398-2']);
+  _gaq.push(['_setDomainName', '.wallstreetcn.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>

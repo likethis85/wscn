@@ -212,6 +212,7 @@ function feedback_menu() {
  * Implements hook_page_build().
  */
 function feedback_page_build(&$page) {
+  /*
   if (user_access('access feedback form') && !feedback_match_path(variable_get('feedback_excluded_paths', 'admin/reports/feedback'))) {
     $page['page_bottom']['feedback'] = array(
       '#theme' => 'feedback_form_display',
@@ -221,7 +222,7 @@ function feedback_page_build(&$page) {
     $path = drupal_get_path('module', 'feedback');
     $page['page_bottom']['feedback']['#attached']['css'][] = $path . '/feedback.css';
     $page['page_bottom']['feedback']['#attached']['js'][] = $path . '/feedback.js';
-  }
+  }*/
 }
 
 /**
