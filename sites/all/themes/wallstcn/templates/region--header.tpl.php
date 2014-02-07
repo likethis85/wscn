@@ -29,7 +29,10 @@
                             <li class="leaf"><a class="bg-9" data-active-url="^/market.*$" href="/market" title="">市场</a></li>
                             <li class="leaf"><a class="bg-10" data-active-url="^/company.*$" href="/company" title="">公司</a></li>
                             <li class="leaf"><a class="bg-11" data-active-url="^/gold.*$" href="/gold" title="">黄金</a></li>
-                            <li class="leaf last"><a class="bg-12" data-active-url="^/wanted.*$" href="/wanted">招聘</a></li>
+                            <li class="leaf"><a class="bg-12" data-active-url="^/discovery.*$" href="/discovery" title="">发现</a></li>
+                            <!--
+                            <li class="leaf last"><a class="bg-13" data-active-url="^/wanted.*$" href="/wanted">招聘</a></li>
+                            -->
                         </ul>
 
                         <?endif?>

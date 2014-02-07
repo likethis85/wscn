@@ -53,6 +53,12 @@ function wscn_image_url($item) {
     } elseif($item->field_field_image_1) {
         $url = file_create_url($item->field_field_image_1[0]['raw']['uri']);
     }
+
+    if (isset($item->upload['und'][0]['filename'])) {
+        $url = file_create_url('./sites/default/files/' . $item->upload['und'][0]['filename']);
+    }
+
+
     return $url;
 }
 
@@ -289,6 +295,59 @@ function wscn_get_image_thumbnail($url, $width, $height) {
 
     return $new_url;
 }
+
+
+function wscn_get_user_comments($uid) {
+
+  $query = db_select('comment', 'c');
+  $query->join('node', 'n', 'c.nid = n.nid');
+  $query->condition('c.uid', $uid, '=');
+  //$query->condition('n.type', '&lt;content-type&gt;', '=');
+  //$query->condition('n.status', '1', '=');
+  $query->condition('c.status', '1', '=');
+  $query->addExpression('c.subject', 'subject');
+  $query->addExpression('c.created', 'created');
+  $query->addExpression('c.nid', 'nid');
+  $query->addExpression('n.title', 'title');
+  $query->orderBy('c.created', 'DESC');
+  $result = $query->execute();
+  if ($comments = $result->fetchAll())
+        return $comments;
+
+  return array();
+}
+
+function wscn_get_user_picture($uid) {
+
+  $query = db_select('file_managed', 'f');
+  $query->condition('f.uid', $uid, '=');
+  $query->addExpression('filename', 'filename');
+  $result = $query->execute();
+  if ($row = $result->fetchAssoc())
+        return $row;
+
+  return array();
+}
+
+function wscn_get_node_totalcount($nid) {
+
+  $query = db_select('node_counter', 'n');
+  $query->condition('n.nid', $nid, '=');
+  $query->addExpression('totalcount', 'totalcount');
+  $result = $query->execute();
+
+  $totalcount = 0;
+  $row = $result->fetchAssoc();
+  if (isset($row['totalcount'])) {
+    return get_counter_totalcount($row['totalcount']);
+  }
+  return $totalcount;
+}
+
+function get_counter_totalcount ($number) {
+    return round($number*2.1);
+}
+
 
 /*
 function wallstcn_form_alter(&$form, &$form_state, $form_id) {
@@ -606,14 +665,20 @@ function get_discovery_index_side_item() {
                          );
 
     // 亿邦动力
-    $discovery_item[4] = array('title' => '阿里巴巴IPO：2014年仍很悬',
-                               'url'   => 'home.ebrun.com/blog-44486.html',
-                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_ebrun_1.jpg',
+    $discovery_item[4] = array('title' => '腾讯未必生，阿里未必死',
+                               'url'   => 'home.ebrun.com/blog-45526.html',
+                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_ebrun_20140128_1.jpg',
                          );
     // 搜房网
-    $discovery_item[5] = array('title' => '不动产登记6月底前出台 能否撼动高房价难料',
-                               'url'   =>'esf.sh.soufun.com/newsecond/news/11892879.htm?utm_source=shhezuo&utm_medium=click&utm_term=lgq_sh&utm_content=shwalls&utm_campaign=20140113walls',
-                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_soufun_1.jpg',
+
+    $discovery_item[0] = array('title' => '中国房价坚不可摧的10大城市 买在这里一生无惧房地产泡沫',
+                               'url'   =>'esf.tj.soufun.com/newsecond/news/11952156.htm?utm_source=tjhezuo&utm_medium=click&utm_term=mei&utm_content=esf&utm_campaign=hua',
+                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_soufun_3.jpeg',
+                         );
+
+    $discovery_item[5] = array('title' => '2014房价跌50%？房价不可能下降的19个理由',
+                               'url'   =>'esf.sh.soufun.com/newsecond/news/12001458.htm?utm_source=shhezuo&utm_medium=click&utm_term=lgq_sh&utm_content=shwalls&utm_campaign=20140127walls',
+                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_soufun_20140128_1.jpg',
                          );
 
     $numbers = range(0, 400);
@@ -696,6 +761,11 @@ function get_discovery_item() {
 
     $discovery_item  = array();
     // 这里加外部广告
+    $discovery_item[0] = array('title' => '2014年中国房地产行业政策趋向分析',
+                               'url'   =>'www.qianzhan.com/indynews/detail/214/140115-de4bf39a.html',
+                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_qianzhan_1.jpg',
+                         );
+
 
     $numbers = range(0, 400);
     shuffle($numbers);

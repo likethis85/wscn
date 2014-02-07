@@ -643,6 +643,7 @@
             var $this = $(this);
             if ($this.text() == "黄金") {
 
+                $this.addClass('mark-new-target');
                 var offset = $this.offset();
                 var img = new Image();
                 img.alt = "new";
@@ -652,6 +653,32 @@
                 img.src = "/sites/all/themes/wallstcn/css/img/new.gif";
 
                 document.body.appendChild(img);
+
+                //窗口大小改变时 ，初始化位置
+
+                var resizeTemp;
+
+                $(window).on('resize', function(){
+
+                    clearTimeout(resizeTemp);
+
+                    resizeTemp = setTimeout(function(){
+
+                        var img = $('.mark-new');
+
+                        var target = $('.mark-new-target');
+
+                        img.css({
+                            left : target.offset().left + target.width()  + "px",
+                            top  : target.offset().top  - 10 + "px"
+                        });
+
+                        //console.log(target.offset().left + ", " + target.offset().top );
+
+                    }, 500);
+
+                });
+
 
             }
         });
@@ -909,26 +936,26 @@
             var $markets   = $("#markets-block");
 
             $("#livenews-swith").on('click', function(e){
-                
+
                 var $this = $(this);
 
                 if ($this.hasClass('side-nav-active')) {
 
                 } else {
-                    
+
                     $("#markets-swith").removeClass("side-nav-active");
                     $this.addClass("side-nav-active");
-                    
+
                     $markets.hide();
                     $livenews.show();
-                    
+
                     return false;
                 }
-               
+
             });
 
             $("#markets-swith").on('click', function(e){
-                
+
                 var $this = $(this);
 
                 if ($this.hasClass('side-nav-active')) {
@@ -937,78 +964,107 @@
 
                     $("#livenews-swith").removeClass("side-nav-active");
                     $this.addClass("side-nav-active");
-                    
+
                     $livenews.hide();
                     $markets.show();
 
                     return false;
                 }
-                
+
             });
 
         })();
 
 
+        /*
+         *
+         * 主站微改版  start
+         *
+         * */
+        (function(){
 
-        // 主站微改版    
-        $(document).ready(function(){
+
+            //设置 侧边拦位置
+            function showSlideBar() {
+
+                var $wrapper = $('#wrapper');
+
+                var $slideBar = $('.article-slide-bar');
+
+                var left = $wrapper.offset().left - 20 - $slideBar.outerWidth();
+
+                if (left >= 0) {
+
+                    $slideBar.css('left',  left + 'px');
+
+                } else {
+
+                    $slideBar.css('left',  '0');
+
+                }
+
+            }
+
+            //设定 侧边拦位置
+            showSlideBar();
+
+            //缩放时重新设定位置
+            var resizeTemp;
+
+            $(window).on('resize', function(){
+
+                clearTimeout(resizeTemp);
+
+                resizeTemp = setTimeout(function(){
+
+                    showSlideBar();
+
+                }, 500)
+
+
+
+            });
+
 
             var uri = new URI(window.location);
             var path = uri.path();
 
             $('#navbar .nav a').each(function(){
-                
-                var item = $(this); 
+
+                var item = $(this);
 
                 var pattern = item.attr("data-active-url");
 
                 if (pattern) {
 
-                    pattern = pattern.replace(/\//g,"\\/");                    
+                    pattern = pattern.replace(/\//g,"\\/");
                     var reg = new RegExp(pattern);
-                    
-                    if(reg.test(path)) {                        
-                        item.addClass("active");                            
+
+                    if(reg.test(path)) {
+                        item.addClass("active");
                     }
-                
+
                 }
-                
+
             });
 
 
-            /*$('#navbar .nav a').each(function(){
-                
-                var item = $(this); 
+            $('#favorites_login_alert').on('click', function(){
 
-                var result;
-
-                var subdomain = item.attr("data-subdomain");
-
-                if (subdomain !== undefined) {
-                    
-                    if (path === '/') {
-                        result = subdomain === uri.subdomain();
-                    }
-                            
-                } else {
-
-                    var pattern = item.attr("data-active-url");
-                    pattern = pattern.replace(/\//g,"\\/");                    
-                    var reg = new RegExp(pattern);
-                    //todo delete;
-                    console.log(path);    
-                    result = reg.test(path);
-
+                if (confirm('您还不是本站的注册用户，暂时无法收藏文章，请先登录或注册。')) {
+                    window.open('/user', '_blank');
                 }
 
-                if(result) {                        
-                    item.addClass("active");                            
-                }
+            });
 
-            });*/
 
-        });    
+        })();
 
+        /*
+         *
+         * 主站微改版  end
+         *
+         * */
 
     });
 })(jQuery);

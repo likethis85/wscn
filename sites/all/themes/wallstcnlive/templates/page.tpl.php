@@ -7,7 +7,7 @@
         <div class="header-title row-fluid">
             <div class="span4"><h1>
                     <a class="logo" href="<?php print $front_page; ?>" title="<?php print $site_name ? $site_name : t('Home'); ?>">
-                        <img src="<?=$logo?>" alt="<?php print $site_name ? $site_name : t('Home'); ?>" />
+                        <img src="<?=$logo?>?v=1.0" alt="<?php print $site_name ? $site_name : t('Home'); ?>" />
                     </a>
             </h1></div>
             <div class="span8">
@@ -63,7 +63,7 @@
 
 
 <div id="wrapper" class="livenews-channel">
-    
+
         <div id="main-content" class="container">
 
             <div class="row-fluid">
@@ -102,20 +102,13 @@
 
                         <div class="random-ad" style="margin-bottom:0;">
                             <div class="carousel-inner">
-                                <!--
-                                <div class="item" data-probability="50">
+                                <div class="item" data-probability="30">
                                     <div style="height:280px;margin:0 auto;">
-                                        <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_live_hit_forexct_1&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_live_forexct_1.jpg" alt="广告"></a>
+                                        <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_live_hit_nordfx_1&url=http://nordfx-chinese.com/?id=730026"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_live_nordfx_1.jpg" alt=""></a>
                                     </div>
                                 </div>
 
-                                <div class="item" data-probability="35">
-                                    <div style="height:280px;margin:0 auto;">
-                                        <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_live_hit_ironfx_1&url=https://www.ironfx.cn/zh/register?utm_source=wallstreetcn728_90HPIB&utm_mediumwallstreetcn728_90HPIB&utm_campaign=wallstreetcn"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_live_ironfx_1.jpg" alt=""></a>
-                                    </div>
-                                </div>
-
-                                <div class="item"  data-probability="50">
+                                <div class="item"  data-probability="70">
                                     <ins class="adsbygoogle"
                                         style="display:inline-block;width:336px;height:280px"
                                         data-ad-client="ca-pub-0869270234052789"
@@ -125,11 +118,17 @@
                                         (adsbygoogle = window.adsbygoogle || []).push({});
                                     </script>
                                 </div>
-                                -->
+                                <!--
+                                <div class="item" data-probability="50">
+                                    <div style="height:280px;margin:0 auto;">
+                                        <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_live_hit_forexct_1&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_live_forexct_1.jpg" alt="广告"></a>
+                                    </div>
+                                </div>
+
                                 <div class="item"  data-probability="100">
                                     <IFRAME WIDTH="336" HEIGHT="280" MARGINWIDTH="0" MARGINHEIGHT="0" HSPACE="0" VSPACE="0" FRAMEBORDER="0" SCROLLING="no"
     SRC="http://pbid.fxdepo.com/engine?site=134351;size=336x280;linktarget=_blank;rnd=(randomNumber)"></IFRAME>
-                                </div>
+                                </div>-->
 
                             </div>
                         </div>
@@ -190,6 +189,10 @@
 
 
                     <?endif?>
+
+                    <div class="ad-box ad-side">
+                        <script src="http://markets.static.wallstreetcn.com/widget_side_v2.js?v=1" data-width="360" data-height="380"></script>
+                    </div>
 
                     <div class="page-header header-red">
                         <h3>经济日历</h3>
@@ -258,8 +261,14 @@
                                 -->
                                 <div class="active item" data-probability="100">
                                     <div style="height:280px;margin:0 auto;">
-                                        <IFRAME WIDTH="336" HEIGHT="280" MARGINWIDTH="0" MARGINHEIGHT="0" HSPACE="0" VSPACE="0" FRAMEBORDER="0" SCROLLING="no"
-SRC="http://pbid.fxdepo.com/engine?site=134334;size=336x280;linktarget=_blank;rnd=(randomNumber)"></IFRAME>
+                                        <ins class="adsbygoogle"
+                                            style="display:inline-block;width:336px;height:280px"
+                                            data-ad-client="ca-pub-0869270234052789"
+                                            data-ad-slot="2911844489"></ins>
+                                        <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                        <script>
+                                            (adsbygoogle = window.adsbygoogle || []).push({});
+                                        </script>
                                     </div>
                                 </div>
                             </div>
