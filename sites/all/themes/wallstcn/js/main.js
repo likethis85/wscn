@@ -987,22 +987,28 @@
             //设置 侧边拦位置
             function showSlideBar() {
 
-                var $wrapper = $('#wrapper');
+                //var $wrapper = $('#wrapper');
+
+                var $content = $('#main-content');
 
                 var $slideBar = $('.article-slide-bar');
 
-                var left = $wrapper.offset().left - 20 - $slideBar.outerWidth();
+                var left = $content.offset().left - 20 - $slideBar.outerWidth();
 
+
+                $slideBar.css('left',  left + 'px');
+
+                /*
                 if (left >= 0) {
 
-                    $slideBar.css('left',  left + 'px');
+
 
                 } else {
 
-                    $slideBar.css('left',  '0');
+                    $slideBar.css('left',  '-100px');
 
                 }
-
+                */
             }
 
             //设定 侧边拦位置
@@ -1019,7 +1025,7 @@
 
                     showSlideBar();
 
-                }, 500)
+                }, 100);
 
 
 
