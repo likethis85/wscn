@@ -766,6 +766,11 @@ function get_discovery_item() {
                                'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_qianzhan_1.jpg',
                          );
 
+    $discovery_item[2] = array('title' => '创业启示录：25个创业失败案例的分析',
+                               'url'   =>'blog.jobbole.com/275/',
+                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_jobbole_1.jpg',
+                         );
+
 
     $numbers = range(0, 400);
     shuffle($numbers);
