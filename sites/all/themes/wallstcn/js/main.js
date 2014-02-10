@@ -644,16 +644,16 @@
             if ($this.text() == "黄金") {
 
                 $this.addClass('mark-new-target');
-                var offset = $this.offset();
                 var img = new Image();
                 img.alt = "new";
                 img.className = "mark-new";
-                img.style.left = offset.left + $this.width()  + "px";
-                img.style.top  = offset.top  - 10 + "px";
+                img.style.right = "5px";
+                img.style.top  = "-10px";
                 img.src = "/sites/all/themes/wallstcn/css/img/new.gif";
 
-                document.body.appendChild(img);
+                $this.append(img);
 
+                /*
                 //窗口大小改变时 ，初始化位置
 
                 var resizeTemp;
@@ -678,7 +678,7 @@
                     }, 500);
 
                 });
-
+                */
 
             }
         });
