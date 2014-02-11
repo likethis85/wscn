@@ -124,7 +124,8 @@
         <a href="http://finance.ifeng.com/" target="_blank">凤凰财经</a> |
         <a href="http://top.chinaz.com/" target="_blank">网站排行榜</a> |
         <a href="http://www.ceweekly.cn/" target="_blank">经济网</a> |
-        <a href="http://www.luxtarget.com/" target="_blank">TARGET致品网</a>
+        <a href="http://www.luxtarget.com/" target="_blank">TARGET致品网</a> |
+        <a href="http://www.bwchinese.com/" target="_blank">商业见地网</a>
     </p>
 
 
