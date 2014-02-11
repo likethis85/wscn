@@ -55,9 +55,9 @@ drupal_set_title($page_title, PASS_THROUGH);?>
         <span class="meta-item">
             <i class="icon-time"></i> <?=format_date($node->created);?>
         </span>
-        <span class="meta-item">
+        <span class="meta-item read-count">
         <?if($logged_in && $content['links']['statistics']):?>
-        <i class="icon-desktop"></i> <?=get_counter_totalcount($content['links']['statistics']['#links']['statistics_counter']['title'])?>
+        <?=get_counter_totalcount($content['links']['statistics']['#links']['statistics_counter']['title'])?>
         <?endif?>
         </span>
     </span>
