@@ -676,9 +676,9 @@ function get_discovery_index_side_item() {
                                'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_soufun_3.jpeg',
                          );
 
-    $discovery_item[5] = array('title' => '2014房价跌50%？房价不可能下降的19个理由',
-                               'url'   =>'esf.sh.soufun.com/newsecond/news/12001458.htm?utm_source=shhezuo&utm_medium=click&utm_term=lgq_sh&utm_content=shwalls&utm_campaign=20140127walls',
-                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_soufun_20140128_1.jpg',
+    $discovery_item[5] = array('title' => '买房最后窗口期 房价坚不可摧的15个城市',
+                               'url'   =>'esf.sh.soufun.com/newsecond/news/12075935.htm?utm_source=shhezuo&utm_medium=click&utm_term=lgq_sh&utm_content=shwalls&utm_campaign=20140212walls',
+                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__link_soufun_2.jpg',
                          );
 
     $numbers = range(0, 400);
