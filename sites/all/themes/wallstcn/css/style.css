@@ -8963,6 +8963,57 @@ body.toolbar, body.toolbar-drawer {
   color: #2A9DB5;
 }
 /* ===========================
+ * add sub-nav
+ * ===========================
+ */
+#navbar .has-sub-nav {
+  position: relative;
+}
+#navbar .has-sub-nav .caret {
+  vertical-align: middle;
+  border-top: 4px solid #fff;
+  height: 4px;
+  width: 0;
+}
+#navbar .has-sub-nav:hover .sub-nav {
+  display: block;
+}
+#navbar .sub-nav {
+  position: absolute;
+  left: 0;
+  top: 43px;
+  display: none;
+  margin: 0;
+  padding: 10px;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.35);
+  color: #fff;
+  background-color: #2D3542;
+}
+#navbar .sub-nav li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#navbar .sub-nav a {
+  display: block;
+  border: none;
+  width: 5em;
+  padding: 0 5px;
+  line-height: 40px;
+}
+#navbar .sub-nav a:hover {
+  text-decoration: none;
+  color: #333;
+  background-color: #eee;
+}
+/* ===========================
+ * fix 广告遮住 header
+ * ===========================
+ */
+#header {
+  z-index: 9999;
+}
+/* ===========================
  * IE fix
  * ===========================
  */

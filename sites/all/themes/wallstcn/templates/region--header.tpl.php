@@ -48,6 +48,18 @@
                             <li class="leaf"><a class="bg-8" data-active-url="^/live-centralbank.*$" href="/live-centralbank" title="">央行</a></li>
                             <li class="leaf"><a class="bg-9" data-active-url="^/live-market.*$" href="/live-market" title="">市场</a></li>
                             <li class="leaf active-trail"><a class="bg-7" data-active-url="^/live-economy.*$" href="/live-economy" title="" class="active-trail active">经济数据</a></li>
+                            <li class="leaf has-sub-nav">
+                                <a class="bg-11"  href="#" title="地区分类">地区 <b class="caret"></b></a>
+                                <ul class="sub-nav">
+                                    <li><a href="/commodity">天然气</a></li>
+                                    <li><a href="/commodity">铂金</a></li>
+                                    <li><a href="/commodity">钯金</a></li>
+                                    <li><a href="/commodity/corn">玉米</a></li>
+                                    <li><a href="/commodity/soybean">大豆</a></li>
+                                    <li><a href="/commodity/wheat">小麦</a></li>
+                                </ul>
+                            </li>
+
                             <!--
                             <li class="leaf"><a class="bg-11" data-active-url="" href="http://wallstreetcn.com/gold" title="" target="_blank">黄金</a></li>
                             <li class="last leaf"><a class="bg-12" data-active-url="^/discovery.*$" href="/discovery" title="">发现</a></li>
