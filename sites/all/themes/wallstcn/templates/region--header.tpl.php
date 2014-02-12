@@ -11,11 +11,11 @@
                         <span class="icon-bar"></span>
                     </a>
                     <a href="http://<?=variable_get('site_domain')?>" class="brand <?=!empty($elements['system_main-menu']) ? 'mainsite-brand' : ''?>"><i class="icon-home"></i> 华尔街见闻</a>
-                    
+
                     <div class="nav-collapse collapse navbar-responsive-collapse">
-                                         
+
                         <?if(isset($elements['system_main-menu']) && $elements['system_main-menu']):?>
-                    
+
                         <ul class="nav">
                             <li class="leaf first"><a class="bg-0" data-active-url="^/$" href="/" title="">首页</a></li>
                             <li class="leaf"><a class="bg-1" data-active-url="" href="http://live.wallstreetcn.com" title="市场直播系统" target="_blank">实时新闻</a></li>
@@ -38,7 +38,7 @@
                         <?endif?>
 
                         <?if(isset($elements['menu_menu-live-menu']) && $elements['menu_menu-live-menu']):?>
-                        
+
                         <ul class="nav">
                             <li class="first leaf"><a class="bg-1" data-active-url="^/$" href="/" title="">实时新闻</a></li>
                             <li class="leaf"><a class="bg-2" data-active-url="^/live-china.*$" href="/live-china" title="">中国</a></li>
@@ -48,8 +48,10 @@
                             <li class="leaf"><a class="bg-8" data-active-url="^/live-centralbank.*$" href="/live-centralbank" title="">央行</a></li>
                             <li class="leaf"><a class="bg-9" data-active-url="^/live-market.*$" href="/live-market" title="">市场</a></li>
                             <li class="leaf active-trail"><a class="bg-7" data-active-url="^/live-economy.*$" href="/live-economy" title="" class="active-trail active">经济数据</a></li>
+                            <!--
                             <li class="leaf"><a class="bg-11" data-active-url="" href="http://wallstreetcn.com/gold" title="" target="_blank">黄金</a></li>
                             <li class="last leaf"><a class="bg-12" data-active-url="^/discovery.*$" href="/discovery" title="">发现</a></li>
+                            -->
                         </ul>
 
                         <?endif?>
@@ -129,7 +131,7 @@
 <?endif?>
 
 <div class="container">
-    
+
     <script id="search-results-js" type="text/x-tmpl">
         {% if(o.cursor.currentPageIndex == 0) { %}
         <div id="search-result">
