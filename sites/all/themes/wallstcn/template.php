@@ -658,12 +658,6 @@ function get_discovery_index_side_item() {
         }
     }
 
-    // 搜房网北京
-    $discovery_item[3] = array('title' => '楼市辛辣热点全面盘点 哪些直戳你的内心',
-                               'url'   => 'esf.soufun.com/zt/201401/sxxesf35.html?utm_source=bjhezuo&utm_medium=click&utm_term=&utm_content=&utm_campaign=hejjwzyd',
-                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_soufun_2.jpg',
-                         );
-
     // 亿邦动力
     $discovery_item[4] = array('title' => '腾讯未必生，阿里未必死',
                                'url'   => 'home.ebrun.com/blog-45526.html',
