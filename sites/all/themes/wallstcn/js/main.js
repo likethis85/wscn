@@ -802,6 +802,12 @@
                 var uri = parseUri();
                 var page = uri.queryKey.page || 0;
                 var data = {};
+
+                if (uri.path != '/node' && uri.path != '/') {
+                    return false;
+                }
+
+                /*
                 switch(uri.path) {
                     case '/node':
                     case '/':
@@ -821,7 +827,7 @@
                 }
                 if(pathMapping[uri.path]) {
                     data = pathMapping[uri.path];
-                }
+                }*/
                 $.ajax({
                     url : url,
                     dataType : 'json',
