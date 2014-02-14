@@ -44,7 +44,7 @@
                             <li class="leaf"><a class="bg-2" data-active-url="^/live-china.*$" href="/live-breaking" title="">要闻</a></li>
 
                             <li class="leaf has-sub-nav">
-                                <a class="bg-2"  href="#" title="地区分类">地区<b class="caret"></b></a>
+                                <a class="bg-3"  href="#" title="地区分类">地区<b class="caret"></b></a>
                                 <ul class="sub-nav">
                                     <li><a href="/live-area?tid_1[]=9479">中国</a></li>
                                     <li><a href="/live-area?tid_1[]=9477">美国</a></li>
@@ -58,7 +58,7 @@
                             </li>
 
                             <li class="leaf has-sub-nav">
-                                <a class="bg-3"  href="#" title="全球央行">全球央行<b class="caret"></b></a>
+                                <a class="bg-4"  href="#" title="全球央行">全球央行<b class="caret"></b></a>
                                 <ul class="sub-nav">
                                     <li><a href="/live-bank?tid_1[]=9479">中国央行</a></li>
                                     <li><a href="/live-bank?tid_1[]=9477">美联储</a></li>
@@ -71,7 +71,7 @@
                             </li>
 
                             <li class="leaf has-sub-nav">
-                                <a class="bg-4"  href="#" title="经济数据">经济数据<b class="caret"></b></a>
+                                <a class="bg-5"  href="#" title="经济数据">经济数据<b class="caret"></b></a>
                                 <ul class="sub-nav">
                                     <li><a href="/live-economy?tid_1[]=9479">中国数据</a></li>
                                     <li><a href="/live-economy?tid_1[]=9477">美国数据</a></li>
@@ -84,10 +84,10 @@
                             </li>
 
 
-                            <li class="leaf"><a class="bg-5" data-active-url="^/live-commodity.*$" href="/live-commodity" title="">商品期货</a></li>
-                            <li class="leaf"><a class="bg-6" data-active-url="^/live-forex.*$" href="/live-forex" title="">外汇</a></li>
-                            <li class="leaf"><a class="bg-7" data-active-url="^/live-stock.*$" href="/live-stock" title="">股市</a></li>
-                            <li class="leaf"><a class="bg-8" data-active-url="^/live-bond.*$" href="/live-bond" title="">债券</a></li>
+                            <li class="leaf"><a class="bg-6" data-active-url="^/live-commodity.*$" href="/live-commodity" title="">商品期货</a></li>
+                            <li class="leaf"><a class="bg-7" data-active-url="^/live-forex.*$" href="/live-forex" title="">外汇</a></li>
+                            <li class="leaf"><a class="bg-8" data-active-url="^/live-stock.*$" href="/live-stock" title="">股市</a></li>
+                            <li class="leaf"><a class="bg-9" data-active-url="^/live-bond.*$" href="/live-bond" title="">债券</a></li>
                             <!--
                             <li class="leaf"><a class="bg-11" data-active-url="" href="http://wallstreetcn.com/gold" title="" target="_blank">黄金</a></li>
                             <li class="last leaf"><a class="bg-12" data-active-url="^/discovery.*$" href="/discovery" title="">发现</a></li>
