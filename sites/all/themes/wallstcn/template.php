@@ -760,6 +760,12 @@ function get_discovery_item() {
                                'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_qianzhan_1.jpg',
                          );
 
+    $discovery_item[1] = array('title' => '为什么牛逼互联网公司都在开曼群岛注册？',
+                               'url'   =>'new.iheima.com/detail/2014/0212/58584.html',
+                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__link_iheima_1.png',
+                         );
+
+
     $discovery_item[2] = array('title' => '创业启示录：25个创业失败案例的分析',
                                'url'   =>'blog.jobbole.com/275/',
                                'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_jobbole_1.jpg',
