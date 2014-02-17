@@ -5823,7 +5823,7 @@ a.badge:focus {
   }
 }
 /*
-@import "bootstrap/less/metro/variables.less"; 
+@import "bootstrap/less/metro/variables.less";
 @import "bootstrap/less/metro/type.less";
 @import "bootstrap/less/metro/tiles.less";
 @import "bootstrap/less/metro/navbar.less";
@@ -6034,14 +6034,14 @@ a:hover {
   color: #FFF;
 }
 /* ===========================
- * body fixed 
+ * body fixed
  * ===========================
  */
 body {
   background: #FFF;
 }
 /* ===========================
- * header fixed 
+ * header fixed
  * ===========================
  */
 #header {
@@ -6076,7 +6076,7 @@ body {
   margin-top: 15px;
 }
 /* ===========================
- * wrapper fixed 
+ * wrapper fixed
  * ===========================
  */
 #wrapper {
@@ -6086,7 +6086,7 @@ body {
   max-width: 1120px;
 }
 /* ===========================
- * Navbar add bg color and fixed #search-form 
+ * Navbar add bg color and fixed #search-form
  * ===========================
  */
 #navbar {
@@ -6319,7 +6319,7 @@ body {
   font-size: 12px;
 }
 /* ===========================
- * Footer fixed 
+ * Footer fixed
  * ===========================
  */
 #footer > .container {
@@ -6592,7 +6592,7 @@ body {
         list-style-type:none;
         white-space: nowrap;
         width: 100%;
-        overflow: hidden;           
+        overflow: hidden;
         -o-text-overflow: ellipsis;
         text-overflow:    ellipsis;
     }
@@ -8943,7 +8943,7 @@ body.toolbar, body.toolbar-drawer {
  * 实时新闻
  * ===========================
  */
-.media-heading.with-picture p:after {
+.media-heading.with-picture p:last-child:after {
   width: auto;
   height: auto;
   line-height: normal;
