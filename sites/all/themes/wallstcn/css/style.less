@@ -252,7 +252,7 @@ a:hover {
 }
 
 #realtime-news {
-    margin-bottom:30px;
+    //margin-bottom:30px;
     height:38px;
     clear:both;
     overflow:hidden;
@@ -264,7 +264,7 @@ a:hover {
     padding-right:80px;
 
     border-bottom: 3px solid #DCDCDC;
-    z-index: -1;
+    //z-index: -1;
 
     .news {
         position:absolute;
@@ -295,6 +295,9 @@ a:hover {
         white-space: nowrap;
         -o-text-overflow: ellipsis;
         text-overflow:    ellipsis;
+
+        text-indent: 12px;
+        background: url(img/list-icon.png) 0 16px no-repeat;    
 
         a, p, .time {
             color:#6F6F6F;
@@ -344,6 +347,10 @@ a:hover {
             line-height: 38px;
             font-size: 20px;
             color: #5D6991;
+
+            &:hover {
+                color:@red;
+            }
         }
 
         .text {
@@ -3584,6 +3591,7 @@ body.toolbar, body.toolbar-drawer {
     }
 
     .sub-nav {
+        z-index: 999;
         position: absolute;
         left: 0;
         top: 43px;

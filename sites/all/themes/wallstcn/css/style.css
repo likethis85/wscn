@@ -5947,7 +5947,6 @@ a:hover {
   margin-bottom: 0;
 }
 #realtime-news {
-  margin-bottom: 30px;
   height: 38px;
   clear: both;
   overflow: hidden;
@@ -5957,7 +5956,6 @@ a:hover {
   padding-left: 130px;
   padding-right: 80px;
   border-bottom: 3px solid #DCDCDC;
-  z-index: -1;
   /**
     a, p, .time {
         color:#888;
@@ -5996,6 +5994,8 @@ a:hover {
   white-space: nowrap;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
+  text-indent: 12px;
+  background: url(img/list-icon.png) 0 16px no-repeat;
 }
 #realtime-news li a,
 #realtime-news li p,
@@ -6027,6 +6027,9 @@ a:hover {
   line-height: 38px;
   font-size: 20px;
   color: #5D6991;
+}
+#realtime-news .control-buttons .button:hover {
+  color: #d24747;
 }
 #realtime-news .control-buttons .text {
   display: block;
@@ -8984,6 +8987,7 @@ body.toolbar, body.toolbar-drawer {
   display: block;
 }
 #navbar .sub-nav {
+  z-index: 999;
   position: absolute;
   left: 0;
   top: 43px;
