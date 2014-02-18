@@ -5823,7 +5823,7 @@ a.badge:focus {
   }
 }
 /*
-@import "bootstrap/less/metro/variables.less"; 
+@import "bootstrap/less/metro/variables.less";
 @import "bootstrap/less/metro/type.less";
 @import "bootstrap/less/metro/tiles.less";
 @import "bootstrap/less/metro/navbar.less";
@@ -5957,6 +5957,7 @@ a:hover {
   padding-left: 130px;
   padding-right: 80px;
   border-bottom: 3px solid #DCDCDC;
+  z-index: -1;
   /**
     a, p, .time {
         color:#888;
@@ -5989,7 +5990,8 @@ a:hover {
   list-style-type: none;
   height: 38px;
   overflow: hidden;
-  width: 50%;
+  width: 45%;
+  margin-right: 5%;
   float: left;
   white-space: nowrap;
   -o-text-overflow: ellipsis;
@@ -6037,14 +6039,14 @@ a:hover {
   background-color: #DFDFDF;
 }
 /* ===========================
- * body fixed 
+ * body fixed
  * ===========================
  */
 body {
   background: #FFF;
 }
 /* ===========================
- * header fixed 
+ * header fixed
  * ===========================
  */
 #header {
@@ -6079,7 +6081,7 @@ body {
   margin-top: 15px;
 }
 /* ===========================
- * wrapper fixed 
+ * wrapper fixed
  * ===========================
  */
 #wrapper {
@@ -6089,7 +6091,7 @@ body {
   max-width: 1120px;
 }
 /* ===========================
- * Navbar add bg color and fixed #search-form 
+ * Navbar add bg color and fixed #search-form
  * ===========================
  */
 #navbar {
@@ -6322,7 +6324,7 @@ body {
   font-size: 12px;
 }
 /* ===========================
- * Footer fixed 
+ * Footer fixed
  * ===========================
  */
 #footer > .container {
@@ -6595,7 +6597,7 @@ body {
         list-style-type:none;
         white-space: nowrap;
         width: 100%;
-        overflow: hidden;           
+        overflow: hidden;
         -o-text-overflow: ellipsis;
         text-overflow:    ellipsis;
     }
@@ -8946,7 +8948,7 @@ body.toolbar, body.toolbar-drawer {
  * 实时新闻
  * ===========================
  */
-.media-heading.with-picture p:after {
+.media-heading.with-picture p:last-child:after {
   width: auto;
   height: auto;
   line-height: normal;

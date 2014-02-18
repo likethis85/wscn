@@ -658,12 +658,6 @@ function get_discovery_index_side_item() {
         }
     }
 
-    // 搜房网北京
-    $discovery_item[3] = array('title' => '楼市辛辣热点全面盘点 哪些直戳你的内心',
-                               'url'   => 'esf.soufun.com/zt/201401/sxxesf35.html?utm_source=bjhezuo&utm_medium=click&utm_term=&utm_content=&utm_campaign=hejjwzyd',
-                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_soufun_2.jpg',
-                         );
-
     // 亿邦动力
     $discovery_item[4] = array('title' => '腾讯未必生，阿里未必死',
                                'url'   => 'home.ebrun.com/blog-45526.html',
@@ -765,6 +759,12 @@ function get_discovery_item() {
                                'url'   =>'www.qianzhan.com/indynews/detail/214/140115-de4bf39a.html',
                                'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_qianzhan_1.jpg',
                          );
+
+    $discovery_item[1] = array('title' => '为什么牛逼互联网公司都在开曼群岛注册？',
+                               'url'   =>'new.iheima.com/detail/2014/0212/58584.html',
+                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__link_iheima_1.png',
+                         );
+
 
     $discovery_item[2] = array('title' => '创业启示录：25个创业失败案例的分析',
                                'url'   =>'blog.jobbole.com/275/',

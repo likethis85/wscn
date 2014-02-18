@@ -87,39 +87,14 @@
 <div class="ad-box ad-side ad-margin-top">
     <div class="random-ad" style="margin-bottom:0;">
         <div class="carousel-inner">
-            <?if(time() < strtotime('2014-01-06 18:00:00') || time() > strtotime('2014-01-13 18:00:00')):?>
-            <div class="active item"  data-probability="40">
+            <div class="active item"  data-probability="60">
                 <div style="width:336px;margin:0 auto">
                     <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_forexct_3&url=http://www.forexct.com/pr/fcity/forexct.htm?SerialId=1066233"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_forexct_3.jpg" alt="广告"></a>
                 </div>
             </div>
 
-            <div class="active item"  data-probability="40">
-                <div style="width:336px;margin:0 auto">
-            <script type="text/javascript">
-              var ord = window.ord || Math.floor(Math.random() * 1e16);
-              document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N6105/adj/G-wallstreetcn.com;sz=300x250;ord=' + ord + '?"><\/script>');
-            </script>
-            <noscript>
-            <a href="http://ad.doubleclick.net/N6105/jump/G-wallstreetcn.com;sz=300x250;ord=[timestamp]?">
-            <img src="http://ad.doubleclick.net/N6105/ad/G-wallstreetcn.com;sz=300x250;ord=[timestamp]?" width="300" height="250" />
-            </a>
-            </noscript>
-                </div>
-            </div>
-            <!--
-            <div class="item"  data-probability="30">
-                <div style="width:336px;margin:0 auto">
-                    <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_ironfx_3&url=https://www.ironfx.cn/zh/register?utm_source=wallstreetcn728_90HPIB&utm_mediumwallstreetcn728_90HPIB&utm_campaign=wallstreetcn"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_ironfx_3.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="item"  data-probability="20">
-                <div style="width:336px;margin:0 auto">
-                    <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_nordfx_2&url=http://nordfx-chinese.com/?id=859276"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_nordfx_2.jpg" alt=""></a>
-                </div>
-            </div>
-            -->
-            <div class="item"  data-probability="20">
+
+            <div class="item"  data-probability="40">
                 <ins class="adsbygoogle"
                     style="display:inline-block;width:336px;height:280px"
                     data-ad-client="ca-pub-0869270234052789"
@@ -129,13 +104,7 @@
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
-            <?else:?>
-            <div class="item"  data-probability="100">
-                <div style="width:336px;margin:0 auto">
-                    <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_index_hit_pingan_1&url=http://1010-0000.pingan.com/index.shtml?WT.mc_id=CXX-a20130628WLY-007"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_pingan_1.jpg" alt="广告"></a>
-                </div>
-            </div>
-            <?endif;?>
+
         </div>
     </div>
 </div>
