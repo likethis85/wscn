@@ -771,6 +771,11 @@ function get_discovery_item() {
                                'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_jobbole_1.jpg',
                          );
 
+    $discovery_item[3] = array('title' => '我从业余项目被收购中所学到的',
+                               'url'   =>'blog.jobbole.com/49455/',
+                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__link_jobbole_1.jpg',
+                         );
+
 
     $numbers = range(0, 400);
     shuffle($numbers);
