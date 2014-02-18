@@ -88,6 +88,8 @@
 
 <?if(isset($elements['menu_menu-live-menu']) && $elements['menu_menu-live-menu']):?>
 <div class="container">
+    
+    <?if(0):?>
     <div id="live-topnews">
     <script type="text/x-tmpl" data-url="/apiv1/news.json">
 
@@ -120,6 +122,29 @@
         </div><!--container end-->
     </script>
     </div>
+
+    <?endif?>
+
+    
+    <div class="row-fluid">
+            
+        <div class="span12">
+
+            <div id="realtime-news">
+                <p class="control-buttons">
+                <span class="text">最新消息</span>
+                
+                <a id="livenews-navbar-prev" href="http://live.<?=variable_get('site_domain')?>" class="button prev"><span class="icon-caret-left"></span></a>
+                <a id="livenews-navbar-next" href="http://live.<?=variable_get('site_domain')?>" class="button next"><span class="icon-caret-right"></span></a>
+                </p>
+                <ul></ul>
+                <a href="http://live.<?=variable_get('site_domain')?>" class="more" target="_blank">more &gt;&gt;</a>
+            </div>
+        </div><!--span12 end-->
+
+    </div><!--rows end-->
+
+
     <?if(1):?>
     <div class="live-top-ad row-fluid">
         <div class="span4">
@@ -178,5 +203,9 @@
     </script>
 
 </div>
+
+
+
+
 
 

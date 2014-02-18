@@ -254,32 +254,55 @@ a:hover {
 #realtime-news {
     margin-bottom:30px;
     height:38px;
-    padding-left:75px;
-    border-bottom:3px solid #E9E9E9;
     clear:both;
     overflow:hidden;
     background:#FFF;
     position:relative;
     vertical-align:top;
 
+    padding-left:130px;
+    padding-right:80px;
+
+    border-bottom: 3px solid #DCDCDC;
+
 
     .news {
         position:absolute;
         left:5px;
     }
+
     ul {
         margin-left:0;
+
+        &:before, &:after {
+            display: table;
+            content: "";
+            line-height: 0;
+            clear: both;
+        }
+
     }
+
     li {
-        color:#888;
+        color:#6F6F6F;
         line-height:38px;
         list-style-type:none;
         height:38px;
         overflow:hidden;
+        width: 50%;
+        float: left;
         white-space: nowrap;
         -o-text-overflow: ellipsis;
         text-overflow:    ellipsis;
+
+        a, p, .time {
+            color:#6F6F6F;
+            font-size:12px;
+        }
+
     }
+
+/**
     a, p, .time {
         color:#888;
         font-size:12px;
@@ -289,65 +312,51 @@ a:hover {
     a {
         color:#333;
     }
+**/    
 
     a:hover {
         color:@red;
     }
 
     .more {
-        display:none;
+        display:block;
         position:absolute;
-        right:10px;
+        line-height: 38px;
+        right:0;
         top:0;
         color:@red;
     }
 
-    .btn {
-        margin:2px 0 0 0;
-        padding:1px 5px;
-        line-height:15px;
-    }
+    
 
     .control-buttons {
-        display:none;
-        margin:0 10px;
-    }
-
-
-    //fixed style to default
-    padding-left:130px;
-    padding-right:80px;
-
-    .control-buttons {
+        
         display:block;
         position:absolute;
-        left:70px;
-    }
+        height: 38px;
+        left:0;
 
-    .more {
-        display:inline;
-    }    
+        .button {
+            display: block;
+            float: left;
+            padding: 0 5px;
+            line-height: 38px;
+            font-size: 20px;
+            color: #5D6991;
+        }
 
-
-    //Red fix
-    background:@red;
-    font-weight:bold;
-    li {
-        color:#FFF;
+        .text {
+            display: block;
+            float: left;
+            font-size: 12px;
+            padding: 0 10px; 
+            line-height: 26px;
+            margin-top: 6px;
+            margin-right: 6px;
+            background-color: #DFDFDF;
+        }
     }
-    a, p, .time {
-        color:#FFF;
-        font-weight:bold;
-    }
-    a:hover {
-        color:#333;
-    }
-    .control-buttons a {
-        color:#333;
-    }
-    .more {
-        color:#FFF;
-    }  
+ 
 }
 
 /* ===========================

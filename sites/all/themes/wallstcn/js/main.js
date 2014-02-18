@@ -196,12 +196,16 @@
         var realtimeNews = [];
         var realtimeNewsIndex = 0;
         var scrollingNews = function(direction, speed){
+
+            var length = Math.ceil(realtimeNews.length/2);
+            console.log(length);    
+
             if(direction < 0) {
                 realtimeNewsIndex--;
-                realtimeNewsIndex = realtimeNewsIndex < 0 ? realtimeNews.length - 1 : realtimeNewsIndex;
+                realtimeNewsIndex = realtimeNewsIndex < 0 ? length - 1 : realtimeNewsIndex;
             } else {
                 realtimeNewsIndex++;
-                realtimeNewsIndex = realtimeNewsIndex >= realtimeNews.length ? 0 : realtimeNewsIndex;
+                realtimeNewsIndex = realtimeNewsIndex >= length ? 0 : realtimeNewsIndex;
             }
 
             if(realtimeNewsIndex == 0) {
@@ -279,7 +283,9 @@
 
                         realtimeNews.push(
                             //'<li><span class="time">' + time + '</span> <a href="' + domain + '/node/' + entries[i].nid + '" target="_blank">' + entries[i].node_title + '</a></li>'
-                            '<li><img width="18" height="20" src="/sites/all/themes/wallstcn/css/img/icon_' + icon + '.png"/>&emsp;<a href="http://live.wallstreetcn.com/" target="_blank"><span style="' + formart + font_color + '">' + entries[i].node_title + '</span></a></li>'
+                            //'<li><img width="18" height="20" src="/sites/all/themes/wallstcn/css/img/icon_' + icon + '.png"/>&emsp;<a href="http://live.wallstreetcn.com/" target="_blank"><span style="' + formart + font_color + '">' + entries[i].node_title + '</span></a></li>'
+                            
+                            '<li><a href="http://live.wallstreetcn.com/" target="_blank"><span style="' + formart + font_color + '">' + entries[i].node_title + '</span></a></li>'
                         );
                     }
                     $("#realtime-news ul").html("");
@@ -302,13 +308,13 @@
         //setInterval(initRealtimeNews, 10000);
         initRealtimeNews();
 
-        //var timerHandler = setInterval(scrollingNews, 5000);
+        var timerHandler = setInterval(scrollingNews, 5000);
         //initRealtimeNews();
         $(document).on('mouseover', '#realtime-news', function(){
-            //clearInterval(timerHandler);
+            clearInterval(timerHandler);
         });
         $(document).on('mouseout', '#realtime-news', function(){
-            //timerHandler = setInterval(scrollingNews, 5000);
+            timerHandler = setInterval(scrollingNews, 5000);
         });
 
 
