@@ -162,10 +162,10 @@
 
                 <div class="control-buttons">
                     <span class="text">最新文章</span>
-                    <div style="float: left;">
-                        <a id="livenews-navbar-prev" href="http://live.<?=variable_get('site_domain')?>" class="button prev"><span class="icon-caret-up"></span></a>
-                        <a id="livenews-navbar-next" href="http://live.<?=variable_get('site_domain')?>" class="button next"><span class="icon-caret-down"></span></a>
-                    </div>                 
+                    
+                        <a id="livenews-navbar-prev" href="http://live.<?=variable_get('site_domain')?>" class="button prev"><span class="icon-caret-left"></span></a>
+                        <a id="livenews-navbar-next" href="http://live.<?=variable_get('site_domain')?>" class="button next"><span class="icon-caret-right"></span></a>
+                                   
                 </div>
 
                 <ul></ul>

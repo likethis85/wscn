@@ -6023,9 +6023,10 @@ a:hover {
 }
 #realtime-news .control-buttons .button {
   display: block;
-  height: 19px;
+  height: 38px;
+  line-height: 38px;
+  float: left;
   padding: 0 5px;
-  line-height: 19px;
   font-size: 16px;
   color: #5D6991;
 }
