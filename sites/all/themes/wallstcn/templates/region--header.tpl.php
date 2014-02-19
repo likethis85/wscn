@@ -116,7 +116,7 @@
 
 <?if(isset($elements['menu_menu-live-menu']) && $elements['menu_menu-live-menu']):?>
 <div class="container">
-    
+
     <?if(0):?>
     <div id="live-topnews">
     <script type="text/x-tmpl" data-url="/apiv1/news.json">
@@ -153,19 +153,21 @@
 
     <?endif?>
 
-    
+
     <div class="row-fluid">
-            
+
         <div class="span12">
 
             <div id="realtime-news">
+
                 <div class="control-buttons">
-                    <span class="text">最新消息</span>
+                    <span class="text">最新文章</span>
                     <div style="float: left;">
                         <a id="livenews-navbar-prev" href="http://live.<?=variable_get('site_domain')?>" class="button prev"><span class="icon-caret-up"></span></a>
                         <a id="livenews-navbar-next" href="http://live.<?=variable_get('site_domain')?>" class="button next"><span class="icon-caret-down"></span></a>
                     </div>                 
                 </div>
+
                 <ul></ul>
                 <a href="http://wallstreetcn.com/news" class="more" target="_blank">more &gt;&gt;</a>
             </div>
@@ -182,7 +184,7 @@
         </div>
         <div class="span4">
             <i class="icon-male"></i>
-            <a href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_live_hit_hxylpme_1&url=http://www.hxylpme.com/?jw" target="_blank">鸿鑫御隆，新华社平台，广招代理商和经纪类会员</a>
+            <a href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_live_hit_hxylpme_1&url=http://www.hxylpme.com/?jw" target="_blank">《限招战略合作伙伴，省级运营中心》</a>
         </div>
         <div class="span4">
             <i class="icon-bullhorn" ></i>
