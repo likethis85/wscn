@@ -5955,6 +5955,7 @@ a:hover {
   vertical-align: top;
   padding-left: 130px;
   padding-right: 80px;
+  margin-top: -10px;
   border-bottom: 3px solid #DCDCDC;
   /**
     a, p, .time {
@@ -6022,10 +6023,10 @@ a:hover {
 }
 #realtime-news .control-buttons .button {
   display: block;
-  float: left;
+  height: 19px;
   padding: 0 5px;
-  line-height: 38px;
-  font-size: 20px;
+  line-height: 19px;
+  font-size: 16px;
   color: #5D6991;
 }
 #realtime-news .control-buttons .button:hover {

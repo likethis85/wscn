@@ -240,7 +240,9 @@
            if(!$("#realtime-news")[0]){
                 return false;
            }
-           var url = '/apiv1/live-index.json';
+           //var url = '/apiv1/live-index.json';
+           var url = '/apiv1/news.json';
+           
            $.ajax({
                 url : url,
                 dataType : 'json',
@@ -285,7 +287,7 @@
                             //'<li><span class="time">' + time + '</span> <a href="' + domain + '/node/' + entries[i].nid + '" target="_blank">' + entries[i].node_title + '</a></li>'
                             //'<li><img width="18" height="20" src="/sites/all/themes/wallstcn/css/img/icon_' + icon + '.png"/>&emsp;<a href="http://live.wallstreetcn.com/" target="_blank"><span style="' + formart + font_color + '">' + entries[i].node_title + '</span></a></li>'
                             
-                            '<li><a href="http://live.wallstreetcn.com/" target="_blank"><span style="' + formart + font_color + '">' + entries[i].node_title + '</span></a></li>'
+                            '<li><a href="http://wallstreetcn.com/node/' + entries[i].nid + '" target="_blank"><span style="' + formart + font_color + '">' + entries[i].node_title + '</span></a></li>'
                         );
                     }
                     $("#realtime-news ul").html("");
