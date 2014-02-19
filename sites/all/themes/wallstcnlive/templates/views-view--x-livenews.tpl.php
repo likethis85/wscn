@@ -99,7 +99,7 @@ $lastdate = '';
                 <?=$item->field_field_source[0]['raw']['value']?>
                 <?endif?>
                 <?endif?>
-
+                <!--
                 <span class="share-btn pull-left">
                     <span class="pull-left">　/　分享到：</span>
                     <span class="addthis_toolbox addthis_default_style" addthis:url="http://live.<?=variable_get('site_domain')?>/node/<?=$item->nid?>"  addthis:title="<?=$item->node_title?>">
@@ -109,6 +109,7 @@ $lastdate = '';
                         <a class="addthis_button_google_plusone_share"></a>
                     </span>
                 </span>
+                -->
             </div>
             <div class="media-comment">
             </div>
@@ -117,9 +118,10 @@ $lastdate = '';
     <?$lastdate = $current_date;?>
     <?endforeach?>
 </div>
+<!--
 <script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51b970eb71800842"></script>
-
+-->
 <div class="view-more">
     <?=$pager?>
 </div>
