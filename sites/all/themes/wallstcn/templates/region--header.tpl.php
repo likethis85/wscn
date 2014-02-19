@@ -116,7 +116,7 @@
 
 <?if(isset($elements['menu_menu-live-menu']) && $elements['menu_menu-live-menu']):?>
 <div class="container">
-    
+
     <?if(0):?>
     <div id="live-topnews">
     <script type="text/x-tmpl" data-url="/apiv1/news.json">
@@ -153,15 +153,15 @@
 
     <?endif?>
 
-    
+
     <div class="row-fluid">
-            
+
         <div class="span12">
 
             <div id="realtime-news">
                 <p class="control-buttons">
-                <span class="text">最新消息</span>
-                
+                <span class="text">最新文章</span>
+
                 <a id="livenews-navbar-prev" href="http://live.<?=variable_get('site_domain')?>" class="button prev"><span class="icon-caret-left"></span></a>
                 <a id="livenews-navbar-next" href="http://live.<?=variable_get('site_domain')?>" class="button next"><span class="icon-caret-right"></span></a>
                 </p>
