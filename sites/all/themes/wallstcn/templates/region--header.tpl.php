@@ -181,7 +181,7 @@
         </div>
         <div class="span4">
             <i class="icon-male"></i>
-            <a href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_live_hit_hxylpme_1&url=http://www.hxylpme.com/?jw" target="_blank">鸿鑫御隆，新华社平台，广招代理商和经纪类会员</a>
+            <a href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_live_hit_hxylpme_1&url=http://www.hxylpme.com/?jw" target="_blank">《限招战略合作伙伴，省级运营中心》</a>
         </div>
         <div class="span4">
             <i class="icon-bullhorn" ></i>
