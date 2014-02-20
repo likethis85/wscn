@@ -126,7 +126,8 @@
         <a href="http://www.ceweekly.cn/" target="_blank">经济网</a> |
         <a href="http://www.luxtarget.com/" target="_blank">TARGET致品网</a> |
         <a href="http://www.bwchinese.com/" target="_blank">商业见地网</a> |
-        <a href="http://jr.dahe.cn/" target="_blank">大河网金融频道</a>
+        <a href="http://jr.dahe.cn/" target="_blank">大河网金融频道</a> |
+        <a href="http://www.gold678.com/" target="_blank">汇金网</a>
     </p>
 
 

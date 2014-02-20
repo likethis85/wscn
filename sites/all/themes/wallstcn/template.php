@@ -659,9 +659,9 @@ function get_discovery_index_side_item() {
     }
 
     // 亿邦动力
-    $discovery_item[4] = array('title' => '腾讯未必生，阿里未必死',
-                               'url'   => 'home.ebrun.com/blog-45526.html',
-                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_ebrun_20140128_1.jpg',
+    $discovery_item[4] = array('title' => '阿里收购高德涉嫌触犯反垄断法',
+                               'url'   => 'home.ebrun.com/blog-47572.html',
+                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__link_ebrun_1.jpg',
                          );
     // 搜房网
 
@@ -670,9 +670,9 @@ function get_discovery_index_side_item() {
                                'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_soufun_3.jpeg',
                          );
 
-    $discovery_item[5] = array('title' => '买房最后窗口期 房价坚不可摧的15个城市',
-                               'url'   =>'esf.sh.soufun.com/newsecond/news/12075935.htm?utm_source=shhezuo&utm_medium=click&utm_term=lgq_sh&utm_content=shwalls&utm_campaign=20140212walls',
-                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__link_soufun_2.jpg',
+    $discovery_item[5] = array('title' => '买房买几层？各楼层利弊全解读',
+                               'url'   =>'esf.sh.soufun.com/newsecond/news/12108076.htm?utm_source=shhezuo&utm_medium=click&utm_term=lgq_sh&utm_content=shwalls&utm_campaign=20140219walls',
+                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__link_soufun_3.jpg',
                          );
 
     $numbers = range(0, 400);
@@ -756,17 +756,17 @@ function get_discovery_item() {
     $discovery_item  = array();
     // 这里加外部广告
     $discovery_item[0] = array('title' => '2014年中国房地产行业政策趋向分析',
-                               'url'   =>'www.qianzhan.com/indynews/detail/214/140115-de4bf39a.html',
+                               'url'   => 'www.qianzhan.com/indynews/detail/214/140115-de4bf39a.html',
                                'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_qianzhan_1.jpg',
                          );
 
-    $discovery_item[1] = array('title' => '为什么牛逼互联网公司都在开曼群岛注册？',
-                               'url'   =>'new.iheima.com/detail/2014/0212/58584.html',
-                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__link_iheima_1.png',
+    $discovery_item[1] = array('title' => '同程网创始人独家自述：腾讯为什么给我5亿?',
+                               'url'   => 'new.iheima.com/detail/2014/0219/58769.html',
+                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__link_iheima_2.jpg',
                          );
 
     $discovery_item[2] = array('title' => '我从业余项目被收购中所学到的',
-                               'url'   =>'blog.jobbole.com/49455/',
+                               'url'   => 'blog.jobbole.com/49455/',
                                'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__link_jobbole_1.jpg',
                          );
 
