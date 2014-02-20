@@ -765,13 +765,7 @@ function get_discovery_item() {
                                'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__link_iheima_1.png',
                          );
 
-
-    $discovery_item[2] = array('title' => '创业启示录：25个创业失败案例的分析',
-                               'url'   =>'blog.jobbole.com/275/',
-                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_jobbole_1.jpg',
-                         );
-
-    $discovery_item[3] = array('title' => '我从业余项目被收购中所学到的',
+    $discovery_item[2] = array('title' => '我从业余项目被收购中所学到的',
                                'url'   =>'blog.jobbole.com/49455/',
                                'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__link_jobbole_1.jpg',
                          );
