@@ -1630,59 +1630,72 @@ body {
 
     #livenews-block {
 
-    }
+        padding: 10px 0;
 
-    #realtime-news {
-        padding: 0;
-        margin: 0;
-        margin: 15px 20px 0px;
-        height: 243px;
-        overflow: hidden;
-        border: none;
-        background-color: inherit;
-        vertical-align: top;
-
-        li {
-
-            font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-            color: #6D6D6D;
+        ul {
+            
+            margin: 0 20px;
+            height: 243px;
+            overflow: hidden;
+            border: none;
             background-color: inherit;
-            vertical-align: middle;
+            vertical-align: top;
 
-            span {
+            li {
+
+                font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
                 color: #6D6D6D;
-                font-weight: normal;
-            }
+                background-color: inherit;
+                vertical-align: middle;
 
-            a {
-                color: #6D6D6D;
-                font-size: 14px;
-                font-weight: normal;
+                line-height:38px;
+                list-style-type:none;
+                height:38px;
+                overflow:hidden;
 
-                &:hover span{
-                    color: #000;
-                    font-weight: bold;
+                white-space: nowrap;
+                -o-text-overflow: ellipsis;
+                text-overflow:    ellipsis;
+
+                span {
+                    color: #6D6D6D;
+                    font-weight: normal;
                 }
+
+                a {
+                    color: #6D6D6D;
+                    font-size: 14px;
+                    font-weight: normal;
+
+                    &:hover span{
+                        color: #000;
+                        font-weight: bold;
+                    }
+                }
+
+                border-bottom: 1px dotted #e3e3e3;
             }
-
-            border-bottom: 1px dotted #e3e3e3;
         }
+
+        .more {
+
+            color:#D24747;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 13px;
+            //line-height: 30px;
+            float:right;
+            margin-right: 20px;
+
+            &:hover {
+                color: #EB2429;
+            }
+        }
+
     }
 
-    #realtime-news-more {
-
-        color:#D24747;
-        text-decoration: none;
-        cursor: pointer;
-        font-size: 13px;
-        line-height: 30px;
-        float:right;
-        margin-right: 20px;
-
-        &:hover {
-            color: #EB2429;
-        }
-    }
+    
+    
 
 
 }

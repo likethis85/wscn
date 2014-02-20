@@ -7132,46 +7132,53 @@ body {
   width: 100%;
   clear: both;
 }
-.side-box #realtime-news {
-  padding: 0;
-  margin: 0;
-  margin: 15px 20px 0px;
+.side-box #livenews-block {
+  padding: 10px 0;
+}
+.side-box #livenews-block ul {
+  margin: 0 20px;
   height: 243px;
   overflow: hidden;
   border: none;
   background-color: inherit;
   vertical-align: top;
 }
-.side-box #realtime-news li {
+.side-box #livenews-block ul li {
   font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   color: #6D6D6D;
   background-color: inherit;
   vertical-align: middle;
+  line-height: 38px;
+  list-style-type: none;
+  height: 38px;
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
   border-bottom: 1px dotted #e3e3e3;
 }
-.side-box #realtime-news li span {
+.side-box #livenews-block ul li span {
   color: #6D6D6D;
   font-weight: normal;
 }
-.side-box #realtime-news li a {
+.side-box #livenews-block ul li a {
   color: #6D6D6D;
   font-size: 14px;
   font-weight: normal;
 }
-.side-box #realtime-news li a:hover span {
+.side-box #livenews-block ul li a:hover span {
   color: #000;
   font-weight: bold;
 }
-.side-box #realtime-news-more {
+.side-box #livenews-block .more {
   color: #D24747;
   text-decoration: none;
   cursor: pointer;
   font-size: 13px;
-  line-height: 30px;
   float: right;
   margin-right: 20px;
 }
-.side-box #realtime-news-more:hover {
+.side-box #livenews-block .more:hover {
   color: #EB2429;
 }
 /* ===========================

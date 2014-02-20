@@ -23,14 +23,12 @@
 
         </div>
 
-        <div class="" id="livenews-block" style="display: none;">
+        <div class="clearfix" id="livenews-block" style="display: none;">
 
-            <div id="realtime-news" style="">
-                <ul>
-                    <li>正在载入...</li>
-                </ul>
-            </div>
-            <a id="realtime-news-more" href="http://live.wallstreetcn.com/" target="_blank">more &gt;&gt;</a>
+            <ul>
+                <li>正在载入...</li>
+            </ul>
+            <a class="more" href="http://live.wallstreetcn.com/" target="_blank">more &gt;&gt;</a>
         </div>
 
     </div>
