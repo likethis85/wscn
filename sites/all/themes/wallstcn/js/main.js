@@ -532,6 +532,7 @@
         });
 
         //搜索栏变化
+        /* 禁用变化
         $("#search-query").on('focus', function(){
             var q = $(this);
             var width = q.width();
@@ -547,7 +548,7 @@
                 backgroundColor : '#FFF'
             }, 'easeOutQuint');
         });
-
+        
         $("#search-query").on('blur', function(){
             var q = $(this);
             q.animate({
@@ -555,7 +556,7 @@
                 backgroundColor : '#707070'
             }, 'easeInQuint');
         });
-
+        */    
         $("#search-submit-icon").on('click', function(){
             searchForm.submit();
         });

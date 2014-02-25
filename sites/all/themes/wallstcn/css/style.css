@@ -8161,13 +8161,9 @@ body {
 #search-query[placeholder] {
   color: #9F9F9F;
 }
-/*
 #search-query:focus {
-    width:150px;
-    background:#FFF;
-    .transition(all .5s ease-in-out);
+  background-color: #FFF;
 }
-*/
 .pagination ul .active a,
 .pagination ul .active span {
   background: #d24747;
