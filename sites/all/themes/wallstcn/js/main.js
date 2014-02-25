@@ -535,8 +535,8 @@
         $("#search-query").on('focus', function(){
             var q = $(this);
             var width = q.width();
-            var maxAllowWidth = 230;
-            var allowWidth = $("#navbar").width() - $("#navbar .nav").width() - 150;
+            var maxAllowWidth = 200;
+            var allowWidth = $("#navbar").width() - $("#navbar .nav").width() - 160;
             allowWidth = allowWidth > maxAllowWidth ? maxAllowWidth : allowWidth;
             if(allowWidth < width) {
                 allowWidth = width;
