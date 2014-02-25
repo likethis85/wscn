@@ -44,7 +44,7 @@
                             <li class="leaf"><a class="bg-2" data-active-url="^/live-china.*$" href="/live-breaking" title="">要闻</a></li>
 
                             <li class="leaf has-sub-nav">
-                                <a class="bg-3"  href="#" title="地区分类">地区<b class="caret"></b></a>
+                                <a class="bg-3"  href="/live-area" title="地区分类">地区<b class="caret"></b></a>
                                 <ul class="sub-nav">
                                     <li><a href="/live-area?tid_1[]=9479">中国</a></li>
                                     <li><a href="/live-area?tid_1[]=9477">美国</a></li>
@@ -58,7 +58,7 @@
                             </li>
 
                             <li class="leaf has-sub-nav">
-                                <a class="bg-4"  href="#" title="全球央行">全球央行<b class="caret"></b></a>
+                                <a class="bg-4"  href="/live-bank" title="全球央行">全球央行<b class="caret"></b></a>
                                 <ul class="sub-nav">
                                     <li><a href="/live-bank?tid_1[]=9479">中国央行</a></li>
                                     <li><a href="/live-bank?tid_1[]=9477">美联储</a></li>
@@ -71,7 +71,7 @@
                             </li>
 
                             <li class="leaf has-sub-nav">
-                                <a class="bg-5"  href="#" title="经济数据">经济数据<b class="caret"></b></a>
+                                <a class="bg-5"  href="/live-economy" title="经济数据">经济数据<b class="caret"></b></a>
                                 <ul class="sub-nav">
                                     <li><a href="/live-economy?tid_1[]=9479">中国数据</a></li>
                                     <li><a href="/live-economy?tid_1[]=9477">美国数据</a></li>
@@ -162,10 +162,10 @@
 
                 <div class="control-buttons">
                     <span class="text">最新文章</span>
-                    
+
                         <a id="livenews-navbar-prev" href="http://live.<?=variable_get('site_domain')?>" class="button prev"><span class="icon-caret-left"></span></a>
                         <a id="livenews-navbar-next" href="http://live.<?=variable_get('site_domain')?>" class="button next"><span class="icon-caret-right"></span></a>
-                                   
+
                 </div>
 
                 <ul></ul>
