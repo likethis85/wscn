@@ -44,7 +44,7 @@
                             <li class="leaf"><a class="bg-2" data-active-url="^/live-china.*$" href="/live-breaking" title="">要闻</a></li>
 
                             <li class="leaf has-sub-nav">
-                                <a class="bg-3"  href="/live-area" title="地区分类">地区<b class="caret"></b></a>
+                                <a class="bg-3"  href="/live-areas" title="地区分类">地区<b class="caret"></b></a>
                                 <ul class="sub-nav">
                                     <li><a href="/live-area?tid_1[]=9479">中国</a></li>
                                     <li><a href="/live-area?tid_1[]=9477">美国</a></li>
