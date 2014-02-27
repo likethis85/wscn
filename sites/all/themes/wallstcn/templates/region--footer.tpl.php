@@ -128,7 +128,8 @@
         <a href="http://www.bwchinese.com/" target="_blank">商业见地网</a> |
         <a href="http://jr.dahe.cn/" target="_blank">大河网金融频道</a> |
         <a href="http://www.gold678.com/" target="_blank">汇金网</a> |
-        <a href="http://www.fx678.com/" target="_blank">汇通网</a>
+        <a href="http://www.fx678.com/" target="_blank">汇通网</a> |
+        <a href="http://www.talicai.com/" target="_blank">她理财</a>
     </p>
 
 
