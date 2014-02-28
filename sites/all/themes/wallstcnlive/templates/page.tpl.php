@@ -89,20 +89,20 @@
 
                         <div class="random-ad" style="margin-bottom:0;">
                             <div class="carousel-inner">
-                                <div class="item" data-probability="40">
+                                <div class="item" data-probability="55">
                                     <div style="height:280px;margin:0 auto;">
                                         <a target="_blank" href="http://wallstreetcn.com/redirect.htm?type=__ads_wscn_live_hit_nordfx_1&url=http://nordfx-chinese.com/?id=730026"><img src="http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_live_nordfx_1.jpg" alt=""></a>
                                     </div>
                                 </div>
-
+                                <!--
                                 <div class="item" data-probability="30">
                                     <div style="height:280px;margin:0 auto;">
                                         <IFRAME WIDTH="336" HEIGHT="280" MARGINWIDTH="0" MARGINHEIGHT="0" HSPACE="0" VSPACE="0" FRAMEBORDER="0" SCROLLING="no"
     SRC="http://pbid.fxdepo.com/engine?site=134351;size=336x280;linktarget=_blank;rnd=(randomNumber)"></IFRAME>
                                     </div>
                                 </div>
-
-                                <div class="item"  data-probability="30">
+                                -->
+                                <div class="item"  data-probability="45">
                                     <ins class="adsbygoogle"
                                         style="display:inline-block;width:336px;height:280px"
                                         data-ad-client="ca-pub-0869270234052789"
