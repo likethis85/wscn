@@ -671,7 +671,7 @@ function get_discovery_index_side_item() {
                          );
 
     $discovery_item[5] = array('title' => '2014这样买房最靠谱！10大黄金法则买房不后悔',
-                               'url'   =>'http://esf.sh.soufun.com/newsecond/news/12178488.htm?utm_source=shhezuo&utm_medium=click&utm_term=lgq_sh&utm_content=shwalls&utm_campaign=20140226walls',
+                               'url'   =>'esf.sh.soufun.com/newsecond/news/12178488.htm?utm_source=shhezuo&utm_medium=click&utm_term=lgq_sh&utm_content=shwalls&utm_campaign=20140226walls',
                                'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__link_soufun_0226.jpg',
                          );
 
