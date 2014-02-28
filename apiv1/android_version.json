@@ -1,7 +1,7 @@
 {
     "version" : "1.0.0",
     "version_code" : "fed",
-    "upgrade_url" : "http://wallstreetcn.com/new.apk",
+    "upgrade_url" : "http://img.wallstreetcn.com/apiv1/1.apk",
     "upgrade_description" : "New version is coming!",
     "force_upgrade" : false
 }
