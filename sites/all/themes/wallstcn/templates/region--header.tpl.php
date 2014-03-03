@@ -176,7 +176,7 @@
     </div><!--rows end-->
 
 
-    <?if(1):?>
+    <?if(0):?>
     <div class="live-top-ad row-fluid">
         <div class="span4">
             <i class="icon-gift"></i>
