@@ -9,7 +9,7 @@ $scripts = str_ireplace('http://wallstreetcn.com', 'http://img.wallstreetcn.com'
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
 
-    <script src="/sites/all/themes/wallstcn/js/check-mobile.js"></script>
+    <!--<script src="/sites/all/themes/wallstcn/js/check-mobile.js"></script>-->
 
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
