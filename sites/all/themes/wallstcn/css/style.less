@@ -197,7 +197,7 @@ a:hover {
     top:0;
     z-index:10;
     margin:0 auto;
-    .box-shadow(0px 2px 5px -2px rgb(0,0,0, 0.3));
+    .box-shadow(0px 2px 5px -2px rgba(0,0,0, 0.3));
 
     #realtime-news {
         margin-bottom:0;
@@ -1929,7 +1929,7 @@ body {
 }
 
 .article-tags {
-    margin-bottom:10px 0;
+    margin-bottom:10px;
 }
 
 .article-share {
@@ -2122,7 +2122,7 @@ body {
         text-decoration: line-through;
     }
 
-    address, caption, cite, code, den, em, th, var {
+    address, caption, cite, code, del, em, th, var {
         font-style: normal;
         font-weight: 500;
     }
@@ -3647,6 +3647,36 @@ body.toolbar, body.toolbar-drawer {
 
 #header {
     z-index: 9999;
+}
+
+/* ===========================
+ * add app download mark
+ * ===========================
+ */
+
+#mark-download-app {
+    z-index: 9999;
+    display: block;
+    position: fixed;
+    //hide first
+    left: -999px;
+    top: 350px;
+    width: 103px;
+    height: 163px;
+
+    a {
+        display: block;
+    }
+
+    a.close {
+        position: absolute;
+        bottom: -24px;
+        right: 0;
+        line-height: 24px;
+        font-size: 12px;
+        color: #a42828;
+        font-weight: normal;
+    }
 }
 
 

@@ -171,6 +171,14 @@
 
 </div>
 
+<div id="mark-download-app">
+    <a href="https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8">
+        <img src="/sites/all/themes/wallstcn/css/img/mark-download-app.png"></img>
+    </a>
+    <a href="javascript:;" class="close">关闭</a>
+</div>
+
+
 <footer id="footer" class="footer">
 <div class="container">
     <?=render($page['footer']); ?>

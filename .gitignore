@@ -6,6 +6,7 @@ sites/*/files
 sites/*/upfile
 sites/*/private
 
+.idea*
 composer.lock
 vendor/*
 ckuploadimg/*

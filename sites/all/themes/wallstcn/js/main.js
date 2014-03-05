@@ -198,7 +198,7 @@
         var scrollingNews = function(direction, speed){
 
             var length = Math.ceil(realtimeNews.length/2);
-            console.log(length);    
+            //console.log(length);
 
             if(direction < 0) {
                 realtimeNewsIndex--;
@@ -1054,6 +1054,10 @@
         (function(){
 
 
+            $('#mark-download-app a.close').on('click', function(){
+                $('#mark-download-app').hide();
+            });
+
             //设置 侧边拦位置
             function showSlideBar() {
 
@@ -1063,22 +1067,32 @@
 
                 var $slideBar = $('.article-slide-bar');
 
-                var left = $content.offset().left - 20 - $slideBar.outerWidth();
+                //console.log('this is the slide bar : ');
 
+                //console.log($slideBar);
 
-                $slideBar.css('left',  left + 'px');
+                if ($slideBar.length > 0) {
 
-                /*
-                if (left >= 0) {
+                    var left = $content.offset().left - 20 - $slideBar.outerWidth();
 
-
-
-                } else {
-
-                    $slideBar.css('left',  '-100px');
-
+                    $slideBar.css('left',  left + 'px');
                 }
-                */
+
+                var $markDown = $('#mark-download-app');
+
+                if ($markDown.length > 0) {
+
+                    var markLeft = $content.offset().left + 20 + $content.width();
+
+                    //var markTop = $content.offset().top;
+
+                    $markDown.css({
+                        left : markLeft + 'px'
+                        //top : markTop + 'px'
+                    });
+                }
+
+
             }
 
             //设定 侧边拦位置
