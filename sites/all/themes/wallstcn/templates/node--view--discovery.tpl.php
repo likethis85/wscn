@@ -33,8 +33,8 @@
 
     for ($i=0; $i<6; $i++) {
 
-        $discovery_2[0] = array('title' => '楼市白皮书：调控思路交替　传递转型信号',
-                                'url'   => 'news.tj.soufun.com/zt/201401/2013tjlsbps.html?xfbd_tianjin_huaerjie',
+        $discovery_2[0] = array('title' => '春寒不减楼市热',
+                                'url'   => 'news.tj.soufun.com/zt/201403/2014tjlscs.html?xfbd_tianjin_huaerjie',
                                 'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__link_soufun_1.jpeg',
                              );
 
