@@ -58,7 +58,7 @@ function _simple_mobile_redirect_setcookie($redirect = FALSE) {
   // drupal_goto() does not exist here, as we are triggering at boot.
   // suggestions to work around this, perhaps a variable setting to get the full URL via the admin.
   if ($redirect) {
-    //header('Location: ' . $base_url . '/' . $simplemobilehome, TRUE, 302);
+    header('Location: ' . $base_url . '/' . $simplemobilehome, TRUE, 302);
   }
 }
 
@@ -84,7 +84,7 @@ function simple_mobile_redirect_boot() {
 
   $http_host = $_SERVER['HTTP_HOST'];
 
-  if ($http_host == 'm.wallstreetcn.com') {
+  if ($http_host == 'm.wallstreetcn.com' || $http_host == 'api.wallstreetcn.com') {
     return;
   }
 
@@ -163,7 +163,7 @@ function simple_mobile_redirect_boot() {
     }
 
     // redirect to the right url for this device
-    //header('Location: ' . $simplemobileredirect, TRUE, 302);
+    header('Location: ' . $simplemobileredirect, TRUE, 302);
     //exit;
   }
   else {
