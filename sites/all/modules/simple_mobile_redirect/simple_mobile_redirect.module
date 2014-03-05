@@ -164,7 +164,7 @@ function simple_mobile_redirect_boot() {
 
     // redirect to the right url for this device
     //header('Location: ' . $simplemobileredirect, TRUE, 302);
-    exit;
+    //exit;
   }
   else {
     // set a cookie so we don't need to go through that again.
