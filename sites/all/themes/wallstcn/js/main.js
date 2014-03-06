@@ -1116,8 +1116,7 @@
             });
 
 
-            var uri = new URI(window.location);
-            var path = uri.path();
+            var path = window.location.pathname;
 
             $('#navbar .nav a').each(function(){
 
