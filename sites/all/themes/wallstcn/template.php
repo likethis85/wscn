@@ -659,9 +659,9 @@ function get_discovery_index_side_item() {
     }
 
     // 亿邦动力
-    $discovery_item[4] = array('title' => '阿里收购高德涉嫌触犯反垄断法',
-                               'url'   => 'home.ebrun.com/blog-47572.html',
-                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__link_ebrun_1.jpg',
+    $discovery_item[4] = array('title' => '传腾讯百度360均将入股京东 为京东抬轿子',
+                               'url'   => 'home.ebrun.com/topic-392888.html',
+                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__link_ebrun_0306.jpg',
                          );
     // 搜房网
 
@@ -670,9 +670,9 @@ function get_discovery_index_side_item() {
                                'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__ads_wscn_index_soufun_3.jpeg',
                          );
 
-    $discovery_item[5] = array('title' => '2014这样买房最靠谱！10大黄金法则买房不后悔',
-                               'url'   =>'esf.sh.soufun.com/newsecond/news/12178488.htm?utm_source=shhezuo&utm_medium=click&utm_term=lgq_sh&utm_content=shwalls&utm_campaign=20140226walls',
-                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__link_soufun_0226.jpg',
+    $discovery_item[5] = array('title' => '网友晒城市娶妻成本排行 上海200万排第3',
+                               'url'   =>'esf.sh.soufun.com/newsecond/news/12237680.htm?utm_source=shhezuo&utm_medium=click&utm_term=zhch_sh&utm_content=shwalls&utm_campaign=20140306walls',
+                               'img'   => 'http://img.wallstreetcn.com/sites/all/themes/wallstcn/ads/__link_soufun_0306.jpg',
                          );
 
     $numbers = range(0, 400);
