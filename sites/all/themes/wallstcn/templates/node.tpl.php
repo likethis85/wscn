@@ -96,8 +96,9 @@ drupal_set_title($page_title, PASS_THROUGH);?>
 
 
 <div class="article-copyright">
-    <p> <b>*欢迎添加见闻微信公众号：wallstreetcn，每天精选最重要的资讯及时送达你手机。</b></p>
-    <p> <b>*欢迎加入华尔街见闻读者QQ群（196387008）交流互动，申请请注明公司与姓名。</b></p>
+    <p> <b>*在各大APP商店搜索“华尔街见闻”，可下载我们的移动客户端。同时欢迎关注见闻微信号：wallstreetcn。</b></p>
+    <!--<p> <b>*欢迎添加见闻微信公众号：wallstreetcn，每天精选最重要的资讯及时送达你手机。</b></p>
+    <p> <b>*欢迎加入华尔街见闻读者QQ群（196387008）交流互动，申请请注明公司与姓名。</b></p> -->
     <p>本文内容仅供读者参考，并非投资建议。 转载请注明来源并加上本站链接，华尔街见闻将保留所有法律权益。</p>
     <p>版权采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh">知识共享署名-非商业性使用 3.0 未本地化版本许可协议</a> 进行许可 <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a></p>
     <p></p>
